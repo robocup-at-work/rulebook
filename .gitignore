@@ -1,3 +1,9 @@
+##Custum changes
+*.adx
+*~
+Rulebook.pdf
+
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof

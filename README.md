@@ -1,0 +1,25 @@
+RuleBook
+========
+
+Rulebook for RoboCup @Work 
+
+The process of altering the Rules for the Roboup@Work league is open to every one. Please feel free to contact the TC or the mailing list
+
+	rc-work@lists.robocup.org. 
+
+with questions.
+
+
+RoboCup@Work teams and team members are welcome to post GitHub issues for clarifications, questions, proposals of change, e.g
+
+
+To build you will need to install:
+
+$ sudo apt-get install texlive-science
+
+
+
+
+
+
+
