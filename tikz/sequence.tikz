@@ -1,0 +1,74 @@
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.3cm,text centered, font={\footnotesize} ]
+    \tikzstyle{element} = [draw=black, fill=white, rectangle, text width = 1.5cm, text centered, minimum height = 0.8cm, minimum width = 1.6cm]
+
+    \tikzstyle{text_element} = [text width = 1.5cm, text centered]
+    
+    \node (ROBOT)[element]{@Work Robot};
+    \node (REFBOX)[element, right of=ROBOT, fill=white, draw=black]{Refbox};
+   \node (ROUNDTABLE)[element, right of=REFBOX]{Round Table};
+  \node (CONVEYOR)[element, right of=ROUNDTABLE, fill=white, draw=black]{Conveyor Belt};
+  
+\coordinate (BELOW) at ($(ROBOT)+(0,-7.2cm)$);
+\draw [dotted, -] (ROBOT) -- (ROBOT|-BELOW) ;
+\draw [dotted, -] (REFBOX) -- (REFBOX|-BELOW) ;
+\draw [dotted, -] (ROUNDTABLE) -- (ROUNDTABLE|-BELOW) ;
+\draw [dotted, -] (CONVEYOR) -- (CONVEYOR|-BELOW) ;
+
+\def \dist {1.0cm}
+\coordinate (BEACON) at ($(ROBOT)+(0,-\dist)$);
+\draw[->, dashed, gray] (BEACON) -- (BEACON-|REFBOX) node [midway] {{\tt beacon} } node [at end, anchor=center] (AUX){};
+
+\def \dist {0.2cm}
+\coordinate (START) at ($(AUX)+(0,-\dist)$);
+\draw[->, blue] (START) -- (START-|ROBOT) node [midway] {{\tt gamestate} } node [at end, anchor=center] (AUX_1){};
+
+\foreach \y in {2,...,6} 
+       {\pgfmathtruncatemacro{\offset}{ \y * 1.3}
+      \coordinate (BEACON) at ($(ROBOT)+(0,-\y)$);
+       \draw[->, dashed, gray] (BEACON) -- (BEACON-|REFBOX) node [midway] {} node [at end, anchor=center] (AUX){};
+} 
+
+\def \dist {1.4cm}
+\coordinate (START_PREP) at ($(START)+(0,-\dist)$);
+\draw[->, blue] (START_PREP) -- (START_PREP-|ROBOT) node [midway, above] {{\tt gamestate}} node [at end, anchor=center] (AUX_1){};
+
+\draw[-,decorate,decoration={brace,amplitude=5pt}] ($(START_PREP)-(2.5cm,-0.1cm)$) -- ($(START)-(2.5cm,0)$) node[midway, xshift=-0.3cm]{Initialisation};
+
+\def \dist {0.3cm}
+\coordinate (TASK) at ($(START_PREP)+(0,-\dist)$);
+\draw[->] (TASK) -- (TASK-|ROBOT) node [midway] {{\tt taskinfo} } node [at end, anchor=center] (AUX_1){};
+
+\def \dist {2.4cm}
+\coordinate (START_GAME) at ($(START)+(0,-\dist)$);
+\draw[->, blue] (START_GAME) -- (START_GAME-|ROBOT) node [midway] { {\tt gamestate} } node [at end, anchor=center] (AUX_1){};
+
+\draw[-,decorate,decoration={brace,amplitude=5pt}] ($(START_GAME)-(2.5cm,-0.1cm)$) -- ($(START_PREP)-(2.5cm,0)$) node[midway, xshift=-0.3cm]{Preparation};
+
+\draw[-, ultra thick] (START_PREP) -- (START_GAME) node [midway] {2 min};
+
+\def \dist {5.4cm}
+\coordinate (END_GAME) at ($(START)+(0,-\dist)$);
+\draw[->,blue] (END_GAME) -- (END_GAME-|ROBOT) node [midway] { {\tt gamestate} } node [at end, anchor=center] (AUX_2){};
+
+\draw[-,decorate,decoration={brace,amplitude=5pt}] ($(END_GAME)-(2.5cm,-0.1cm)$) -- ($(START_GAME)-(2.5cm,0)$) node[midway, xshift=-0.3cm]{Test execution};
+
+\def \dist {0.9cm}
+\coordinate (START_BELT) at ($(AUX_1)+(0,-\dist)$);
+\draw[->] (START_BELT) -- (START_BELT-|ROUNDTABLE) node [midway, xshift=1cm] { {\tt command } } node [at end, anchor=center] (AUX_3){};
+
+\def \dist {0.2cm}
+\coordinate (END_BELT) at ($(AUX_3)+(0,-\dist)$);
+\draw[->] (END_BELT) -- (END_BELT-|ROBOT) node [midway, xshift=1cm] { {\tt status } } node [at end, anchor=center] (AUX_1){};
+
+\def \dist {0.9cm}
+\coordinate (START_BELT) at ($(AUX_1)+(0,-\dist)$);
+\draw[->] (START_BELT) -- (START_BELT-|CONVEYOR) node [midway, xshift=2cm] { {\tt command } } node [at end, anchor=center] (AUX_3){};
+
+\def \dist {0.2cm}
+\coordinate (END_BELT) at ($(AUX_3)+(0,-\dist)$);
+\draw[->] (END_BELT) -- (END_BELT-|ROBOT) node [midway, xshift=2cm] { {\tt status } } node [at end, anchor=center] (AUX_1){};
+
+
+\draw[-, ultra thick] (START_GAME) -- (END_GAME) node [midway, yshift=-1cm] {10min};
+
+\end{tikzpicture}
