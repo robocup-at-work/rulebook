@@ -8,6 +8,8 @@
 \usepackage{mathtools}
 \usepackage{gensymb}
 \setlist{noitemsep}
+\usepackage{hhline}
+\usepackage{rotating}
 \usepackage{tikz}
 \usetikzlibrary{arrows}
 \usetikzlibrary{calc}
@@ -67,7 +69,7 @@
   colorlinks   = true,
   anchorcolor  = blue,
   linkcolor    = blue,
-  urlcolor     = blue, 
+  urlcolor     = blue,
 }
 
 %%% HEADINGS & PAGE STYLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -134,17 +136,11 @@
 \chapter{Tests}
 
 \input{./tests/Tests}
-\input{./tests/BNT}
-\input{./tests/BMT}
-\input{./tests/BTT}
-\input{./tests/CBT}
-\input{./tests/PPT}
-\input{./tests/Final}
+
 
 \chapter{Open-Source Award}
 \input{./general_rules/Opensource_Award}
 
 \printabx
 \printidx
-
 \end{document}

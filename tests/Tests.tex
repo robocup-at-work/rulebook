@@ -1,24 +1,127 @@
-The actual competition tasks are defined as a set of so-called tests. A competition is organized in several stages. For each stage, the Technical Committee will select a set of tests to be performed by each team.
-\par
-A possible stage design would be as follows:
+% !TEX root = ../Rulebook.tex
 
-Stage 1:
-\begin{itemize}
-	\item BNT: Basic Navigation Test
-	\item BMT: Basic Manipulation Test
-	\item BTT: Basic Transportation Test
-\end{itemize}
+The actual competition contains a number runs combining a set of so-called
+test instances. These tasks combining two dimensions, a test scenario and a
+set of parameters in order to vary its complexity.
+
+The following sections explain the individual tests and summarize the aspects of
+complexity. Afterwards the in instances are defined. These set of instances can
+be combined by the OC in order to define the specific competition runs.
+
+Note that not necessarily the most complex tests have to be in the finals;
+it might make more sense to use them as early-bird benchmark challenges for
+things most teams are not yet able to solve. Tests for the finals should be
+tests which can be solved rather well by all finalists, but with different
+performance, in order to increase the attractiveness of the event. The ability
+of a team to solve more complex tests should be reflected by the prior score
+the team takes into the finals
+
+\section{Description of the test scenarios}
+
+\input{./tests/BNT}
+
+\section{Complexities}
 
 
-Stage 2:
-\begin{itemize}
-	\item CBT: Conveyor Belt Test
-	\item PPT: Precision Placement Test
-\end{itemize}
+\begin{figure}[ht]
+\centering
+\input{./tikz/complexityTree.tikz}
+\caption{Aspects of complexity that may integrated in a specific instance of a test}
+\end{figure}
 
-Finals: 
-\begin{itemize}
-	\item A combination of tests from previous stages
-\end{itemize}
 
-Note that not necessarily the most complex tests have to be in the finals; it might make more sense to use them as early-bird benchmark challenges for things most teams are not yet able to solve. Tests for the finals should be tests which can be solved rather well by all finalists, but with different performance, in order to increase the attractiveness of the event. The ability of a team to solve more complex tests should be reflected by the prior score the team takes into the finals
+\todo{Do we really need a seperate description of the comlexities or should
+we integrate the intended information it the previous chapter?}
+
+\subsection{Grasping}
+
+
+\subsection{Arena}
+
+\subsubsection{Static obstacles}
+The definition of the instances includes the number of static obstacles, they
+are located by the OC and will be equal for all teams during a run.
+
+
+
+
+\todo{describing complexities}
+
+\section{Instances}
+
+The following instances may occure as an instance the run. Please beware, that
+combinations are possible!
+
+
+
+
+%\setlength{\tabcolsep}{4.75pt}
+\renewcommand{\arraystretch}{1.1}
+\newcommand{\R}[2]{
+	\begin{turn}{90}
+		\begin{minipage}[][1em][c]{#2}
+		#1
+	  \end{minipage}
+	\end{turn}
+}
+
+\newcommand{\kreis}[1]{\hspace{0.5em}\unitlength1ex\begin{picture}(2.8,2.8)%
+\put(0.75,0.75){\circle{2.8}}\put(0.75,0.75){\makebox(0,0){#1}}\end{picture}}
+\newcommand{\Y}{{\tiny \CIRCLE}}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\begin{table}[h!]
+ \definecolor{headlineColor}{rgb}{.7,.7,.7}
+ \definecolor{sectionColor}{rgb}{.4,.4,.4}
+ \centering
+ \begin{tabular}{l|l|l|l*{5}{|P{1cm}}|}
+   \hhline{~~~~-----}
+   \multicolumn{4}{l|}{ } &  \multicolumn{5}{c|}{ Instances}\\
+   \hhline{~~~~-----}
+   \multicolumn{4}{l|}{ }                 &  \kreis{1} & \kreis{2} & \kreis{3} & \kreis{4} & \kreis{5} \\
+   \multicolumn{4}{r|}{     }             &  BNT       & BNT       & BTT      & BTT        &  PPT  \\
+   \hline
+    \multirow{14}{0.5cm}{\R{\centering Manipulation }{4cm}}
+     & \multirow{5}{0.5cm}{\R{\centering Objects }{2.0cm}}
+     &      RoboCup@Work         & Team    &  \Y        &           &          &           &         \\
+     &   &                       & OC      &            &           &          &           &         \\
+     &   &  Rockin               & Team    &            &           &          &           &         \\
+     &   &                       & OC      &            &           &          &           &         \\
+     &    & arbitrary            & OC      &            &           &          &           &        \\
+     &    & number               & Team    &     3       &           &          &           &        \\
+     &    &                      & OC      &            &           &          &           &        \\
+     \hhline{~--------}
+     & \multirow{9}{0.5cm}{\R{\centering Grasping }{1.9cm}}
+         & Height 1 (0cm)        & -        &            &           &          &           &         \\
+      &  & Height 2 (10cm)       & -        &   \Y       &           &          &           &         \\
+      &  & Height 3 (??cm)       & -        &            &           &          &           &         \\
+      &  & Height 4 (??cm)       & -        &            &           &          &           &         \\
+      &  & Shelf plattform       & -        &            &           &          &           &         \\
+      &  & Position              & Team     &   \Y       &           &          &           &         \\
+      &  &                       & OC       &            &           &          &           &         \\
+	  &  & Rotation              & Team     &   \Y       &           &          &           &         \\
+      &  &                       & OC       &            &           &          &           &         \\
+	  &  & Orientation           & Team     &   \Y       &           &          &           &         \\
+      &  &                       & OC       &            &           &          &           &         \\
+      &  & Red container         & -        &            &           &          &           &         \\
+      &  & Blue container        & -        &            &           &          &           &         \\
+      \hhline{~--------}
+      & \multirow{7}{0.5cm}{\R{\centering Putting down }{3cm}}
+          & Height 1 (0cm)       & -        &            &           &          &           &         \\
+      &  & Height 2 (10cm)       & -        &    \Y      &           &          &           &         \\
+      &  & Height 3 (??cm)       & -        &            &           &          &           &         \\
+      &  & Height 4 (??cm)       & -        &            &           &          &           &         \\
+      &  & Shelf plattform       & -        &            &           &          &           &         \\
+      &  & Red container         & -        &            &           &          &           &         \\
+      &  & Blue container        & -        &            &           &          &           &         \\
+    \hline
+    \multirow{4}{0.5cm}{\R{\centering Arena }{2cm}}
+     & \multirow{5}{0.5cm}{\R{\centering Objects }{1.5cm}}
+     &      Static obstacles     & OC      &            &           &          &           &         \\
+     &   &  Dynamic obstacles    & -       &            &           &          &           &         \\
+     &   &  Barrier tape         & OC      &            &           &          &           &         \\
+     \hline
+ \end{tabular}
+ \label{tab:Instances}
+ \caption{Instances of the RoboCup@Work 2016 competition}
+\end{table}
