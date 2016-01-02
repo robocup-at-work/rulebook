@@ -1,46 +1,71 @@
 \tikzset{
-  basic/.style  = {draw, font=\sffamily, rectangle, text width=2.4cm,},
-  root/.style   = {basic, text width=2cm, rounded corners=2pt, thin, align=center},
-  level 2/.style = {basic,  rounded corners=6pt, thin,align=center, text width=8em,sibling distance=35mm},
-  level 3/.style = {basic, thin, align=left},
- level 4/.style = {basic, thin, align=left, fill = blue!50}
+  basic/.style  = {draw, rectangle, thin, text width=2cm, 
+	                 rounded corners=2pt, align=center},
+  root/.style   =  {basic},
+  level 2/.style = {basic, sibling distance=45mm},
+  level 3/.style = {basic, align=left},
+  level 4/.style = {basic, align=left, fill = white!50, node distance = 0.7cm},
+	box/.style = {draw, black, dashed}
 }
 
 \begin{tikzpicture}[
-  font = footnotesize,
-  level 1/.style={sibling distance=60mm},
+  font = \footnotesize,
+  level 1/.style={sibling distance=70mm},
   edge from parent/.style={->,draw},
   >=latex]
 
 % root of the the initial tree, level 1
 \node[root] {Complexities}
 % The first level, as children of the initial tree
-  child {node[level 2] (c1) {Grasping}
-       child  {node[level 3]  (OBJECTS) {Objects} }
-        child {node[level 3]  (GRASPING) {Grasping} }
-        child {node[level 3]  {Putting down} }
+  child {node[level 2] (c1) {Manipulation}
+       child  {node[level 3]  (OBJECTS) {Objects}}
+       child {node[level 3]  (GRASPING) {Grasping} }
+       child {node[level 3, xshift =-2cm]  (PUTTING) {Putting down} }
 	}
-  child {node[level 2] (c2) {Arena}};
+  child {node[level 2, xshift=-1cm] (ARENA) {Arena}};
 
-
-\begin{scope}[every node/.style={level 4,  top color=blue!50,bottom color=green!70,shading angle=45}]
-\node [below of = OBJECTS, xshift=15pt,] (c11) {@work};
+%% OBJECTS
+\begin{scope}[every node/.style={level 4,  top color=white!50,bottom color=gray!50,shading angle=45}]
+\node [below of = OBJECTS, xshift=15pt, yshift=-20pt] (c11) {@work};
 \node [below of = c11] (c12) {Rockin};
 \node [below of = c12] (c13) {arbitary};
-\node [below of = c13] (c14) {number};
+\node [below of = c13, yshift=-5pt] (c14) {number};
 \end{scope}
 
+\node [box, fit = (c11) (c12) (c13)] (BOX) {};
+\node at (BOX.north west) [anchor = south west] {Type};
+
+%% GRASPING
 \begin{scope}[every node/.style={level 4}]
-\node [below of = GRASPING, xshift=15pt,] (c21) {Height 0cm};
-\node [below of = c21] (c22) {Height 10cm};
-\node [below of = c22] (c23) {Height ??cm};
-\node [below of = c23] (c24) {Height ??cm};
-\node [below of = c24, top color=blue!50,bottom color=green!70,shading angle=45] (c25) {Position};
-\node [below of = c25, top color=blue!50,bottom color=green!70,shading angle=45] (c26) {Rotation};
-\node [below of = c26, top color=blue!50,bottom color=green!70,shading angle=45] (c27) {Orientation};
-\node [below of = c27] (c28) {Container red};
-\node [below of = c28] (c29) {Container blue};
+\node [below of = GRASPING, xshift=28pt, yshift=-20pt] (c21) {0cm};
+\node [below of = c21] (c22) {10cm};
+\node [below of = c22] (c23) { ??cm};
+\node [below of = c23] (c24) { ??cm};
+\node [below of = c24, top color=white!50,bottom color=gray!50,shading angle=45, yshift=-18pt] (c25) {Position};
+\node [below of = c25, top color=white!50,bottom color=gray!50,shading angle=45] (c26) {Rotation};
+\node [below of = c26, top color=white!50,bottom color=gray!50,shading angle=45] (c27) {Orientation};
+\node [below of = c27, yshift=-18pt,] (c28) {red};
+\node [below of = c28] (c29) { blue};
 \end{scope}
+
+\node [box, fit = (c21) (c22) (c23) (c24)] (BOX) {};
+\node at (BOX.north west) [anchor = south west] {Height};
+
+\node [box, fit = (c25) (c26) (c27)] (BOX) {};
+\node at (BOX.north west) [anchor = south west] {Object Pose};
+
+\node [box, fit = (c28) (c29)] (BOX) {};
+\node at (BOX.north west) [anchor = south west] {Container};
+
+%% ARENA
+\begin{scope}[every node/.style={level 4}]
+\node [below of = ARENA, xshift=15pt, yshift=-20pt] (c31) {Static};
+\node [below of = c31] (c32) {Dynamic};
+\node [below of = c32, yshift=-5pt] (c33) {Barrier tape};
+\end{scope}
+
+\node [box, fit = (c31) (c32)] (BOX) {};
+\node at (BOX.north west) [anchor = south west] {Obstacles};
 
 % lines from each level 1 node to every one of its "children"
  \foreach \value in {1,2,3,4}
@@ -48,5 +73,14 @@
 
  \foreach \value in {1,...,9}
    \draw[->] (GRASPING.195) |- (c2\value.west);
+	
+ \foreach \value in {1,...,4}
+   \draw[->] (PUTTING.345) |- (c2\value.east);
+
+ \foreach \value in {8,...,9}
+   \draw[->] (PUTTING.345) |- (c2\value.east);
+	
+\foreach \value in {1,2,3}
+   \draw[->] (ARENA.195) |- (c3\value.west);
 
 \end{tikzpicture}

@@ -5,7 +5,7 @@ test instances. These tasks combining two dimensions, a test scenario and a
 set of parameters in order to vary its complexity.
 
 The following sections explain the individual tests and summarize the aspects of
-complexity. Afterwards the in instances are defined. These set of instances can
+complexity. Afterward the in instances are defined. These set of instances can
 be combined by the OC in order to define the specific competition runs.
 
 Note that not necessarily the most complex tests have to be in the finals;
@@ -20,8 +20,10 @@ the team takes into the finals
 
 \input{./tests/BNT}
 
-\section{Complexities}
+\section{Task Variabilities}
 
+The different mandatory and optional parameters and configurations are 
+mentioned in Sec.~\ref{sec:ArenaDesign} and \ref{sec:ManipulationTasks}.
 
 \begin{figure}[ht]
 \centering
@@ -30,17 +32,8 @@ the team takes into the finals
 \end{figure}
 
 
-\todo{Do we really need a seperate description of the comlexities or should
-we integrate the intended information it the previous chapter?}
-
-\subsection{Grasping}
 
 
-\subsection{Arena}
-
-\subsubsection{Static obstacles}
-The definition of the instances includes the number of static obstacles, they
-are located by the OC and will be equal for all teams during a run.
 
 
 
@@ -79,29 +72,29 @@ combinations are possible!
    \multicolumn{4}{l|}{ } &  \multicolumn{5}{c|}{ Instances}\\
    \hhline{~~~~-----}
    \multicolumn{4}{l|}{ }                 &  \kreis{1} & \kreis{2} & \kreis{3} & \kreis{4} & \kreis{5} \\
-   \multicolumn{4}{r|}{     }             &  BNT       & BNT       & BTT      & BTT        &  PPT  \\
+   \multicolumn{4}{r|}{     }             &  BNT       & BMT       & BTT      & BTT        &  PPT  \\
    \hline
     \multirow{14}{0.5cm}{\R{\centering Manipulation }{4cm}}
      & \multirow{5}{0.5cm}{\R{\centering Objects }{2.0cm}}
-     &      RoboCup@Work         & Team    &  \Y        &           &          &           &         \\
+     &      RoboCup@Work         & Team    &            &   \Y      &          &           &         \\
      &   &                       & OC      &            &           &          &           &         \\
      &   &  Rockin               & Team    &            &           &          &           &         \\
      &   &                       & OC      &            &           &          &           &         \\
      &    & arbitrary            & OC      &            &           &          &           &        \\
-     &    & number               & Team    &     3       &           &          &           &        \\
+     &    & number               & Team    &            &    3      &          &           &        \\
      &    &                      & OC      &            &           &          &           &        \\
      \hhline{~--------}
      & \multirow{9}{0.5cm}{\R{\centering Grasping }{1.9cm}}
          & Height 1 (0cm)        & -        &            &           &          &           &         \\
-      &  & Height 2 (10cm)       & -        &   \Y       &           &          &           &         \\
+      &  & Height 2 (10cm)       & -        &            &   \Y      &          &           &         \\
       &  & Height 3 (??cm)       & -        &            &           &          &           &         \\
       &  & Height 4 (??cm)       & -        &            &           &          &           &         \\
       &  & Shelf plattform       & -        &            &           &          &           &         \\
-      &  & Position              & Team     &   \Y       &           &          &           &         \\
+      &  & Position              & Team     &            &   \Y      &          &           &         \\
       &  &                       & OC       &            &           &          &           &         \\
-	  &  & Rotation              & Team     &   \Y       &           &          &           &         \\
+	    &  & Rotation              & Team     &            &           &          &           &         \\
       &  &                       & OC       &            &           &          &           &         \\
-	  &  & Orientation           & Team     &   \Y       &           &          &           &         \\
+	    &  & Orientation           & Team     &            &           &          &           &         \\
       &  &                       & OC       &            &           &          &           &         \\
       &  & Red container         & -        &            &           &          &           &         \\
       &  & Blue container        & -        &            &           &          &           &         \\
