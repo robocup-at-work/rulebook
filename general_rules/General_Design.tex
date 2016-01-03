@@ -104,12 +104,14 @@ string  current\_action } \\ \hline
    {\tt /atwork/refbox/taskinfo } & S & P & {\tt BNT[] bnt\_tasks \newline
 BMT[] bmt\_tasks  \newline
 BTT[] btt\_tasks } \\ \hline
-   {\tt /atwork/refbox/[device]/command} & P & S & ???? \\ \hline
+   {\tt /atwork/refbox/[device]/command} & P & S & {\tt int8 state \newline
+int8 ERROR        = -1 \newline
+int8 NOT\_RUNNING  = 0 \newline
+int8 RUNNING      = 1   }\\\hline
    {\tt /atwork/refbox/[device]/status  } & S & P & {\tt int8 state \newline
 int8 ERROR        = -1 \newline
 int8 NOT\_RUNNING  = 0 \newline
 int8 RUNNING      = 1   }\\\hline
-   {\tt /atwork/refbox/[device]/status  } & S & P & ???\\\hline
  \end{tabular}
   \label{tab:RefBoxTopics}
  \caption{Refbox topics}
@@ -145,13 +147,13 @@ uint8  SOUTH = 2 \newline
 uint8  NORTH = 3 \newline
 uint32  duration  }\\\hline
  \end{tabular}
-  \label{tab:RefBoxTopics}
  \caption{Refbox auxiliary message types}
+  \label{tab:RefBoxAUX}
 \end{table}
 
-
-
-\todo{explain the structure!}
+Tab.~\ref{tab:RefBoxAUX} summarizes the auxiliary types embedded in
+the refbox messages. A detailed description of the refbox-API is given in the 
+corresponding documentation available on \todo{???????????????}. 
 
 \par
 The refbox visualizes the current state of the competition run, current time measurements, the task specification and robots position for visitors. Team information (name, affiliation, contact information) are given too in this context.
@@ -223,7 +225,8 @@ http://www.hitl.washington.edu/artoolkit/
 The black inner square of the markers is at least 8 cm x 8 cm large with an additional white border around of at least 12 cm side length. Figure \ref{fig:floor_marker} depicts some examples of these markers.
 
 \begin{figure}
-\includegraphics[width= 0.5\textwidth ]{../images/example_floor_marker.png}
+\centering
+\includegraphics[width= 0.4\textwidth ]{../images/example_floor_marker.png}
 \caption{Example of a floor marker.}
 \label{fig:floor_marker}
 \end{figure}
@@ -233,7 +236,8 @@ The black inner square of the markers is at least 8 cm x 8 cm large with an addi
 The arena may include virtual walls marked by either striped yellow and black or white and red barrier tape on the floor (see Figure \ref{fig:barrier_tape}). If any part of a robot passes over such a tape it is considered like a collision with a normal wall.
 
 \begin{figure}
-\includegraphics[width= 0.5\textwidth ]{../images/example_barrier_tape.jpg}
+\centering
+\includegraphics[width= 0.4\textwidth ]{../images/example_barrier_tape.jpg}
 \caption{Example of Barrier Tape.}
 \label{fig:barrier_tape}
 \end{figure}

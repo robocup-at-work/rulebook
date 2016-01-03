@@ -1,9 +1,9 @@
-\section{Precision Placement Test (PPT)}
+\subsection{Precision Placement Test (PPT)}
 
-\subsection{Purpose and Focus of the Test}
+\paragraph{Purpose and Focus of the Test}
 The purpose of the Precision Placement Test is to assess the robot’s ability to grasp and place objects into object-specific cavities. This demands advanced perception abilities (to recognize the correct cavity for each object) and manipulation abilities (to grasp and place the object in such a manner that it fits into the cavity).
 
-\subsection{Scenario Environment}
+\paragraph{Scenario Environment}
 The same arena as for the Basic Manipulation Test is used (Figures 5.4 and 5.5) whereas the plane of one service arena includes object-specific cavities as shown in the Figure 6.3 and Figure 6.4. For each object used in the test there will be one specific cavity. The cavity has the dimension of the object plus a 2 mm offset for each dimension. At most five cavities are used in the test.
 
 
@@ -34,10 +34,10 @@ The same arena as for the Basic Manipulation Test is used (Figures 5.4 and 5.5) 
 \label{fig:ppt_horizontal_tiles}
 \end{figure}
 
-\subsection{Manipulation Objects}
+\paragraph{Manipulation Objects}
 The same manipulation objects as for the Basic Manipulation Test are used. 
 
-\subsection{Task}
+\paragraph{Task}
 A single robot is used. The robot is placed by the team freely within the arena. The objective of the task is to pick the object which is placed in this service area and make a precise-placement in the corresponding cavity at the service area with the special PPT platform (an example configuration is illustrated in Figure \ref{fig:ppt_plattform}). 
 
 \begin{figure}
@@ -55,17 +55,17 @@ An example task specification is given here:
 PPT\textless S1,(M20, S40\_40\_G),S2\textgreater
 \par
 where S1 is the location where to pick up the objects M20 and S40\_40\_G. The objects need to be placed then in the corresponding cavities at location S2.
+%
+%\subsection{Complexity Levels}
+%
+%All Complexity Options from BMT apply.
+%
+%\subsubsection{PPT Orientation Complexity (bonus factor = 0.2):}
+%The cavities can be placed in all orientations.
+%\subsubsection{PPT Rotation Complexity (bonus factor = 0.2):}
+%The cavities can be placed in all orientations.
 
-\subsection{Complexity Levels}
-
-All Complexity Options from BMT apply.
-
-\subsubsection{PPT Orientation Complexity (bonus factor = 0.2):}
-The cavities can be placed in all orientations.
-\subsubsection{PPT Rotation Complexity (bonus factor = 0.2):}
-The cavities can be placed in all orientations.
-
-\subsection{Rules}
+\paragraph{Rules}
 The following rules have to be obeyed:
 
 \begin{itemize}
@@ -79,15 +79,15 @@ The following rules have to be obeyed:
 
 \end{itemize}
 
-\subsection{Scoring}
-Points are awarded as follows:
-
-\begin{itemize}
-\item 50 points are awarded for successfully grasping an object.
-\item 100 points are awarded for successfully placing a manipulation object into the correct cavity.
-\item 50 points are awarded if the task specification has been completely fulfilled. The task is considered as fulfilled if all objects have been dropped in the right cavity. The robot does not have to leave the arena.
-\item a penalty of -50 points is given for each object which has been dropped into the wrong cavity
-\item The reached points of a test will be multiplied with a defined complexity factor depending on the previously chosen complexity level.
-\end{itemize}
+%\subsection{Scoring}
+%Points are awarded as follows:
+%
+%\begin{itemize}
+%\item 50 points are awarded for successfully grasping an object.
+%\item 100 points are awarded for successfully placing a manipulation object into the correct cavity.
+%\item 50 points are awarded if the task specification has been completely fulfilled. The task is considered as fulfilled if all objects have been dropped in the right cavity. The robot does not have to leave the arena.
+%\item a penalty of -50 points is given for each object which has been dropped into the wrong cavity
+%\item The reached points of a test will be multiplied with a defined complexity factor depending on the previously chosen complexity level.
+%\end{itemize}
 
 
