@@ -147,7 +147,7 @@ uint8  SOUTH = 2 \newline
 uint8  NORTH = 3 \newline
 uint32  duration  }\\\hline
  \end{tabular}
- \caption{Refbox auxiliary message types}
+ \caption{Refbox auxiliary message types \todo{can we provide a repository where the message files are stored?}}
   \label{tab:RefBoxAUX}
 \end{table}
 
@@ -158,6 +158,7 @@ corresponding documentation available on \todo{???????????????}.
 \par
 The refbox visualizes the current state of the competition run, current time measurements, the task specification and robots position for visitors. Team information (name, affiliation, contact information) are given too in this context.
 
+\todo{NICO: add maybe some screenshots from the refbox, also make a reference to the FESTO Refbox}
 
 \section{Use of External/Control Devices}
 No external devices are allowed (e.g. remote controls) in general. Exceptions may be certain simplifications leading to reduction of points as described in Chapter 4.4, or in particular tests. All communication of the robots with external elements must be wireless. Cable connections between the robot and external devices are not allowed during competition runs.
@@ -259,7 +260,7 @@ The intention is to start with a simple set of objects of different shapes and c
 
 \newlength{\myColumWidth}
 \setlength{\myColumWidth}{2cm}
-\newcommand{\imageView}[1]{\raisebox{-.5\height}[1cm][1cm]{\includegraphics[width=\myColumWidth]{#1}}}
+\newcommand{\imageView}[1]{\raisebox{-.5\height}[1.4cm][1.3cm]{\includegraphics[width=\myColumWidth]{#1}}}
 
 \begin{table}[p]
 \begin{tabular}{|c|c|c|p{5cm}|}
@@ -294,15 +295,45 @@ Length: 100mm \\
 Outer diameter: 30mm
 Length: 45mm \\
 \hline
-\imageView{../images/V20.jpg} & V20 & 14g & Inner diameter: 20mm \newline
-Outer diameter: 30mm \newline
-Length: 45mm \\
-\hline
+%\imageView{../images/V20.jpg} & V20 & 14g & Inner diameter: 20mm \newline
+%Outer diameter: 30mm \newline
+%Length: 45mm \\
+%\hline
 \end{tabular}
 \label{tab:manipulation_objects}
-\caption{Examples of typical manipulation objects}
+\caption{Examples of typical manipulation objects \todo{add the rockin objects, and make clear that we have two type of object sets}}
 
 \end{table}
+
+
+\begin{table}[p]
+\begin{tabular}{|c|c|c|p{5cm}|}
+\hline
+Object & Symbolic Description & Weight (in g) & Details \\
+\hline
+\imageView{../images/bearingBoxA.jpg} & Bearing\_Box & g & Bearing Box\\
+\hline
+\imageView{../images/bearing.jpg} & Bearing & g & Bearing \newline
+Width: ?? \newline
+Length: ?? \\
+\hline
+\imageView{../images/axis.jpg} & Axis & g & Axis\newline Height: ?mm \newline
+Width: ?mm \newline
+Length: ?mm \\
+\hline
+\imageView{../images/distanceTube.jpg} & Distance\_Tube & ?g & Height: ?mm \newline
+Width: ?mm \newline
+Length: ?mm \\
+\hline
+\imageView{../images/assembledA.jpg} & Motor & ?g & Assembled motor\newline
+Length: ?mm \\
+\hline
+\end{tabular}
+\label{tab:manipulation_objects_rockin}
+\caption{RoCKIn...}
+
+\end{table}
+
 
 Objects of one kind can slightly vary e.g. considering surface. Teams can ask the Technical Committee for allowance to use objects brought by the team to a competition, provided they do not differ in a relevant way from the default objects.
 
@@ -346,6 +377,6 @@ The following two figures illustrate the kind of arenas that can be built with t
 
 \begin{figure}
 \includegraphics[width= \textwidth ]{../images/example_map_go13.png}
-\caption{Illustration of the arena configuration used at the German Open 2013.}
+\caption{Illustration of the arena configuration used at the German Open 2013.\todo{do we really need this figure? I would replace it with a series of arena figures from the previous competitions.}}
 \label{fig:example_map_go13}
 \end{figure}
