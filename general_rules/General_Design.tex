@@ -75,17 +75,17 @@ competition. For this purpose each robot has to transmit a keep-alive signal eve
   \item aborts the run in case of a time lapse.
 \end{enumerate}
 
-Figure \ref{fig:refbox} depicts the progress of a competition run. When the robot is initialized, it starts immediately to transmit it beacon signal. The refbox answers with a state information. If the previous robot has left the arena, one of the referees started the seconded phase while pushing a button. The ref box transmits a new state message that informs the robot about the beginning of the initialization phase. Inside the refbox a time is started, it initiates the start of the execution phase after transmitting the test parameters. During the next \todo{10 min} the robot is able to activate the external devices and to receive their status information. This phase is terminated by a second timer that alerts after 10 minutes or by an external sensing device monitoring the exit.
+Figure \ref{fig:refbox} depicts the progress of a competition run. When the robot is initialized, it starts immediately to transmit it beacon signal. The referee box answers with a state information. If the previous robot has left the arena, one of the referees started the seconded phase while pushing a button. The referee box transmits a new state message that informs the robot about the beginning of the initialization phase. Inside the referee box a time is started, it initiates the start of the execution phase after transmitting the test parameters. During the next \todo{10 min} the robot is able to activate the external devices and to receive their status information. This phase is terminated by a second timer that alerts after 10 minutes or by an external sensing device monitoring the exit.
 
 \begin{figure}
 \centering
 \input{./tikz/sequence.tikz}
-\caption{Sequence diagram of a complete competition run monitored by the refbox}
+\caption{Sequence diagram of a complete competition run monitored by the referee box}
 \label{fig:refbox}
 \end{figure}
 \par
 The TC provides a ROS and a MQTT based interface of the referee box as well as an reference implementation, that is available for all teams from January 2016.
-The publish/subscribe communication with the refbox and the external devices have to be mapped on the following topics:
+The publish/subscribe communication with the referee box and the external devices have to be mapped on the following topics:
 
 \begin{table}[h!]
 \centering
@@ -114,7 +114,7 @@ int8 NOT\_RUNNING  = 0 \newline
 int8 RUNNING      = 1   }\\\hline
  \end{tabular}
   \label{tab:RefBoxTopics}
- \caption{Refbox topics}
+ \caption{Referee box topics}
 \end{table}
 
 \begin{table}[h!]
@@ -147,18 +147,18 @@ uint8  SOUTH = 2 \newline
 uint8  NORTH = 3 \newline
 uint32  duration  }\\\hline
  \end{tabular}
- \caption{Refbox auxiliary message types \todo{can we provide a repository where the message files are stored?}}
+ \caption{Refere box auxiliary message types \todo{can we provide a repository where the message files are stored?}}
   \label{tab:RefBoxAUX}
 \end{table}
 
 Tab.~\ref{tab:RefBoxAUX} summarizes the auxiliary types embedded in
-the refbox messages. A detailed description of the refbox-API is given in the 
+the referee box messages. A detailed description of the referee box-API is given in the 
 corresponding documentation available on \todo{???????????????}. 
 
 \par
-The refbox visualizes the current state of the competition run, current time measurements, the task specification and robots position for visitors. Team information (name, affiliation, contact information) are given too in this context.
+The referee box visualizes the current state of the competition run, current time measurements, the task specification and robots position for visitors. Team information (name, affiliation, contact information) are given too in this context.
 
-\todo{NICO: add maybe some screenshots from the refbox, also make a reference to the FESTO Refbox}
+\todo{NICO: add maybe some screenshots from the referee box, also make a reference to the FESTO referee box}
 
 \section{Use of External/Control Devices}
 No external devices are allowed (e.g. remote controls) in general. Exceptions may be certain simplifications leading to reduction of points as described in Chapter 4.4, or in particular tests. All communication of the robots with external elements must be wireless. Cable connections between the robot and external devices are not allowed during competition runs.
