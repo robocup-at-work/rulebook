@@ -25,9 +25,9 @@ If not specified otherwise, the following set of scoring rules applies for each 
 Teams may use simplifications, which will result in a reduction of scores for the given run:
 
 \begin{itemize}
-	\item Use of external sensors                        −200 points
-	\item Use of other external objects (e.g. to support localization):         −100 points
-	\item Use of own loading or unloading areas:                 −200 points
+	\item Use of external sensors                        -200 points
+	\item Use of other external objects (e.g. to support localization):         -100 points
+	\item Use of own loading or unloading areas:                 -200 points
 \end{itemize}
 
 Additional simplifications are specified for individual tests. These reductions do not count as penalty points. Teams that want to make use of the simplifications above have to announce them in advance of the competition to the TC. The TC might forbid use of specific elements for simplification if these are not in the spirit of the league or may cause disproportionate advantages for a team. 
@@ -35,8 +35,8 @@ Additional simplifications are specified for individual tests. These reductions 
 Penalty points are given as follows, each time again the incident occurs:
 
 \begin{itemize}
-	\item A manipulation object is lost or placed anywhere outside of the service areas: −100 points.
-	\item Robot caused a collision with the environment: −50 points.
+	\item A manipulation object is lost or placed anywhere outside of the service areas: -100 points.
+	\item Robot caused a collision with the environment: -50 points.
 	\item Restart used: -200 points.
 \end{itemize}
 
@@ -45,6 +45,8 @@ Controlled collisions between a robot and the environment are allowed, i.e. slig
 If the projection of any part of a robot touches a barrier tape marking a virtual wall it counts as a collision. Touching or Passing a Barrier Tape when entering or exiting the arena does not count as collision.
 \par
 When an object lost contact to the robot or touches the ground, it is not considered as being carried anymore (e.g. an object falls off the gripper or from the transportation platform).
+\par
+An object is considered Grasped when it is moved out of the manipulation area (e.g. over the robot). Points or Penalty’s are Scored according to test specification.
 \par
 All teams fully complete a perfect run will receive a completion bonus of 0.75 points per second left on the run time. These points are only awarded if the run is perfect, all objectives reached without any penalties.
 \par
@@ -60,18 +62,20 @@ Each test provides a set of so-called feature variations encoding the overall va
 
 
 \subsection{Common Procedures} 
-The order in which the teams have to perform a run is determined by a draw by the Organizing Committee. The order will be made public at least one hour before slot of the particular test. A run is preceded with a 5 minutes preparation time. This time begins once the previous team has left the arena and the arena is setup (e.g. all manipulation objects are in place).
+The order in which the teams have to perform a run is determined by a draw by the Organizing Committee. The order will be made public at least one hour before slot of the particular test. A run is preceded with up to 5 minutes preparation time. This time will start as soon as the previous team has left the start zone. 
 \par
 During the preparation time the team may enter the competition area in person, but not with the robot. Entering before this time is allowed only with explicit allowance of the Organizing Committee. 
 \par
 When the preparation time ends, all team members must immediately leave the area and
-robots must be ready to start. The team has to check if the arena is setup correct (e.g. all manipulation objects are placed according to task spec, obstacles are placed correct).
+robots must be ready to start. The team has to check if the arena is setup correct (e.g. all manipulation objects are placed according to task specification, obstacles are placed correct). If the team is ready the run may start as soon as the previous team has left the arena. If the team is not ready after the preparation time has run out the run time will start, the time may be stopped as soon as the robot is connected to the RefBox and the team leader signals ok. The run time will start even if the previous team is still in the arena.
 \par
 The referees start a run by sending the start signal from the Referee Box.
 \par
 A run ends when the duration for the given test has passed, when the task has been finished by all robots, when the referees decide to stop it, or when the team leader of the team whose turn it is decides that the run can be finished earlier as no more progress is expected.
 \par
 During a run teams may only interact with the robot or enter the area if explicitly allowed by the referees. 
+\par
+If the robot at any point during the run does not show any progress for 2 minutes, the run will be aborted. This includes repeating the same behaviour and not leaving the start arena as a team might not be entirely prepared, or is having connection issues.
 \par
 After each run, the teams must leave the arena within one minute.
 
@@ -96,7 +100,7 @@ The Organizing Committee is responsible for all aspects concerning the competiti
 The Technical Committee is responsible for all aspects concerning the rules, such as compliance of the robots with rules and safety standards, the clarification of rules and resolution of any conflicts that may arise during the competition. 
 
 \subsection{Referees}
-The referees are to ensure the correct execution of the tests. They may interrupt runs if they suspect breaches of rules, see possible danger for humans or possible damages of robots or the environment. The referees are also responsible for timekeeping and recording scoring results. 
+The referees are to ensure the correct execution of the tests. They may interrupt(abort) runs if they suspect breaches of rules, see possible danger for humans or possible damages of robots or the environment. If a suspected breach of rules may be discussed after the run and cases no danger to others the run should continue, therefore the referee should  announce his suspicion as fast as possible. The referees are also responsible for timekeeping and recording scoring results. 
 
 \subsection{Meetings and Language of Communication}
 Both the TC and the OC may organize several special meetings during a competition, such as referee meetings, team leader meetings, etc. The meetings will be announced locally. It is the responsibility of the team to inform itself about the organization and scheduling of such meetings.  
@@ -109,3 +113,7 @@ The language for all communication in the league is English.
 Teams and team members are expected to maintain a friendly and cooperative atmosphere throughout a competition and contribute to a vivid work environment and to scientific exchange before, during and after a competition.
 \par
 The Technical Committee may disqualify individual team members or a whole teams during a competition for severe reasons, such as repeated breach of rules. 
+
+\subsection{Wireless LAN}
+A wireless LAN will be provided by the league. The usage of this WLAN is mandatory, any other WLAN is forbidden. The WLAN will be Dual-Band. There might be more then one WLAN (e.g. one per arena). 
+

@@ -1,0 +1,62 @@
+\section{Basic Welding Test (BWT)}
+
+\subsection{Purpose and Focus of the Test}
+The purpose of the Basic Welding Test is to demonstrate basic welding capabilities, like detecting a marker and performing spot welding. 
+\par
+The focus lies on the precision needed in many welding scenarios. After detecting the target, the target needs to be reached closely and than a laser pointer should be activated for an pre defined amount of time.
+
+\subsection{Scenario Environment}
+The arena used for this test contains basically all elements as for the Basic Navigation Test. Additionally to environmental elements (walls, service areas, floor markers, etc.), an object with spot markers (see Fig. \ref{BWT_Label}) will be added on one or more service areas. 
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\textwidth/4]{../images/BWT_Marker.jpg} 
+\caption{The Marker used to identify the welding spots. The Blue areas are not specified and may be of any color. The middle part is the spot where the welding shall be performed.}
+\label{BWT_Label}
+\end{center}
+\end{figure}
+
+
+\subsection{Task}
+A single robot is used. The robot starts at the defined start position outside the arena. The task consists of a sequence of spot welding operations. The objective is to successfully reach all spot markers and perform the spot welding operation. The task is finished once all spot markers are welded ant the robot has exited through the designated exit.
+\par
+The task specification consists of: 
+\begin{itemize}
+	\item The specification of the welding place or places (e.g. D0, S5, U2)
+	\item The number of makers (1, 2, 3)
+	\item The specification of a final place for the robot.
+\end{itemize}
+
+Two examples for a full task specification is as follows:
+\begin{itemize}
+	\item BWT\textless S1(2),S6(1),S7\textgreater 
+\end{itemize}
+
+
+\subsection{Complexity Options}
+
+So far no complexity objections exist.
+
+\subsection{Rules}
+The following rules have to be obeyed:
+
+\begin{itemize}
+\item The order in which the teams have to perform will be determined by a draw.
+\item A team has a time period defined int the instance specification.
+\item At the beginning of a team’s period, the team will get the task specification. 
+\item The team must start at in the designated start area.
+\item The laser used for the test must be of or below class 1 (acording to IEC 60825)
+\item The Spot is successfully welded if the robot has reached the spot and performed a welding operation for 3 seconds.
+\item A Welding spot is reached when the laser of the robot when activated hits the spot and the distance between either the laser of an arbitrary extension of the laser is closer then 2 cm.
+\end{itemize}
+
+
+\subsection{Scoring}
+Points are awarded as follows:
+
+\begin{itemize}
+\item 100 points are awarded for successfully performing a spot welding operation on a correct target.
+\item - 100 points are awarded for performing the welding operation or activating the laser pointer in any location other then a specified marker.
+
+\end{itemize}
+
