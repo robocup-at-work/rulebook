@@ -13,7 +13,7 @@ RoboCup@Work teams and team members are welcome to post GitHub issues for clarif
 
 To build you will need to install:
 
-$ sudo apt-get install texlive-science
+    $ sudo apt-get install texlive-science
 
 
 
