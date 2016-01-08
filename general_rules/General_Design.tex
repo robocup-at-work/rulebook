@@ -65,8 +65,9 @@ When participating in a tournament, the team may operate the robot only in their
 
 \section{Referee Box}
 The TC shall provide a referee box that supports the evaluation of the competition. It applies the time measuring, generates the tasks according to the chosen test configuration and monitors the
-competition. For this purpose each robot has to transmit a keep-alive signal every second during all phases (initialization, preparation, game, finish). The referee box:
+competition. For this purpose each robot has to transmit a keep-alive signal every second during all phases (initialization, preparation, game, finish). 
 
+The referee box
 \begin{enumerate}
   \item announces the start of the preparation time,
   \item communicates the task specifications,
@@ -75,7 +76,7 @@ competition. For this purpose each robot has to transmit a keep-alive signal eve
   \item aborts the run in case of a time lapse.
 \end{enumerate}
 
-Figure \ref{fig:refbox} depicts the progress of a competition run. When the robot is initialized, it starts immediately to transmit it beacon signal. The referee box answers with a state information. If the previous robot has left the arena, one of the referees started the seconded phase while pushing a button. The referee box transmits a new state message that informs the robot about the beginning of the initialization phase. Inside the referee box a time is started, it initiates the start of the execution phase after transmitting the test parameters. During the next \todo{10 min} the robot is able to activate the external devices and to receive their status information. This phase is terminated by a second timer that alerts after 10 minutes or by an external sensing device monitoring the exit.
+Figure \ref{fig:refbox} depicts the progress of a competition run. When the robot is initialized, it starts immediately to transmit its beacon signal. The referee box answers with a state information. If the previous robot has left the arena, one of the referees starts the seconded phase by pushing a button. The referee box transmits a new state message that informs the robot about the beginning of the initialization phase. Inside the referee box a timer is started which initiates the start of the execution phase after transmitting the test parameters. During the next \todo{10 min} the robot is able to activate the external devices and to receive their status information. This phase is terminated by a second timer that alerts after 10 minutes or by an external sensing device monitoring the exit.
 
 \begin{figure}
 \centering
@@ -151,7 +152,7 @@ uint32  duration  }\\\hline
   \label{tab:RefBoxAUX}
 \end{table}
 
-Tab.~\ref{tab:RefBoxAUX} summarizes the auxiliary types embedded in
+Table~\ref{tab:RefBoxAUX} summarizes the auxiliary types embedded in
 the referee box messages. A detailed description of the referee box-API is given in the 
 corresponding documentation available on \todo{???????????????}. 
 
@@ -171,12 +172,14 @@ It must be clear at all times that no manual or remote control is exerted to inf
 \label{sec:ArenaDesign}
 \subsection{Size of the Arena}
 
-The size of a competition arena is a rectangular area no less than 2 m x 4 m and no more than 10 m x 12 m.
-An orientation is always associated with the arena. An arbitrary wall is designated as “North” orientation, and the wall to its right is designated as “East” and so on. The orientations will be assigned by the local league chair or/and the TC as soon as the arena is built up. Figure 5.1 shows one possible example of an arena configuration.
+The size of a competition arena is a rectangular area not lesser than 2 m x 4 m and not more than 10 m x 12 m.
+An orientation is always associated with the arena. An arbitrary wall is designated as “North” orientation, and the wall to its right is designated as “East” and so on. The orientations will be assigned by the local league chair or/and the TC as soon as the arena is built up. Figure~\ref{fig:example_arena} shows one possible example of an arena configuration.
 
 \begin{figure}
+
 \includegraphics[width= \textwidth ]{../images/example_arena.jpg}
-\caption{An exemplary setup for a \RCAW environment}
+\caption{An exemplary setup for a \RCAW environment.}
+\label{fig:example_arena}
 \end{figure}
 
 \subsection{Floor}
@@ -201,7 +204,7 @@ The floor is made of some firm material. Examples include floors made of concret
 \end{figure}
 
 \subsection{Walls}
-The competition arena is partly surrounded by walls. The height of the walls is no less than 20 cm and no more than 40 cm. One or more gates may be foreseen, where robots can enter or leave the arena. Gates may or may not be closable. The walls have a mostly uniform color.
+The competition arena is partially surrounded by walls. The height of the walls is not lesser than 20 cm and not more than 40 cm. One or more gates may be foreseen, where robots can enter or leave the arena. Gates may or may not be closable. The walls have a mostly uniform color.\note{It might be that for RC'16 some advertisement or logos of sponsor will be stuck to some of the walls. (Fred)}
 
 \subsection{Service Areas}
 Arenas contain one or more service areas, which have specific purposes for a particular test. Examples include loading and unloading areas, conveyor belts, rotators, storage areas, etc. Service areas may contain specific environment objects, such as racks, shelves, etc.
@@ -213,10 +216,10 @@ Service areas, e.g. loading and unloading areas, may foresee the use of racks. O
 Service areas may foresee the use of shelves and shelf units. Objects to be delivered or removed from shelves have to be placed or picked sideways. The height of the shelves should be not lesser than 5 cm and not more than 40 cm. The color of the shelf surface is white, unless a test specifies a different color. The shelf surface may be specially designed in order to serve specific purposes, e.g. holding objects.\note{Should we really mention a color here (i.e. white)? Currently the top of the workstations and shelves is some kind of gray. (Fred)}
 
 \subsection{Places}
-An arena designed for a particular test may foresee the definition of a set of designated places, which are locations in the arena that can be referred to by a unique, symbolic identifier. These identifiers are used e.g. for task specification, possibly in conjunction with other information, such as an orientation. Places may be marked by markers of some sort.
+An arena designed for a particular test may foresee the definition of a set of designated places, which are locations in the arena that can be referred to by a unique, symbolic identifier. These identifiers are used e.g. for the task specification, possibly in conjunction with other information, such as an orientation. Places may be marked by markers of some sort.
 
 \subsection{Obstacles}
-An arena defined for a particular test may foresee the use of obstacles. Obstacles may by passive (i.e. not able to relocate by themselves) or active (e.g. other robots). The size of obstacles should be no less than 10 cm x 10 cm x 5 cm; there is no upper bound on the size. The details about the dynamic objects are not known before the competition and will be chosen by the OC on-site. Examples for obstacles are trash bins, boxes, big aluminium profiles or even other robots.
+An arena defined for a particular test may foresee the use of obstacles. Obstacles may by passive (i.e. not able to relocate by themselves) or active (e.g. other robots). The size of obstacles should be not lesser than 10 cm x 10 cm x 5 cm; there is no upper bound on the size. The details about the dynamic objects are not known before the competition and will be chosen by the OC on-site. Examples for obstacles are trash bins, boxes, big aluminium profiles or even other robots.
 
 \subsection{Floor Markers}
 The arena used for a particular test may foresee the use of floor markers for designated places. The design of these floor markers are rectangular black-and-white images as used by the ARToolKit library:
@@ -234,20 +237,20 @@ The black inner square of the markers is at least 8 cm x 8 cm large with an addi
 
 
 \subsection{Barrier Tape as Virtual Walls}
-The arena may include virtual walls marked by either striped yellow and black or white and red barrier tape on the floor (see Figure \ref{fig:barrier_tape}). If any part of a robot passes over such a tape it is considered like a collision with a normal wall.
+The arena may include virtual walls marked by either striped yellow/black or white/red barrier tape on the floor (see Figure \ref{fig:barrier_tape}). If any part of a robot passes over such a tape it is considered as a collision with a usual wall.
 
 \begin{figure}
 \centering
 \includegraphics[width= 0.4\textwidth ]{../images/example_barrier_tape.jpg}
-\caption{Example of Barrier Tape.}
+\caption{Example of barrier tape.}
 \label{fig:barrier_tape}
 \end{figure}
 
 \subsection{Entrance and Exit}
-If possible the Arena should have one entrance and one exit, which are equipped with Laser barriers. These barriers are used for timekeeping and will be used by the Referee Box.
+If possible, the arena should have one entrance and one exit, which are equipped with laser barriers. These barriers are used for timekeeping by the referee box.
 
 \subsection{Setup of the Arena}
-The arena must be surrounded by either walls or barrier tape. The only exceptions are the Entrance and Exit. There must be a route to all places and markers relevant for a test which has a minimum width of 55 cm..
+The arena must be surrounded by either walls or barrier tape. The only exceptions are the entrance and exit. There must be a route to all places and markers relevant for a test which has a minimum width of 55 cm.
 
 \section{Design of Manipulation Tasks}
 \label{sec:ManipulationTasks}
