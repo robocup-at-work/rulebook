@@ -1,7 +1,5 @@
-RuleBook
+Rulebook for RoboCup@Work
 ========
-
-Rulebook for RoboCup@Work 
 
 The process of altering the Rules for the Roboup@Work league is open to every one. Please feel free to contact the TC or the mailing list
 
