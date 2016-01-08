@@ -259,9 +259,9 @@ The arena must be surrounded by either walls or barrier tape. The only exception
 \label{sec:ManipulationTasks}
 
 \subsection{Manipulation Objects}
-The manipulation objects in \RCAW shall include a wide range of objects relevant in industrial applications of robotics and eventually cover any raw material, semi-finished parts, and finished parts and products as well as tools and possibly operating materials required for manufacturing processes.
+The manipulation objects in \RCAW shall include a wide range of objects relevant in industrial applications of robotics\revcha{ and}{. They} eventually cover any raw material, (semi-)finished parts or products as well as tools and possibly operating materials required for manufacturing processes.
 \par
-The intention is to start with a simple set of objects of different shapes and colors and to widen the spectrum every year in at least one aspect. The initial set of objects includes basic and standard screws and nuts in various sizes and weight as shown in the following table:
+The intention is to start with a simple set of objects of different shapes and colors. Every year, the spectrum shall then be widen in at least one aspect. The initial set of objects includes basic standard screws and nuts in various sizes and weights as shown in Table~\ref{tab:manipulation_objects} and Table~\ref{tab:manipulation_objects_rockin}. 
 
 \newcommand{\imageView}[1]{\includegraphics[width=2cm, valign=c]{#1}}
 
@@ -363,8 +363,7 @@ Object & Symbolic Description & Weight & Details \\
 \end{table}
 }
 
-
-Objects of one kind can slightly vary e.g. considering surface. Teams can ask the TC for allowance to use objects brought by the team to a competition, provided they do not differ in a relevant way from the default objects.
+Objects of one kind can slightly vary e.g. considering the surface. Teams can ask the TC for allowance to use objects brought by the team to a competition, provided they do not differ in a relevant way from the default objects.\note{Sorry, but to we really want to allow this? Teams should be able to cope with such kind of small differences. All teams should use exactly the same objects. In @Home teams even see the objects just at the competition and need to train them on-site. (Fred)}
 
 \subsection{Manipulation Zone}
 
@@ -372,10 +371,10 @@ Objects of one kind can slightly vary e.g. considering surface. Teams can ask th
 For the placement of manipulation objects the following terms are used:
 
 \begin{itemize}
-\item position: point within 2D coordinate system of service area
-\item rotation: rotation around vertical axis of service area
-\item orientation: rotation around horizontal axes of service area, i.e. whether the object is standing upright or lying on its side.
-\item pose: combination of position and rotation
+\item position: point within 2D coordinate system of a service area
+\item rotation: rotation around vertical axis of a service area\note{From a geometric point of view the rotation is already part of the orientation. (Fred)}
+\item orientation: rotation around horizontal axes of a service area, i.e. whether the object is standing upright or lying on its side.
+\item pose: combination of position\revcha{ and rotation}{, rotation and orientation}
 \end{itemize}
 
 \subsection{Grasping objects}
