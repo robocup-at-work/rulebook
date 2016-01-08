@@ -263,45 +263,57 @@ The manipulation objects in \RCAW shall include a wide range of objects relevant
 \par
 The intention is to start with a simple set of objects of different shapes and colors and to widen the spectrum every year in at least one aspect. The initial set of objects includes basic and standard screws and nuts in various sizes and weight as shown in the following table:
 
+\newcommand{\imageView}[1]{\includegraphics[width=2cm, valign=c]{#1}}
 
-\newlength{\myColumWidth}
-\setlength{\myColumWidth}{2cm}
-\newcommand{\imageView}[1]{\raisebox{-.5\height}[1.4cm][1.3cm]{\includegraphics[width=\myColumWidth]{#1}}}
 
+
+{
+\newcommand{\rowpadding}{0.4cm}
+\setlength\extrarowheight{\rowpadding}
 \begin{table}[p]
-\begin{tabular}{|c|c|c|p{5cm}|}
+\begin{tabular}{|c|c|c|m{6cm}|}
 \hline
 Object & Symbolic Description & Weight & Details \\
 \hline
-\imageView{../images/F20_20_B.jpg} & F20\_20\_B & 49g & Height: 20 mm \newline
+\imageView{../images/F20_20_B.jpg} & F20\_20\_B & 49 g & Small aluminium profile (black)\newline
+ Height: 20 mm \newline
  Width: 20 mm \newline
- Length: 100 mm \\
+ Length: 100 mm \\ [\rowpadding]
 \hline
-\imageView{../images/F20_20_G.jpg} & F20\_20\_G & 49g & Height: 20 mm \newline
-Width: 20 mm \newline
-Length: 100 mm \\
+\imageView{../images/F20_20_G.jpg} & F20\_20\_G & 49 g & Small aluminium profile (gray)\newline
+ Height: 20 mm \newline
+ Width: 20 mm \newline
+ Length: 100 mm \\ [\rowpadding]
 \hline
-\imageView{../images/S40_40_B.jpg} & S40\_40\_B & 186g & Height: 40 mm \newline
-Width: 40 mm \newline
-Length: 100 mm \\
+\imageView{../images/S40_40_B.jpg} & S40\_40\_B & 186 g & Big aluminium profile (black)\newline
+ Height: 40 mm \newline
+ Width: 40 mm \newline
+ Length: 100 mm \\ [\rowpadding]
 \hline
-\imageView{../images/S40_40_G.jpg} & S40\_40\_G & 186g & Height: 40 mm \newline
-Width: 40 mm \newline
-Length: 100 mm \\
+\imageView{../images/S40_40_G.jpg} & S40\_40\_G & 186 g & Big aluminium profile (gray)\newline
+ Height: 40 mm \newline
+ Width: 40 mm \newline
+ Length: 100 mm \\ [\rowpadding]
 \hline
-\imageView{../images/M20_100.jpg} & M20\_100 & 296g & ISO 4014 \newline
-M20 \newline
-Length: 100 mm \\
+\imageView{../images/M20_100.jpg} & M20\_100 & 296 g & Screw\newline
+ ISO 4014 \newline
+ M20 \newline
+ Length: 100 mm \\ [\rowpadding]
 \hline
-\imageView{../images/M20.jpg} & M20 & 56g & ISO 4032 \newline M20 \\
+\imageView{../images/M20.jpg} & M20 & 56 g & Small nut\newline
+ ISO 4032 \newline 
+ M20 \\ [\rowpadding]
 \hline
-\imageView{../images/M30.jpg} & M30 & 217g & ISO 4032 \newline M30 \\
+\imageView{../images/M30.jpg} & M30 & 217 g & Big nut\newline
+ ISO 4032 \newline 
+ M30 \\ [\rowpadding]
 \hline
-\imageView{../images/R20.jpg} & R20 & 14g & Inner diameter: 20 mm \newline
-Outer diameter: 30 mm \newline
-Length: 45 mm \\
+\imageView{../images/R20.jpg} & R20 & 14 g & Plastic tube\newline
+ Inner diameter: 20 mm \newline
+ Outer diameter: 30 mm \newline
+ Length: 45 mm \\ [\rowpadding]
 \hline
-%\imageView{../images/V20.jpg} & V20 & 14g & Inner diameter: 20 mm \newline
+%\imageView{../images/V20.jpg} & V20 & 14 g & Inner diameter: 20 mm \newline
 %Outer diameter: 30 mm \newline
 %Length: 45 mm \\
 %\hline
@@ -312,43 +324,44 @@ Length: 45 mm \\
 
 
 \begin{table}[p]
-\begin{tabular}{|c|c|c|p{5cm}|}
+\begin{tabular}{|c|c|c|m{6cm}|}
 \hline
 Object & Symbolic Description & Weight & Details \\
 \hline
 
-\imageView{../images/bearingBoxA.jpg} & Bearing\_Box & 102g & Bearing Box\newline
-Height: 25 mm \newline
-Width: 45 mm \newline
-Length: 50 mm \newline
-Inner diameter: 32 mm \\
+\imageView{../images/bearingBoxA.jpg} & Bearing\_Box & 102 g & Bearing box\newline
+ Height: 25 mm \newline
+ Width: 45 mm \newline
+ Length: 50 mm \newline
+ Inner diameter: 32 mm \\ [\rowpadding]
 \hline
 
-\imageView{../images/bearing.jpg} & Bearing & 42g & Bearing\newline
-Height: 13 mm \newline
-Inner diameter: 15 mm \newline
-Outer diameter: 32 mm \\
+\imageView{../images/bearing.jpg} & Bearing & 42 g & Bearing\newline
+ Height: 13 mm \newline
+ Inner diameter: 15 mm \newline
+ Outer diameter: 32 mm \\ [\rowpadding]
 \hline
 
-\imageView{../images/axis.jpg} & Axis & 40g & Axis\newline
-Diameter: 27 mm \newline
-Length: 96 mm \\
+\imageView{../images/axis.jpg} & Axis & 40 g & Axis\newline
+ Diameter: 27 mm \newline
+ Length: 96 mm \\ [\rowpadding]
 \hline
 
-\imageView{../images/distanceTube.jpg} & Distance\_Tube & 5g & Distance Tube\newline
-Height: 10 mm \newline
-Inner diameter: 28 mm \newline
-Outer diameter: 32 mm \\
+\imageView{../images/distanceTube.jpg} & Distance\_Tube & 5 g & Distance tube\newline
+ Height: 10 mm \newline
+ Inner diameter: 28 mm \newline
+ Outer diameter: 32 mm \\ [\rowpadding]
 \hline
 
-\imageView{../images/motor.jpg} & Motor & 20g & Motor\newline
-Diameter: 42 mm \newline
-Length: 87 mm \\
+\imageView{../images/motor.jpg} & Motor & 20 g & Motor\newline
+ Diameter: 42 mm \newline
+ Length: 87 mm \\ [\rowpadding]
 \hline
 \end{tabular}
 \caption{RoCKIn...}
 \label{tab:manipulation_objects_rockin}
 \end{table}
+}
 
 
 Objects of one kind can slightly vary e.g. considering surface. Teams can ask the TC for allowance to use objects brought by the team to a competition, provided they do not differ in a relevant way from the default objects.
