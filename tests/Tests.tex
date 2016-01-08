@@ -1,24 +1,147 @@
-The actual competition tasks are defined as a set of so-called tests. A competition is organized in several stages. For each stage, the Technical Committee will select a set of tests to be performed by each team.
-\par
-A possible stage design would be as follows:
+% !TEX root = ../Rulebook.tex
 
-Stage 1:
-\begin{itemize}
-	\item BNT: Basic Navigation Test
-	\item BMT: Basic Manipulation Test
-	\item BTT: Basic Transportation Test
-\end{itemize}
+The actual competition contains a number runs combining a set of so-called
+test instances. These tasks combining two dimensions, a test scenario and a
+set of parameters in order to vary its complexity.
+
+The following sections explain the individual tests and summarize the aspects of
+complexity. Afterward the in instances are defined. These set of instances can
+be combined by the OC in order to define the specific competition runs.
+
+Note that not necessarily the most complex tests have to be in the finals;
+it might make more sense to use them as early-bird benchmark challenges for
+things most teams are not yet able to solve. Tests for the finals should be
+tests which can be solved rather well by all finalists, but with different
+performance, in order to increase the attractiveness of the event. The ability
+of a team to solve more complex tests should be reflected by the prior score
+the team takes into the finals
+
+\section{Description of the test scenarios}
+
+\input{./tests/BNT}
+
+\input{./tests/BMT}
+
+\input{./tests/BTT}
+
+\input{./tests/PPT}
+
+\input{./tests/CBT}
+
+\section{Task Variations}
+
+The different optional parameters and configurations for each task are 
+mentioned in Sec.~\ref{sec:ArenaDesign} and \ref{sec:ManipulationTasks}. 
+Fig.~\ref{fig:complexityTree} summarizes the possible variations and 
+emphasizes aspects that may chosen by the team (gray), OC (white) or both 
+(gray/white).
+
+\begin{figure}[ht]
+\centering
+\input{./tikz/complexityTree.tikz}
+\caption{Aspects of complexity that may integrated in a specific instance of a test}
+\label{fig:complexityTree}
+\end{figure}
 
 
-Stage 2:
-\begin{itemize}
-	\item CBT: Conveyor Belt Test
-	\item PPT: Precision Placement Test
-\end{itemize}
+\section{Instances}
 
-Finals: 
-\begin{itemize}
-	\item A combination of tests from previous stages
-\end{itemize}
+The following instances may occur as an instance the run. Please beware, that
+combinations are possible!
 
-Note that not necessarily the most complex tests have to be in the finals; it might make more sense to use them as early-bird benchmark challenges for things most teams are not yet able to solve. Tests for the finals should be tests which can be solved rather well by all finalists, but with different performance, in order to increase the attractiveness of the event. The ability of a team to solve more complex tests should be reflected by the prior score the team takes into the finals
+
+
+
+%\setlength{\tabcolsep}{4.75pt}
+\renewcommand{\arraystretch}{1.1}
+\newcommand{\R}[2]{
+	\begin{turn}{90}
+		\begin{minipage}[][1em][c]{#2}
+		#1
+	  \end{minipage}
+	\end{turn}
+}
+
+\newcommand{\cir}[1]{\hspace{0.5em}\unitlength1ex\begin{picture}(2.8,2.8)%
+\put(0.75,0.75){\circle{2.8}}\put(0.75,0.75){\makebox(0,0){#1}}\end{picture}}
+\newcommand{\Y}{{\tiny \CIRCLE}}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\begin{landscape}
+\begin{table}[h!]
+ \definecolor{headlineColor}{rgb}{.7,.7,.7}
+ \definecolor{sectionColor}{rgb}{.4,.4,.4}
+ \centering
+ \begin{tabular}{|l|l|l|l*{10}{|P{1cm}}|}
+   \hhline{~~~~----------}
+   \multicolumn{4}{l|}{ } &  \multicolumn{10}{c|}{ Instances}\\
+   \hhline{~~~~----------}
+   \multicolumn{4}{l|}{ }          &\cir{1}&\cir{2}&\cir{3}&\cir{4}&\cir{5}&\cir{6}&\cir{7}&\cir{8}&\cir{9}&\cir{10}\\
+   \multicolumn{4}{r|}{     }      & BNT   & BMT   & BMT   & BTT   &  BTT  &       &  PPT  &       &       &       \\
+   \hline\hline
+    \multirow{27}{0.5cm}{\R{\centering Manipulation }{4cm}}
+     & \multirow{7}{0.5cm}{\R{\centering Objects }{2.0cm}}
+     &      \RCAW    & Team &       &   \Y  &       &       &       &       &       &       &       &       \\
+     &    &                 & OC   &       &       &       &       &       &       &       &       &       &       \\
+     &    &  RoCKIn         & Team &       &       &       &       &       &       &       &       &       &       \\
+     &    &                 & OC   &       &       &       &       &       &       &       &       &       &       \\
+     &    & arbitrary       & OC   &       &       &       &       &       &       &       &       &       &       \\
+     &    & number          & Team &       &   5   &       &       &       &       &       &       &       &       \\
+     &    &                 & OC   &       &       &       &       &       &       &       &       &       &       \\
+     \hhline{~-------------}
+     & \multirow{10}{0.5cm}{\R{\centering Grasping }{1.9cm}}
+         & Height           & -    &       &  10cm &       &       &       &       &       &       &       &       \\
+      &  & Shelf unit       & -    &       &       &       &       &       &       &       &       &       &       \\
+      &  & Position         & Team &       &  \Y   &       &       &       &       &       &       &       &       \\
+      &  &                  & OC   &       &       &       &       &       &       &       &       &       &       \\
+	    &  & Rotation         & Team &       &       &       &       &       &       &       &       &       &       \\
+      &  &                  & OC   &       &       &       &       &       &       &       &       &       &       \\
+	    &  & Orientation      & Team &       &       &       &       &       &       &       &       &       &       \\
+      &  &                  & OC   &       &       &       &       &       &       &       &       &       &       \\
+      &  & Red container    & -    &       &       &       &       &       &       &       &       &       &       \\
+      &  & Blue container   & -    &       &       &       &       &       &       &       &       &       &       \\
+      \hhline{~-------------}
+      & \multirow{4}{0.5cm}{\R{\centering Putting down }{2cm}}
+         & Height           & -    &       & 10cm  &       &       &       &       &       &       &       &       \\
+      &  & Shelf unit       & -    &       &       &       &       &       &       &       &       &       &       \\
+      &  & Red container    & -    &       &       &       &       &       &       &       &       &       &       \\
+      &  & Blue container   & -    &       &       &       &       &       &       &       &       &       &       \\
+    \hline
+    \multirow{3}{0.5cm}{\R{\centering Arena }{1.5cm}}
+     & \multirow{3}{0.5cm}{\R{\centering Objects }{1.5cm}}
+     &     Static obstacles & OC   &  \Y   &  \Y   &       &       &       &       &       &       &       &       \\
+     &   & Dynamic obstacles& -    &       &  \Y   &       &       &       &       &       &       &       &       \\
+     &   & Barrier tape     & OC   &  \Y   &       &       &       &       &       &       &       &       &       \\ 
+		\hline
+		 \multicolumn{3}{|l|}{Duration} 
+		                        & OC   & 3min  &  5min &       &       &       &       &       &       &       &       \\
+		\hline
+ \end{tabular}
+ \label{tab:Instances}
+ \caption{Instances of the \RCAW 2016 competition (The OC will chose the runs among this selection)}
+\end{table}
+\end{landscape}
+
+
+\begin{landscape}
+\begin{table}[h!]
+ \centering
+ \begin{tabular}{|p{5cm}*{10}{|P{1cm}}|}
+   \hhline{~----------}
+   \multicolumn{1}{l|}{ } &  \multicolumn{10}{c|}{ Instances}\\
+   \hhline{~----------}
+   \multicolumn{1}{l|}{ }          &\cir{1}&\cir{2}&\cir{3}&\cir{4}&\cir{5}&\cir{6}&\cir{7}&\cir{8}&\cir{9}&\cir{10}\\
+   \multicolumn{1}{r|}{     }      & BNT   & BMT   & BMT   & BTT   &  BTT  &       &  PPT  &       &       &       \\
+   \hline\hline
+	correct destinations reached    &  50    &       &       &       &       &       &       &       &       &       \\
+	correct object identification   &        &       &       &       &       &       &       &       &       &       \\
+  correct object manipulation     &        &  50   &  70   & ...   &       &       &       &       &       &       \\ 
+	completing whole task           &  50    &  100  &  100  & ...   &       &       &       &       &       &       \\ 
+	fastest run bonus               &  50    &  100  &  100  & ...   &       &       &       &       &       &       \\ \hline
+	maximum attainable points       &        &       &       &       &       &       &       &       &       &       \\ \hline
+		\hline
+ \end{tabular}
+ \label{tab:Instances}
+ \caption{Instances of the \RCAW 2016 competition (The OC will chose the runs among this selection)}
+\end{table}
+\end{landscape}

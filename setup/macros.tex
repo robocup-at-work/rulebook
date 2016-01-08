@@ -2,7 +2,7 @@
 %%
 %%          $Id: macros.tex 399 2013-02-14 20:24:02Z holz $
 %%    author(s): RoboCupAtHome Technical Committee(s)
-%%  description: Macros for the RoboCupAtHome rulebook
+%%  description: Macros for the RoboCupAtWork rulebook
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -11,17 +11,8 @@
 
 \newcommand{\rulebookVersion}{\STATE\ version for RoboCup \YEAR}
 
-\def\RoboCup{{\textsc{RoboCup}}}
-\def\Robocup{{\textsc{RoboCup}}}
-\def\robocup{{\textsc{RoboCup}}}
-\def\AtHome{{\textsc{RoboCup@Home}}}
-\def\MSL{\textsc{Middle Size League}}
-\def\MS{{\textsc{Middle Size}}}
-\def\SSL{\textsc{Soccer Simulation League}}
-\def\SS{\textsc{Soccer Simulation}}
-
-\def\TC{technical committee (TC)}
-\def\OC{organizing committee (OC)}
+\def\RC{RoboCup\xspace}
+\def\RCAW{RoboCup@Work\xspace}
 
 \renewcommand{\labelenumi}{\arabic{enumi}.}
 \renewcommand{\labelenumii}{\labelenumi\arabic{enumii}.}
@@ -38,12 +29,16 @@
 \newcommand{\TODO}[1]{\textbf{\it\color{red}{TODO:\\}#1\color{black}}}
 \newcommand{\chk}[1]{\textbf{\color{red}#1\color{black}}}
 
+\newcommand{\revadd}[1]{\textcolor{blue}{#1}}
+\newcommand{\revdel}[1]{\textcolor{red}{\sout{#1}}}
+\newcommand{\revcha}[2]{\revdel{#1}\revadd{#2}}
+
 \newcommand{\reworkon}{\marginpar{\raggedright\color{red}{$\downarrow$rework}\color{black}}}
 \newcommand{\reworkoff}{\marginpar{\raggedright\color{red}{$\uparrow$rework}\color{black}}}
 
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%  site notes/margin notes
-\def\note#1{\marginpar{\raggedright\tiny#1}}
+\def\note#1{\marginpar{\raggedright\tiny\color{blue}#1}}
 \def\mpar#1{\marginpar{\raggedright\tiny#1}}
 \def\rand#1{\marginpar{\raggedright\tiny#1}}
 \setlength{\marginparwidth}{2cm}
