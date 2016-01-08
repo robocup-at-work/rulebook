@@ -1,7 +1,7 @@
 % !TEX root = ../Rulebook.tex
 
 Each of the particular tests defined later in this document may define its own scenario. In this document, a scenario consists of the following elements:
-the environment
+\revdel{the environment}
 
 \begin{itemize}
 	\item the objects that affect navigation
@@ -61,7 +61,7 @@ In general, all robots shall be operated with maximum safety in mind. Any robot 
 \par
 All robots must have a mechanical mechanism for immediately stopping the robot in cases of emergency. This mechanism must be clearly visible and easily accessible. The OC may request the proof of a robot’s safety (e.g. the correct operation of an emergency stop) anytime during the tournament and exclude teams that cannot satisfy safety requirements.
 \par
-When participating in a tournament, the team may operate the robot only in their own team area, in the arenas provided (possibly constrained by a schedule assigning periods of time for exclusive use of the arena by a team or a group of teams), and in any other areas designated by the organizers for robot operation. Any operation of robots outside of these areas, e.g. in public areas or emergency paths, require prior permission by the OC.
+When participating in a tournament, the team may operate the robot only in their own team area, in the arenas provided \revdel{(possibly constrained by a schedule assigning periods of time for exclusive use of the arena by a team or a group of teams)}, and in any other areas designated by the organizers for robot operation. Any operation of robots outside of these areas, e.g. in public areas or emergency paths, require prior permission by the OC.
 
 \section{Referee Box}
 The TC shall provide a referee box that supports the evaluation of the competition. It applies the time measuring, generates the tasks according to the chosen test configuration and monitors the
@@ -131,7 +131,7 @@ uint8 M20\_100  = 4 \newline
 uint8 M20      = 5 \newline
 uint8 M30      = 6 \newline
 uint8 R20      = 7 \newline
-uint8 V20      = 8 \newline
+\revdel{uint8 V20      = 8} \newline
 string destination }\\ \hline
  {\tt BMT} &  {\tt string   startplace \newline
 string[] pickObjects \newline
@@ -147,7 +147,7 @@ uint8  SOUTH = 2 \newline
 uint8  NORTH = 3 \newline
 uint32  duration  }\\\hline
  \end{tabular}
- \caption{Refere box auxiliary message types \todo{can we provide a repository where the message files are stored?}}
+ \caption{Refere box auxiliary message types \todo{can we provide a repository where the message files are stored? And make it consistent with items in Table \ref{tab:manipulation_objects} and \ref{tab:manipulation_objects_rockin}. And add the missing test like PPT, CBT, etc.}}
   \label{tab:RefBoxAUX}
 \end{table}
 
@@ -156,12 +156,12 @@ the referee box messages. A detailed description of the referee box-API is given
 corresponding documentation available on \todo{???????????????}. 
 
 \par
-The referee box visualizes the current state of the competition run, current time measurements, the task specification and robots position for visitors. Team information (name, affiliation, contact information) are given too in this context.
+The referee box visualizes the current state of the competition run, \revdel{current} time measurements, the task specification and robot positions for visitors. Team information (name, affiliation, contact information) are given too in this context.
 
 \todo{NICO: add maybe some screenshots from the referee box, also make a reference to the FESTO referee box}
 
 \section{Use of External/Control Devices}
-No external devices are allowed (e.g. remote controls) in general. Exceptions may be certain simplifications leading to reduction of points as described in Chapter 4.4, or in particular tests. All communication of the robots with external elements must be wireless. Cable connections between the robot and external devices are not allowed during competition runs.
+No external devices are allowed (e.g. remote controls) in general. Exceptions may be certain simplifications leading to reduction of points as described in \revcha{Chapter}{Section}~\ref{ssec:ScoringAndRanking}, or in particular tests. All communication of the robots with external elements must be wireless. Cable connections between the robot and external devices are not allowed during competition runs.
 \par
 %  It is possible for the TC to choose an alternative referee box software, or to allow teams to use their own referee box. This must be announced before the tournament starts.
 A team may set up an additional external computer to monitor the operation of their robot(s) during a run. This monitoring system must be designed such that no manual interaction through keyboard, mouse, or any other input device is required during a run. Team members must keep their hands off the keyboards and mice of all their computers during a run.
@@ -207,10 +207,10 @@ The competition arena is partly surrounded by walls. The height of the walls is 
 Arenas contain one or more service areas, which have specific purposes for a particular test. Examples include loading and unloading areas, conveyor belts, rotators, storage areas, etc. Service areas may contain specific environment objects, such as racks, shelves, etc.
 
 \subsection{Racks}
-Service areas, e.g. loading and unloading areas, may foresee the use of racks. Objects to be delivered or removed from racks have to be placed or picked up from the top. The height of the racks should be no less than 5 cm and no more than 40 cm. The color for the top surface of racks is white, unless a test specifies a different color. The top surface of the rack may be specially designed in order to serve specific purposes, e.g. holding objects.
+Service areas, e.g. loading and unloading areas, may foresee the use of racks. Objects to be delivered or removed from racks have to be placed or picked up from the top. The height of the racks should be not lesser than 5 cm and not more than 40 cm. The color for the top surface of racks is white, unless a test specifies a different color. The top surface of the rack may be specially designed in order to serve specific purposes, e.g. holding objects.\note{Should we really mention a color here (i.e. white)? Currently the top of the workstations and shelves is some kind of gray. (Fred)}
 
 \subsection{Shelves}
-Service areas may foresee the use of shelves and shelf units. Objects to be delivered or removed from shelves have to be placed or picked sideways. The height of the shelves should be no less than 5 cm and no more than 40 cm. The color of the shelf surface is white, unless a test specifies a different color. The shelf surface may be specially designed in order to serve specific purposes, e.g. holding objects.
+Service areas may foresee the use of shelves and shelf units. Objects to be delivered or removed from shelves have to be placed or picked sideways. The height of the shelves should be not lesser than 5 cm and not more than 40 cm. The color of the shelf surface is white, unless a test specifies a different color. The shelf surface may be specially designed in order to serve specific purposes, e.g. holding objects.\note{Should we really mention a color here (i.e. white)? Currently the top of the workstations and shelves is some kind of gray. (Fred)}
 
 \subsection{Places}
 An arena designed for a particular test may foresee the definition of a set of designated places, which are locations in the arena that can be referred to by a unique, symbolic identifier. These identifiers are used e.g. for task specification, possibly in conjunction with other information, such as an orientation. Places may be marked by markers of some sort.
