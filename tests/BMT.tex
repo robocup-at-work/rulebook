@@ -7,7 +7,7 @@ The purpose of the \iaterm{Basic Manipulation Test}{BMT} is to demonstrate basic
 \par
 The focus is on the manipulation and on demonstrating safe and robust grasping and placing of objects of different size and shape. Therefore, only minimal movement of the robot is required.
 \par
-Some minor movement is intentionally designed into this test in order to force the teams to do dynamic assessment of the situation (e.g. estimating positions of manipulation objects, determining grasp positions, etc.) and to avoid that solutions depending on completely known initial situations and well-calibrated systems are possible.
+Some minor movement is intentionally designed into this test in order to force the teams to perform dynamic assessment of the situation (e.g. estimating positions of manipulation objects, determining grasp positions, etc.) and to avoid that solutions depending on completely known initial situations and well-calibrated systems are possible.
 
 \paragraph{Scenario Environment}
 The arena used for this test contains basically all elements as for the Basic Navigation Test. Additionally to environmental elements (walls, service areas, floor markers, etc.), different manipulatable objects will be placed on the service areas.
@@ -23,16 +23,19 @@ The task specification consists of:
 	\item The specification of the initial place (e.g. D0, S5, U2)
 	\item A source location, given as place (any one)
 	\item A destination location, given as place (any one, but nearby the source location)
-The specification of a final place for the robot (which does not need to be reached)
+	\item \revadd{A configuration in which the objects need to be placed at the destination service area}
+	\item \revadd{A list of objects to manipulated from the source to the destination service area}
+	\item The specification of a final place for the robot (which does not need to be reached)
 \end{itemize}
 
-For now, in the competitions only the line is just as possible configuration:
+For now, only the \emph{line} is a possible configuration in the competition:
+\begin{center}
+	line(\textless sequence of objects\textgreater )
+\end{center}
 \par
-Line( \textless sequence of objects\textgreater )
-\par
-Further configurations may be specified in the future. Note, that the pose and orientation of each object in the destination service area is left unspecified and can be chosen by the robot. That means also objects don’t have to be put in a line.
+Further configurations may be specified in future. Note, that the pose \revdel{and orientation} of each object in the destination service area is left unspecified and can be chosen by the robot, i.e. the objects do not need to be put in a line.
 
-Two examples for a full task specification is as follows:
+Two examples for a full task specification are as follows:
 \begin{itemize}
 	\item BMT\textless S6,S6,S7,line(V20,R20,F20\_20\_B),S7\textgreater
 	\item BMT\textless S6,S6,S7,line(F20\_20\_G,F20\_20\_B,M20\_100),S7\textgreater
@@ -75,12 +78,12 @@ Two examples for a full task specification is as follows:
  \item The order in which the teams have to perform will be determined by a draw.
  \item At the beginning of a team’s period, the team will get the task specification.
  \item The team can setup the robot anywhere inside the arena.
- \item A manipulation object counts as successfully grasped as defined in Section 5.5.3.
- \item A manipulation object counts as successfully placed, if the robot has placed the object into the correct destination service area as described in Section 5.5.4..
- \item The team has at most 5 minutes to complete the task. The time is stopped when the robot has completed task by placing the last object of the task specification. If a team cannot complete the task within 5 minutes, the run will be stopped after 5 minutes.
+ \item A manipulation object counts as successfully grasped as defined in Section~\ref{ssec:GraspingObjects}
+ \item A manipulation object counts as successfully placed, if the robot has placed the object into the correct destination service area as described in Section~\ref{ssec:PlacingObjects}.
+ \item \revdel{The team has at most 5 minutes to complete the task.} The time is stopped when the robot has completed the task by placing the last object of the task specification. If a team cannot complete the task within \revcha{5 minutes}{the designated time}, the run will be stopped \revdel{after 5 minutes}.
  \end{itemize}
 
-\todo{check the specific time definitions}
+\todo{check the specific time definitions} \note{The time will be definied in the instances. So, they do not need to be specified here, right? (Fred)}
 %
 %
 % \subsection{Scoring}
