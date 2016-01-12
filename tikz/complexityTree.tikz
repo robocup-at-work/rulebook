@@ -38,7 +38,7 @@
 %% GRASPING
 \begin{scope}[every node/.style={level 4}]
 \node [below of = GRASPING, xshift=32pt, yshift=-20pt] (c21) {0 cm};
-\node [below of = c21] (c22) {10c m};
+\node [below of = c21] (c22) {10 cm};
 \node [below of = c22] (c23) { ?? cm};
 \node [below of = c23] (c24) { ?? cm};
 \node [below of = c24, top color=white!50,bottom color=gray!50,shading angle=45, yshift=-18pt] (c25) {Position};
