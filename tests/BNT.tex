@@ -59,13 +59,13 @@ The following rules have to be obeyed:
 
 \begin{itemize}
 \item The order in which the teams have to perform will be determined by a draw.
-\item A team has a time period of 5 minutes to complete the task, in addition to the default preparation time.
+\item \revdel{A team has a time period of 5 minutes to complete the task, in addition to the default preparation time.} \note{remove, since the time will be specified on the instance page. (Fred)}
 \item At the beginning of a team’s run, the team will get the task specification, which is a sequence of triplets (\textless place\textgreater, \textless orientation\textgreater, \textless break\textgreater), where \textless place\textgreater designates one of the specified places of the environment (e.g. D0, D1, D2, O1, S2, S3, T2, T4, T6), \textless orientation\textgreater is one of (N, E, S, W), and \textless break\textgreater is a one-digit integer between 1 and 3. An example task specification would be \textless (S1,E,1),(D1,W,1),(S3,E,1),(D2,W,1)\textgreater .
 \item After the team’s robot enters the arena, it must move to the places given in the task specification and assume the orientation specified after the place. The robot may reach a destination by choosing any path.
 \item The robot must visit the places in the order given by the task specification. It is possible to skip a place of the task specification and continue with the next one. In cases where the robot skipped one or multiple places there may be multiple possible matchings between places reached and places specified. In that case for calculating scores the matching is taken which leads to the highest score for the team.
 \item A destination is counted as reached when the robot covers the place marker as much as the complexity level demands. The orientation must not deviate more than 45 deg.
 \item When a destination is reached, the robot must stop its movement for the number of seconds specified by the break.
-\item The time is stopped when the robot has completed the task and left the arena. If the team cannot complete the task within 5 minutes, the run will be stopped after 5 minutes.
+\item The time is stopped when the robot has completed the task and left the arena. If the team cannot complete the task within \revcha{5 minutes}{the designated time}, the run will be stopped\revdel{ after 5 minutes}.
 \end{itemize}
 %
 %
