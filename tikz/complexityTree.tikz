@@ -26,8 +26,8 @@
 
 %% OBJECTS
 \begin{scope}[every node/.style={level 4,  top color=white!50,bottom color=gray!50,shading angle=45}]
-\node [below of = OBJECTS, xshift=15pt, yshift=-20pt] (c11) {@work};
-\node [below of = c11] (c12) {Rockin};
+\node [below of = OBJECTS, xshift=15pt, yshift=-20pt] (c11) {@Work};
+\node [below of = c11] (c12) {RoCKIn};
 \node [below of = c12] (c13) {arbitary};
 \node [below of = c13, yshift=-5pt] (c14) {number};
 \end{scope}
@@ -37,10 +37,10 @@
 
 %% GRASPING
 \begin{scope}[every node/.style={level 4}]
-\node [below of = GRASPING, xshift=32pt, yshift=-20pt] (c21) {0cm};
-\node [below of = c21] (c22) {10cm};
-\node [below of = c22] (c23) { ??cm};
-\node [below of = c23] (c24) { ??cm};
+\node [below of = GRASPING, xshift=32pt, yshift=-20pt] (c21) {0 cm};
+\node [below of = c21] (c22) {10c m};
+\node [below of = c22] (c23) { ?? cm};
+\node [below of = c23] (c24) { ?? cm};
 \node [below of = c24, top color=white!50,bottom color=gray!50,shading angle=45, yshift=-18pt] (c25) {Position};
 \node [below of = c25, top color=white!50,bottom color=gray!50,shading angle=45] (c26) {Rotation};
 \node [below of = c26, top color=white!50,bottom color=gray!50,shading angle=45] (c27) {Orientation};
