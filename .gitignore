@@ -1,6 +1,8 @@
 ##Custum changes
 *.adx
 *~
+.temp*
+Rulebook.and
 Rulebook.pdf
 
 
@@ -93,7 +95,6 @@ acs-*.bib
 *.idx
 *.ilg
 *.ind
-*.ist
 
 # minitoc
 *.maf
