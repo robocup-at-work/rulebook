@@ -378,21 +378,21 @@ For the placement of manipulation objects the following terms are used:
 \end{itemize}
 
 \subsection{Grasping Objects}
-If not specified differently in a test, the following definition applies to decide if an object counts as grasped from a service area.
+If not specified differently in a test, the following definition applies to decide if an object counts as being grasped from a service area.
 \par
 An object counts as grasped from a service area, when
-the robot has lifted the object. It is not enough to shove it beyond the service areas edge.
-the object was moved outside of the source service area. Outside means that the vertical projection of the object’s convex hull does not touch the service area anymore.
-the robot shows the intention to move itself with the object away from the service area. By default this is assumed when the distance on the horizontal plane between every part of the robot and service area as well as between every part of the object and service area is more than 20 cm; or when the object has been placed on another service area. The referees may interpret the intention differently if agreed on before the run.
+\revdel{the robot has lifted the object. It is not enough to shove it beyond the service areas edge.}
+the object was moved outside of the source service area. Outside means, that the vertical projection of the object’s convex hull does not touch the service area anymore\revcha{.}{ and}
+the robot shows the intention to move itself with the object away from the service area. By default, this is assumed when the distance on the horizontal plane between every part of the robot and service area as well as between every part of the object and service area is more than 20 cm; or when the object has been placed on another service area. The referees may interpret the intention differently if agreed on before the run.
 \par
 The last point shall enable to let the robot pick up an object in order to analyse its type, e.g. by holding it close to a camera on the robot.
 \par
-If the robot handles an object, but does not fulfil all points above, the object does not count as grasped, and neither points for grasping a required object, nor penalty points for grasping an unspecified object are given. Still, if the object drops to the ground or an uncontrolled collision occurs, the normal penalty points apply.
+If the robot handles an object, but does not fulfil all points above, the object does not count as being grasped, and neither points for grasping a required object, nor penalty points for grasping an unspecified object are given. Still, if the object drops to the ground or an uncontrolled collision occurs, the normal penalty points apply.
 
 \subsection{Placing Objects on Service Areas}
 If not specified differently in a test, a manipulation object counts as placed on a target service area if any part of the object is touching the surface of the service area and the object is not moving at the end of the run.
 \par
-The position, rotation or orientation of the object on the service area can be chosen freely by the robot.
+The \revcha{position, rotation or orientation}{pose} of the object on the service area can be chosen freely by the robot.
 
 \section{Overall Scenario and Variation Points}
 The following two figures illustrate the kind of arenas that can be built with the previously described components. Figure \ref{fig:example_map} shows an old arena configuration (from IROS 2012) as a topological map defining places and connections, while Figure \ref{fig:example_map_go13} shows an arena configuration (from German Open 2013) with only a few surrounding walls, more open space and a conveyor belt. 
