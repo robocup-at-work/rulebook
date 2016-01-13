@@ -73,49 +73,52 @@ combinations are possible!
  \definecolor{headlineColor}{rgb}{.7,.7,.7}
  \definecolor{sectionColor}{rgb}{.4,.4,.4}
  \centering
- \begin{tabular}{|l|l|l|l*{10}{|P{1cm}}|}
-   \hhline{~~~~----------}
-   \multicolumn{4}{l|}{ } &  \multicolumn{10}{c|}{ Instances}\\
-   \hhline{~~~~----------}
-   \multicolumn{4}{l|}{ }          &\cir{1}&\cir{2}&\cir{3}&\cir{4}&\cir{5}&\cir{6}&\cir{7}&\cir{8}&\cir{9}&\cir{10}\\
-   \multicolumn{4}{r|}{     }      & BNT   & BMT   & BMT   & BTT   &  BTT  &       &  PPT  &       &       &       \\
+ \begin{tabular}{|l|l|l|l*{8}{|P{1cm}}|}
+   \hhline{~~~~--------}
+   \multicolumn{4}{l|}{ } &  \multicolumn{8}{c|}{ Instances}\\
+   \hhline{~~~~--------}
+   \multicolumn{4}{l|}{ }          &\cir{1}&\cir{2}&\cir{3}&\cir{4}&\cir{5}&\cir{6}&\cir{7}&\cir{8}\\
+   \multicolumn{4}{r|}{     }        & BNT   & BMT   & BTT1  & BTT2  &  BTT3 &  PPT  &  CBT   &  Final\\
    \hline\hline
     \multirow{27}{0.5cm}{\R{\centering Manipulation }{4cm}}
      & \multirow{7}{0.5cm}{\R{\centering Objects }{2.0cm}}
-     &      \RCAW    & Team &       &   \Y  &       &       &       &       &       &       &       &       \\
-     &    &                 & OC   &       &       &       &       &       &       &       &       &       &       \\
-     &    &  RoCKIn         & Team &       &       &       &       &       &       &       &       &       &       \\
-     &    &                 & OC   &       &       &       &       &       &       &       &       &       &       \\
-     &    & arbitrary       & OC   &       &       &       &       &       &       &       &       &       &       \\
-     &    & number          & Team &       &   5   &       &       &       &       &       &       &       &       \\
-     &    &                 & OC   &       &       &       &       &       &       &       &       &       &       \\
-     \hhline{~-------------}
+     &      \RCAW           & Team   &       &       &       &       &       &       &       &       \\
+     &    &                 & TC/OC  &       &   \Y  &  \Y   &   \Y  &   \Y  &   \Y  &   \Y  &   \Y  \\
+     &    & RoCKIn          & Team   &       &   \Y  &       &       &       &       &       &       \\
+     &    &                 & TC/OC  &       &       &       &   \Y  &   \Y  &       &       &   \Y  \\
+     &    & Decoy	       & TC/OC   &       &       &  3    &       &   3   &       &       &   5   \\
+     &    & Number          & TC/OC  &       &   5   &  5    &   5   &   7   &   3   &   3   &   10  \\
+     \hhline{~-----------}
      & \multirow{10}{0.5cm}{\R{\centering Grasping }{1.9cm}}
-         & Height           & -    &       &  10 cm &       &       &       &       &       &       &       &       \\
-      &  & Shelf unit       & -    &       &       &       &       &       &       &       &       &       &       \\
-      &  & Position         & Team &       &  \Y   &       &       &       &       &       &       &       &       \\
-      &  &                  & OC   &       &       &       &       &       &       &       &       &       &       \\
-	    &  & Rotation         & Team &       &       &       &       &       &       &       &       &       &       \\
-      &  &                  & OC   &       &       &       &       &       &       &       &       &       &       \\
-	    &  & Orientation      & Team &       &       &       &       &       &       &       &       &       &       \\
-      &  &                  & OC   &       &       &       &       &       &       &       &       &       &       \\
-      &  & Red container    & -    &       &       &       &       &       &       &       &       &       &       \\
-      &  & Blue container   & -    &       &       &       &       &       &       &       &       &       &       \\
-      \hhline{~-------------}
+         & Height           & -      &       & 10 cm & 0 cm\newline 10 cm\newline 15 cm  &   5 cm    &  0 cm\newline 10 cm\newline 15 cm    &  10 cm & & 0 cm\newline 5 cm\newline 10 cm\newline 15 cm \\
+      &  & Shelf unit       & -      &       &       &       &       &       &       &       &   2   \\
+      &  & Position         & Team   &       &       &   \Y  &       &  \Y   &       &       &       \\
+      &  &                  & TC/OC  &       &   \Y  &       &  \Y   &       &   \Y  &   \Y  &   \Y  \\
+	  &  & Rotation         & Team   &       &       &       &       &       &       &       &       \\
+      &  &                  & TC/OC  &       &   \Y  &   \Y  &  \Y   &  \Y   &   \Y  &   \Y  &   \Y  \\
+	  &  & Orientation      & Team   &       &   \Y  &   \Y  &  \Y   &  \Y   &   \Y  &   \Y  &   \Y  \\
+%     &  &                  & TC/OC  &       &       &       &       &       &       &       &       \\
+%     &  & Red container    & -      &       &       &       &       &       &       &       &       \\
+%     &  & Blue container   & -      &       &       &       &       &       &       &       &       \\
+      &  & Moving round table& -     &       &       &       &       &       &       &   3   &   1   \\
+      \hhline{~-----------}
       & \multirow{4}{0.5cm}{\R{\centering Putting down }{2cm}}
-         & Height           & -    &       & 10 cm  &       &       &       &       &       &       &       &       \\
-      &  & Shelf unit       & -    &       &       &       &       &       &       &       &       &       &       \\
-      &  & Red container    & -    &       &       &       &       &       &       &       &       &       &       \\
-      &  & Blue container   & -    &       &       &       &       &       &       &       &       &       &       \\
+         & Height           & -      &       & 10 cm &  0 cm\newline 10 cm\newline 15 cm  & 5 cm    &  0 cm\newline 10 cm\newline 15 cm  &  10 cm & & 0 cm\newline 5 cm\newline 10 cm\newline 15 cm \\
+      &  & Shelf unit       & -      &       &       &       &       &       &       &       &   1   \\
+&  & Cavity platform with decoy& -   &       &       &       &       &       &  \Y   &       &   1   \\
+      &  & Red container    & -      &       &       &       &   1   &   1   &       &       &   1   \\
+      &  & Blue container   & -      &       &       &       &   1   &   1   &       &       &   1   \\
+      &  & Moving round table& -     &       &       &       &   1   &   1   &       &       &       \\
     \hline
     \multirow{3}{0.5cm}{\R{\centering Arena }{1.5cm}}
-     & \multirow{3}{0.5cm}{\R{\centering Objects }{1.5cm}}
-     &     Static obstacles & OC   &  \Y   &  \Y   &       &       &       &       &       &       &       &       \\
-     &   & Dynamic obstacles& -    &       &  \Y   &       &       &       &       &       &       &       &       \\
-     &   & Barrier tape     & OC   &  \Y   &       &       &       &       &       &       &       &       &       \\ 
+     & \multirow{3}{0.5cm}{\R{\centering }{1.5cm}}
+     &     Static obstacles & TC/OC  &  2    &       &       &   2   &   2   &       &       &   2   \\
+%    &   & Dynamic obstacles& -      &       &       &       &       &       &       &       &       \\
+     &   & Barrier tape     & TC/OC  &  2    &       &       &       &       &       &       &   2   \\ 
+     &   & Waypoints        & TC/OC  &  9    &       &       &       &       &       &       &       \\ 
 		\hline
 		 \multicolumn{3}{|l|}{Duration} 
-		                        & OC   & 3 min  &  5 min &       &       &       &       &       &       &       &       \\
+		                    & TC/OC   & 5 min   & 5 min & 5min  & 5 min & 5 min & 5 min & 5 min & 10min \\
 		\hline
  \end{tabular}
  \caption{Instances of the \RCAW 2016 competition (The OC will choose the runs among this selection)}
@@ -127,20 +130,19 @@ combinations are possible!
 \begin{landscape}
 \begin{table}[h!]
  \centering
- \begin{tabular}{|p{5cm}*{10}{|P{1cm}}|}
-   \hhline{~----------}
-   \multicolumn{1}{l|}{ } &  \multicolumn{10}{c|}{ Instances}\\
-   \hhline{~----------}
-   \multicolumn{1}{l|}{ }          &\cir{1}&\cir{2}&\cir{3}&\cir{4}&\cir{5}&\cir{6}&\cir{7}&\cir{8}&\cir{9}&\cir{10}\\
-   \multicolumn{1}{r|}{     }      & BNT   & BMT   & BMT   & BTT   &  BTT  &       &  PPT  &       &       &       \\
+ \begin{tabular}{|p{5cm}*{8}{|P{1cm}}|}
+   \hhline{~--------}
+   \multicolumn{1}{l|}{ } &  \multicolumn{8}{c|}{ Instances}\\
+   \hhline{~--------}
+   \multicolumn{1}{l|}{ }          &\cir{1}&\cir{2}&\cir{3}&\cir{4}&\cir{5}&\cir{6}&\cir{7}&\cir{8}\\
+   \multicolumn{1}{r|}{     }       & BNT    & BMT   & BTT1  & BTT2  &  BTT3 & PPT   &  CBT  & Finals\\
    \hline\hline
-	correct destinations reached    &  50    &       &       &       &       &       &       &       &       &       \\
-	correct object identification   &        &       &       &       &       &       &       &       &       &       \\
-  correct object manipulation     &        &  50   &  70   & ...   &       &       &       &       &       &       \\ 
-	completing whole task           &  50    &  100  &  100  & ...   &       &       &       &       &       &       \\ 
-	fastest run bonus               &  50    &  100  &  100  & ...   &       &       &       &       &       &       \\ \hline
-	maximum attainable points       &        &       &       &       &       &       &       &       &       &       \\ \hline
-		\hline
+	correct destinations reached    &  50    &       &       &       &       &       &       &       \\
+    correct object grasping         &        &  100  &  100  & 100   &  100  &       &  100  &  100 \\ 
+    correct object placing          &        &  100  &  100  & 100   &  100  & 100   &       &  100  \\ 
+	completing whole task           &  50    &  100  &  100  & 100   &  100  & 100   &  100  &  100  \\ \hline\hline
+	maximum attainable points\newline (time bonus not included)   
+	                                &  500   & 1100  &  1100 & 1100  & 1500  & 400   &  400  &  2100 \\ \hline
  \end{tabular}
  \caption{Instances of the \RCAW 2016 competition (The OC will choose the runs among this selection).}
   \label{tab:InstancePoints}
