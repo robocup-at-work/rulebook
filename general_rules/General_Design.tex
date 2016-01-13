@@ -10,7 +10,7 @@ Each of the particular tests defined later in this document may define its own s
 	\item the number of robots allowed per team
 	\item the number of teams competing simultaneously in the same arena
 	\item the task to be performed by a team
-	\item the criteria for evaluating a team’s performance
+	\item the criteria for evaluating a team's performance
 \end{itemize}
 
 In order to avoid excessive development efforts for each specific test and to allow reuse of partial functionalities the scenarios are built from a reasonably small set of components, which are later put together in different ways. This section describes these elements.
@@ -43,7 +43,7 @@ Future competitions may foresee the use of RFID sensors in the scenario design.
 The robots used for competition shall satisfy professional quality standards. The concrete definition of these standards is to be assessed by the TC, comprising aspects such as sturdy construction, general safety, and robust operation. It is not required that the robots are certified for industrial use.
 
 \subsection{Robot Design and Design Constraints}
-The robots need to comply with certain size constraints. A robot, including all parts attached to it as used in the competition, must be able to move by itself into a configuration so that it fits into a cube of side lengths 80 cm x 50 cm x 80 cm (length x width x height). If all the robot’s parts, such as manipulator or anything able to protrude outside of the previously specified cube, are fully extended, the system must still not exceed a cube of side lengths 120 cm x 80 cm x 160 cm (length x width x height). The organizers may specify further constraints, such as weight limits. If a team would like to apply a robot with deviating robot dimensions, it should contact the TC. Exceptions for specific robots are possible in case of small differences.
+The robots need to comply with certain size constraints. A robot, including all parts attached to it as used in the competition, must be able to move by itself into a configuration so that it fits into a cube of side lengths 80 cm x 50 cm x 80 cm (length x width x height). If all the robot's parts, such as manipulator or anything able to protrude outside of the previously specified cube, are fully extended, the system must still not exceed a cube of side lengths 120 cm x 80 cm x 160 cm (length x width x height). The organizers may specify further constraints, such as weight limits. If a team would like to apply a robot with deviating robot dimensions, it should contact the TC. Exceptions for specific robots are possible in case of small differences.
 
 \par
 The manipulator of the robot should be designed and mounted on the robot such that it can grasp objects which will be placed in heights of between 0 cm and 40 cm above the floor.
@@ -52,14 +52,14 @@ Electric, pneumatic, and hydraulic actuation mechanisms are permitted, provided 
 \par
 If there are even vague doubts about the eligibility of using particular designs, parts, or mechanisms, the team should consult the TC well in advance.
 \par
-The robots have to be marked such that a clear distinction of robots used by different teams during a test is possible for spectators. The OC can define the concrete types of markers to be used. In this case the markers are not taken into account when checking the robot’s size constraints. The markers shall not interfere with safe operation of the robot.
+The robots have to be marked such that a clear distinction of robots used by different teams during a test is possible for spectators. The OC can define the concrete types of markers to be used. In this case the markers are not taken into account when checking the robot's size constraints. The markers shall not interfere with safe operation of the robot.
 \par
 The TC may require that robots are equipped with a wireless communication device of some sort (e.g. 802.11n), in order to communicate task specifications to the robots.
 
 \subsection{Robot Behavior and Safety}
 In general, all robots shall be operated with maximum safety in mind. Any robot operation must be such that a robot neither harms humans nor damages the environment. A team must choose the operating parameters of their robot, e.g. the motion velocities for a robot base or a manipulator, or the grasp forces of a gripper, such that it can guarantee the safe operation of their robots.
 \par
-All robots must have a mechanical mechanism for immediately stopping the robot in cases of emergency. This mechanism must be clearly visible and easily accessible. The OC may request the proof of a robot’s safety (e.g. the correct operation of an emergency stop) anytime during the tournament and exclude teams that cannot satisfy safety requirements.
+All robots must have a mechanical mechanism for immediately stopping the robot in cases of emergency. This mechanism must be clearly visible and easily accessible. The OC may request the proof of a robot's safety (e.g. the correct operation of an emergency stop) anytime during the tournament and exclude teams that cannot satisfy safety requirements.
 \par
 When participating in a tournament, the team may operate the robot only in their own team area, in the arenas provided \revdel{(possibly constrained by a schedule assigning periods of time for exclusive use of the arena by a team or a group of teams)}, and in any other areas designated by the organizers for robot operation. Any operation of robots outside of these areas, e.g. in public areas or emergency paths, require prior permission by the OC.
 
@@ -186,7 +186,7 @@ An orientation is always associated with the arena. An arbitrary wall is designa
 \end{figure}
 
 \subsection{Floor}
-The floor is made of some firm material. Examples include floors made of concrete, screed, timber, plywood, chipboard, laminated boards, linoleum, PVC flooring, or carpet. Some examples are illustrated in Figure \ref{example_floors}. Floors may neither be made of loose material of any kind (gravel, sand, or any material which may damage the functioning of the robots’ wheels) nor may such material be used on top of the floor. Liquids of any kind are not allowed. The floor may have spots of unevenness of up to 1cm in any direction (clefts, rifts, ridges, etc.).
+The floor is made of some firm material. Examples include floors made of concrete, screed, timber, plywood, chipboard, laminated boards, linoleum, PVC flooring, or carpet. Some examples are illustrated in Figure \ref{example_floors}. Floors may neither be made of loose material of any kind (gravel, sand, or any material which may damage the functioning of the robots' wheels) nor may such material be used on top of the floor. Liquids of any kind are not allowed. The floor may have spots of unevenness of up to 1cm in any direction (clefts, rifts, ridges, etc.).
 
 \begin{figure}
 \begin{center}
@@ -382,7 +382,7 @@ If not specified differently in a test, the following definition applies to deci
 \par
 An object counts as grasped from a service area, when
 \revdel{the robot has lifted the object. It is not enough to shove it beyond the service areas edge.}
-the object was moved outside of the source service area. Outside means, that the vertical projection of the object’s convex hull does not touch the service area anymore\revcha{.}{ and}
+the object was moved outside of the source service area. Outside means, that the vertical projection of the object's convex hull does not touch the service area anymore\revcha{.}{ and}
 the robot shows the intention to move itself with the object away from the service area. By default, this is assumed when the distance on the horizontal plane between every part of the robot and service area as well as between every part of the object and service area is more than 20 cm; or when the object has been placed on another service area. The referees may interpret the intention differently if agreed on before the run.
 \par
 The last point shall enable to let the robot pick up an object in order to analyse its type, e.g. by holding it close to a camera on the robot.
