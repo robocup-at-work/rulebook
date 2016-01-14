@@ -48,14 +48,11 @@ If the projection of any part of a robot touches a barrier tape marking a virtua
 \par
 When an object lost contact to the robot or touches the ground, it is not considered as being carried anymore (e.g. an object falls off the gripper or from the transportation platform).
 \par
-An object is considered as being grasped, when it is moved out of the manipulation area (e.g. over the robot). Points or penalties are scored according to the task specification.
-\par
 All teams fully complete a perfect run will receive a completion bonus of 0.75 points per second left on the run time. These points are only awarded if the run is perfect, i.e. all objectives reached without any penalties.
 \par
 A team cannot get less than zero points for one run. The score for a test is the average of the runs of this test, calculated by summing up the scores of each run and dividing it by the number of runs. The scores of the tests of the first stage are summed up, and the teams with the highest sums proceed to the next stage.
 \par
-In case of a tie, the team with the higher score during the last test wins. If both had the same score, then the test before that one is considered and so on. In case of a tie, there will be a decider run chosen by the TC only for those teams affected.
-\note{This is not fair and actually flipping the coin. In this case, I would rather let both teams go to the next stage. (Fred)}
+In case of a tie, the OC will either schedule a deciding run or continue with a higher number of participants.
 \par
 %Some tests have three so-called complexity levels. A complexity level (low, medium and high) encodes the difficulty of the test such as the number of objects to manipulate or whether the arena is equipped with obstacles or without.
 \par
@@ -70,6 +67,8 @@ The order in which the teams have to perform a run is determined by a draw by th
 A run is preceded with a 5 minutes preparation time. This time begins once the previous team has left the arena and the arena is setup (e.g. all manipulation objects are in place). During the preparation time the team may enter the competition area in person, but not with the robot. Entering before this time is allowed only with explicit allowance of the OC.
 \par
 When the preparation time ends, all team members must immediately leave the area and robots must be ready to start. The team has to check if the arena is setup correct (e.g. all manipulation objects are placed according to task specification, obstacles are placed correct). If the team is ready the run may start as soon as the previous team has left the arena. If the team is not ready after the preparation time has run out the run time will start, the time may be stopped as soon as the robot is connected to the referee box and the team leader signals okay. The run time will start even if the previous team is still in the arena.
+
+\note{REWORK (Jan)}
 
 \par
 The referees start a run by sending the start signal from the referee box.
@@ -95,7 +94,7 @@ Teams might use one so-called restart in a run. Restarts have the following aspe
 
 	\item Per run, at most one restart is allowed for a team, if not specified 			otherwise in a test.
 	\item At any time during a run, the team can call for a restart to the 				referees.
-	\item When the referees accept the call for restart, the team may enter the 			arena. The time will continue running.
+	\item When the referees acknowledge the call for restart, the team may enter the 			arena. The time will continue running.
 	\item The arena and the robot will be reset exactly to the setup at the 				beginning of the run (except the timer for the run). Random elements such as 			obstacles or object positions remain like before.
 	\item The points for this run achieved so far are reset to zero (including 			possible penalty points). After the run, a penalty score for the restart will 	be applied.
 	\item The referees decide when the arena is prepared again for the restart. If 	the robot is not yet ready, teams can keep trying to get it ready until the 			time for the run is over.
@@ -105,7 +104,6 @@ Teams might use one so-called restart in a run. Restarts have the following aspe
 \end{itemize}
 
 \subsection{Roles of OC and TC}
-\note{Shouldn't this be in Section 1.2.1? (Fred)}
 The OC is responsible for all aspects concerning the competition, such as providing the competition arenas, ensuring their conformity with the rules, assigning space to teams in the team area, the organization and scheduling of meetings, the nomination and scheduling of referees, and the scheduling and timely execution of tests and stages.
 The TC is responsible for all aspects concerning the rules, such as compliance of the robots with rules and safety standards, the clarification of rules and resolution of any conflicts that may arise during the competition.
 
@@ -114,9 +112,9 @@ The referees have to ensure the correct execution of the tests. They may interru
 \begin{itemize}
 \item controlling the referee box (1 referee)
 \item supervising the robot and counting collisions (2 referees from different positions) and
-\item scoring results (all 3 together).
+\item scoring results
 \end{itemize}
-A team of referees supervise all runs of one test. \todo{The appointment of the referees has to be announced to the teams in combination to the test schedule. OK?}
+A team of referees supervise all runs of one test. If the referees disagree the TC will decide. \todo{The appointment of the referees has to be announced to the teams in combination to the test schedule. OK?}
 
 \subsection{Meetings and Language of Communication}
 Both the TC and the OC may organize several special meetings during a competition, such as referee meetings, team leader meetings, etc. The meetings will be announced locally. It is the responsibility of the team to inform itself about the organization and scheduling of such meetings.
