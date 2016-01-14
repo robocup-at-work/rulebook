@@ -1,6 +1,6 @@
 % !TEX root = ../Rulebook.tex
 \newpage
-\subsection{Basic Manipulation Test}
+\section{Basic Manipulation Test}
 
 \paragraph{Purpose and Focus of the Test}
 The purpose of the \iaterm{Basic Manipulation Test}{BMT} is to demonstrate basic manipulation capabilities by the robots, like grasping, turning, or placing an object.
@@ -13,32 +13,34 @@ Some minor movement is intentionally designed into this test in order to force t
 The arena used for this test contains basically all elements as for the Basic Navigation Test. Additionally to environmental elements (walls, service areas, floor markers, etc.), different manipulatable objects will be placed on the service areas.
 
 \paragraph{Manipulation Objects}
-The manipulation objects \revcha{in this test include the objects specified in Table \ref{tab:manipulation_objects}}{used in this test are specified by the instances defined in Table~\ref{tab:Instances}}.
+The manipulation objects used in this test are defined by the instances described in Table~\ref{tab:Instances}.
 
 \paragraph{Task}
 A single robot is used. The robot can be placed in an arbitrary starting location by the team. The task consists of a sequence of grasp and place operations, with a small base movement in between. The objective is to move a set of objects from one service area into another. The task is finished once all objects are moved or when the time foreseen for the run ends.
 \par
 The task specification consists of:
 \begin{itemize}
-	\item The specification of the initial place (e.g. D0, S5, U2)
+	\item The specification of the initial place (e.g. \texttt{D0}, \texttt{S5}, \texttt{U2})
 	\item A source location, given as place (any one)
 	\item A destination location, given as place (any one, but nearby the source location)
-	\item \revadd{A configuration in which the objects need to be placed at the destination service area}
-	\item \revadd{A list of objects to manipulated from the source to the destination service area}
+	\item A configuration in which the objects need to be placed at the destination service area
+	\item A list of objects to manipulated from the source to the destination service area
 	\item The specification of a final place for the robot (which does not need to be reached)
 \end{itemize}
 
 For now, only the \emph{line} is a possible configuration in the competition:
 \begin{center}
-	line(\textless sequence of objects\textgreater )
+	\texttt{line(\textless sequence of objects\textgreater )}
 \end{center}
 \par
-Further configurations may be specified in future. Note, that the pose \revdel{and orientation} of each object in the destination service area is left unspecified and can be chosen by the robot, i.e. the objects do not need to be put in a line.
+Further configurations may be specified in future. Note, that the pose  of each object in the destination service area is left unspecified and can be chosen by the robot, i.e. the objects do not need to be put in a line.
 
 Two examples for a full task specification are as follows:
 \begin{itemize}
-	\item BMT\textless S6,S6,S7,line(V20,R20,F20\_20\_B),S7\textgreater
-	\item BMT\textless S6,S6,S7,line(F20\_20\_G,F20\_20\_B,M20\_100),S7\textgreater
+	\item \texttt{BMT\textless \texttt{S6,S6,S7,line(V20,R20,F20\_20\_B),S7}\textgreater}
+	\item \texttt{BMT\textless \texttt{T1,T1,U2,line(R20,F20\_20\_B),U2}\textgreater}
+
+%	\item \texttt{BMT\textless S6,S6,S7,line(F20_20_G,F20_20_B,M20_100),S7\textgreater}
 \end{itemize}
 
 %
@@ -80,10 +82,9 @@ Two examples for a full task specification are as follows:
  \item The robot will get the task specification from the referee box.
  \item A manipulation object counts as successfully grasped as defined in Section~\ref{ssec:GraspingObjects}
  \item A manipulation object counts as successfully placed, if the robot has placed the object into the correct destination service area as described in Section~\ref{ssec:PlacingObjects}.
- \item \revdel{The team has at most 5 minutes to complete the task.} The time is stopped when the robot has completed the task by placing the last object of the task specification. If a team cannot complete the task within \revcha{5 minutes}{the designated time}, the run will be stopped \revdel{after 5 minutes}.
+ \item The time is stopped when the robot has completed the task by placing the last object of the task specification. If a team cannot complete the task within the designated time, the run will be stopped.
  \end{itemize}
 
-\todo{check the specific time definitions} \note{The time will be definied in the instances. So, they do not need to be specified here, right? (Fred)}
 %
 %
 % \subsection{Scoring}

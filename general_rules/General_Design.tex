@@ -1,9 +1,9 @@
 % !TEX root = ../Rulebook.tex
 
 Each of the particular tests defined later in this document may define its own scenario. In this document, a scenario consists of the following elements:
-\revdel{the environment}
 
 \begin{itemize}
+	\item the environment
 	\item the objects that affect navigation
 	\item the objects that are to be manipulated
 	\item the objects with which robots interact
@@ -61,7 +61,7 @@ In general, all robots shall be operated with maximum safety in mind. Any robot 
 \par
 All robots must have a mechanical mechanism for immediately stopping the robot in cases of emergency. This mechanism must be clearly visible and easily accessible. The OC may request the proof of a robot's safety (e.g. the correct operation of an emergency stop) anytime during the tournament and exclude teams that cannot satisfy safety requirements.
 \par
-When participating in a tournament, the team may operate the robot only in their own team area, in the arenas provided \revdel{(possibly constrained by a schedule assigning periods of time for exclusive use of the arena by a team or a group of teams)}, and in any other areas designated by the organizers for robot operation. Any operation of robots outside of these areas, e.g. in public areas or emergency paths, require prior permission by the OC.
+When participating in a tournament, the team may operate the robot only in their own team area, in the arenas provided (possibly constrained by a schedule assigning periods of time for exclusive use of the arena by a team or a group of teams), and in any other areas designated by the organizers for robot operation. Any operation of robots outside of these areas, e.g. in public areas or emergency paths, require prior permission by the OC.
 
 \section{Referee Box}
 The TC shall provide a referee box that supports the evaluation of the competition. It applies the time measuring, generates the tasks according to the chosen test configuration and monitors the
@@ -165,7 +165,7 @@ The referee box visualizes the current state of the competition run, \revdel{cur
 \todo{NICO: add maybe some screenshots from the referee box, also make a reference to the FESTO referee box}
 
 \section{Use of External/Control Devices}
-No external devices are allowed (e.g. remote controls) in general. Exceptions may be certain simplifications leading to reduction of points as described in \revcha{Chapter}{Section}~\ref{ssec:ScoringAndRanking}, or in particular tests. All communication of the robots with external elements must be wireless. Cable connections between the robot and external devices are not allowed during competition runs.
+No external devices are allowed (e.g. remote controls) in general. Exceptions may be certain simplifications leading to reduction of points as described in Section~\ref{ssec:ScoringAndRanking}, or in particular tests. All communication of the robots with external elements must be wireless. Cable connections between the robot and external devices are not allowed during competition runs.
 \par
 %  It is possible for the TC to choose an alternative referee box software, or to allow teams to use their own referee box. This must be announced before the tournament starts.
 A team may set up an additional external computer to monitor the operation of their robot(s) during a run. This monitoring system must be designed such that no manual interaction through keyboard, mouse, or any other input device is required during a run. Team members must keep their hands off the keyboards and mice of all their computers during a run.
@@ -176,14 +176,21 @@ It must be clear at all times that no manual or remote control is exerted to inf
 \subsection{Size of the Arena}
 
 The size of a competition arena is a rectangular area not lesser than 2 m x 4 m and not more than 10 m x 12 m.
-An orientation is always associated with the arena. An arbitrary wall is designated as “North” orientation, and the wall to its right is designated as “East” and so on. The orientations will be assigned by the local league chair or/and the TC as soon as the arena is built up. Figure~\ref{fig:example_arena} shows one possible example of an arena configuration.
+An orientation is always associated with the arena. An arbitrary wall is designated as “North” orientation, and the wall to its right is designated as “East” and so on. The orientations will be assigned by the local league chair or/and the TC as soon as the arena is built up. Figure~\ref{fig:example_arena} shows one possible example of an arena configuration, while Figure~\ref{fig:example_topological_map} illustrates the topology.
 
 \begin{figure}
 
 \includegraphics[width= \textwidth ]{../images/example_arena.jpg}
-\caption{An exemplary setup for a \RCAW environment. \todo{similar to Figure~\ref{fig:example_map_go13}. Delete one or put them together in a subfigure environment}}
+\caption{An exemplary setup of a \RCAW environment.}
 \label{fig:example_arena}
 \end{figure}
+
+\begin{figure}
+\includegraphics[width= \textwidth ]{../images/example_map.png}
+\caption{Topological map with five service areas (D1, D2, S1, S2, S3). The purple squares define places.}
+\label{fig:example_topological_map}
+\end{figure}
+
 
 \subsection{Floor}
 The floor is made of some firm material. Examples include floors made of concrete, screed, timber, plywood, chipboard, laminated boards, linoleum, PVC flooring, or carpet. Some examples are illustrated in Figure \ref{example_floors}. Floors may neither be made of loose material of any kind (gravel, sand, or any material which may damage the functioning of the robots' wheels) nor may such material be used on top of the floor. Liquids of any kind are not allowed. The floor may have spots of unevenness of up to 1cm in any direction (clefts, rifts, ridges, etc.).
@@ -210,7 +217,7 @@ The floor is made of some firm material. Examples include floors made of concret
 The competition arena is partially surrounded by walls. The height of the walls is not lesser than 20 cm and not more than 40 cm. One or more gates may be foreseen, where robots can enter or leave the arena. Gates may or may not be closable. The walls have a mostly uniform color. Small visual elements like logos or advertisments may be placed on the walls.
 
 \subsection{Service Areas}
-Arenas contain one or more service areas, which have specific purposes for a particular test. Examples include loading and unloading areas, conveyor belts, rotators, storage areas, etc. Service areas may contain specific environment objects, such as racks, shelves, etc.
+Arenas contain one or more service areas, which have specific purposes for a particular test. Examples include loading and unloading areas, conveyor belts, rotators, storage areas, etc. Service areas may contain specific environment objects, such as racks, shelves, etc. They may be accessible from different locations, i.e. it might be possible to reach an area from two or more sides.
 
 \subsection{Racks}
 Service areas, e.g. loading and unloading areas, may foresee the use of racks. Objects to be delivered or removed from racks have to be placed or picked up from the top. The height of the racks should be not lesser than 5 cm and not more than 40 cm. The color for the top surface of racks is a bright uniform color such as white or light gray, unless a test specifies a different color. The top surface of the rack may be specially designed in order to serve specific purposes, e.g. holding objects.
@@ -229,7 +236,7 @@ The arena used for a particular test may foresee the use of floor markers for de
 
 \url{http://www.hitl.washington.edu/artoolkit}
 
-The black inner square of the markers is at least 8 cm x 8 cm large with an additional white border around of at least 12 cm side length. Figure \ref{fig:floor_marker} depicts some examples of these markers.
+The black inner square of the markers is at least 8 cm x 8 cm large with an additional white border around of at least 12 cm side length. Figure \ref{fig:floor_marker} and \ref{fig:barrier_tape} depict some examples of these markers.
 
 \begin{figure}
 \centering
@@ -240,14 +247,17 @@ The black inner square of the markers is at least 8 cm x 8 cm large with an addi
 
 
 \subsection{Barrier Tape as Virtual Walls}
-The arena may include virtual walls marked by either striped yellow/black or white/red barrier tape on the floor (see Figure \ref{fig:barrier_tape}). If any part of a robot passes over such a tape it is considered as a collision with a usual wall.\note{It should be mentioned that one type of barrier tape is allowed to be crossed in certain situations (e.g. when entering and leaving the arena) without out getting penalty points.}
+The arena may include virtual walls marked by either striped yellow/black or white/red barrier tape on the floor (see Figure \ref{fig:barrier_tape}). If any part of a robot passes over such a tape it is considered as a collision with a usual wall.
+
+The red/white tape is used to frame the entrance and exit area. The robot is allowed to cross this kind of barrier only at the beginning of a test to enter arena and at the end for leaving. In contrast, the yellow/black one denotes an obstacle which the robot is never allowed to cross. 
 
 \begin{figure}
 \centering
-\includegraphics[width= 0.4\textwidth ]{../images/example_barrier_tape.jpg}
-\caption{Example of barrier tape.}
+\includegraphics[width= 0.7\textwidth ]{../images/barrier_tapes_in_china15.jpg}
+\caption{Example of barrier tape used during RoboCup 2015. The red/white tape is used for the entrance and exit, while the yellow/black one denotes an obstacle.}
 \label{fig:barrier_tape}
 \end{figure}
+
 
 \subsection{Entrance and Exit}
 If possible, the arena should have one entrance and one exit, which are equipped with laser barriers. These barriers are used for timekeeping by the referee box.
@@ -259,14 +269,11 @@ The arena must be surrounded by either walls or barrier tape. The only exception
 \label{sec:ManipulationTasks}
 
 \subsection{Manipulation Objects} \label{ssec:ManipulationObjects}
-The manipulation objects in \RCAW shall include a wide range of objects relevant in industrial applications of robotics\revcha{ and}{. They} eventually cover any raw material, (semi-)finished parts or products as well as tools and possibly operating materials required for manufacturing processes.
+The manipulation objects in \RCAW shall include a wide range of objects relevant in industrial applications of robotics. They eventually cover any raw material, (semi-)finished parts or products as well as tools and possibly operating materials required for manufacturing processes.
 \par
-The intention is to start with a simple set of objects of different shapes and colors. Every year, the spectrum shall then be widen in at least one aspect. The initial set of objects includes basic standard screws and nuts in various sizes and weights as shown in Table~\ref{tab:manipulation_objects} and Table~\ref{tab:manipulation_objects_rockin}. 
+The intention is to start with a simple set of objects of different shapes and colors. Every year, the spectrum shall then be widen in at least one aspect. The initial set of objects includes basic standard screws and nuts in various sizes and weights as shown in Table~\ref{tab:manipulation_objects} and Table~\ref{tab:manipulation_objects_rockin}. Objects of one kind can slightly vary e.g. considering the surface. 
 
 \newcommand{\imageView}[1]{\includegraphics[width=2cm, valign=c]{#1}}
-
-
-
 {
 \newcommand{\rowpadding}{0.4cm}
 \setlength\extrarowheight{\rowpadding}
@@ -275,50 +282,50 @@ The intention is to start with a simple set of objects of different shapes and c
 \hline
 Object & Symbolic Description & Weight & Details \\
 \hline
-\imageView{../images/F20_20_B.jpg} & F20\_20\_B & 49 g & Small aluminium profile (black)\newline
+\imageView{../images/F20_20_B.jpg} & \texttt{F20\_20\_B} & 49 g & Small aluminium profile (black)\newline
  Height: 20 mm \newline
  Width: 20 mm \newline
  Length: 100 mm \\ [\rowpadding]
 \hline
-\imageView{../images/F20_20_G.jpg} & F20\_20\_G & 49 g & Small aluminium profile (gray)\newline
+\imageView{../images/F20_20_G.jpg} & \texttt{F20\_20\_G} & 49 g & Small aluminium profile (gray)\newline
  Height: 20 mm \newline
  Width: 20 mm \newline
  Length: 100 mm \\ [\rowpadding]
 \hline
-\imageView{../images/S40_40_B.jpg} & S40\_40\_B & 186 g & Big aluminium profile (black)\newline
+\imageView{../images/S40_40_B.jpg} & \texttt{S40\_40\_B} & 186 g & Big aluminium profile (black)\newline
  Height: 40 mm \newline
  Width: 40 mm \newline
  Length: 100 mm \\ [\rowpadding]
 \hline
-\imageView{../images/S40_40_G.jpg} & S40\_40\_G & 186 g & Big aluminium profile (gray)\newline
+\imageView{../images/S40_40_G.jpg} & \texttt{S40\_40\_G} & 186 g & Big aluminium profile (gray)\newline
  Height: 40 mm \newline
  Width: 40 mm \newline
  Length: 100 mm \\ [\rowpadding]
 \hline
-\imageView{../images/M20_100.jpg} & M20\_100 & 296 g & Screw\newline
+\imageView{../images/M20_100.jpg} & \texttt{M20\_100} & 296 g & Screw\newline
  ISO 4014 \newline
  M20 \newline
  Length: 100 mm \\ [\rowpadding]
 \hline
-\imageView{../images/M20.jpg} & M20 & 56 g & Small nut\newline
+\imageView{../images/M20.jpg} & \texttt{M20} & 56 g & Small nut\newline
  ISO 4032 \newline 
  M20 \\ [\rowpadding]
 \hline
-\imageView{../images/M30.jpg} & M30 & 217 g & Big nut\newline
+\imageView{../images/M30.jpg} & \texttt{M30} & 217 g & Big nut\newline
  ISO 4032 \newline 
  M30 \\ [\rowpadding]
 \hline
-\imageView{../images/R20.jpg} & R20 & 14 g & Plastic tube\newline
+\imageView{../images/R20.jpg} & \texttt{R20} & 14 g & Plastic tube\newline
  Inner diameter: 20 mm \newline
  Outer diameter: 30 mm \newline
  Length: 45 mm \\ [\rowpadding]
 \hline
-%\imageView{../images/V20.jpg} & V20 & 14 g & Inner diameter: 20 mm \newline
+%\imageView{../images/V20.jpg} & \texttt{V20} & 14 g & Inner diameter: 20 mm \newline
 %Outer diameter: 30 mm \newline
 %Length: 45 mm \\
 %\hline
 \end{tabular}
-\caption{Examples of typical manipulation objects \todo{add the RoCKIn objects, and make clear that we have two type of object sets}}
+\caption{\RCAW manipulation object set.}
 \label{tab:manipulation_objects}
 \end{table}
 
@@ -329,25 +336,25 @@ Object & Symbolic Description & Weight & Details \\
 Object & Symbolic Description & Weight & Details \\
 \hline
 
-\imageView{../images/bearingBoxA.jpg} & Bearing\_Box & 102 g & Bearing box\newline
+\imageView{../images/bearingBoxA.jpg} & \texttt{Bearing\_Box} & 102 g & Bearing box\newline
  Height: 25 mm \newline
  Width: 45 mm \newline
  Length: 50 mm \newline
  Inner diameter: 32 mm \\ [\rowpadding]
 \hline
 
-\imageView{../images/bearing.jpg} & Bearing & 42 g & Bearing\newline
+\imageView{../images/bearing.jpg} & \texttt{Bearing} & 42 g & Bearing\newline
  Height: 13 mm \newline
  Inner diameter: 15 mm \newline
  Outer diameter: 32 mm \\ [\rowpadding]
 \hline
 
-\imageView{../images/axis.jpg} & Axis & 40 g & Axis\newline
+\imageView{../images/axis.jpg} & \texttt{Axis} & 40 g & Axis\newline
  Diameter: 27 mm \newline
  Length: 96 mm \\ [\rowpadding]
 \hline
 
-\imageView{../images/distanceTube.jpg} & Distance\_Tube & 5 g & Distance tube\newline
+\imageView{../images/distanceTube.jpg} & \texttt{Distance\_Tube} & 5 g & Distance tube\newline
  Height: 10 mm \newline
  Inner diameter: 28 mm \newline
  Outer diameter: 32 mm \\ [\rowpadding]
@@ -358,30 +365,45 @@ Object & Symbolic Description & Weight & Details \\
  Length: 87 mm \\ [\rowpadding]
 \hline
 \end{tabular}
-\caption{RoCKIn...}
+\caption{RoCKIn manipulation object set.}
 \label{tab:manipulation_objects_rockin}
 \end{table}
 }
 
-Objects of one kind can slightly vary e.g. considering the surface. Teams can ask the TC for allowance to use objects brought by the team to a competition, provided they do not differ in a relevant way from the default objects.\note{Sorry, but to we really want to allow this? Teams should be able to cope with such kind of small differences. All teams should use exactly the same objects. In @Home teams even see the objects just at the competition and need to train them on-site. (Fred)}
-
 \subsection{Manipulation Zone}
+The manipulation zone defines the area where objects can be placed. Thereby, the following constraints need to be satisfied:
+\begin{itemize}
+	\item The maximum depth of the manipulation zone is 20 cm.
+	\item The minimum distance between objects to each other is 2 cm.
+	\item The minumum distance of the beginning of the manipulation zone to a wall is 10 cm.
+	\item There as an offset of 2 cm from the border of the service area to the manipulation zone.
+\end{itemize}
+Note, the constraints do not permit, that objects can be partially occluded dependent on the viewpoint.
+\begin{figure} [h!]
+\centering
+\includegraphics[width=1.0\textwidth ]{../images/manipulation_zone.png}
+\caption{Manipulation zone: the green color indicates the area where objects can be placed on a service area by the referees.}
+\label{fig:manipulation_zone}
+\end{figure}
+
+
+
+
 
 \subsection{Placement of Objects}
 For the placement of manipulation objects the following terms are used:
 
 \begin{itemize}
-\item position: point within 2D coordinate system of a service area
-\item rotation: rotation around vertical axis of a service area\note{From a geometric point of view the rotation is already part of the orientation. (Fred)}
-\item orientation: rotation around horizontal axes of a service area, i.e. whether the object is standing upright or lying on its side.
-\item pose: combination of position\revcha{ and rotation}{, rotation and orientation}
+\item position: point within 2D coordinate system of a service area,
+\item rotation: rotation around vertical axis of a service area,
+\item orientation: rotation around horizontal axes of a service area, i.e. whether the object is standing upright or lying on its side
+\item pose: combination of position, rotation and orientation.
 \end{itemize}
 
 \subsection{Grasping Objects} \label{ssec:GraspingObjects}
 If not specified differently in a test, the following definition applies to decide if an object counts as being grasped from a service area.
 \par
-An object counts as grasped from a service area, when
-\revdel{the robot has lifted the object. It is not enough to shove it beyond the service areas edge.} the object was moved outside of the source service area. Outside means, that the vertical projection of the object’s convex hull does not touch the service area any more.
+An object counts as grasped from a service area, when the object was moved outside of the source service area. Outside means, that the vertical projection of the object’s convex hull does not touch the service area any more.
 
 \par
 The last point shall enable to let the robot pick up an object in order to analyse its type, e.g. by holding it close to a camera on the robot.
@@ -391,20 +413,13 @@ If the robot handles an object, but does not fulfil all points above, the object
 \subsection{Placing Objects on Service Areas} \label{ssec:PlacingObjects}
 If not specified differently in a test, a manipulation object counts as placed on a target service area if any part of the object is touching the surface of the service area and the object is not moving at the end of the run.
 \par
-The \revcha{position, rotation or orientation}{pose} of the object on the service area can be chosen freely by the robot.
+The pose of the object on the service area can be chosen freely by the robot.
 
-\section{Overall Scenario and Variation Points}
-The following two figures illustrate the kind of arenas that can be built with the previously described components. Figure \ref{fig:example_map} shows an old arena configuration (from IROS 2012) as a topological map defining places and connections, while Figure \ref{fig:example_map_go13} shows an arena configuration (from German Open 2013) with only a few surrounding walls, more open space and a conveyor belt. 
-Areas may be accessible from different locations, it might be possible to reach an area from two or more sides.
+%\section{Overall Scenario and Variation Points}
+%The following two figures illustrate the kind of arenas that can be built with the previously described components. Figure \ref{fig:example_map} shows an old arena configuration (from IROS 2012) as a topological map defining places and connections, while Figure \ref{fig:example_map_go13} shows an arena configuration (from German Open 2013) with only a few surrounding walls, more open space and a conveyor belt. 
 
-\begin{figure}
-\includegraphics[width= \textwidth ]{../images/example_map.png}
-\caption{Example of an arena with 5 service areas (D1, D2, S1, S2, S3). The purple squares define places.}
-\label{fig:example_map}
-\end{figure}
-
-\begin{figure}
-\includegraphics[width= \textwidth ]{../images/arena_brsu_spatial_areas.jpg}
-\caption{Illustration of one possible arena configuration. \todo{similar to Figure~\ref{fig:example_arena}. Delete one or put them together in a subfigure environment}}
-\label{fig:example_map_go13}
-\end{figure}
+%\begin{figure}
+%\includegraphics[width= \textwidth ]{../images/arena_brsu_spatial_areas.jpg}
+%\caption{Illustration of one possible arena configuration. \todo{similar to Figure~\ref{fig:example_arena}. Delete one or put them together in a subfigure environment}}
+%\label{fig:example_map_brsu}
+%\end{figure}

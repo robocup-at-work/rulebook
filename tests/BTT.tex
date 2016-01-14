@@ -1,18 +1,18 @@
 \newpage
-\subsection{Basic Transportation Test}
+\section{Basic Transportation Test}
 
 \paragraph{Purpose and Focus of the Test}
 The purpose of the \iaterm{Basic Transportation Test}{BTT} is to assess the ability of the robots for combined navigation and manipulation tasks. 
-The \revcha{focus of the Basic Transportation Test is to assess the ability of a team}{robots have} to deal with flexible task specifications, especially concerning information about object constellations in source and target locations, and task constraints such as limits on the number of objects allowed to be carried simultaneously, etc.  
+The robots have to deal with flexible task specifications, especially concerning information about object constellations in source and target locations, and task constraints such as limits on the number of objects allowed to be carried simultaneously, etc.  
 
-\subsection{Scenario Environment}
+\paragraph{Scenario Environment}
 The arena used for this test contains all elements as for the Basic Manipulation Test. Besides that all areas may contain objects.
 
 \paragraph{Manipulation Objects}
-The manipulation objects \revcha{in this test include the objects specified in Section~\ref{ssec:ManipulationObjects}}{used in this test are specified by the instances defined in Table~\ref{tab:Instances}}.
+The manipulation objects used in this test are defined by the instances described in Table~\ref{tab:Instances}.
 
 \paragraph{Task}
-A single robot is used, which is initially positioned outside of the arena near a gate to the arena. The task is to get several objects from the source service areas (such as S1, T7, or U3), and to deliver them to the destination service areas (e.g. D1 and D3). Robots may carry up to three objects simultaneously. 
+A single robot is used, which is initially positioned outside of the arena near a gate to the arena. The task is to get several objects from the source service areas (such as \texttt{S1}, \texttt{T7}, or \texttt{U3}), and to deliver them to the destination service areas (e.g. \texttt{D1} and \texttt{D3}). Robots may carry up to three objects simultaneously. 
 \par
 The task specification consists of two lists:
 The first list contains for each service area a list of manipulation object descriptions. The descriptions are similar as those used for the Basic Manipulation Test. 
@@ -20,11 +20,11 @@ The second list contains for each destination service area a configuration of ma
 
 Two example task specifications are given here:
 \begin{itemize}
-	\item BTT\textless initialsituation(\textless S6,line(M20\_100,F20\_20\_B)\textgreater \textless S7,line(V20)\textgreater); \\
-	goalsituation(\textless S1,line(M20\_100,F20\_20\_B)\textgreater \textless S2,line(V20)\textgreater )\textgreater
+	\item \texttt{BTT\textless initialsituation(\textless S6,line(M20\_100,F20\_20\_B)\textgreater \textless S7,line(V20)\textgreater);} \\
+	\texttt{goalsituation(\textless S1,line(M20\_100,F20\_20\_B)\textgreater \textless S2,line(V20)\textgreater )\textgreater}
 
-	\item BTT\textless initialsituation(\textless S6,line(S40\_40\_B,F20\_20\_B)\textgreater \textless S7,line(M20\_100)\textgreater); \\
-	goalsituation(\textless S1,line(F20\_20\_B,F20\_20\_B)>\textless S2,line(M20\_100)\textgreater )\textgreater
+	\item \texttt{BTT\textless initialsituation(\textless S6,line(S40\_40\_B,F20\_20\_B)\textgreater \textless S7,line(M20\_100)\textgreater);} \\
+	\texttt{goalsituation(\textless S1,line(F20\_20\_B,F20\_20\_B)>\textless S2,line(M20\_100)\textgreater )\textgreater}
 
 \end{itemize}
 
@@ -39,16 +39,15 @@ The following rules have to be obeyed:
 
 \begin{itemize}
 \item The order in which the teams have to perform will be determined by a draw.
-\item \revdel{A team has a time period of 10 minutes to complete a run.}
 \item The robot has to start from outside the arena.
 \item The robot will get the task specification from the referee box.
 \item After the team's robot starts, it must move into the arena and attempt to complete the task. 
 \item A manipulation object counts as successfully grasped as specified in Section~\ref{ssec:GraspingObjects}.
-\item \revadd{A manipulation object counts as successfully placed, if the robot has placed the object into the correct destination service area as described in Section~\ref{ssec:PlacingObjects}.}
+\item A manipulation object counts as successfully placed, if the robot has placed the object into the correct destination service area as described in Section~\ref{ssec:PlacingObjects}.
 \item It is not allowed to place manipulation objects anywhere except for the robot itself and any of the available service areas.
 \item A robot may carry up to three objects at the same time.
-\item The time is stopped when the robot has completed the task (delivered all objects to the right locations and left the arena through the exit gates). If a team cannot complete the task within \revcha{10 minutes} the designated time, the run will be stopped \revdel{after 10 minutes}. 
-\item The team must leave the arena within one minute after completing the task.\note{This is a general rule and should be either in the rules of all tasks or, what I would prefer, in one of the general sections at the beginning. (Fred)}
+\item The time is stopped when the robot has completed the task (delivered all objects to the right locations and left the arena through the exit gates). If a team cannot complete the task within the designated time, the run will be stopped.. 
+
 \end{itemize}
 
 
