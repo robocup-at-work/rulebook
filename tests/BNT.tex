@@ -25,14 +25,6 @@ The task specification consists of:
 	\item A duration in seconds
 \end{itemize}
 
-
-Two example task specifications for the BNT test are given below:
-
-\begin{itemize}
-	\item \texttt{BNT\textless(S6,N,3)(S2,N,3)(D1,S,3)(S5,W,3)(D3,E,3)(D4,S,3)\textgreater}
-	\item \texttt{BNT\textless(S6,N,3)(S3,W,3)(S7,W,3)(S2,W,3)(D3,E,3)\textgreater}
-\end{itemize}
-
 The duration is always set to 3 seconds in order to make validation easier for the referees.
 %
 % \subsection{Complexity Options}
@@ -62,7 +54,6 @@ The following rules have to be obeyed:
 
 \begin{itemize}
 \item The order in which the teams have to perform will be determined by a draw.
-\item The robot will get the task specification from the referee box, which is a sequence of triplets (\texttt{\textless place\textgreater}, \texttt{\textless orientation\textgreater}, \texttt{\textless break\textgreater)}, where \texttt{\textless place\textgreater} designates one of the specified places of the environment (e.g. \texttt{D0}, \texttt{D1}, \texttt{S2},\texttt{T6}), \texttt{\textless orientation\textgreater} is one of (\texttt{N}, \texttt{S}, \texttt{W}, \texttt{E}), and \texttt{\textless break\textgreater} is a one-digit integer between \texttt{1} and \texttt{3}. An example task specification would be \texttt{\textless (S1,E,1),(D1,W,1),(S3,E,1),(D2,W,1)\textgreater}.
 \item After the team's robot enters the arena, it must move to the places given in the task specification and assume the orientation specified after the place. The robot may reach a destination by choosing any path.
 \item The robot must visit the places in the order given by the task specification. It is possible to skip a place of the task specification and continue with the next one. In cases where the robot skipped one or multiple places there may be multiple possible matchings between places reached and places specified. In that case for calculating scores the matching is taken which leads to the highest score for the team.
 \item A destination is counted as reached when the robot covers the place marker as much as the complexity level demands. The orientation must not deviate more than 45 deg.

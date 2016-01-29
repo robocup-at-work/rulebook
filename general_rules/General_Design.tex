@@ -444,7 +444,7 @@ The last point shall enable to let the robot pick up an object in order to analy
 If the robot handles an object, but does not fulfil all points above, the object does not count as being grasped, and neither points for grasping a required object, nor penalty points for grasping an unspecified object are given. Still, if the object drops to the ground or an uncontrolled collision occurs, the normal penalty points apply.
 
 \subsection{Placing Objects on Service Areas} \label{ssec:PlacingObjects}
-If not specified differently in a test, a manipulation object counts as placed on a target service area if any part of the object is touching the surface of the service area and the object is not moving at the end of the run.
+If not specified differently in a test, a manipulation object counts as placed on a target service area if any part of the object is touching the surface of the service area and the object is not moving at the end of the run. An objects does not count as placed when it is dropped (e.g. dropped from a height above 5 cm). 
 \par
 The pose of the object on the service area can be chosen freely by the robot.
 
