@@ -1,16 +1,16 @@
 % !TEX root = ../Rulebook.tex
 
-Each of the particular tests defined later in this document may define its own scenario. In this document, a scenario consists of the following elements:
+Each of the particular tests defined later in this document may define its own scenario. In this document, a scenario consists of elements such as the
 
 \begin{itemize}
-	\item the environment
-	\item the objects that affect navigation
-	\item the objects that are to be manipulated
-	\item the objects with which robots interact
-	\item the number of robots allowed per team
-	\item the number of teams competing simultaneously in the same arena
-	\item the task to be performed by a team
-	\item the criteria for evaluating a team's performance
+	\item environment,
+	\item objects that affect navigation,
+	\item objects that are to be manipulated,
+	\item objects with which robots interact,
+	\item number of robots allowed per team,
+	\item number of teams competing simultaneously in the same arena,
+	\item task to be performed by a team, and
+	\item the criteria for evaluating a team's performance.
 \end{itemize}
 
 In order to avoid excessive development efforts for each specific test and to allow reuse of partial functionalities the scenarios are built from a reasonably small set of components, which are later put together in different ways. This section describes these elements.
@@ -36,8 +36,8 @@ The manipulator of the robot should be designed and mounted on the robot such th
 	\item The manipulator of the robot should be designed and mounted on the robot such that it can grasp objects from heights between 0 cm and 25 cm above the floor.
 	\item The robots use sensors to obtain information about their whereabouts in the environment and the task-relevant objects. The major types of sensors that may be used by the robots include:
 	\begin{itemize}
-		\item laser range finders (cf. models by Hokuyo or Sick)
-		\item color CCD cameras (cf. any kind of USB camera)
+		\item Laser range finders (cf. models by Hokuyo or Sick)
+		\item Color CCD cameras (cf. any kind of USB camera)
 		\item 3D cameras (cf. any kind of camera with depth information)
 	\end{itemize}
 	\item The design of the scenario should be such that the robots can solve the tasks safely and robustly using (all or a subset of) these sensors.
@@ -70,8 +70,8 @@ The referee box
 \begin{enumerate}
   \item announces the start of the preparation time,
   \item communicates the task specifications,
-  \item starts each competition run and
-  \item closes a successful run after reaching the endzone or
+  \item starts each competition run, and
+  \item closes a successful run after reaching the endzone, or
   \item aborts the run in case of a time lapse.
 \end{enumerate}
 
@@ -431,10 +431,10 @@ Note, the constraints do not permit, that objects can be partially occluded depe
 For the placement of manipulation objects the following terms are used:
 
 \begin{itemize}
-\item position: point within 2D coordinate system of a service area,
-\item rotation: rotation around vertical axis of a service area,
-\item orientation: rotation around horizontal axes of a service area, i.e. whether the object is standing upright or lying on its side
-\item pose: combination of position, rotation and orientation.
+\item Position: point within 2D coordinate system of a service area,
+\item Rotation: rotation around vertical axis of a service area,
+\item Prientation: rotation around horizontal axes of a service area, i.e. whether the object is standing upright or lying on its side
+\item Pose: combination of position, rotation and orientation.
 \end{itemize}
 
 \subsection{Grasping Objects} \label{ssec:GraspingObjects}
