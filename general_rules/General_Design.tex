@@ -230,7 +230,9 @@ The competition arena is partially surrounded by walls. The height of the walls 
 Arenas contain one or more service areas, which have specific purposes for a particular test. Examples include loading and unloading areas, conveyor belts, rotators, storage areas, etc. Service areas may contain specific environment objects, such as shelves, racks, etc. They may be accessible from different locations, i.e. it might be possible to reach an area from two or more sides. Note that service areas can have different heights.
 
 \subsection{Containers}
-As in many industrial settings, the \RCAW environment may be equipped with several containers (see Figure~\ref{fig:containers}). They can store any kind of manipulation object defined in Section~\ref{ssec:ManipulationObjects}. Robots are supposed either to grasp one or multiple objects out of containers or to place previously grasped objects into them. Several containers can be present in the environment and are always associated with a service area. That means that the container itself will be placed on top and within the manipulation zone defined in Section~\ref{ssec:ManipulationZone}. The constraints defined in Section~\ref{ssec:ManipulationZone} apply also to the containers.
+As in many industrial settings, the \RCAW environment may be equipped with several containers (see Figure~\ref{fig:containers}). They can store any kind of manipulation object defined in Section~\ref{ssec:ManipulationObjects}. Robots are supposed either to grasp one or multiple objects out of containers or to place previously grasped objects into them. Several containers can be present in the environment and are always associated with a service area. That means that the container itself will be placed on top and within the manipulation zone defined in Section~\ref{ssec:ManipulationZone}. 
+It is also possible that more than one container is placed on top of a single service area.
+The constraints defined in Section~\ref{ssec:ManipulationZone} apply also to the containers.
 
 Currently, a container itself does to not need to be manipulated or transported by the robot.
 
@@ -247,7 +249,9 @@ Currently, a container itself does to not need to be manipulated or transported 
 %Service areas, e.g. loading and unloading areas, may foresee the use of racks. Objects to be delivered or removed from racks have to be placed or picked up from the top. The height of the racks should be not lesser than 5 cm and not more than 40 cm. The color for the top surface of racks is a bright uniform color such as white or light gray, unless a test specifies a different color. The top surface of the rack may be specially designed in order to serve specific purposes, e.g. holding objects.
 
 \subsection{Shelves}
-Service areas may foresee the use of shelves and shelf units as depicted in Figure~\ref{fig:shelf}. Objects to be delivered or removed from shelves have to be placed or picked sideways. The height of the shelves should be not lesser than 5 cm and not more than 40 cm. The color of the shelf surface is a bright uniform color such as white or light gray, unless a test specifies a different color. The shelf surface may be specially designed in order to serve specific purposes, e.g. holding objects.
+Service areas may foresee the use of shelves and shelf units as depicted in Figure~\ref{fig:shelf}. Objects to be delivered or removed from shelves have to be placed or picked sideways. The height of the shelves should be not lesser than 5 cm and not more than 40 cm. The color of the shelf surface is a bright uniform color such as white or light gray, unless a test specifies a different color.
+Since the shelf is a new element in \RCAW, the robots are supposed to manipulate objects only on the lower level plane. 
+The shelf surface may be specially designed in order to serve specific purposes, e.g. holding objects.
 
 \begin{figure} [h!]
 \centering
