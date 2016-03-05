@@ -3,15 +3,10 @@
 
 \subsection{Purpose and Focus of the Test}
 The purpose of the \iaterm{Basic Assembly Test}{BAT} is to demonstrate basic assembly capabilities by the robots, like combining objects, by fitting or attaching them together.
-The focus is on the manipulation towards assembly, e.g. force fitting or the preparation of objects to be attached by e.g. external devices and machines.
-
-\todo{What does "objects to be attached by e.g. external devices and machines" exactly mean. I don't get it. (Fred)}
+The focus is on the manipulation towards assembly, e.g. force fitting or the preparation of objects to be attached by e.g. external devices and machines. This can include holding an object in place for another robot, machine or human to assemble it.
 
 \subsection{Scenario Environment}
-The arena used for this test contains \revdel{basically} all elements as for the Basic Navigation Test. In addition to environmental elements (such as walls, service areas, floor markers, etc.), different manipulatable objects will be placed on the service areas. On top of one \revcha{or more specific areas}{service area}, a car model will be added (see Fig \ref{fig:BAT_car}).
-
-\todo{Will it the car mounted fixed to the service area or is it just placed on top? (Fred)}
-\todo{Will the car, the axle and the wheel differently colored? (Fred)}
+The arena used for this test contains all elements as for the Basic Navigation Test. In addition to environmental elements (such as walls, service areas, floor markers, etc.), different manipulatable objects will be placed on the service areas. On top of the service area, a car model will be mounted and fixed, so that the robot will not be able to move the car (see Fig \ref{fig:BAT_car}). The axle will be red, the tire blue and the car model will be neither.
 
 \begin{figure} [h!]
 \centering
@@ -22,8 +17,7 @@ The arena used for this test contains \revdel{basically} all elements as for the
 
 
 \subsection{Manipulation Objects}
-The manipulation objects in this test may include the objects specified in Table \ref{tab:manipulation_objects}.
-\todo{Why are the normal objects relevant for this task, if only wheels need to be fitted onto axes? (Fred)}
+The manipulation objects in this test may include the objects specified in Table, as they can still be inside of the arena and function as decoy objects. \ref{tab:manipulation_objects}.
 The set of objects is extended by:
 
 \begin{table}[p]
@@ -49,10 +43,8 @@ A single robot is used. The task consists of a sequence of assembly operations, 
 \par
 The task specification consists of: 
 \begin{itemize}
-	\item The specification of the initial place (e.g. D0, S5, U2) \todo{initial place of what? (Fred)}
 	\item Location(s) of the wheels
 	\item Location(s) where the assembly takes places
-	\item The specification of a final place for the robot\todo{Do we really need this? I know this is also specified in the BMT, but ni the past we never used it. So, why to stick with it here? (Fred)}
 \end{itemize}
 
 \subsection{Rules}
@@ -62,8 +54,10 @@ The following rules have to be obeyed:
 \item The order in which the teams have to perform will be determined by a draw.
 \item At the beginning of a team's period, the team will get the task specification. 
 \item The team must set-up the robot in the designated start area.
-\item A assembly object counts as successfully assembled when it is attached to the correct object or is in place for the external device to perform the assembly.
-\item \todo{What about the maximum available time for the assembly? And how many assemblies need to be performed (Fred)}
+\item An assembly object counts as successfully assembled when it is attached to the correct object or is in place for the external device to perform the assembly.
+\item An assembly objects counts as assembled wrong when it is assembled wrong (e.g. fitting a second tire on one axle)
+\item The maximum time and the number of assembly to be performed will be determined on the event by the TC.
+
 \end{itemize}
 
 
@@ -75,6 +69,4 @@ Points are awarded as follows:
 \item wrong assembly:  \hfill -100 points
 \end{itemize}
 
-\todo{Can you give an example for a wrong assembly. What's the objective of the penalty points, if you only get points for a correct assembly? (Fred)}
 
-\todo{Why are we not using any of the objects from the RoboCup or RoCKIn set and introducing new objects instead. In my opinion increases the entry barrier for teams to participate in this challenge. (Fred)}
