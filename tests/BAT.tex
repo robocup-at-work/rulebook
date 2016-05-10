@@ -26,9 +26,9 @@ The set of objects is extended by:
 \hline 
  & Symbolic Description & Weight (in g) & Details \\ 
 \hline 
-\includegraphics[width=3cm]{./images/BAT_Tire.png}  & T40 & approx. 50g & Height: 40mm \newline
- Width: 40mm \newline
- Length: approx. 10mm \\ 
+\includegraphics[width=3cm]{./images/BAT_Tire.png}  & T50 & approx. 20g & Height: 50mm \newline
+ Width: 50mm \newline
+ Length: approx. 33mm \\ 
 \hline 
 \end{tabular} 
 
@@ -36,10 +36,11 @@ The set of objects is extended by:
 \caption{Examples of assembly objects}
 \end{table}
 
-All objects can be printed using a 3D-printer (e.g. axis and wheel), the car model is only for visualization purposes. All parts are available as STL files.
+All objects can be printed using a 3D-printer (e.g. axis and wheel), the car model is only for visualization purposes. All parts are available as STL files. (\url{https://github.com/robocup-at-work/models})
+
 
 \subsection{Task}
-A single robot is used. The task consists of a sequence of assembly operations, with a small base movement in between. The objective is to collect a set of objects and perform an assembly option. The robot will be given instruction where to pick up the wheels and where to assemble them. The task is to fit the wheels onto the axes. The wheels and the axes need to be detected by the robot. A few wheels may be already assembled. Therefore it is necessary to detect where a wheel is still missing.
+A single robot is used. The task consists of a sequence of assembly operations, with a small base movement in between. The objective is to collect a set of objects and perform an assembly option. The robot will be given instruction where to pick up the wheels and where to assemble them. The task is to fit the wheels onto the axes. The wheels and the axes need to be detected by the robot. A few wheels may be already assembled. Therefore it is necessary to detect where a wheel is still missing. The wheels designated for assembly will lie flat on the service areas.
 
 \par
 The task specification consists of: 
