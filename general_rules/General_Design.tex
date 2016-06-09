@@ -229,7 +229,7 @@ The competition arena is partially surrounded by walls. The height of the walls 
 
 \subsection{Service Areas}
 \label{ssec:serviceareas}
-Arenas contain one or more service areas, which have specific purposes for a particular test. Examples include loading and unloading areas, conveyor belts, rotators, storage areas, etc. Service areas may contain specific environment objects, such as shelves, racks, etc. They may be accessible from different locations, i.e. it might be possible to reach an area from two or more sides. Note that service areas can have different heights. If a service area has a height of zero cm, a tape will mark the area (see Figure \ref{fig:barrier_tape_0cm}). The tape will be on the floor and will be blue/white striped. This tape may be crossed, and does not count as a collision. If the robot touches an manipulation object while navigating, this will be handled as a collision. If a service area will have a height of 5 cm there will be a wall surrounding it.
+Arenas contain one or more service areas, which have specific purposes for a particular test. Examples include loading and unloading areas, conveyor belts, rotators, storage areas, etc. Service areas may contain specific environment objects, such as shelves, racks, etc. They may be accessible from different locations, i.e. it might be possible to reach an area from two or more sides. Note that service areas can have different heights. If a service area has a height of zero cm, a tape will mark the area (see Figure \ref{fig:barrier_tape_0cm}). The tape will be on the floor and will be blue/white striped. This tape may be crossed, and does not count as a collision. If the robot touches an manipulation object while navigating, this will be handled as a collision. If a service area will have a height of 5 cm there will be a wall with 10 cm height surrounding it.
 
 \begin{figure} [h!]
 \begin{center}
@@ -446,7 +446,7 @@ For the placement of manipulation objects the following terms are used:
 \begin{itemize}
 \item Position: point within 2D coordinate system of a service area,
 \item Rotation: rotation around vertical axis of a service area,
-\item Prientation: rotation around horizontal axes of a service area, i.e. whether the object is standing upright or lying on its side
+\item Orientation: rotation around horizontal axes of a service area, i.e. whether the object is standing upright or lying on its side
 \item Pose: combination of position, rotation and orientation.
 \end{itemize}
 
