@@ -64,7 +64,7 @@ When participating in a competition, the team may operate the robot only in thei
 
 \section{Referee Box}
 The TC shall provide a referee box that supports the evaluation of the competition. It applies the time measuring, generates the tasks according to the chosen test configuration and monitors the
-competition. For this purpose each robot has to transmit a keep-alive signal every second during all phases (initialization, preparation, game, finish). 
+competition. For this purpose each robot has to transmit a keep-alive signal every second during all phases (initialization, preparation, game, finish).
 
 The referee box
 \begin{enumerate}
@@ -75,18 +75,18 @@ The referee box
   \item aborts the run in case of a time lapse.
 \end{enumerate}
 
-% Figure \ref{fig:refbox} depicts the progress of a competition run. 
-When the robot is initialized, it starts immediately to transmit its beacon 
-signal. The referee box answers with a state information. If the previous robot 
-has left the arena, one of the referees starts the seconded phase by pushing a 
-button. The referee box transmits a new state message that informs the robot 
-about the beginning of the initialization phase. Inside the referee box a 
-timer is started which initiates the start of the execution phase after 
-transmitting the test parameters. During the run the robot is able to activate 
-the external devices and to receive their status information. This run phase is 
-terminated by a second timer that alerts after the duration defined in the 
+% Figure \ref{fig:refbox} depicts the progress of a competition run.
+When the robot is initialized, it starts immediately to transmit its beacon
+signal. The referee box answers with a state information. If the previous robot
+has left the arena, one of the referees starts the seconded phase by pushing a
+button. The referee box transmits a new state message that informs the robot
+about the beginning of the initialization phase. Inside the referee box a
+timer is started which initiates the start of the execution phase after
+transmitting the test parameters. During the run the robot is able to activate
+the external devices and to receive their status information. This run phase is
+terminated by a second timer that alerts after the duration defined in the
 instance table.
-% 
+%
 % \begin{figure}
 % \centering
 % \input{./tikz/sequence.tikz}
@@ -94,17 +94,17 @@ instance table.
 % \label{fig:refbox}
 % \end{figure}
 % \par
-The TC provides a \aterm{Robot Operating System}{ROS} based interface of the referee box as well as 
+The TC provides a \aterm{Robot Operating System}{ROS} based interface of the referee box as well as
 an reference implementation.
 The Referee box implementation and its documentation is available under the following link:
 \begin{center}
-\url{https://github.com/robocup-at-work/at_work_central_factory_hub}	
+\url{https://github.com/robocup-at-work/at_work_central_factory_hub}
 
 \end{center}
 
 
 
-% The publish/subscribe communication with the referee box and the external 
+% The publish/subscribe communication with the referee box and the external
 % devices have to be mapped on the following topics:\note{We should not talk about @Work being a game, e.g. "gamestate". (Sven and Fred)}
 
 % \begin{table}[h!]
@@ -136,7 +136,7 @@ The Referee box implementation and its documentation is available under the foll
 %   \label{tab:RefBoxTopics}
 %  \caption{Referee box topics}
 % \end{table}
-% 
+%
 % \begin{table}[h!]
 % \centering
 %  \begin{tabular}{|l|p{6.3cm}|}
@@ -153,13 +153,13 @@ The Referee box implementation and its documentation is available under the foll
 % uint8 R20      = 7 \newline
 % \revdel{uint8 V20      = 8} \newline
 % string destination }\\ \hline
-% 
+%
 %  {\tt BNT} &  {\tt Waypoint[] waypoints }\\ \hline
-% 
+%
 %  {\tt BMT} &  {\tt string   startplace \newline
 % string[] pickObjects \newline
 % string   destination }\\ \hline
-% 
+%
 %   {\tt BTT} &  {\tt string destination  \newline
 % AtworkObject[] objects }\\ \hline
 %    {\tt Waypoint  } &  {\tt string position \newline
@@ -173,10 +173,10 @@ The Referee box implementation and its documentation is available under the foll
 %  \caption{Refere box auxiliary message types \todo{can we provide a repository where the message files are stored? And make it consistent with items in Table \ref{tab:manipulation_objects} and \ref{tab:manipulation_objects_rockin}. And add the missing test like PPT, CBT, etc.}}
 %   \label{tab:RefBoxAUX}
 % \end{table}
-% 
+%
 % Table~\ref{tab:RefBoxAUX} summarizes the auxiliary types embedded in
-% the referee box messages. A detailed description of the referee box-API is given in the 
-% corresponding documentation available on \todo{???????????????}. 
+% the referee box messages. A detailed description of the referee box-API is given in the
+% corresponding documentation available on \todo{???????????????}.
 
 \par
 The referee box visualizes the current state of the competition run, time measurements, the task specification and robot positions for visitors. Team information (name, affiliation, contact information) are given too in this context.
@@ -227,9 +227,20 @@ The floor is made of some firm material. Examples include floors made of concret
 \subsection{Walls}
 The competition arena is partially surrounded by walls. The height of the walls is not lesser than 20 cm and not more than 40 cm. One or more gates may be foreseen, where robots can enter or leave the arena. Gates may or may not be closable. The walls have a mostly uniform color. Small visual elements like logos or advertisements may be placed on the walls.
 
-\subsection{Service Areas}
-\label{ssec:serviceareas}
-Arenas contain one or more service areas, which have specific purposes for a particular test. Examples include loading and unloading areas, conveyor belts, rotators, storage areas, etc. Service areas may contain specific environment objects, such as shelves, racks, etc. They may be accessible from different locations, i.e. it might be possible to reach an area from two or more sides. Note that service areas can have different heights. If a service area has a height of zero cm, a tape will mark the area (see Figure \ref{fig:barrier_tape_0cm}). The tape will be on the floor and will be blue/white striped. This tape may be crossed, and does not count as a collision. If the robot touches an manipulation object while navigating, this will be handled as a collision. If a service area will have a height of 5 cm there will be a wall with 10 cm height surrounding it.
+\subsection{Service Areas} \label{ssec:serviceareas} Arenas contain one or more
+service areas, which have specific purposes for a particular test. Examples
+include loading and unloading areas, conveyor belts, rotators, storage areas,
+etc. Service areas may contain specific environment objects, such as shelves,
+racks, etc. They may be accessible from different locations, i.e. it might be
+possible to reach an area from two or more sides. Note that service areas can
+have different heights. If a service area has a height of zero cm, a tape will
+mark the area (see Figure \ref{fig:barrier_tape_0cm}). The tape will be on the
+floor and will be blue/white striped. \textcolor{red}{The surounded area is
+covered by a white sheet of paper fixed by the tape. The OC is responsible
+to replace it in case of pollution or tears.} This tape may be crossed, and does not
+count as a collision. If the robot touches an manipulation object while
+navigating, this will be handled as a collision. If a service area will have a
+height of 5 cm there will be a wall with 10 cm height surrounding it.
 
 \begin{figure} [h!]
 \begin{center}
@@ -241,7 +252,7 @@ Arenas contain one or more service areas, which have specific purposes for a par
 
 
 \subsection{Containers}
-As in many industrial settings, the \RCAW environment may be equipped with several containers (see Figure~\ref{fig:containers}). They can store any kind of manipulation object defined in Section~\ref{ssec:ManipulationObjects}. Robots are supposed either to grasp one or multiple objects out of containers or to place previously grasped objects into them. Several containers can be present in the environment and are always associated with a service area. That means that the container itself will be placed on top and within the manipulation zone defined in Section~\ref{ssec:ManipulationZone}. 
+As in many industrial settings, the \RCAW environment may be equipped with several containers (see Figure~\ref{fig:containers}). They can store any kind of manipulation object defined in Section~\ref{ssec:ManipulationObjects}. Robots are supposed either to grasp one or multiple objects out of containers or to place previously grasped objects into them. Several containers can be present in the environment and are always associated with a service area. That means that the container itself will be placed on top and within the manipulation zone defined in Section~\ref{ssec:ManipulationZone}.
 It is also possible that more than one container is placed on top of a single service area.
 The constraints defined in Section~\ref{ssec:ManipulationZone} apply also to the containers.
 
@@ -261,7 +272,7 @@ Currently, a container itself does to not need to be manipulated or transported 
 
 \subsection{Shelves}
 Service areas may foresee the use of shelves and shelf units as depicted in Figure~\ref{fig:shelf}. Objects to be delivered or removed from shelves have to be placed or picked sideways. The height of the shelves should be not lesser than 5 cm and not more than 40 cm. The color of the shelf surface is a bright uniform color such as white or light gray, unless a test specifies a different color.
-Since the shelf is a new element in \RCAW, the robots are supposed to manipulate objects only on the lower level plane. 
+Since the shelf is a new element in \RCAW, the robots are supposed to manipulate objects only on the lower level plane.
 The shelf surface may be specially designed in order to serve specific purposes, e.g. holding objects.
 
 \begin{figure} [h!]
@@ -298,7 +309,7 @@ The black inner square of the markers is at least 8 cm x 8 cm large with an addi
 \subsection{Barrier Tape as Virtual Walls}
 The arena may include virtual walls marked by either striped yellow/black or white/red barrier tape on the floor (see Figure \ref{fig:barrier_tape}). If any part of a robot passes over such a tape it is considered as a collision with a usual wall.
 
-The red/white tape is used to frame the entrance and exit area. The robot is allowed to cross this kind of barrier only at the beginning of a test to enter arena and at the end for leaving. In contrast, the yellow/black one denotes an obstacle which the robot is never allowed to cross. 
+The red/white tape is used to frame the entrance and exit area. The robot is allowed to cross this kind of barrier only at the beginning of a test to enter arena and at the end for leaving. In contrast, the yellow/black one denotes an obstacle which the robot is never allowed to cross.
 
 The blue/white tape is not considered a virtual wall but marks the areas of 0 cm height (see Section \ref{ssec:serviceareas}).
 
@@ -322,7 +333,7 @@ The arena must be surrounded by either walls or barrier tape. The only exception
 \subsection{Manipulation Objects} \label{ssec:ManipulationObjects}
 The manipulation objects in \RCAW shall include a wide range of objects relevant in industrial applications of robotics. They eventually cover any raw material, (semi-)finished parts or products as well as tools and possibly operating materials required for manufacturing processes.
 \par
-The intention is to start with a simple set of objects of different shapes and colors. Every year, the spectrum shall then be widen in at least one aspect. The initial set of objects includes basic standard screws and nuts with various sizes and masses as shown in Table~\ref{tab:manipulation_objects} and Table~\ref{tab:manipulation_objects_rockin}. Objects of one kind can slightly vary e.g. considering the surface. 
+The intention is to start with a simple set of objects of different shapes and colors. Every year, the spectrum shall then be widen in at least one aspect. The initial set of objects includes basic standard screws and nuts with various sizes and masses as shown in Table~\ref{tab:manipulation_objects} and Table~\ref{tab:manipulation_objects_rockin}. Objects of one kind can slightly vary e.g. considering the surface.
 
 \newcommand{\imageView}[1]{\includegraphics[width=2cm, valign=c]{#1}}
 {
@@ -359,11 +370,11 @@ Object & Symbolic Description & Mass & Details \\
  Length: 100 mm \\ [\rowpadding]
 \hline
 \imageView{./images/M20.jpg} & \texttt{M20} & 56 g & Small nut\newline
- ISO 4032 \newline 
+ ISO 4032 \newline
  M20 \\ [\rowpadding]
 \hline
 \imageView{./images/M30.jpg} & \texttt{M30} & 217 g & Big nut\newline
- ISO 4032 \newline 
+ ISO 4032 \newline
  M30 \\ [\rowpadding]
 \hline
 \imageView{./images/R20.jpg} & \texttt{R20} & 14 g & Plastic tube\newline
@@ -461,12 +472,12 @@ The last point shall enable to let the robot pick up an object in order to analy
 If the robot handles an object, but does not fulfill all points above, the object does not count as being grasped, and neither points for grasping a required object, nor penalty points for grasping an unspecified object are given. Still, if the object drops to the ground or an uncontrolled collision occurs, the normal penalty points apply.
 
 \subsection{Placing Objects on Service Areas} \label{ssec:PlacingObjects}
-If not specified differently in a test, a manipulation object counts as placed on a target service area if any part of the object is touching the surface of the service area and the object is not moving at the end of the run. An objects does not count as placed when it is dropped (e.g. dropped from a height above 5 cm). 
+If not specified differently in a test, a manipulation object counts as placed on a target service area if any part of the object is touching the surface of the service area and the object is not moving at the end of the run. An objects does not count as placed when it is dropped (e.g. dropped from a height above 5 cm).
 \par
 The pose of the object on the service area can be chosen freely by the robot.
 
 %\section{Overall Scenario and Variation Points}
-%The following two figures illustrate the kind of arenas that can be built with the previously described components. Figure \ref{fig:example_map} shows an old arena configuration (from IROS 2012) as a topological map defining places and connections, while Figure \ref{fig:example_map_go13} shows an arena configuration (from German Open 2013) with only a few surrounding walls, more open space and a conveyor belt. 
+%The following two figures illustrate the kind of arenas that can be built with the previously described components. Figure \ref{fig:example_map} shows an old arena configuration (from IROS 2012) as a topological map defining places and connections, while Figure \ref{fig:example_map_go13} shows an arena configuration (from German Open 2013) with only a few surrounding walls, more open space and a conveyor belt.
 
 %\begin{figure}
 %\includegraphics[width= \textwidth ]{./images/arena_brsu_spatial_areas.jpg}
