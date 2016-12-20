@@ -58,51 +58,52 @@ The following instances may occur as an instance of the run. Ranking of the team
  \centering
  \begin{tabular}{|l|l|l|l*{9}{|P{1cm}}|}
    \hhline{~~~~---------}
-   \multicolumn{4}{l|}{ } &  \multicolumn{9}{c|}{ Instances}\\
+   \multicolumn{4}{l|}{ } &  \multicolumn{8}{c|}{ Instances}\\
    \hhline{~~~~---------}
-   \multicolumn{4}{l|}{ }          &\cir{1}&\cir{2}&\cir{3}&\cir{4}&\cir{5}&\cir{6}&\cir{7}&\cir{8}&\cir{9}\\
-   \multicolumn{4}{r|}{     }        & BNT   & BMT   & BTT1  & BTT2  &  BTT3 &  PPT  &  CBT1   & CBT2 & Final\\
+   \multicolumn{4}{l|}{ }          &\cir{1}&\cir{2}&\cir{3}&\cir{4}&\cir{5}&\cir{6}&\cir{7}&\cir{8}\\
+   \multicolumn{4}{r|}{     }        & BNT   & BMT   & BTT1  & BTT2  &  BTT3 &  PPT  &  RTT & Final\\
    \hhline{~~~~---------} \hline
-    \multirow{27}{0.5cm}{\R{\centering Manipulation }{4cm}}
-     & \multirow{7}{0.5cm}{\R{\centering Objects }{0.5cm}}
+    \multirow{18}{0.5cm}{\R{\centering Manipulation }{3cm}}
+     & \multirow{8}{0.5cm}{\R{\centering Objects }{2.0cm}}
 %    &      \RCAW           & Team     &       &       &       &       &       &       &       &    &    \\ \hhline{~~~----------}
-     &      \RCAW           & RefBox   &       &   3   &  5    &   2   &   4   &   3   &   3   & 3  & 5  \\ \hhline{~~-----------}
-     &    & RoCKIn          & Team     &       &   2   &       &       &       &       &       &    &    \\ \hhline{~~~----------}
-     &    &                 & RefBox   &       &       &       &   3   &   3   &       &       &    & 5  \\ \hhline{~~-----------}
-     &    & Decoy           & RefBox   &       &       &  3    &       &   3   &       &       &    & 5   \\ \hhline{~------------}
+     &      \RCAW           & RefBox   &       &   3   &  5    &   \cellcolor{red!50}3 &   4   &    3   & 3  & 5  \\ \hhline{~~----------}
+     &    & RoCKIn          & Team     &       &   2   &       &       &       &       &       &    \\ \hhline{~~~---------}
+     &    &                 & RefBox   &       &       &       &   3   &   3   &       &       & 5  \\ \hhline{~~----------}
+     &    & Decoy           & RefBox   &       &       &  3    &       &   3   &       &       & 5   \\ \hhline{~~----------}
+     &    & Table height           & RefBox   &       & 10 cm & 10 cm & \cellcolor{red!50} 5cm \newline 10 cm &  0 cm\newline 10 cm\newline 15 cm    &  10 cm &  \cellcolor{red!50} 10 cm & 0 cm\newline 5 cm\newline 10 cm\newline 15 cm \\
     %&    & Number          & TC/OC    &       &   5   &  5    &   5   &   7   &   3   &   3   & 3  & 10  \\ 
-     \hhline{~------------} \hhline{~------------}
-     & \multirow{10}{0.5cm}{\R{\centering Grasping }{2.5cm}}
-         & Height           & RefBox   &       & 10 cm & 10 cm &   10 cm    &  0 cm\newline 10 cm\newline 15 cm    &  10 cm & & & 0 cm\newline 5 cm\newline 10 cm\newline 15 cm \\ \hhline{~~-----------}
-      &  & Shelf unit       & RefBox   &       &       &       &       &       &       &       &    & 2   \\ \hhline{~~-----------}
+     \hhline{~-----------} \hhline{~-----------}
+     & \multirow{7}{0.5cm}{\R{\centering Grasping }{2cm}}
+%       & Height           & RefBox   &       & 10 cm & 10 cm & \cellcolor{red!50} 5cm \newline 10 cm &  0 cm\newline 10 cm\newline 15 cm    &  10 cm & & & 0 cm\newline 5 cm\newline 10 cm\newline 15 cm \\ \hhline{~~-----------}
+         & Shelf unit       & RefBox   &       &       &       &       &       &       &    & 2   \\ \hhline{~~----------}
 %     &  & Position         & Team     &       &       &   \Y  &       &  \Y   &       &       &    &    \\ \hhline{~~~----------}
-      &  & Position         & Referee  &       &   \Y  &   \Y  &  \Y   &  \Y   &   \Y  &   \Y  & \Y & \Y  \\ \hhline{~~-----------}
+      &  & Position         &          &       &   Ref  &   Ref  &  Ref  &  Ref   &   Team  & Team & Ref  \\ \hhline{~~----------}
 %	  &  & Rotation         & Team     &       &       &       &       &       &       &       &    &    \\ \hhline{~~~----------}
-      &  & Rotation         & Referee  &       &   \Y  &   \Y  &  \Y   &  \Y   &   \Y  &   \Y  & \Y & \Y  \\ \hhline{~~-----------}
-	  &  & Orientation      & Team     &       &   \Y  &   \Y  &  \Y   &  \Y   &   \Y  &   \Y  & \Y & \Y  \\ \hhline{~~-----------}
+      &  & Rotation         &          &       &  Team &   Ref   &  Ref    &  Ref    &   Team  & Team& Ref   \\ \hhline{~~-----------}
+      &  & Orientation      &          &       &  Team &   Team  &  Team   &  Ref    &  Team  &Team & Ref   \\ \hhline{~~-----------}
 %     &  &                  & TC/OC    &       &       &       &       &       &       &       &    &    \\ 
 %     &  & Red container    & -        &       &       &       &       &       &       &       &    &    \\
 %     &  & Blue container   & -        &       &       &       &       &       &       &       &    &    \\
-      &  & Conveyor belt    & RefBox   &       &       &       &       &       &       &   3   &   &     \\ \hhline{~~-----------}
-      &  & Rotating turntable& RefBox  &       &       &       &       &       &       &      & 3  & 1   \\ 
-      \hhline{~------------} \hhline{~------------}
-      & \multirow{4}{0.5cm}{\R{\centering Putting down }{4.5cm}}
-         & Height              & RefBox &       & 10 cm &  10 cm & 10 cm    &  0 cm\newline 10 cm\newline 15 cm  &  10 cm & & & 0 cm\newline 5 cm\newline 10 cm\newline 15 cm \\ \hhline{~~-----------}
-      &  & Shelf unit          & RefBox &       &       &       &   1   &       &       &       &   & 1   \\ \hhline{~~-----------}
-&  & Cavity platform with decoy& RefBox &       &       &       &       &       &  \Y   &       &   & 1   \\ \hhline{~~-----------}
-      &  & Red container       & RefBox &       &       &       &   1   &   1   &       &       &   & 1   \\ \hhline{~~-----------}
-      &  & Blue container      & RefBox &       &       &       &   1   &   1   &       &       &   & 1   \\ \hhline{~~-----------}
-      &  & Rotating turntable  & RefBox &       &       &       &   1   &   1   &       &       &   &    \\ 
-    \hhline{-------------} \hhline{-------------}
+%      &  & Conveyor belt    & RefBox   &       &       &       &       &       &       &   3   &   &     \\ \hhline{~~-----------}
+      &  & Rotating turntable& RefBox  &       &       &       &       &       &        & 3  & 1   \\ 
+      \hhline{~-----------} \hhline{~-----------}
+      & \multirow{4}{0.5cm}{\R{\centering Placement}{2.5cm}}
+%           & Height              & RefBox &       & 10 cm &  10 cm & 10 cm    &  0 cm\newline 10 cm\newline 15 cm  &  10 cm & & & 0 cm\newline 5 cm\newline 10 cm\newline 15 cm \\ \hhline{~~-----------}
+        & Shelf unit          & RefBox &       &       &       &  \cellcolor{red!50}   & \cellcolor{red!50} 1     &        &   & 1   \\ \hhline{~~----------}
+      &  & Cavity platform with decoy& RefBox &       &       &       &       &       &  3   &   & 1   \\ \hhline{~~----------}
+      &  & Red container       & RefBox &       &       &       &   1   &   1   &       &   & 1   \\ \hhline{~~----------}
+      &  & Blue container      & RefBox &       &       &       &   1   &   1   &       &   & 1   \\ \hhline{~~----------}
+      &  & Rotating turntable  & RefBox &       &       &       &   1   &  \cellcolor{red!50}   &       &   &    \\ 
+    \hhline{------------} \hhline{------------}
     \multirow{3}{0.5cm}{\R{\centering Arena }{1.5cm}}
      & \multirow{3}{0.5cm}{\R{\centering }{1.5cm}}
-     &     Obstacles (static) & Referee &  2    &       &       &   2   &   2   &       &       &   & 2   \\ \hhline{~~-----------}
+     &     Obstacles (static) & Referee &  2    &       &       &   2   &   2   &       &   & 2   \\ \hhline{~~----------}
 %    &   & Dynamic obstacles  & -       &       &       &       &       &       &       &       &   &    \\ \hhline{~~-----------}
-     &   & Barrier tape       & Referee &  2    &       &   1   &       &       &       &       &   & 2   \\ \hhline{~~-----------}
-     &   & Waypoints          & RefBox  &  9    &       &       &       &       &       &       &   &    \\ 
+     &   & Barrier tape       & Referee &  2    &       &   1   &       & \cellcolor{red!50}  1    &       &   & 2   \\ \hhline{~~----------}
+     &   & Waypoints          & RefBox  &  9    &       &       &       &       &       &   &    \\ 
 		\hline \hline
 		 \multicolumn{3}{|l|}{Duration} 
-		                    & RefBox & 5 min   & 5 min & 5 min  & \cellcolor{red!50} 8 min & \cellcolor{red!50} 8 min & 5 min & 5 min & 5 min & 10min \\
+		                    & RefBox & 5 min   & 5 min & 5 min  & \cellcolor{red!50} 8 min & \cellcolor{red!50} 8 min & 5 min & 5 min & 10min \\
 		\hline
  \end{tabular}
  \caption{Instances of the \RCAW \YEAR competition (The OC will choose the runs among this selection).}
