@@ -46,9 +46,8 @@
 \node [below of = c27, yshift=-18pt,] (c28) {Red};
 \node [below of = c28] (c29) {Blue};
 \node [below of = c29, yshift=-5pt] (c30) {Shelf};
-\node [below of = c30, yshift=-5pt] (c31) {Conveyor belt};
-\node [below of = c31, yshift=-5pt] (c32) {Rotating turntable};
-\node [below of = c32, yshift=-5pt] (c33) {Cavities};
+\node [below of = c30, yshift=-5pt] (c31) {Rotating turntable};
+\node [below of = c31, yshift=-5pt] (c32) {Cavities};
 \end{scope}
 
 \node [box, fit = (c21) (c22) (c23) (c24)] (BOX) {};
@@ -85,7 +84,7 @@
  \foreach \value in {1,...,4}
    \draw[->, thin] (PUTTING.345) |- (c2\value.east);
 
- \foreach \value in {28,...,33}
+ \foreach \value in {28,...,32}
    \draw[->, thin] (PUTTING.345) |- (c\value.east);
 	
 \foreach \value in {1,2,3}

@@ -41,22 +41,13 @@ Penalty points are given as follows, each time again the incident occurs:
 \begin{itemize}
 	\item A manipulation object is lost or placed anywhere outside of the service areas: \hfill -100 points
 	\item Robot caused a collision with the environment: \hfill -50 points
-	\item \textcolor{red}{\sout{Restart used: \hfill -200 points}}
 	\item \textcolor{red}{Delivering a wrong manipulation object to service area \hfill -50 points }
 \end{itemize}
 
 \textcolor{red}{Collisions of the manipulator with the upside of the service area 
 are allowed.}
 
-\textcolor{red}{old version \textit{
-Controlled collisions between a robot and the environment are allowed, i.e. slightly touching a loading area with the robot's base or gripper. As soon as a robot starts to move environmental elements or the wheels start to spin (wheel-spin), it will be considered as a collision and the running test will be aborted. A controlled collision can only occur during manipulation operations.
-}}
-\par
-\textcolor{red}{If a team has decided to run a task while considering virtual walls
-and the robot's projection touches a barrier tape it counts as a collision.}
-
-\textcolor{red}{old version \textit{If the projection of any part of a robot 
-touches a barrier tape marking a virtual wall it counts as a collision.}}
+If the projection of any part of a robot touches a barrier tape marking a virtual wall it counts as a collision. \textcolor{red}{The maximum penalty resulting from these collisions depends on the specific competition instance and is listed in Tab.~\ref{tab:InstancePoints}.}
 
 Touching or Passing a Barrier Tape when entering or exiting the arena does not count as collision.
 \par
@@ -82,10 +73,7 @@ each team to participate. If a team chancels its participation at this
 point of time, it cannot withdraw this decision during the test.}
 The order in which the teams have to perform a run is determined by a draw by
 the OC. The order will be made public at least \textcolor{red}{45 minutes} before slot of the
-particular test. \textcolor{red}{Additionally, at this point in time each team 
-has the opportunity to declare its general ignorance of barrier tapes. In this 
-case, it accepts the general penalty listed in Tab.~\ref{tab:InstancePoints}.}
-
+particular test. 
 \par
 A run is preceded with a 5 minutes preparation time. This time begins once the previous team has left the start area.
 During a run and the preparation time team members are not allowed inside the arena, except the referees allow it (e.g. to check if everything is set-up according to specification).
@@ -125,7 +113,7 @@ Teams might use one so-called restart in a run. Restarts have the following aspe
 	\item When the referees acknowledge the call for restart, the team may enter the 			arena. The time will continue running.
 	\item The arena and the robot will be reset exactly to the setup at the 				beginning of the run (except the timer for the run). Random elements such as 			obstacles or object positions remain like before.
 	\item The points for this run achieved so far are reset to zero 
-	\item \textcolor{red}{Scores that are received after a restart are reduced by a factor of 0.75}
+	\item \textcolor{red}{Scores that are received after a restart are multiplied by a factor of 0.75}
 	\item The referees decide when the arena is prepared again for the restart. If 	the robot is not yet ready, teams can keep trying to get it ready until the 			time for the run is over.
 	\item As soon as the team signals that the robot is ready, the task 					specification is sent again.
 	\item Afterwards the start signal is sent from the referee box.
