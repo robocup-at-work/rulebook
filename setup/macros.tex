@@ -25,8 +25,6 @@
 
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\tbc}[1]{\textbf{\it\color{red}{t.b.c. ...}#1\color{black}}}
-\newcommand{\todo}[1]{\textbf{\it\color{red}{todo: }#1\color{black}}}
-\newcommand{\TODO}[1]{\textbf{\it\color{red}{TODO:\\}#1\color{black}}}
 \newcommand{\chk}[1]{\textbf{\color{red}#1\color{black}}}
 
 \newcommand{\revadd}[1]{\textcolor{blue}{#1}}
@@ -70,12 +68,12 @@
 \def\revdattmpfile{.temp_rulebook_date}
 \immediate\write18{git rev-list HEAD | wc -l > \revnumtmpfile}
 %\immediate\write18{svnversion . > \revnumtmpfile}
-\IfFileExists{\revnumtmpfile}{\def\svnRevision{\input{\revnumtmpfile}\unskip}}{} 
+\IfFileExists{\revnumtmpfile}{\def\svnRevision{\input{\revnumtmpfile}\unskip}}{}
 \immediate\write18{git log -1 --date=short  | grep 'Date:' | awk '{print $2}'> \revdattmpfile}
 %\immediate\write18{svn info | grep 'Last Changed Date:' | awk '{print $4}'> \revdattmpfile}
-\IfFileExists{\revdattmpfile}{\def\svnChangeData{\input{\revdattmpfile}\unskip}}{} 
-% \IfFileExists{\revnumtmpfile}{\immediate\write18{rm -f \revnumtmpfile}}{} 
-% \IfFileExists{\revdattmpfile}{\immediate\write18{rm -f \revdattmpfile}}{} 
+\IfFileExists{\revdattmpfile}{\def\svnChangeData{\input{\revdattmpfile}\unskip}}{}
+% \IfFileExists{\revnumtmpfile}{\immediate\write18{rm -f \revnumtmpfile}}{}
+% \IfFileExists{\revdattmpfile}{\immediate\write18{rm -f \revdattmpfile}}{}
 \newcommand{\VERSION}{Revision \svnChangeData\_\svnRevision}
 
 
