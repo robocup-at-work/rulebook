@@ -16,7 +16,7 @@ The arena used for this test contains basically all elements as for the Basic Na
 The manipulation objects used in this test are defined by the instances described in Table~\ref{tab:Instances}.
 
 \paragraph{Task}
-A single robot is used. The robot can be placed in an arbitrary starting location by the team. The task consists of a sequence of grasp and place operations, with a small base movement in between. The objective is to move a set of objects from one service area into another. The task is finished once all objects are moved or when the time foreseen for the run ends.
+\robin{\st{A single robot is used. The robot can be placed in an arbitrary starting location by the team.}} The task consists of a sequence of grasp and place operations, with a small base movement in between. The objective is to move a set of objects from one service area into another. The task is finished once all objects are moved or when the time foreseen for the run ends.
 \par
 The task specification consists of:
 \begin{itemize}
@@ -61,23 +61,15 @@ The task specification consists of:
  The following rules have to be obeyed:
 
  \begin{itemize}
+ \item \robin{A single robot is used.}
+ \item \robin{The robot has to start from outside the arena and to end in the final.}
  \item The order in which the teams have to perform will be determined by a draw.
- \item The team can setup the robot anywhere inside the arena.
+ \item \robin{\st{The team can setup the robot anywhere inside the arena.}}
  \item The robot will get the task specification from the referee box.
  \item A manipulation object counts as successfully grasped as defined in Section~\ref{ssec:GraspingObjects}
  \item A manipulation object counts as successfully placed, if the robot has placed the object into the correct destination service area as described in Section~\ref{ssec:PlacingObjects}.
- \item The time is stopped when the robot has completed the task by placing the last object of the task specification. If a team cannot complete the task within the designated time, the run will be stopped.
+ \item \robin{\st{The time is stopped when the robot has completed the task by placing the last object of the task specification. If a team cannot complete the task within the designated time, the run will be stopped.} The run is over when the robot reached the final position or the designated time has expired.}
+ \item \robin{The score for this test will be calculated as defined in \ref{sec:ScoringAndRanking}.}
  \end{itemize}
 
-%
-%
-% \subsection{Scoring}
-% Points are awarded as follows:
-%
-% \begin{itemize}
-% \item 100 points are awarded for successfully grasping a manipulation object that is part of the task specification..
-% \item 50 points are awarded for successfully placing a manipulation object into the destination service area.
-% \item - 100 points for grasping a wrong manipulation object.
-% \item 50 points are awarded for completing the task specification completely correct.
-% \item The reached points of a test will be multiplied with a defined complexity factor depending on the previously chosen complexity level.
-% \end{itemize}
+

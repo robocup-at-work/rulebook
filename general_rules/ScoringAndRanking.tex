@@ -1,6 +1,10 @@
 
-\section{Scoring and Ranking} \label{sec:TestInstances}
+\section{Scoring and Ranking} \label{sec:ScoringAndRanking}
 The following instances may occur as an instance of the run. Ranking of the teams will be based on the sum of the achieved points in all the tests.
+
+\subsection{Scoring}
+Points are awarded according to \ref{tab:InstancePoints}.
+
 
 %\setlength{\tabcolsep}{4.75pt}
 \renewcommand{\arraystretch}{1.1}
@@ -78,7 +82,7 @@ The following instances may occur as an instance of the run. Ranking of the team
 		                    & RefBox & 5 min   & 5 min & 5 min  &   8 min &   8 min & 5 min & 5 min & 10min \\
 		\hline
  \end{tabular}
- \caption{Instances of the \RCAW \YEAR competition (The OC will choose the runs among this selection).}
+ \caption{Test specification in the instances of the \RCAW \YEAR competition.}
  \label{tab:Instances}
 \end{table}
 \end{landscape}
@@ -98,12 +102,15 @@ The following instances may occur as an instance of the run. Ranking of the team
     Correct destinations reached    &  50    &       &       &       &       &       &       &      \\
     Correct object grasping         &        &  100  &  100  & 100   &  100  &       &  300  &  100 \\ 
     Correct object placing          &        &  100  &  100  & 100   &  100  & 300   &       &  100  \\ 
+    Incorrect object placing        &        &  -100 & -100  & -100  & -100  & -100  &       & -100  \\ 
+    Incorrect object grasping       &        &       & -100  & -100  & -100  &       & -100  & -100  \\ 
     Completing whole task           &  50    &  100  &  100  & 100   &  100  & 100   &  100  &  100  \\ \hline\hline
     \robin{Maximum} Barrier Tape penalty    &  100   &       &  200  &       &  300  &       &       &  400  \\ \hline\hline
     Maximum attainable points\newline (time bonus not included)   
 	                                &  500   & 1100  &  1100 & 1100  & 1500  & 1000  & 1000 &  2100 \\ \hline
  \end{tabular}
- \caption{Instances of the \RCAW \YEAR competition (The OC will choose the runs among this selection).}
+ \caption{Scoring in the instances of the \RCAW \YEAR competition.}
   \label{tab:InstancePoints}
 \end{table}
 \end{landscape}
+

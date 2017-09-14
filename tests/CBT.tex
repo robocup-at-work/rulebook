@@ -1,23 +1,24 @@
 % !TEX root = ../Rulebook.tex
 \newpage
-\section{Conveyor Belt Test / Rotating Table Test}
+\section{Rotating Table Test}
+\robin{\st{Conveyor Belt Test / }}
 
 \paragraph{Purpose and Focus of the Test}
-The purpose of the \iaterm{Conveyor Belt Test}{CBT} is to assess the robot's ability to manipulate moving objects which are placed on a conveyor belt and/or rotating turntable. The test demands fast perception and manipulation skills in order to pick up objects from a moving surface.
+The purpose of the \iaterm{Conveyor Belt Test}{CBT} is to assess the robot's ability to manipulate moving objects which are placed on a \robin{\st{conveyor belt and/or}} rotating turntable. The test demands fast perception and manipulation skills in order to pick up objects from a moving surface.
 
 \paragraph{Scenario Environment}
-The same arena as for the Basic Manipulation Test is used. In case that the arena does not already includes such a device (see Figure \ref{fig:conveyor_belt}), it will be added only for this particular test.
-The OC may choose to use a rotating turntable instead of a linear conveyor belt in order to simplify the setup of the arena. The particular choice shall be announced before the competition.
+The same arena as for the Basic Manipulation Test is used. In case that the arena does not already include such a device (see Figure \ref{fig:conveyor_belt}), it will be added only for this particular test.
+\robin{\st{The OC may choose to use a rotating turntable instead of a linear conveyor belt in order to simplify the setup of the arena. The particular choice shall be announced before the competition.
 An area besides the conveyor belt is left free so that a robot can drive there and grasp the objects from the belt. The other sides might not be accessible, because the device is placed into a corner. 
-The conveyor belt should have a wireless mechanism to turn it on. 
+The conveyor belt should have a wireless mechanism to turn it on.}}
 
 \begin{figure} [h!]
 	\begin{center}
-		\subfloat[Conveyor belt]{\includegraphics[height = 4cm]{./images/conveyor_belt.jpg}} 
-		\hspace{1cm}
-		\subfloat[Rotating table]{\includegraphics[height = 4cm]{./images/rotating_table.jpg}} 
+%		\subfloat[Conveyor belt]{\includegraphics[height = 4cm]{./images/conveyor_belt.jpg}} 
+%		\hspace{1cm}
+		\includegraphics[height = 6cm]{./images/rotating_table.jpg}
 	\end{center}
-	\caption{Illustration of a conveyor belt and rotating table used in the competition.}
+	\caption{Illustration of a rotating table used in the competition.}
 	\label{fig:conveyor_belt}
 \end{figure}
 
@@ -27,12 +28,12 @@ The conveyor belt should have a wireless mechanism to turn it on.
 The manipulation objects used in this test are defined by the instances described in Table~\ref{tab:Instances}.
 
 \paragraph{Task}
-A single robot is used. The robot is placed by the team in some starting position outside of the arena. Initially the conveyor is switched off (i.e. the belt is not moving) and all objects are put on the belt with a distance between them determined by the TC. The task of the robot is to navigate to the location of the conveyor belt and to grasp all objects from the moving belt before they fall off at the other end of the belt. If a turntable is used, the objects can pass multiple times in front of the robot, until the maximum time for the run is over. The robot is supposed to place the grasped objects on the robot itself. The task is finished once the robot successfully grasped all objects or the foreseen time of the test has been exceeded. 
+\robin{\st{A single robot is used. The robot is placed by the team in some starting position outside of the arena. Initially the conveyor is switched off (i.e. the belt is not moving) and all objects are put on the belt with a distance between them determined by the TC.}} The task of the robot is to navigate to the location of the rotating table and to grasp all objects from the moving table \robin{\st{belt before they fall off at the other end of the belt. If a turntable is used, the}}. The objects can pass multiple times in front of the robot, until the maximum time for the run is over. The robot is supposed to place the grasped objects on the robot itself. \robin{\st{The task is finished once the robot successfully grasped all objects or the foreseen time of the test has been exceeded.}} 
 \par
-There are two options to determine when to switch on the conveyor belt:
-The robot starts it itself, using the wireless mechanism or a team member can give a signal to the referees to switch on the conveyor belt.
+\robin{\st{There are two options to determine when to switch on the conveyor belt:
+The robot starts it itself, using the wireless mechanism or a team member can give a signal to the referees to switch on the conveyor belt.}}
 \par
-Teams can decide during the run to give the signal to the referees, e.g. when the robot failed to start it itself. 
+\robin{\st{Teams can decide during the run to give the signal to the referees, e.g. when the robot failed to start it itself. }}
 
 
 %\subsection{Complexity Options}
@@ -53,14 +54,17 @@ Teams can decide during the run to give the signal to the referees, e.g. when th
 The following rules have to be obeyed:
 
 \begin{itemize}
+\item \robin{A single robot is used.}
+\item \robin{The robot has to start from outside the arena and to end in the final.}
 \item The order in which the teams have to perform will be determined by a draw.
-\item The objects are placed on the conveyor before the run starts
+\item The objects are placed on the conveyor before the run starts \robin{by the OC or TC}.
 \item The robot will get the task specification from the referee box.
-\item After the team's robot starts, it must move inside the arena.
-\item Either the robot itself starts the conveyor belt, or a team member can give a signal to the referees to switch on the conveyor belt..
-\item The objects have to be grasped actively from the moving belt. The robot is not allowed e.g. to wait at the end with a particular basket and collect the falling objects from the end of the conveyor belt. Further, wiping the objects to the side is also not allowed.
-\item A manipulation object counts as successfully grasped, if the robot has lifted the object and moved it outside of the area of the conveyor belt as specified in Section~\ref{ssec:PlacingObjects}.
-\item The time is stopped when the robot has completed the task.
+\item \robin{\st{After the team's robot starts, it must move inside the arena.}}
+\item \robin{\st{Either the robot itself starts the conveyor belt, or a team member can give a signal to the referees to switch on the conveyor belt..}}
+\item The objects have to be grasped actively from the moving table. \robin{\st{The robot is not allowed e.g. to wait at the end with a particular basket and collect the falling objects from the end of the conveyor belt. Further, wiping the objects to the side is also not allowed.} The robot is not allowed to stop the items with its gripper.}
+\item A manipulation object counts as successfully grasped \robin{\st{, if the robot has lifted the object and moved it outside of the area of the conveyor belt}} as specified in Section~\ref{ssec:PlacingObjects}.
+\item \robin{\st{The time is stopped when the robot has completed the task.}The run is over when the robot reached the final position or the designated time has expired.}
+\item \robin{The score for this test will be calculated as defined in \ref{sec:ScoringAndRanking}.}
 \end{itemize}
 
 

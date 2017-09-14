@@ -3,8 +3,8 @@
 \section{Basic Transportation Test}
 
 \paragraph{Purpose and Focus of the Test}
-The purpose of the \iaterm{Basic Transportation Test}{BTT} is to assess the ability of the robots for combined navigation and manipulation tasks. 
-The robots have to deal with flexible task specifications, especially concerning information about object constellations in source and target locations, and task constraints such as limits on the number of objects allowed to be carried simultaneously, etc.  
+The purpose of the \iaterm{Basic Transportation Test}{BTT} is to assess the ability of the robots for combined navigation and manipulation tasks \robin{as well as its task planning capabilities}. 
+The robots have to deal with flexible task specifications, especially concerning information about object constellations in source and target locations, and task constraints such as limits on the number of objects allowed to be carried simultaneously, etc.
 
 \paragraph{Scenario Environment}
 The arena used for this test contains all elements as for the Basic Manipulation Test. Besides that all areas may contain objects.
@@ -13,7 +13,7 @@ The arena used for this test contains all elements as for the Basic Manipulation
 The manipulation objects used in this test are defined by the instances described in Table~\ref{tab:Instances}.
 
 \paragraph{Task}
-A single robot is used, which is initially positioned outside of the arena near a gate to the arena. The task is to get several objects from the source service areas (such as \texttt{SH02}, \texttt{WS09}, or \texttt{CB02}), and to deliver them to the destination service areas (e.g. \texttt{WS11} and \texttt{SH05}). Robots may carry up to three objects simultaneously. 
+\robin{\st{A single robot is used, which is initially positioned outside of the arena near a gate to the arena.}} The task is to get several objects from the source service areas (such as \texttt{SH02}, \texttt{WS09}, or \texttt{CB02}) and to deliver them to the destination service areas (e.g. \texttt{WS11} and \texttt{SH05}). \robin{\st{Robots may carry up to three objects simultaneously.}} 
 \par
 The task specification consists of two lists:
 The first list contains for each service area a list of manipulation object descriptions. The descriptions are similar as those used for the Basic Manipulation Test. 
@@ -29,15 +29,17 @@ The term “line” in the task specification can be ignored.
 The following rules have to be obeyed:
 
 \begin{itemize}
+ \item \robin{A single robot is used.}
+ \item \robin{The robot has to start from outside the arena and to end in the final.}
 \item The order in which the teams have to perform will be determined by a draw.
-\item The robot has to start from outside the arena.
 \item The robot will get the task specification from the referee box.
-\item After the team's robot starts, it must move into the arena and attempt to complete the task. 
+\item \robin{\st{After the team's robot starts, it must move into the arena and attempt to complete the task.}}
 \item A manipulation object counts as successfully grasped as specified in Section~\ref{ssec:GraspingObjects}.
-\item A manipulation object counts as successfully placed, if the robot has placed the object into the correct destination service area as described in Section~\ref{ssec:PlacingObjects}.
+\item A manipulation object counts as successfully placed \robin{\st{, if the robot has placed the object into the correct destination service area}} as specified in Section~\ref{ssec:PlacingObjects}.
 \item It is not allowed to place manipulation objects anywhere except for the robot itself and any of the available service areas.
 \item A robot may carry up to three objects at the same time.
-\item The time is stopped when the robot has completed the task (delivered all objects to the right locations and left the arena through the exit gates). If a team cannot complete the task within the designated time, the run will be stopped.. 
+\item \robin{\st{The time is stopped when the robot has completed the task (delivered all objects to the right locations and left the arena through the exit gates). If a team cannot complete the task within the designated time, the run will be stopped.}The run is over when the robot reached the final position or the designated time has expired.}
+\item \robin{The score for this test will be calculated as defined in \ref{sec:ScoringAndRanking}.}
 
 \end{itemize}
 
