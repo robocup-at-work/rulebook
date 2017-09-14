@@ -225,7 +225,7 @@ The floor is made of some firm material. Examples include floors made of concret
 \end{figure}
 
 \subsection{Walls}
-The competition arena is partially surrounded by walls. The height of the walls is not lesser than 20 cm and not more than 40 cm. One or more gates may be foreseen, where robots can enter or leave the arena. Gates may or may not be closable. The walls have a mostly uniform color. Small visual elements like logos or advertisements may be placed on the walls.
+The competition arena is partially surrounded by walls. \robin{Parts of the outer border that are not blocked by walls will be marked by yellow/black barrier tape and count as virtual walls as defined in \ref{ssec:barriertape}.} The height of the walls is not lesser than 20 cm and not more than 40 cm. One or more gates may be foreseen, where robots can enter or leave the arena. Gates may or may not be closable. The walls have a mostly uniform color. Small visual elements like logos or advertisements may be placed on the walls.
 
 \subsection{Service Areas} \label{ssec:serviceareas} Arenas contain one or more
 service areas, which have specific purposes for a particular test. Examples
@@ -286,9 +286,6 @@ The shelf surface may be specially designed in order to serve specific purposes,
 \subsection{Places}
 An arena designed for a particular test may foresee the definition of a set of designated places, which are locations in the arena that can be referred to by a unique, symbolic identifier. These identifiers are used e.g. for the task specification, possibly in conjunction with other information, such as an orientation. Places may be marked by markers of some sort.
 
-\subsection{Obstacles}
-An arena defined for a particular test may foresee the use of obstacles. Obstacles may by passive (i.e. not able to relocate by themselves) or active (e.g. other robots). The size of obstacles should be not lesser than 10 cm x 10 cm x 5 cm; there is no upper bound on the size. The details about the dynamic objects are not known before the competition and will be chosen by the OC on-site. Examples for obstacles are trash bins, boxes, big aluminium profiles or even other robots.
-
 \subsection{Floor Markers}
 The arena used for a particular test may foresee the use of floor markers for designated places. The design of these floor markers are rectangular black-and-white images as used by the ARToolKit library:
 \begin{center}
@@ -305,8 +302,11 @@ The black inner square of the markers is at least 8 cm x 8 cm large with an addi
 \end{figure}
 
 
+\subsection{Obstacles}
+An arena defined for a particular test may foresee the use of obstacles. Obstacles may by passive (i.e. not able to relocate by themselves) or active (e.g. other robots). The size of obstacles should be not lesser than 10 cm x 10 cm x 5 cm; there is no upper bound on the size. The details about the dynamic objects are not known before the competition and will be chosen by the OC on-site. Examples for obstacles are trash bins, boxes, big aluminium profiles or even other robots.
 
-\subsection{Barrier Tape as Virtual Walls}
+
+\subsection{Barrier Tape as Virtual Walls} \label{ssec:barriertape}
 The arena may include virtual walls marked by either striped yellow/black or white/red barrier tape on the floor (see Figure \ref{fig:barrier_tape}). If any part of a robot passes over such a tape it is considered as a collision with a usual wall.
 
 The red/white tape is used to frame the entrance and exit area. The robot is allowed to cross this kind of barrier only at the beginning of a test to enter arena and at the end for leaving. In contrast, the yellow/black one denotes an obstacle which the robot is never allowed to cross.
