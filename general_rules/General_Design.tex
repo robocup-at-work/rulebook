@@ -227,84 +227,6 @@ The floor is made of some firm material. Examples include floors made of concret
 \subsection{Walls}
 The competition arena is partially surrounded by walls. \robin{Parts of the outer border that are not blocked by walls will be marked by yellow/black barrier tape and count as virtual walls as defined in \ref{ssec:barriertape}.} The height of the walls is not lesser than 20 cm and not more than 40 cm. One or more gates may be foreseen, where robots can enter or leave the arena. Gates may or may not be closable. The walls have a mostly uniform color. Small visual elements like logos or advertisements may be placed on the walls.
 
-\subsection{Service Areas} \label{ssec:serviceareas} The Arena contains one or more
-service areas, which have specific purposes for a particular test. Examples
-include loading and unloading areas, conveyor belts, rotators, storage areas,
-etc. Service areas may contain specific environment objects, such as shelves,
-racks, etc. They may be accessible from different locations, i.e. it might be
-possible to reach an area from two or more sides. Note that service areas can
-have different heights. If a service area has a height of zero cm, a tape will
-mark the area (see Figure \ref{fig:barrier_tape_0cm}). The tape will be on the
-floor and will be blue/white striped. The surounded area is
-covered by a white sheet of paper fixed by the tape. The OC is responsible
-to replace it in case of pollution or tears. This tape may be crossed, and does not
-count as a collision. If the robot touches an manipulation object while
-navigating, this will be handled as a collision. If a service area will have a
-height of 5 cm there will be a wall with 10 cm height surrounding it.
-
-\begin{figure} [h!]
-\begin{center}
-\includegraphics[height = 2.5cm]{./images/barrier_tape_0cm_area.jpg}
-\end{center}
-\caption{Barrier tape used to mark service areas with 0 cm height.}
-\label{fig:barrier_tape_0cm}
-\end{figure}
-
-
-\subsection{Containers}
-As in many industrial settings, the \RCAW environment may be equipped with several containers (see Figure~\ref{fig:containers}). They can store any kind of manipulation object defined in Section~\ref{ssec:ManipulationObjects}. Robots are supposed either to grasp one or multiple objects out of containers or to place previously grasped objects into them. Several containers can be present in the environment and are always associated with a service area. That means that the container itself will be placed on top and within the manipulation zone defined in Section~\ref{ssec:ManipulationZone}.
-It is also possible that more than one container is placed on top of a single service area.
-The constraints defined in Section~\ref{ssec:ManipulationZone} apply also to the containers.
-
-Currently, a container itself does to not need to be manipulated or transported by the robot.
-
-\begin{figure} [h!]
-\begin{center}
-\subfloat[blue]{\includegraphics[height = 3cm]{./images/container_blue.jpg}} \hspace{1cm}
-\subfloat[red]{\includegraphics[height = 3cm]{./images/container_red.jpg}}
-\end{center}
-\caption{Containers can be used for grasping objects out or placing objects into them.}
-\label{fig:containers}
-\end{figure}
-
-%\subsection{Racks}
-%Service areas, e.g. loading and unloading areas, may foresee the use of racks. Objects to be delivered or removed from racks have to be placed or picked up from the top. The height of the racks should be not lesser than 5 cm and not more than 40 cm. The color for the top surface of racks is a bright uniform color such as white or light gray, unless a test specifies a different color. The top surface of the rack may be specially designed in order to serve specific purposes, e.g. holding objects.
-
-\subsection{Shelves}
-Service areas may foresee the use of shelves and shelf units as depicted in Figure~\ref{fig:shelf}. Objects to be delivered or removed from shelves have to be placed or picked sideways. The height of the shelves should be not lesser than 5 cm and not more than 40 cm. The color of the shelf surface is a bright uniform color such as white or light gray, unless a test specifies a different color.
-Since the shelf is a new element in \RCAW, the robots are supposed to manipulate objects only on the lower level plane.
-The shelf surface may be specially designed in order to serve specific purposes, e.g. holding objects.
-
-\begin{figure} [h!]
-\centering
-\includegraphics[width=0.4\textwidth ]{./images/shelf.jpg}
-\caption{A shelf with two levels and uniform colored surfaces.}
-\label{fig:shelf}
-\end{figure}
-
-
-\subsection{Places}
-An arena designed for a particular test may foresee the definition of a set of designated places, which are locations in the arena that can be referred to by a unique, symbolic identifier. These identifiers are used e.g. for the task specification, possibly in conjunction with other information, such as an orientation. Places may be marked by markers of some sort.
-
-\subsection{Floor Markers}
-The arena used for a particular test may foresee the use of floor markers for designated places. The design of these floor markers are rectangular black-and-white images as used by the ARToolKit library:
-\begin{center}
-\url{http://www.hitl.washington.edu/artoolkit}
-\end{center}
-
-The black inner square of the markers is at least 8 cm x 8 cm large with an additional white border around of at least 12 cm side length. Figure \ref{fig:floor_marker} and \ref{fig:barrier_tape} depict some examples of these markers.
-
-\begin{figure} [h!]
-\centering
-\includegraphics[width= 0.4\textwidth ]{./images/example_floor_marker.png}
-\caption{Example of a floor marker.}
-\label{fig:floor_marker}
-\end{figure}
-
-
-\subsection{Obstacles}
-An arena defined for a particular test may foresee the use of obstacles. Obstacles may by passive (i.e. not able to relocate by themselves) or active (e.g. other robots). The size of obstacles should be not lesser than 10 cm x 10 cm x 5 cm; there is no upper bound on the size. The details about the dynamic objects are not known before the competition and will be chosen by the OC on-site. Examples for obstacles are trash bins, boxes, big aluminium profiles or even other robots.
-
 
 \subsection{Barrier Tape as Virtual Walls} \label{ssec:barriertape}
 The arena may include virtual walls marked by either striped yellow/black or white/red barrier tape on the floor (see Figure \ref{fig:barrier_tape}). If any part of a robot passes over such a tape it is considered as a collision with a usual wall.
@@ -323,17 +245,133 @@ The blue/white tape is not considered a virtual wall but marks the areas of 0 cm
 
 \subsection{Entrance and Exit}
 If possible, the arena should have one entrance and one exit, which are equipped with laser barriers. These barriers are used for timekeeping by the referee box.
+\robin{You wish}
+
+\subsection{Places}
+An arena designed for a particular test may foresee the definition of a set of designated places, which are locations in the arena that can be referred to by a unique, symbolic identifier. These identifiers are used e.g. for the task specification, possibly in conjunction with other information, such as an orientation. Places may be marked by markers of some sort. \robin{We do not need this paragraph any more, since we cancelled the BNT}
+
+\subsection{Floor Markers} \label{ssec:floormarkers}
+The arena used for a particular test may foresee the use of floor markers for designated places. The design of these floor markers are rectangular black-and-white images as used by the ARToolKit library:
+\begin{center}
+\url{http://www.hitl.washington.edu/artoolkit}
+\end{center}
+
+The black inner square of the markers is at least 8 cm x 8 cm large with an additional white border around of at least 12 cm side length. Figure \ref{fig:floor_marker} and \ref{fig:barrier_tape} depict some examples of these markers.
+
+\begin{figure} [h!]
+\centering
+\includegraphics[width= 0.4\textwidth ]{./images/example_floor_marker.png}
+\caption{Example of a floor marker.}
+\label{fig:floor_marker}
+\end{figure}
+
+
+\subsection{Obstacles}
+An arena defined for a particular test may foresee the use of obstacles. Obstacles may by passive (i.e. not able to relocate by themselves) or active (e.g. other robots). The size of obstacles should be not lesser than 10 cm x 10 cm x 5 cm; there is no upper bound on the size. The details about the dynamic objects are not known before the competition and will be chosen by the OC \robin{or TC} on-site. Examples for obstacles are trash bins, boxes, big aluminium profiles or even other robots.
+
+
+
+
+\subsection{Service Areas} \label{ssec:serviceareas} The Arena contains one or more
+service areas, which have specific purposes for a particular test. Examples
+include loading and unloading areas, conveyor belts, rotators, storage areas,
+etc. Service areas may contain specific environment objects, such as shelves,
+racks, etc. They may be accessible from different locations, i.e. it might be
+possible to reach an area from two or more sides. Note that service areas can
+have different heights. If a service area has a height of zero cm, a tape will
+mark the area (see Figure \ref{fig:barrier_tape_0cm}). The tape will be on the
+floor and will be blue/white striped. The surounded area is
+covered by a white sheet of paper fixed by the tape. The OC is responsible
+to replace it in case of pollution or tears. This tape may be crossed, and does not
+count as a collision. If the robot touches an manipulation object while
+navigating, this will be handled as a collision. \robin{\st{If a service area will have a
+height of 5 cm there will be a wall with 10 cm height surrounding it.}}
+
+\begin{figure} [h!]
+\begin{center}
+\includegraphics[height = 2.5cm]{./images/barrier_tape_0cm_area.jpg}
+\end{center}
+\caption{Barrier tape used to mark service areas with 0 cm height.}
+\label{fig:barrier_tape_0cm}
+\end{figure}
+
+
+\subsection{Containers}
+As in many industrial settings, the \RCAW environment may be equipped with several containers (see Figure~\ref{fig:containers}). They can store any kind of manipulation object defined in Section~\ref{ssec:ManipulationObjects}. Robots are supposed either to grasp one or multiple objects out of containers or to place previously grasped objects into them. Several containers can be present in the environment and are always associated with a service area. That means that the container itself will be placed on top and within the manipulation zone defined in Section~\ref{ssec:ManipulationZone}.
+It is also possible that more than one container is placed on top of a single service area.
+The constraints defined in Section~\ref{ssec:ManipulationZone} apply also to the containers.
+
+
+\begin{figure} [h!]
+\begin{center}
+\subfloat[blue]{\includegraphics[height = 3cm]{./images/container_blue.jpg}} \hspace{1cm}
+\subfloat[red]{\includegraphics[height = 3cm]{./images/container_red.jpg}}
+\end{center}
+\caption{Containers can be used for grasping objects out or placing objects into them.}
+\label{fig:containers}
+\end{figure}
+
+Currently, a container itself does to not need to be manipulated or transported by the robot.
+
+%\subsection{Racks}
+%Service areas, e.g. loading and unloading areas, may foresee the use of racks. Objects to be delivered or removed from racks have to be placed or picked up from the top. The height of the racks should be not lesser than 5 cm and not more than 40 cm. The color for the top surface of racks is a bright uniform color such as white or light gray, unless a test specifies a different color. The top surface of the rack may be specially designed in order to serve specific purposes, e.g. holding objects.
+
+\subsection{Shelves}
+Service areas may foresee the use of shelves and shelf units as depicted in Figure~\ref{fig:shelf}. Objects to be delivered or removed from shelves have to be placed or picked sideways. The height of the shelves should be not lesser than 5 cm and not more than 40 cm. The color of the shelf surface is a bright uniform color such as white or light gray, unless a test specifies a different color.
+Since the shelf is a new element in \RCAW, the robots are supposed to manipulate objects only on the lower level plane.
+The shelf surface may be specially designed in order to serve specific purposes, e.g. holding objects.
+
+\begin{figure} [h!]
+\centering
+\includegraphics[width=0.4\textwidth ]{./images/shelf.jpg}
+\caption{A shelf with two levels and uniform colored surfaces.}
+\label{fig:shelf}
+\end{figure}
+
+
 
 \subsection{Setup of the Arena}
-The arena must be surrounded by either walls or barrier tape. The only exceptions are the entrance and exit. There must be a route to all places and markers relevant for a test which has a minimum width of 55 cm.
+\robin{\st{The arena must be surrounded by either walls or barrier tape. The only exceptions are the entrance and exit. There must be a route to all places and markers relevant for a test which has a minimum width of 55 cm.}}
 
-\section{Design of Manipulation Tasks}
-\label{sec:ManipulationTasks}
+
+\section{Design of Navigation Tasks} \label{sec:ManipulationTasks}
+
+\robin{Every task has some navigation involved in it. Successful navigation will be awarded in every test according to Table \ref{tab:InstancePoints}. This rule has been implemented so that new teams can participate in every test and earn points, even if they are not capable of manipulating objects reliably.}
+
+\subsection{Reaching a Service Area}
+\robin{Service areas will be marked by floor markers as defined in Section \ref{ssec:floormarkers}. Before starting the manipulation, the robot is supposed to reach the service area. A service area counts as successfully reached if the robot covered the floor marker assigned to the respective service area for a certain amount of time and didn't move (e.g. wheels are not spinning significantly). The waiting period will be send with the task by the refbox. If not specified otherwise in the test the waiting period will always be 3 seconds, so it is easier for the referees to judge.}
+
+\section{Design of Manipulation Tasks} \label{sec:ManipulationTasks}
+
+\subsection{Manipulation Zone} \label{ssec:ManipulationZone}
+The manipulation zone defines the area where objects can be placed. Thereby, the following constraints need to be satisfied:
+\begin{itemize}
+	\item The maximum depth of the manipulation zone is 20 cm.
+	\item The minimum distance between objects to each other is 2 cm.
+	\item The minimum distance of the beginning of the manipulation zone to a wall is 10 cm.
+	\item There as an offset of 2 cm from the border of the service area to the manipulation zone.
+\end{itemize}
+Note, the constraints do not permit, that objects can be partially occluded dependent on the viewpoint.
+\begin{figure} [h!]
+\centering
+\includegraphics[width=1.0\textwidth ]{./images/manipulation_zone.pdf}
+\caption{Manipulation zone: the green color indicates the area where objects can be placed on a service area by the referees.}
+\label{fig:manipulation_zone}
+\end{figure}
 
 \subsection{Manipulation Objects} \label{ssec:ManipulationObjects}
 The manipulation objects in \RCAW shall include a wide range of objects relevant in industrial applications of robotics. They eventually cover any raw material, (semi-)finished parts or products as well as tools and possibly operating materials required for manufacturing processes.
 \par
-The intention is to start with a simple set of objects of different shapes and colors. Every year, the spectrum shall then be widen in at least one aspect. The initial set of objects includes basic standard screws and nuts with various sizes and masses as shown in Table~\ref{tab:manipulation_objects} and Table~\ref{tab:manipulation_objects_rockin}. Objects of one kind can slightly vary e.g. considering the surface.
+The intention is to start with a simple set of objects of different shapes and colors. Every year, the spectrum shall then be widened in at least one aspect. The initial set of objects includes basic standard screws and nuts with various sizes and masses as shown in Table~\ref{tab:manipulation_objects} and Table~\ref{tab:manipulation_objects_rockin}. Objects of one kind can slightly vary e.g. considering the surface.
+
+For the manipulation of objects the following terms are used:
+
+\begin{itemize}
+\item Position: point within 2D coordinate system of a service area,
+\item Rotation: rotation around vertical axis of a service area,
+\item Orientation: rotation around horizontal axes of a service area, i.e. whether the object is standing upright or lying on its side
+\item Pose: combination of position, rotation and orientation.
+\end{itemize}
 
 \newcommand{\imageView}[1]{\includegraphics[width=2cm, valign=c]{#1}}
 {
@@ -432,37 +470,10 @@ Object & Symbolic Description & Mass & Details \\
 \end{table}
 }
 
-\subsection{Manipulation Zone} \label{ssec:ManipulationZone}
-The manipulation zone defines the area where objects can be placed. Thereby, the following constraints need to be satisfied:
-\begin{itemize}
-	\item The maximum depth of the manipulation zone is 20 cm.
-	\item The minimum distance between objects to each other is 2 cm.
-	\item The minimum distance of the beginning of the manipulation zone to a wall is 10 cm.
-	\item There as an offset of 2 cm from the border of the service area to the manipulation zone.
-\end{itemize}
-Note, the constraints do not permit, that objects can be partially occluded dependent on the viewpoint.
-\begin{figure} [h!]
-\centering
-\includegraphics[width=1.0\textwidth ]{./images/manipulation_zone.pdf}
-\caption{Manipulation zone: the green color indicates the area where objects can be placed on a service area by the referees.}
-\label{fig:manipulation_zone}
-\end{figure}
 
-
-
-
-\subsection{Placement of Objects}
-For the placement of manipulation objects the following terms are used:
-
-\begin{itemize}
-\item Position: point within 2D coordinate system of a service area,
-\item Rotation: rotation around vertical axis of a service area,
-\item Orientation: rotation around horizontal axes of a service area, i.e. whether the object is standing upright or lying on its side
-\item Pose: combination of position, rotation and orientation.
-\end{itemize}
 
 \subsection{Grasping Objects} \label{ssec:GraspingObjects}
-If not specified differently in a test, the following definition applies to decide if an object counts as being grasped from a service area.
+If not specified differently in a test, the following definition applies to decide if an object counts as correctly grasped from a service area.
 \par
 An object counts as grasped from a service area, when the object was moved outside of the source service area. Outside means, that the vertical projection of the object’s convex hull does not touch the service area any more.
 
@@ -472,7 +483,7 @@ The last point shall enable to let the robot pick up an object in order to analy
 If the robot handles an object, but does not fulfill all points above, the object does not count as being grasped, and neither points for grasping a required object, nor penalty points for grasping an unspecified object are given. Still, if the object drops to the ground or an uncontrolled collision occurs, the normal penalty points apply.
 
 \subsection{Placing Objects on Service Areas} \label{ssec:PlacingObjects}
-If not specified differently in a test, a manipulation object counts as placed on a target service area if any part of the object is touching the surface of the service area and the object is not moving at the end of the run. An objects does not count as placed when it is dropped (e.g. dropped from a height above 5 cm).
+If not specified differently in a test, a manipulation object counts as correctly placed on a target service area if any part of the object is touching the surface of the service area and the object is not moving at the end of the run. An objects does not count as placed when it is dropped (e.g. dropped from a height above 5 cm). \robin{This is to avoid that robots throw objects and potentially harm people or property.}
 \par
 The pose of the object on the service area can be chosen freely by the robot.
 

@@ -67,6 +67,7 @@ The following rules have to be obeyed:
 \item The robot will get the task specification from the referee box.
 \item A manipulation object counts as successfully grasped as specified in Section~\ref{ssec:GraspingObjects}.
 \item An object counts as placed correctly if it fell through the correct cavity and touches the ground beyond. It may happen that an object blocks the cavity for the next object, e.g. by standing upright on the floor. In that case a referee may remove that object (which remains to count as a successful place). If the referee is not able to do so and the robot places another object into the blocked cavity, it counts as a correct placement if it would have been successful without the blocking object.
+ \item \robin{A service area counts as successfully reached as defined in Section~\ref{ssec:Navigating}}
 \item \robin{\st{The time is stopped when the robot has placed the last object correctly. If a team cannot complete the task within the specified time, the run will be stopped after it is exceeded.}The run is over when the robot reached the final position or the designated time has expired.}  
 \item \robin{The score for this test will be calculated as defined in \ref{sec:ScoringAndRanking}.}
 
