@@ -225,7 +225,54 @@ The floor is made of some firm material. Examples include floors made of concret
 \end{figure}
 
 \subsection{Walls}
-The competition arena is partially surrounded by walls. The height of the walls is not lesser than 20 cm and not more than 40 cm. One or more gates may be foreseen, where robots can enter or leave the arena. Gates may or may not be closable. The walls have a mostly uniform color. Small visual elements like logos or advertisements may be placed on the walls.
+The competition arena is partially surrounded by walls. \robin{Parts of the outer border that are not blocked by walls will be marked by yellow/black barrier tape and count as virtual walls as defined in \ref{ssec:virtualWalls}} The height of the walls is not lesser than 20 cm and not more than 40 cm. One or more gates may be foreseen, where robots can enter or leave the arena. Gates may or may not be closable. The walls have a mostly uniform color. Small visual elements like logos or advertisements may be placed on the walls.
+
+
+\subsection{Barrier Tape as Virtual Walls} \label{ssec:virtualWalls}
+The arena may include virtual walls marked by either striped yellow/black or white/red barrier tape on the floor (see Figure \ref{fig:barrier_tape}). If any part of a robot passes over such a tape it is considered as a collision with a usual wall.
+
+The red/white tape is used to frame the entrance and exit area. The robot is allowed to cross this kind of barrier only at the beginning of a test to enter arena and at the end for leaving. In contrast, the yellow/black one denotes an obstacle which the robot is never allowed to cross.
+
+The blue/white tape is not considered a virtual wall but marks the areas of 0 cm height (see Section \ref{ssec:serviceareas}).
+
+\begin{figure} [h!]
+\centering
+\includegraphics[width= 0.7\textwidth ]{./images/barrier_tapes_in_china15.jpg}
+\caption{Example of barrier tape used during \RC 2015. The red/white tape is used for the entrance and exit, while the yellow/black one denotes an obstacle.}
+\label{fig:barrier_tape}
+\end{figure}
+
+
+
+\subsection{Entrance and Exit}
+If possible, the arena should have one entrance and one exit, which are equipped with laser barriers. These barriers are used for timekeeping by the referee box.
+
+
+
+\subsection{Places}
+An arena designed for a particular test may foresee the definition of a set of designated places, which are locations in the arena that can be referred to by a unique, symbolic identifier. These identifiers are used e.g. for the task specification, possibly in conjunction with other information, such as an orientation. Places may be marked by markers of some sort.
+\robin{Not needed anymore, since BNT is gone}
+
+
+\subsection{Floor Markers}
+The arena used for a particular test may foresee the use of floor markers for designated places. The design of these floor markers are rectangular black-and-white images as used by the ARToolKit library:
+\begin{center}
+\url{http://www.hitl.washington.edu/artoolkit}
+\end{center}
+
+The black inner square of the markers is at least 8 cm x 8 cm large with an additional white border around of at least 12 cm side length. Figure \ref{fig:floor_marker} and \ref{fig:barrier_tape} depict some examples of these markers.
+
+\begin{figure} [h!]
+\centering
+\includegraphics[width= 0.4\textwidth ]{./images/example_floor_marker.png}
+\caption{Example of a floor marker.}
+\label{fig:floor_marker}
+\end{figure}
+
+
+\subsection{Obstacles}
+An arena defined for a particular test may foresee the use of obstacles. Obstacles may by passive (i.e. not able to relocate by themselves) or active (e.g. other robots). The size of obstacles should be not lesser than 10 cm x 10 cm x 5 cm; there is no upper bound on the size. The details about the dynamic objects are not known before the competition and will be chosen by the OC \robin{or TC} on-site. Examples for obstacles are trash bins, boxes, big aluminium profiles or even other robots.
+
 
 \subsection{Service Areas} \label{ssec:serviceareas} Arenas contain one or more
 service areas, which have specific purposes for a particular test. Examples
@@ -283,57 +330,50 @@ The shelf surface may be specially designed in order to serve specific purposes,
 \end{figure}
 
 
-\subsection{Places}
-An arena designed for a particular test may foresee the definition of a set of designated places, which are locations in the arena that can be referred to by a unique, symbolic identifier. These identifiers are used e.g. for the task specification, possibly in conjunction with other information, such as an orientation. Places may be marked by markers of some sort.
-
-\subsection{Obstacles}
-An arena defined for a particular test may foresee the use of obstacles. Obstacles may by passive (i.e. not able to relocate by themselves) or active (e.g. other robots). The size of obstacles should be not lesser than 10 cm x 10 cm x 5 cm; there is no upper bound on the size. The details about the dynamic objects are not known before the competition and will be chosen by the OC on-site. Examples for obstacles are trash bins, boxes, big aluminium profiles or even other robots.
-
-\subsection{Floor Markers}
-The arena used for a particular test may foresee the use of floor markers for designated places. The design of these floor markers are rectangular black-and-white images as used by the ARToolKit library:
-\begin{center}
-\url{http://www.hitl.washington.edu/artoolkit}
-\end{center}
-
-The black inner square of the markers is at least 8 cm x 8 cm large with an additional white border around of at least 12 cm side length. Figure \ref{fig:floor_marker} and \ref{fig:barrier_tape} depict some examples of these markers.
-
-\begin{figure} [h!]
-\centering
-\includegraphics[width= 0.4\textwidth ]{./images/example_floor_marker.png}
-\caption{Example of a floor marker.}
-\label{fig:floor_marker}
-\end{figure}
-
-
-
-\subsection{Barrier Tape as Virtual Walls}
-The arena may include virtual walls marked by either striped yellow/black or white/red barrier tape on the floor (see Figure \ref{fig:barrier_tape}). If any part of a robot passes over such a tape it is considered as a collision with a usual wall.
-
-The red/white tape is used to frame the entrance and exit area. The robot is allowed to cross this kind of barrier only at the beginning of a test to enter arena and at the end for leaving. In contrast, the yellow/black one denotes an obstacle which the robot is never allowed to cross.
-
-The blue/white tape is not considered a virtual wall but marks the areas of 0 cm height (see Section \ref{ssec:serviceareas}).
-
-\begin{figure} [h!]
-\centering
-\includegraphics[width= 0.7\textwidth ]{./images/barrier_tapes_in_china15.jpg}
-\caption{Example of barrier tape used during \RC 2015. The red/white tape is used for the entrance and exit, while the yellow/black one denotes an obstacle.}
-\label{fig:barrier_tape}
-\end{figure}
-
-
-\subsection{Entrance and Exit}
-If possible, the arena should have one entrance and one exit, which are equipped with laser barriers. These barriers are used for timekeeping by the referee box.
-
 \subsection{Setup of the Arena}
-The arena must be surrounded by either walls or barrier tape. The only exceptions are the entrance and exit. There must be a route to all places and markers relevant for a test which has a minimum width of 55 cm.
+\robin{\st{The arena must be surrounded by either walls or barrier tape. The only exceptions are the entrance and exit. There must be a route to all places and markers relevant for a test which has a minimum width of 55 cm.}}
 
-\section{Design of Manipulation Tasks}
-\label{sec:ManipulationTasks}
+
+\section{Dessign of Navigation Tasks} \label{sec:NavigationTasks}
+\robin{Every task has some navigation involved in it. Successful navigation will be awarded in every test according to Table \ref{tab:InstancePoints}.  This rule has been implemented so that new teams can participate in every test and earn points, even if they are not capable of manipulating objects reliably.}
+
+\subsection{Reaching a Service Area} \label{ssec:reachingServiceArea}
+\robin{Service areas will be marked by floor markers as defined in Section 2.3.7. Before starting the manipulation, the robot is supposed to reach the service area. A service area counts as successfully reached if the robot covered the floor marker assigned to the respective service area for a certain amount of time and didn’t move (e.g.  wheels are not spinning significantly). The waiting period will be send with the task by the refbox. If not specified otherwise in the test the waiting period will always be 3 seconds, so it is easier for the referees to judge.}
+
+
+\section{Design of Manipulation Tasks} \label{sec:ManipulationTasks}
+
+
+\subsection{Manipulation Zone} \label{ssec:ManipulationZone}
+The manipulation zone defines the area where objects can be placed. Thereby, the following constraints need to be satisfied:
+\begin{itemize}
+	\item The maximum depth of the manipulation zone is 20 cm.
+	\item The minimum distance between objects to each other is 2 cm.
+	\item The minimum distance of the beginning of the manipulation zone to a wall is 10 cm.
+	\item There as an offset of 2 cm from the border of the service area to the manipulation zone.
+\end{itemize}
+Note, the constraints do not permit, that objects can be partially occluded dependent on the viewpoint.
+\begin{figure} [h!]
+\centering
+\includegraphics[width=1.0\textwidth ]{./images/manipulation_zone.pdf}
+\caption{Manipulation zone: the green color indicates the area where objects can be placed on a service area by the referees.}
+\label{fig:manipulation_zone}
+\end{figure}
+
 
 \subsection{Manipulation Objects} \label{ssec:ManipulationObjects}
 The manipulation objects in \RCAW shall include a wide range of objects relevant in industrial applications of robotics. They eventually cover any raw material, (semi-)finished parts or products as well as tools and possibly operating materials required for manufacturing processes.
 \par
 The intention is to start with a simple set of objects of different shapes and colors. Every year, the spectrum shall then be widen in at least one aspect. The initial set of objects includes basic standard screws and nuts with various sizes and masses as shown in Table~\ref{tab:manipulation_objects} and Table~\ref{tab:manipulation_objects_rockin}. Objects of one kind can slightly vary e.g. considering the surface.
+
+For the placement of manipulation objects the following terms are used:
+
+\begin{itemize}
+\item Position: point within 2D coordinate system of a service area,
+\item Rotation: rotation around vertical axis of a service area,
+\item Orientation: rotation around horizontal axes of a service area, i.e. whether the object is standing upright or lying on its side
+\item Pose: combination of position, rotation and orientation.
+\end{itemize}
 
 \newcommand{\imageView}[1]{\includegraphics[width=2cm, valign=c]{#1}}
 {
@@ -432,34 +472,6 @@ Object & Symbolic Description & Mass & Details \\
 \end{table}
 }
 
-\subsection{Manipulation Zone} \label{ssec:ManipulationZone}
-The manipulation zone defines the area where objects can be placed. Thereby, the following constraints need to be satisfied:
-\begin{itemize}
-	\item The maximum depth of the manipulation zone is 20 cm.
-	\item The minimum distance between objects to each other is 2 cm.
-	\item The minimum distance of the beginning of the manipulation zone to a wall is 10 cm.
-	\item There as an offset of 2 cm from the border of the service area to the manipulation zone.
-\end{itemize}
-Note, the constraints do not permit, that objects can be partially occluded dependent on the viewpoint.
-\begin{figure} [h!]
-\centering
-\includegraphics[width=1.0\textwidth ]{./images/manipulation_zone.pdf}
-\caption{Manipulation zone: the green color indicates the area where objects can be placed on a service area by the referees.}
-\label{fig:manipulation_zone}
-\end{figure}
-
-
-
-
-\subsection{Placement of Objects}
-For the placement of manipulation objects the following terms are used:
-
-\begin{itemize}
-\item Position: point within 2D coordinate system of a service area,
-\item Rotation: rotation around vertical axis of a service area,
-\item Orientation: rotation around horizontal axes of a service area, i.e. whether the object is standing upright or lying on its side
-\item Pose: combination of position, rotation and orientation.
-\end{itemize}
 
 \subsection{Grasping Objects} \label{ssec:GraspingObjects}
 If not specified differently in a test, the following definition applies to decide if an object counts as being grasped from a service area.
@@ -472,7 +484,7 @@ The last point shall enable to let the robot pick up an object in order to analy
 If the robot handles an object, but does not fulfill all points above, the object does not count as being grasped, and neither points for grasping a required object, nor penalty points for grasping an unspecified object are given. Still, if the object drops to the ground or an uncontrolled collision occurs, the normal penalty points apply.
 
 \subsection{Placing Objects on Service Areas} \label{ssec:PlacingObjects}
-If not specified differently in a test, a manipulation object counts as placed on a target service area if any part of the object is touching the surface of the service area and the object is not moving at the end of the run. An objects does not count as placed when it is dropped (e.g. dropped from a height above 5 cm).
+If not specified differently in a test, a manipulation object counts as placed on a target service area if any part of the object is touching the surface of the service area and the object is not moving at the end of the run. An objects does not count as placed when it is dropped (e.g. dropped from a height above 5 cm). \robin{This is to avoid that robots throw objects and potentially harm people or property.}
 \par
 The pose of the object on the service area can be chosen freely by the robot.
 

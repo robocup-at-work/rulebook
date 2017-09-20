@@ -1,3 +1,5 @@
+% !TEX root = ../Rulebook.tex
+
 
 \section{Scoring and Ranking} \label{sec:ScoringAndRanking}
 The following instances may occur as an instance of the run. Ranking of the teams will be based on the sum of the achieved points in all the tests.
@@ -27,6 +29,35 @@ Explanation of the terms:
 \put(0.75,0.75){\circle{2.8}}\put(0.75,0.75){\makebox(0,0){#1}}\end{picture}}
 \newcommand{\Y}{{\tiny \CIRCLE}}
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+
+\begin{landscape}
+\begin{table}[h!]
+ \centering
+ \begin{tabular}{|p{5cm}*{8}{|P{1cm}}|}
+   \hhline{~--------}
+   \multicolumn{1}{l|}{ } &  \multicolumn{7}{c|}{ Instances}\\
+   \hhline{~--------}
+   \multicolumn{1}{l|}{ }          &\cir{1}&\cir{2}&\cir{3}&\cir{4}&\cir{5}  &\cir{6}&\cir{7}\\
+   \multicolumn{1}{r|}{     }       & BMT   & BTT1  & BTT2  &  BTT3 & PPT   &  RTT & Final\\
+   \hhline{~--------}
+   \hline
+    Correct destinations reached    &  50  &   50  &  50   &   50  &  50   &   50  &   50 \\
+    Correct object grasping         & 100  &  100  & 100   &  100  &       &  300  &  100 \\ 
+    Correct object placing          & 100  &  100  & 100   &  100  & 300   &       &  100  \\ 
+    Incorrect object placing        & -100 & -100  & -100  & -100  & -100  &       & -100  \\ 
+    Incorrect object grasping       &      & -100  & -100  & -100  &       & -100  & -100  \\ 
+    Completing whole task           & 100  &  100  & 100   &  100  & 100   &  100  &  100  \\ \hline\hline
+    \robin{Maximum} Barrier Tape penalty    &       &  200  &       &  300  &       &       &  400  \\ \hline\hline
+    Maximum attainable points\newline (time bonus not included)   
+	                                & 1100  &  1100 & 1100  & 1500  & 1000  & 1000 &  2100 \\ \hline
+ \end{tabular}
+ \caption{Scoring in the instances of the \RCAW \YEAR competition.}
+  \label{tab:InstancePoints}
+\end{table}
+\end{landscape}
+
+
 
 \begin{landscape}
 \begin{table}[h!]
@@ -79,33 +110,6 @@ Explanation of the terms:
  \end{tabular}
  \caption{Test specification in the instances of the \RCAW \YEAR competition.}
  \label{tab:Instances}
-\end{table}
-\end{landscape}
-
-
-\begin{landscape}
-\begin{table}[h!]
- \centering
- \begin{tabular}{|p{5cm}*{8}{|P{1cm}}|}
-   \hhline{~--------}
-   \multicolumn{1}{l|}{ } &  \multicolumn{7}{c|}{ Instances}\\
-   \hhline{~--------}
-   \multicolumn{1}{l|}{ }          &\cir{1}&\cir{2}&\cir{3}&\cir{4}&\cir{5}  &\cir{6}&\cir{7}\\
-   \multicolumn{1}{r|}{     }       & BMT   & BTT1  & BTT2  &  BTT3 & PPT   &  RTT & Final\\
-   \hhline{~--------}
-   \hline
-    Correct destinations reached    &  50  &   50  &  50   &   50  &  50   &   50  &   50 \\
-    Correct object grasping         & 100  &  100  & 100   &  100  &       &  300  &  100 \\ 
-    Correct object placing          & 100  &  100  & 100   &  100  & 300   &       &  100  \\ 
-    Incorrect object placing        & -100 & -100  & -100  & -100  & -100  &       & -100  \\ 
-    Incorrect object grasping       &      & -100  & -100  & -100  &       & -100  & -100  \\ 
-    Completing whole task           & 100  &  100  & 100   &  100  & 100   &  100  &  100  \\ \hline\hline
-    \robin{Maximum} Barrier Tape penalty    &       &  200  &       &  300  &       &       &  400  \\ \hline\hline
-    Maximum attainable points\newline (time bonus not included)   
-	                                & 1100  &  1100 & 1100  & 1500  & 1000  & 1000 &  2100 \\ \hline
- \end{tabular}
- \caption{Scoring in the instances of the \RCAW \YEAR competition.}
-  \label{tab:InstancePoints}
 \end{table}
 \end{landscape}
 
