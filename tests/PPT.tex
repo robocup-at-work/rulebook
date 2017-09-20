@@ -32,7 +32,7 @@ The same arena as for the Basic Manipulation Test is used whereas the plane of o
 The manipulation objects used in this test are defined by the instances described in Table~\ref{tab:Instances}.
 
 \paragraph{Task}
-A single robot is used. The robot is placed by the team freely within the arena. The objective of the task is to pick the objects which are placed on one service area and make a precise-placement in the corresponding cavity at the service area with the special PPT platform (an example configuration is illustrated in Figure \ref{fig:ppt_plattform}). 
+\robin{\st{A single robot is used. The robot is placed by the team freely within the arena.}} The objective of the task is to pick the objects which are placed on one service area and make a precise placement in the corresponding cavity at the service area with the special PPT platform (an example configuration is illustrated in Figure \ref{fig:ppt_plattform}). 
 
 \begin{figure}
 \centering
@@ -41,9 +41,9 @@ A single robot is used. The robot is placed by the team freely within the arena.
 \label{fig:ppt_plattform}
 \end{figure}
 
-The task consists of multiple grasp and place operations, possibly with base movement in between, which will, however, be short. The task is finished once the objects are picked up and placed in the corresponding cavities or when the time foreseen for the run ends. Note that the placement of the object in the cavity is finished when the object is fallen into the cavity (i.e. at least some part of the object has to touch ground floor underneath the cavity).
+The task consists of multiple grasp and place operations, possibly with base movement in between, which will, however, be short. \robin{\st{The task is finished once the objects are picked up and placed in the corresponding cavities or when the time foreseen for the run ends.}} Note that the placement of the object in the cavity is finished when the object is fallen into the cavity (i.e. at least some part of the object has to touch ground floor underneath the cavity).
 \par
-All objects to be transported in a run of a team and the corresponding cavities share the same orientation, either horizontal or vertical. This may vary between different teams and different runs.
+\robin{\st{All objects to be transported in a run of a team and the corresponding cavities share the same orientation, either horizontal or vertical. This may vary between different teams and different runs.}}
 \par
 
 %
@@ -61,11 +61,15 @@ The following rules have to be obeyed:
 
 \begin{itemize}
 
+\item \robin{A single robot is used.}
+\item \robin{The robot has to start from outside the arena and to end in the final.}
 \item The order in which the teams have to perform will be determined by a draw.
 \item The robot will get the task specification from the referee box.
 \item A manipulation object counts as successfully grasped as specified in Section~\ref{ssec:GraspingObjects}.
 \item An object counts as placed correctly if it fell through the correct cavity and touches the ground beyond. It may happen that an object blocks the cavity for the next object, e.g. by standing upright on the floor. In that case a referee may remove that object (which remains to count as a successful place). If the referee is not able to do so and the robot places another object into the blocked cavity, it counts as a correct placement if it would have been successful without the blocking object.
-\item The time is stopped when the robot has placed the last object correctly. If a team cannot complete the task within the specified time, the run will be stopped after it is exceeded.  
+ \item \robin{A service area counts as successfully reached as defined in Section~\ref{ssec:Navigating}}
+\item \robin{\st{The time is stopped when the robot has placed the last object correctly. If a team cannot complete the task within the specified time, the run will be stopped after it is exceeded.}The run is over when the robot reached the final position or the designated time has expired.}  
+\item \robin{The score for this test will be calculated as defined in \ref{sec:ScoringAndRanking}.}
 
 \end{itemize}
 
