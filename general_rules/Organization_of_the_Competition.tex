@@ -21,50 +21,6 @@ The OC may decide to split the competition into several stages. The competition 
 Each stage is composed of a sequence of tests. The OC and the TC will jointly determine the type and number of tests in a stage and schedule the tests.
 Each test may be executed in one or multiple runs. The term run designates a single trial of a test for each team.
 
-\subsection{Scoring and Ranking} \label{ssec:ScoringAndRanking}
-For each test the calculation of scores is defined individually, comprising points for achieving certain subtasks, points for winning a run and penalty points.
-\par
-If not specified otherwise, the following set of scoring rules applies for each test:
-\par
-Teams may use simplifications, which will result in a reduction of scores for the given run:
-
-\begin{itemize}
-	\item Use of external sensors: \hfill -200 points
-	\item Use of other external objects (e.g. to support localization): \hfill -100 points
-	\item Use of own loading or unloading areas: \hfill -200 points
-\end{itemize}
-
-Additional simplifications are specified for individual tests. These reductions do not count as penalty points. Teams that want to make use of the simplifications above have to announce them in advance of the competition to the TC. The TC might forbid the use of specific elements for simplification if these are not in the spirit of the league or may cause disproportionate advantages for a team.
-\par
-Penalty points are given as follows, each time again the incident occurs:
-
-\begin{itemize}
-	\item A manipulation object is lost or placed anywhere outside of the service areas: \hfill -100 points
-	\item Robot caused a collision with the environment: \hfill -50 points
-	\item Delivering a wrong manipulation object to service area \hfill -50 points 
-\end{itemize}
-
-Collisions of the manipulator with the upside of the service area are allowed.
-
-If the projection of any part of a robot touches a barrier tape marking a virtual wall it counts as a collision. The maximum penalty resulting from these collisions depends on the specific competition instance and is listed in Tab.~\ref{tab:InstancePoints}.
-
-Touching or Passing a Barrier Tape when entering or exiting the arena does not count as collision.
-\par
-When an object lost contact to the robot or touches the ground, it is not considered as being carried anymore (e.g. an object falls off the gripper or from the transportation platform).
-\par
-All teams fully complete a perfect run will receive a completion bonus of 0.75 points per second left on the run time. These points are only awarded if the run is perfect, i.e. all objectives reached without any penalties.
-\par
-A team cannot get less than zero points for one run.
-The scores of the tests of the first stage are summed up, and the teams with the highest sums proceed to the next stage.
-\par
-In case of a tie, the OC will either schedule a deciding run or continue with a higher number of participants.
-\par
-%Some tests have three so-called complexity levels. A complexity level (low, medium and high) encodes the difficulty of the test such as the number of objects to manipulate or whether the arena is equipped with obstacles or without.
-\par
-%Every team decides for each run of a test in which complexity level they want to participate. This decision must be made by all teams when asked for by the OC, but at least before the first team starts a particular run.
-
-Each test provides a set of so-called feature variations encoding the overall variability of the test (e.g. whether obstacles can occur or not, number and type of manipulation objects). To enhance comparability among different test runs, all teams will have to perform the same test instances as specified in Table~\ref{tab:Instances}.
-
 
 \subsection{Common Procedures}
 One hour before a test the OC requests the capability of
@@ -101,23 +57,6 @@ During a run, teams may only interact with the robot or enter the area if explic
 If the robot at any point during the run does not show any progress for 2 minutes, the run will be aborted. This includes repeating the same behavior and not leaving the start arena as a team might not be entirely prepared, or is having connection issues.
 \par
 After each run, the teams must leave the arena within one minute.
-
-\subsection{Restarts}
-Teams might use one so-called restart in a run. Restarts have the following aspects:
-
-\begin{itemize}
-
-	\item Per run, at most one restart is allowed for a team, if not specified 			otherwise in a test.
-	\item At any time during a run, the team can call for a restart to the 				referees.
-	\item When the referees acknowledge the call for restart, the team may enter the 			arena. The time will continue running.
-	\item The arena and the robot will be reset exactly to the setup at the 				beginning of the run (except the timer for the run). Random elements such as 			obstacles or object positions remain like before.
-	\item The points for this run achieved so far are reset to zero 
-	\item Scores that are received after a restart are multiplied by a factor of 0.75.
-	\item The referees decide when the arena is prepared again for the restart. If 	the robot is not yet ready, teams can keep trying to get it ready until the 			time for the run is over.
-	\item As soon as the team signals that the robot is ready, the task 					specification is sent again.
-	\item Afterwards the start signal is sent from the referee box.
-
-\end{itemize}
 
 \subsection{Referees}
 The referees have to ensure the correct execution of the tests. They may interrupt runs if they suspect breaches of rules, see possible danger for humans or possible damages of robots and the environment. If a suspected breach of rules may be discussed after the run and cases no danger to others the run should continue, therefore the referee should  announce his suspicion as fast as possible. Beside these general tasks, the referees are responsible for

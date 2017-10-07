@@ -225,10 +225,10 @@ The floor is made of some firm material. Examples include floors made of concret
 \end{figure}
 
 \subsection{Walls}
-The competition arena is partially surrounded by walls. \robin{Parts of the outer border that are not blocked by walls will be marked by yellow/black barrier tape and count as virtual walls as defined in \ref{ssec:virtualWalls}} The height of the walls is not lesser than 20 cm and not more than 40 cm. One or more gates may be foreseen, where robots can enter or leave the arena. Gates may or may not be closable. The walls have a mostly uniform color. Small visual elements like logos or advertisements may be placed on the walls.
+The competition arena is partially surrounded by walls. \robin{Parts of the outer border that are not blocked by walls will be marked by yellow/black barrier tape and count as virtual walls as defined in \ref{ssec:barrier_tape}} The height of the walls is not lesser than 20 cm and not more than 40 cm. One or more gates may be foreseen, where robots can enter or leave the arena. Gates may or may not be closable. The walls have a mostly uniform color. Small visual elements like logos or advertisements may be placed on the walls.
 
 
-\subsection{Barrier Tape as Virtual Walls} \label{ssec:virtualWalls}
+\subsection{Barrier Tape as Virtual Walls} \label{ssec:barrier_tape}
 The arena may include virtual walls marked by either striped yellow/black or white/red barrier tape on the floor (see Figure \ref{fig:barrier_tape}). If any part of a robot passes over such a tape it is considered as a collision with a usual wall.
 
 The red/white tape is used to frame the entrance and exit area. The robot is allowed to cross this kind of barrier only at the beginning of a test to enter arena and at the end for leaving. In contrast, the yellow/black one denotes an obstacle which the robot is never allowed to cross.
@@ -250,7 +250,7 @@ If possible, the arena should have one entrance and one exit, which are equipped
 
 
 \subsection{Places}
-An arena designed for a particular test may foresee the definition of a set of designated places, which are locations in the arena that can be referred to by a unique, symbolic identifier. These identifiers are used e.g. for the task specification, possibly in conjunction with other information, such as an orientation. Places may be marked by markers of some sort.
+\robin{\st{An arena designed for a particular test may foresee the definition of a set of designated places, which are locations in the arena that can be referred to by a unique, symbolic identifier. These identifiers are used e.g. for the task specification, possibly in conjunction with other information, such as an orientation. Places may be marked by markers of some sort.}}
 \robin{Not needed anymore, since BNT is gone}
 
 
@@ -276,7 +276,7 @@ An arena defined for a particular test may foresee the use of obstacles. Obstacl
 
 \subsection{Service Areas} \label{ssec:serviceareas} Arenas contain one or more
 service areas, which have specific purposes for a particular test. Examples
-include loading and unloading areas, conveyor belts, rotators, storage areas,
+include loading and unloading areas, rotators, storage areas,
 etc. Service areas may contain specific environment objects, such as shelves,
 racks, etc. They may be accessible from different locations, i.e. it might be
 possible to reach an area from two or more sides. Note that service areas can
@@ -337,7 +337,7 @@ The shelf surface may be specially designed in order to serve specific purposes,
 \section{Dessign of Navigation Tasks} \label{sec:NavigationTasks}
 \robin{Every task has some navigation involved in it. Successful navigation will be awarded in every test according to Table \ref{tab:InstancePoints}.  This rule has been implemented so that new teams can participate in every test and earn points, even if they are not capable of manipulating objects reliably.}
 
-\subsection{Reaching a Service Area} \label{ssec:reachingServiceArea}
+\subsection{Reaching a Service Area} \label{ssec:Navigating}
 \robin{Service areas will be marked by floor markers as defined in Section 2.3.7. Before starting the manipulation, the robot is supposed to reach the service area. A service area counts as successfully reached if the robot covered the floor marker assigned to the respective service area for a certain amount of time and didn’t move (e.g.  wheels are not spinning significantly). The waiting period will be send with the task by the refbox. If not specified otherwise in the test the waiting period will always be 3 seconds, so it is easier for the referees to judge.}
 
 

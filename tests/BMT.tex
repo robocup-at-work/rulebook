@@ -1,30 +1,29 @@
 % !TEX root = ../Rulebook.tex
+
 \newpage
 \section{Basic Manipulation Test}
 
 \paragraph{Purpose and Focus of the Test}
 The purpose of the \iaterm{Basic Manipulation Test}{BMT} is to demonstrate basic manipulation capabilities by the robots, like grasping, turning, or placing an object.
 \par
-The focus is on the manipulation and on demonstrating safe and robust grasping and placing of objects of different size and shape. Therefore,\robin{ the number of service areas will be constraint to two, one source area and one target area, which are close to each other. \st{ only minor navigation of the robot is required.
-\par
-Some minor movement is intentionally designed into this test in order to force the teams to perform dynamic assessment of the situation (e.g. estimating positions of manipulation objects, determining grasp positions, etc.) and to avoid that solutions depending on completely known initial situations and well-calibrated systems are possible.} } 
+The focus is on the manipulation and on demonstrating safe and robust grasping and placing of objects of different size and shape. Therefore, the number of service areas will be constraint to two, one source area and one target area, which are close to each other. 
 
 \paragraph{Scenario Environment}
-\robin{\st{The arena used for this test contains basically all elements as for the Basic Navigation Test.} The arena used for this test contains all environmental elements: walls, service areas and floor markers. There will be no obstacles placed in the environment.} Additionally to environmental elements, different manipulatable objects will be placed on the service areas.
+Additionally to environmental elements, different manipulatable objects will be placed on the specified service areas.
 
 \paragraph{Manipulation Objects}
 The manipulation objects used in this test are defined by the instances described in Table~\ref{tab:Instances}.
 
 \paragraph{Task}
-\robin{\st{A single robot is used. The robot can be placed in an arbitrary starting location by the team.}} The task consists of a sequence of grasp and place operations, with a small base movement in between. The objective is to move a set of objects from one service area into another. \robin{To complete the task the source and the target destination have to be reached at least once.} The task is finished once all objects are moved or when the time foreseen for the run ends.
+The task consists of a sequence of grasp and place operations, with a small base movement in between. The objective is to move a set of objects from one service area into another. To complete the task the source and the target destination have to be reached at least once. \robin{\st{The task is finished once all objects are moved or when the time foreseen for the run ends.}}
 \par
 The task specification consists of:
 \begin{itemize}
-	\item The specification of the initial place \robin{\st{(e.g. \texttt{WS03}, \texttt{CB01}, \texttt{SH02})}}
+	\item The specification of the initial place
 	\item A source location, given as place (any one)
 	\item A destination location, given as place (any one, but nearby the source location)
 	\item A list of objects to manipulated from the source to the destination service area
-	\item The specification of a final place for the robot \robin{\st{(which does not need to be reached)}}
+	\item The specification of a final place for the robot
 \end{itemize}
 
 
@@ -32,16 +31,13 @@ The task specification consists of:
  The following rules have to be obeyed:
 
  \begin{itemize}
- \item \robin{A single robot is used.}
- \item \robin{The robot has to start from outside the arena and to end in the final.}
  \item The order in which the teams have to perform will be determined by a draw.
- \item \robin{\st{The team can set up the robot anywhere inside the arena.}}
  \item The robot will get the task specification from the referee box.
  \item A manipulation object counts as successfully grasped as defined in Section~\ref{ssec:GraspingObjects}
  \item A manipulation object counts as successfully placed, if the robot has placed the object into the correct destination service area as described in Section~\ref{ssec:PlacingObjects}.
- \item \robin{A service area counts as successfully reached as defined in Section~\ref{ssec:Navigating}}
- \item \robin{\st{The time is stopped when the robot has completed the task by placing the last object of the task specification. If a team cannot complete the task within the designated time, the run will be stopped.} The run is over when the robot reached the final place or the designated time has expired.}
- \item \robin{The score for this test will be calculated as defined in \ref{sec:ScoringAndRanking}.}
+ \item A service area counts as successfully reached as defined in Section~\ref{ssec:Navigating}
+ \item  The run is over when the robot reached the final place or the designated time has expired.
+ \item The score for this test will be calculated as defined in \ref{sec:ScoringAndRanking}.
  \end{itemize}
 
 
