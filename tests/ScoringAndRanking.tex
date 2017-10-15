@@ -26,7 +26,7 @@ Penalty points are given as follows, each time again the incident occurs:
 \begin{itemize}
 	\item A manipulation object is lost or placed anywhere outside of the service areas: \hfill -100 points
 	\item Robot caused a collision with the environment: \hfill -50 points
-	\item Delivering a wrong manipulation object to service area \hfill -50 points 
+	\item Delivering a wrong manipulation object to service area \hfill -50 points
 \end{itemize}
 
 Collisions of the manipulator with the upside of the service area are allowed.
@@ -68,7 +68,7 @@ Teams might use one so-called restart in a run. Restarts have the following aspe
 	\item At any time during a run, the team can call for a restart to the referees.
 	\item When the referees acknowledge the call for restart, the team may enter the arena. The time will continue running.
 	\item The arena and the robot will be reset exactly to the setup at the beginning of the run (except the timer for the run). Random elements such as obstacles or object positions remain like before.
-	\item The points for this run achieved so far are reset to zero 
+	\item The points for this run achieved so far are reset to zero
 	\item Scores that are received after a restart are multiplied by a factor of 0.75.
 	\item The referees decide when the arena is prepared again for the restart. If 	the robot is not yet ready, teams can keep trying to get it ready until the time for the run is over.
 	\item As soon as the team signals that the robot is ready, the task specification is sent again.
@@ -96,39 +96,13 @@ The test will occur in the instances shown in Table~\ref{tab:Instances}. Ranking
 \newcommand{\Y}{\tiny \CIRCLE}
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 
+\definecolor{headlineColor}{rgb}{.7,.7,.7}
+\definecolor{sectionColor}{rgb}{.7,.1,.1}
 
-\begin{landscape}
-\begin{table}
- \centering
- \begin{tabular}{|p{5cm}*{9}{|P{1cm}}|}
-   \hhline{~--------}
-   \multicolumn{1}{l|}{ } &  \multicolumn{8}{c|}{ Instances}\\
-   \hhline{~--------}
-   \multicolumn{1}{l|}{ }          &\cir{1}&\cir{2}&\cir{3}&\cir{4}&\cir{5}  &\cir{6}&\cir{7}&\cir{8}\\
-   \multicolumn{1}{r|}{     }       & BNT   & BMT   & BTT1  & BTT2  &  BTT3 & PPT   &  RTT & Final\\
-   \hhline{~--------}
-   \hline
-    Correct navigating              &  50  &  50   &   50  &  50   &   50  &  50   &   50  &   50 \\
-    Correct object grasping         &      & 100  &  100  & 100   &  100  &       &  300  &  100 \\ 
-    Correct object placing          &      & 100  &  100  & 100   &  100  & 300   &       &  100  \\ 
-    Incorrect object placing        &      & -100 & -100  & -100  & -100  & -100  &       & -100  \\ 
-    Incorrect object grasping       &      &      & -100  & -100  & -100  &       & -100  & -100  \\ 
-    Completing whole task           &  50  & 100  &  100  & 100   &  100  & 100   &  100  &  100  \\ \hline\hline
-    Maximum barrier \newline tape penalty    &  100  &      &  200  &       &  300  &       &       &  400  \\ \hline\hline
-    Maximum attainable points\newline (time bonus not included)   
-	                                  & 500  & 1100 &  1100 & 1100  & 1500  & 1000  & 1000  &  2100 \\ \hline
- \end{tabular}
- \caption{Scoring in the instances of the \RCAW \YEAR competition.}
-  \label{tab:InstancePoints}
-\end{table}
-\end{landscape}
-
-
+\newcommand{\C}{\cellcolor{sectionColor}}
 
 \begin{landscape}
 \begin{table}[h!]
- \definecolor{headlineColor}{rgb}{.7,.7,.7}
- \definecolor{sectionColor}{rgb}{.4,.4,.4}
  \centering
  \begin{tabular}{|l|l|l|l*{12}{|P{1cm}}|}
    \hhline{~~~~--------}
@@ -139,39 +113,39 @@ The test will occur in the instances shown in Table~\ref{tab:Instances}. Ranking
    \hhline{~~~~--------} \hline
     \multirow{18}{0.5cm}{\R{\centering Manipulation }{3cm}}
      & \multirow{8}{0.5cm}{\R{\centering Objects }{2.0cm}}
-     &      \RCAW           & RefBox   &       &   3   &  5    &    3 &   4   &    3   & 3  & 5  \\ \hhline{~~----------}
-     &    & RoCKIn          & Team     &       &   2   &       &       &       &       &       &    \\ \hhline{~~~---------}
-     &    &                 & RefBox   &       &       &       &   3   &   3   &       &       & 5  \\ \hhline{~~----------}
-     &    & Decoy           & RefBox   &       &       &  3    &       &   3   &       &       & 5   \\ \hhline{~~----------}
-     &    & Table height           & RefBox   &       & 10 cm & 10 cm &   5cm \newline 10 cm &  0 cm\newline 10 cm\newline 15 cm    &  10 cm &    10 cm & 0 cm\newline 5 cm\newline 10 cm\newline 15 cm \\
+     &      \RCAW           & RefBox   &       &   3   &  5    &    3 &   \C 3   &    3   & 3  & 5  \\ \hhline{~~----------}
+     &    & RoCKIn          & Team     &       &\C\sout{2}&       &       &       &       &       &    \\ \hhline{~~~---------}
+     &    &                 & RefBox   &       &\C 2   &       &   3   &   3   &       &       & 5  \\ \hhline{~~----------}
+     &    & Decoy           & RefBox   &       &       &  \C\sout{3}    &  \C 3     &   3   &       &  \C 3     & 5   \\ \hhline{~~----------}
+     &    & Table height    & RefBox   &       & 10 cm & 10 cm &  \C  0 cm\newline 10 cm\newline 15 cm   &  \C 10 cm  &  10 cm &    10 cm & 0 cm\newline 5 cm\newline 10 cm\newline 15 cm \\
      \hhline{~-----------} \hhline{~-----------}
      & \multirow{7}{0.5cm}{\R{\centering Grasping }{2cm}}
-         & Shelf unit       & RefBox   &       &       &       &       &       &       &    & 2   \\ \hhline{~~----------}
-      &  & Position         &          &       &   Ref  &   Ref  &  Ref  &  Ref   &   Team  & Team & Ref  \\ \hhline{~~----------}
+         & Shelf unit       & RefBox   &       &       &       &       &  \C  2   &       &    & 2   \\ \hhline{~~----------}
+      &  & Position         &          &       &   Ref  &   Ref  &  Ref  &  Ref   &   Team  & \C Ref & Ref  \\ \hhline{~~----------}
       &  & Rotation         &          &       &  Team &   Ref   &  Ref    &  Ref    &   Team  & Team& Ref   \\ \hhline{~~----------}
-      &  & Orientation      &          &       &  Team &   Team  &  Team   &  Ref    &  Team  &Team & Ref   \\ \hhline{~~----------}
-      &  & Rotating turntable& RefBox  &       &       &       &       &       &        & 3  & 1   \\ 
-      \hhline{~-----------} 
+      &  & Orientation      &          &       &  Team &   Team  &  Team   &  Ref !  &  Team  &Team & Ref!   \\ \hhline{~~----------}
+      &  & Rotating turntable& RefBox  &       &       &       &       &       &        & 3  & 1   \\
+      \hhline{~-----------}
       & \multirow{4}{0.5cm}{\R{\centering Placement}{2.5cm}}
          & Shelf unit          & RefBox &       &       &       &      &   1     &        &   & 1   \\ \hhline{~~----------}
       &  & Cavity platform with decoy& RefBox &       &       &       &       &       &  3   &   & 1   \\ \hhline{~~----------}
-      &  & Red container       & RefBox &       &       &       &   1   &   1   &       &   & 1   \\ \hhline{~~----------}
-      &  & Blue container      & RefBox &       &       &       &   1   &   1   &       &   & 1   \\ \hhline{~~----------}
-      &  & Rotating turntable  & RefBox &       &       &       &   1   &      &       &   &    \\ 
+      &  & Red container       & RefBox &       &       &       &  \C\sout{1}  &   1   &       &   & 1   \\ \hhline{~~----------}
+      &  & Blue container      & RefBox &       &       &       &  \C\sout{1}    &   1   &       &   & 1   \\ \hhline{~~----------}
+      &  & Rotating turntable  & RefBox &       &       &       &   1   &      &       &   &    \\
       \hhline{------------} \hhline{------------}
 	    \multirow{7}{0.5cm}{\R{\centering Arena}{3cm}}
       & \multirow{3}{0.5cm}{\R{\centering Cavities}{1.5cm}}
          & Position     & RefBox &       &       &       &      &      &   Ref	  &   &  Ref   \\ \hhline{~~----------}
       &  & Rotatoion	& RefBox &       &       &       &      &      &   Ref    &   &  Ref   \\ \hhline{~~----------}
-      &  & Orientation	& RefBox &       &       &       &      &      &   Team   &   &  Team  \\ 
+      &  & Orientation	& RefBox &       &       &       &      &      &   Team   &   &  Team  \\
     \hhline{~-----------} \hhline{~-----------}
      & \multirow{3}{0.5cm}{\R{\centering }{1.5cm}}
      &     Obstacles (static) & Referee &       &       &       &   2   &   2   &       &   & 2   \\ \hhline{~~----------}
      &   & Barrier tape       & Referee &   2   &       &   1   &       &    1    &       &   & 2   \\ \hhline{~~----------}
-     &   & Waypoints          & RefBox  &   9   &       &       &       &       &       &   &    \\ 
+     &   & Waypoints          & RefBox  &   9   &       &       &       &       &       &   &    \\
 		\hline \hline
-		 \multicolumn{3}{|l|}{Duration} 
-		                    & RefBox & 5 min & 5 min & 5 min  &   8 min &   8 min & 5 min & 5 min & 10min \\
+		 \multicolumn{3}{|l|}{Duration}
+		                    & RefBox & 5 min & 5 min & 5 min  &   8 min &   8 min &  \C\sout{5} 3 min &\C\sout{5} 3 min & 10min \\
 		\hline
  \end{tabular}
  \caption{Test specification in the instances of the \RCAW \YEAR competition.}
@@ -179,3 +153,32 @@ The test will occur in the instances shown in Table~\ref{tab:Instances}. Ranking
 \end{table}
 \end{landscape}
 
+\begin{landscape}
+\begin{table}
+ \centering
+ \begin{tabular}{|p{5.5cm}*{9}{|P{1cm}}|}
+   \hhline{~--------}
+   \multicolumn{1}{l|}{ } &  \multicolumn{8}{c|}{ Instances}\\
+   \hhline{~--------}
+   \multicolumn{1}{l|}{ }          &\cir{1}&\cir{2}&\cir{3}&\cir{4}&\cir{5}  &\cir{6}&\cir{7}&\cir{8}\\
+   \multicolumn{1}{r|}{     }       & BNT   & BMT   & BTT1  & BTT2  &  BTT3 & PPT   &  RTT & Final\\
+   \hhline{~--------}
+   \hline
+    Correct destination reached     &  50  &      &       &       &       &       &       &      \\
+    Correct object grasping standard&      & 100  &  100  & 100   &  100  &       &       &  100 \\
+		\hspace{1cm} round table        &      &      &       &       &       &       &   \C\sout{300} \newline 250      &   \C 250  \\
+    Correct object placing standard &      & 100  &  100  & 100   &  100  &       &       &  100  \\
+		\hspace{1cm} PPT area           &      &      &       &       &       & \C\sout{300} \newline 250   &       &   \C 250  \\
+		\hspace{1cm} shelf upper level  &      &      &       &       & \C 150&       &       &   \C 150  \\
+		\hspace{1cm} shelf lower level  &      &      &       &       & \C 400&       &       &   \C 400  \\
+    Incorrect object placing (?)    &      & -100 & -100  & -100  & -100  & -100  &       & -100  \\
+    Incorrect object grasping (?)   &      &      & -100  & -100  & -100  &       & -100  & -100  \\
+    Completing whole task           &  50  & \C\sout{100} \newline 50  &  100  & \C\sout{100} \newline 200   &  \C\sout{100} \newline 200  & \C\sout{100}   &  \C\sout{100}  &  \C\sout{100} \newline 300   \\ \hline\hline
+    Maximum barrier \newline tape penalty    &  100  &      &  200  &       &  300  &       &       &  400  \\ \hline\hline
+    Maximum attainable points\newline (time bonus not included)
+	                                  & 500  & 1100 &  1100 & 1100  & 1500  & 1000  & 1000  &  2100 \\ \hline
+ \end{tabular}
+ \caption{Scoring in the instances of the \RCAW \YEAR competition.}
+  \label{tab:InstancePoints}
+\end{table}
+\end{landscape}
