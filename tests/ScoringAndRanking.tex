@@ -111,26 +111,25 @@ The test will occur in the instances shown in Table~\ref{tab:Instances}. Ranking
    \multicolumn{4}{l|}{ }          &\cir{1}&\cir{2}&\cir{3}&\cir{4}&\cir{5}&\cir{6}&\cir{7}&\cir{8}\\
    \multicolumn{4}{r|}{     }        & BNT   & BMT   & BTT1  & BTT2  &  BTT3 &  PPT  &  RTT & Final\\
    \hhline{~~~~--------} \hline
-    \multirow{18}{0.5cm}{\R{\centering Manipulation }{3cm}}
-     & \multirow{8}{0.5cm}{\R{\centering Objects }{2.0cm}}
-     &      \RCAW           & RefBox   &       &   3   &  5    &    3 &   \C 3   &    3   & 3  & 5  \\ \hhline{~~----------}
-     &    & RoCKIn          & Team     &       &\C\sout{2}&       &       &       &       &       &    \\ \hhline{~~~---------}
-     &    &                 & RefBox   &       &\C 2   &       &   3   &   3   &       &       & 5  \\ \hhline{~~----------}
-     &    & Decoy           & RefBox   &       &       &  3    &  \C 3     &   3   &       &  \C 3     & 5   \\ \hhline{~~----------}
-     &    & Table height    & RefBox   &       & 10 cm & 10 cm &  \C  0 cm\newline 5 cm \newline 10 cm\newline 15 cm   &  \C 10 cm  &  10 cm &    10 cm & 0 cm\newline 5 cm\newline 10 cm\newline 15 cm \\
+    \multirow{17}{0.5cm}{\R{\centering Manipulation }{3cm}}
+     & \multirow{7}{0.5cm}{\R{\centering Objects }{2.0cm}}
+     & \C\RCAW \&  RoCKIn    & Team    &       &\C 2   &       &       &       &       &       &    \\ \hhline{~~~---------}
+     &    &                 & RefBox   &       &\C 3   & \C 5     &  \C 6   &  \C6   &  \C 3    &  \C3     & \C 10 \\ \hhline{~~----------}
+     &    & Decoy           & RefBox   &       &       &  3    &   3     &   3   &       &   3     & 5   \\ \hhline{~~----------}
+     &    & Table height    & RefBox   &       & 10 cm & 10 cm &  0 cm\newline 5 cm \newline 10 cm\newline 15 cm   & 10 cm  &  10 cm &    10 cm & 0 cm\newline 5 cm\newline 10 cm\newline 15 cm \\
      \hhline{~-----------} \hhline{~-----------}
      & \multirow{7}{0.5cm}{\R{\centering Grasping }{2cm}}
-         & Shelf unit       & RefBox   &       &       &       &       &  \C  2   &       &    & 2   \\ \hhline{~~----------}
-      &  & Position         &          &       &   Ref  &   Ref  &  Ref  &  Ref   &   Team  & \C Ref & Ref  \\ \hhline{~~----------}
+         & Shelf unit       & RefBox   &       &       &       &       &   2   &       &    & 2   \\ \hhline{~~----------}
+      &  & Position         &          &       &   Ref  &   Ref  &  Ref  &  Ref   &   Team  &  Ref & Ref  \\ \hhline{~~----------}
       &  & Rotation         &          &       &  Team &   Ref   &  Ref    &  Ref    &   Team  & Team& Ref   \\ \hhline{~~----------}
-      &  & Orientation      &          &       &  Team &   Team  &  Team   &  Ref !  &  Team  &Team & Ref!   \\ \hhline{~~----------}
+      &  & Orientation      &          &       &  Team &   Team  &  Team   & \C Ref !  &  Team  &Team & \C Ref!   \\ \hhline{~~----------}
       &  & Rotating turntable& RefBox  &       &       &       &       &       &        & 3  & 1   \\
       \hhline{~-----------}
       & \multirow{4}{0.5cm}{\R{\centering Placement}{2.5cm}}
-         & Shelf unit          & RefBox &       &       &       &      &   1     &        &   & 1   \\ \hhline{~~----------}
-      &  & Cavity platform with decoy& RefBox &       &       &       &       &       &  3   &   & 1   \\ \hhline{~~----------}
-      &  & Red container       & RefBox &       &       &       &  \C\sout{1}  &   1   &       &   & 1   \\ \hhline{~~----------}
-      &  & Blue container      & RefBox &       &       &       &  \C\sout{1}    &   1   &       &   & 1   \\ \hhline{~~----------}
+         & Shelf unit          & RefBox &       &       &       &       &   1     &        &   & 1   \\ \hhline{~~----------}
+      &  & Cavity platform with decoy& RefBox   &       &       &       &       &       &  3   &   & 1   \\ \hhline{~~----------}
+      &  & Red container       & RefBox &       &       &       &       &  \C 2   &       &   & \C 2   \\ \hhline{~~----------}
+      &  & Blue container      & RefBox &       &       &       &       &  \C 2   &       &   & \C 2   \\ \hhline{~~----------}
       &  & Rotating turntable  & RefBox &       &       &       &   1   &      &       &   &    \\
       \hhline{------------} \hhline{------------}
 	    \multirow{7}{0.5cm}{\R{\centering Arena}{3cm}}
@@ -145,7 +144,7 @@ The test will occur in the instances shown in Table~\ref{tab:Instances}. Ranking
      &   & Waypoints          & RefBox  &   9   &       &       &       &       &       &   &    \\
 		\hline \hline
 		 \multicolumn{3}{|l|}{Duration}
-		                    & RefBox & 5 min & 5 min & 5 min  &   8 min &   8 min &  \C\sout{5} 3 min &\C\sout{5} 3 min & 10min \\
+		                    & RefBox & 5 min & 5 min & 5 min  &   8 min &   8 min &   3 min & 3 min & 10min \\
 		\hline
  \end{tabular}
  \caption{Test specification in the instances of the \RCAW \YEAR competition.}
@@ -165,15 +164,16 @@ The test will occur in the instances shown in Table~\ref{tab:Instances}. Ranking
    \hhline{~--------}
    \hline
     Correct destination reached     &  50  &      &       &       &       &       &       &      \\
-    Correct object grasping standard&      & 100  &  100  & 100   &  100  &       &       &  100 \\
-		\hspace{1cm} round table        &      &      &       &       &       &       &   \C\sout{300} \newline 250      &   \C 250  \\
+		  \hspace{0.5cm} \C{correct service area reached}&     &   \C{25}   &  \C{25}     &   \C{25}    &  \C{25}     &       &       &   \C{25}   \\ \hline
+    Correct object grasping standard&      & \C\sout{100} \newline 75  &  \C\sout{100} \newline 75   & \C\sout{100} \newline 75    &  \C\sout{100} \newline 75   &       &       &  \C\sout{100} \newline 75  \\
+		\hspace{0.5cm} round table        &      &      &       &       &       &       &   \C{200}       &   \C{200}   \\ \hline
     Correct object placing standard &      & 100  &  100  & 100   &  100  &       &       &  100  \\
-		\hspace{1cm} PPT area           &      &      &       &       &       & \C\sout{300} \newline 250   &       &   \C 250  \\
-		\hspace{1cm} shelf upper level  &      &      &       &       & \C 150&       &       &   \C 150  \\
-		\hspace{1cm} shelf lower level  &      &      &       &       & \C 400&       &       &   \C 400  \\
-    Incorrect object placing (?)    &      & -100 & -100  & -100  & -100  & -100  &       & -100  \\
-    Incorrect object grasping (?)   &      &      & -100  & -100  & -100  &       & -100  & -100  \\
-    Completing whole task           &  50  & \C\sout{100} \newline 50  &  100  & \C\sout{100} \newline 200   &  \C\sout{100} \newline 200  & \C\sout{100}   &  \C\sout{100}  &  \C\sout{100} \newline 300   \\ \hline\hline
+		\hspace{0.5cm} PPT area           &      &      &       &       &       &  250   &       &   250  \\
+		\hspace{0.5cm} shelf upper level  &      &      &       &       & 150&       &       &   150  \\
+		\hspace{0.5cm} shelf lower level  &      &      &       &       & \C 300&       &       &   \C 300  \\ \hline
+    Incorrect object placing        &      & -100 & -100  & -100  & -100  & -100  &       & -100  \\
+    Incorrect object grasping       &      &      & -100  & -100  & -100  &       & -100  & -100  \\
+    Completing whole task           &  50  &  50  &  100  &  200   &   200  &        &       &  300   \\ \hline\hline
     Maximum barrier \newline tape penalty    &  100  &      &  200  &       &  300  &       &       &  400  \\ \hline\hline
     Maximum attainable points\newline (time bonus not included)
 	                                  & 500  & 1100 &  1100 & 1100  & 1500  & 1000  & 1000  &  2100 \\ \hline
