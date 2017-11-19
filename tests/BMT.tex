@@ -15,29 +15,29 @@ Additionally to environmental elements, different manipulatable objects will be 
 The manipulation objects used in this test are defined by the instances described in Table~\ref{tab:Instances}.
 
 \paragraph{Task}
-The task consists of a sequence of grasp and place operations, with a small base movement in between. The objective is to move a set of objects from one service area into another. To complete the task the source and the target destination have to be reached at least once. \robin{\st{The task is finished once all objects are moved or when the time foreseen for the run ends.}}
+The task consists of a sequence of grasp and place operations, with a small base movement in between. The objective is to move a set of objects from one service area into another. To complete the task the source and the target destination have to be reached at least once.
 \par
 The task specification consists of:
 \begin{itemize}
-	\item The specification of the initial place
-	\item A source location, given as place (any one)
-	\item A destination location, given as place (any one, but nearby the source location)
-	\item A list of objects to manipulated from the source to the destination service area
-	\item The specification of a final place for the robot
+	\item[--] The specification of the initial place
+	\item[--] A source location, given as place (any one)
+	\item[--] A destination location, given as place (any one, but nearby the source location)
+	\item[--] A list of objects to manipulated from the source to the destination service area
+	\item[--] The specification of a final place for the robot
 \end{itemize}
 
 
- \paragraph{Rules}
- The following rules have to be obeyed:
+\paragraph{Rules}
+The following rules have to be obeyed:
 
- \begin{itemize}
- \item The order in which the teams have to perform will be determined by a draw.
- \item The robot will get the task specification from the referee box.
- \item A manipulation object counts as successfully grasped as defined in Section~\ref{ssec:GraspingObjects}
- \item A manipulation object counts as successfully placed, if the robot has placed the object into the correct destination service area as described in Section~\ref{ssec:PlacingObjects}.
- \item A service area counts as successfully reached as defined in Section~\ref{ssec:Navigating}
- \item  The run is over when the robot reached the final place or the designated time has expired.
- \item The score for this test will be calculated as defined in \ref{sec:ScoringAndRanking}.
- \end{itemize}
+\begin{itemize}
+\item The order in which the teams have to perform will be determined by a draw.
+\item The robot will get the task specification from the referee box.
+\item A service area counts as successfully reached as defined in Section~\ref{ssec:Navigating}
+\item A manipulation object counts as successfully grasped as defined in Section~\ref{ssec:GraspingObjects}
+\item A manipulation object counts as successfully placed, if the robot has placed the object into the correct destination service area as described in Section~\ref{ssec:PlacingObjects}.
+\item  The run is over when the robot reached the final place or the designated time has expired.
+\item The score for this test will be calculated as defined in \ref{sec:ScoringAndRanking}.
+\end{itemize}
 
 

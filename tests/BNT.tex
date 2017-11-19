@@ -6,7 +6,6 @@
 The purpose of the \iaterm{Basic Navigation Test}{BNT} is to check whether the robots can navigate well in their environment, i.e. in a goal-oriented, autonomous, robust, and safe way.
 \par
 As the navigation problem is in the focus of robotics research for a long time and many approaches for solving it and its subtasks (like exploration, mapping, self-localization, path planning, motion control, and obstacle avoidance) exist, the focus of this test is to demonstrate that these approaches function properly on the robots used by the teams and in the environment defined by the test.
-The arena used for this test contains all elements that affect or support navigation: walls, service areas, places, arena objects, wall markers, and floor markers. In addition, obstacles may be placed in the environment.
 \par
 
 \paragraph{Scenario Environment}
@@ -15,7 +14,7 @@ The arena used for this test contains all elements that affect or support naviga
 \paragraph{Manipulation Objects}
 This test does not include any objects for manipulation.
 \paragraph{Task}
-For the navigation test, a single robot is used. The robot will be sent a task specification, which is a string containing a series of triples, each of which specifies a place, an orientation, and pause duration. The robot has to move to the places specified in the task string, in the order as specified by the string, orient itself according to the orientation given, cover a place marker, pause its movement for the time in seconds as specified by the pause length, and finally leave the arena through the gate.
+The robot will be sent a task specification, which is a string containing a series of triples, each of which specifies a place, an orientation, and pause duration. The robot has to move to the places specified in the task string, in the order as specified by the string, orient itself according to the orientation given, cover a place marker, pause its movement for the time in seconds as specified by the pause length, and finally leave the arena to reach the final position.
 
 The task specification consists of:
 
@@ -53,12 +52,13 @@ The duration is always set to 3 seconds in order to make validation easier for t
 The following rules have to be obeyed:
 
 \begin{itemize}
+\item A single robot is used.
+\item The robot has to start form outside the arena and to end in the final.
 \item The order in which the teams have to perform will be determined by a draw.
 \item After the team's robot enters the arena, it must move to the places given in the task specification and assume the orientation specified after the place. The robot may reach a destination by choosing any path.
 \item The robot must visit the places in the order given by the task specification. It is possible to skip a place of the task specification and continue with the next one. In cases where the robot skipped one or multiple places there may be multiple possible matchings between places reached and places specified. In that case for calculating scores the matching is taken which leads to the highest score for the team.
-\item A destination is counted as reached when the robot covers the place marker as much as the complexity level demands. The orientation must not deviate more than 45 deg.
-\item When a destination is reached, the robot must stop its movement for the number of seconds specified by the break.
-\item The time is stopped when the robot has completed the task and left the arena. If the team cannot complete the task within the designated time, the run will be stopped.
+\item A destination is counted as reached when the robot covers the place marker for the number of seconds specified by the break and does not move (very small movement of the wheels is allowed). The orientation must not deviate more than 45 degrees.
+\item The run is over when the robot reached the final place or the designated time has expired.
 \end{itemize}
 %
 %

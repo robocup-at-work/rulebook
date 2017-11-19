@@ -225,11 +225,17 @@ The floor is made of some firm material. Examples include floors made of concret
 \end{figure}
 
 \subsection{Walls}
-The competition arena is partially surrounded by walls. \robin{Parts of the outer border that are not blocked by walls will be marked by yellow/black barrier tape and count as virtual walls as defined in \ref{ssec:barrier_tape}} The height of the walls is not lesser than 20 cm and not more than 40 cm. One or more gates may be foreseen, where robots can enter or leave the arena. Gates may or may not be closable. The walls have a mostly uniform color. Small visual elements like logos or advertisements may be placed on the walls.
+The competition arena is partially surrounded by walls. Parts of the outer border that are not blocked by walls will be marked by yellow/black barrier tape and count as virtual walls as defined in \ref{ssec:barrier_tape}. The height of the walls is not less than 20 cm and not more than 40 cm. One or more gates may be foreseen, where robots can enter or leave the arena. Gates may or may not be closable. The walls have a mostly uniform color. Small visual elements like logos or advertisements may be placed on the walls.
 
 
 \subsection{Barrier Tape as Virtual Walls} \label{ssec:barrier_tape}
-The arena may include virtual walls marked by either striped yellow/black or white/red barrier tape on the floor (see Figure \ref{fig:barrier_tape}). If any part of a robot passes over such a tape it is considered as a collision with a usual wall.
+The arena may include virtual walls marked by either striped yellow/black or white/red barrier tape on the floor (see Figure \ref{fig:barrier_tape}). 
+
+There are two types of yellow/black barrier tape to be considered. 
+\begin{itemize}
+\item The outer border of the arena that is not blocked by actual walls will be marked by this tape. If any part of a robot passes over such a tape it is considered as a collision with a usual wall and will be penalized according to section \ref{sec:ScoringAndRanking}.
+\item There may be barrier tapes on the floor of the arena that do not mark an outer border, but instead are supposed to mark a dangerous zone and are also not to be crossed. The penalty for those collisions can be found under section \ref{}. NOTE: These collisions will also be considered a major collision in following years.
+\end{itemize}
 
 The red/white tape is used to frame the entrance and exit area. The robot is allowed to cross this kind of barrier only at the beginning of a test to enter arena and at the end for leaving. In contrast, the yellow/black one denotes an obstacle which the robot is never allowed to cross.
 
@@ -250,8 +256,7 @@ If possible, the arena should have one entrance and one exit, which are equipped
 
 
 \subsection{Places}
-\robin{\st{An arena designed for a particular test may foresee the definition of a set of designated places, which are locations in the arena that can be referred to by a unique, symbolic identifier. These identifiers are used e.g. for the task specification, possibly in conjunction with other information, such as an orientation. Places may be marked by markers of some sort.}}
-\robin{Not needed anymore, since BNT is gone}
+An arena designed for a particular test may foresee the definition of a set of designated places, which are locations in the arena that can be referred to by a unique, symbolic identifier. These identifiers are used e.g. for the task specification, possibly in conjunction with other information, such as an orientation. Places may be marked by markers of some sort.
 
 
 \subsection{Floor Markers}
@@ -271,7 +276,7 @@ The black inner square of the markers is at least 8 cm x 8 cm large with an addi
 
 
 \subsection{Obstacles}
-An arena defined for a particular test may foresee the use of obstacles. Obstacles may by passive (i.e. not able to relocate by themselves) or active (e.g. other robots). The size of obstacles should be not lesser than 10 cm x 10 cm x 5 cm; there is no upper bound on the size. The details about the dynamic objects are not known before the competition and will be chosen by the OC \robin{or TC} on-site. Examples for obstacles are trash bins, boxes, big aluminium profiles or even other robots.
+An arena defined for a particular test may foresee the use of obstacles. Obstacles may by passive (i.e. not able to relocate by themselves) or active (e.g. other robots). The size of obstacles should be not lesser than 10 cm x 10 cm x 5 cm; there is no upper bound on the size. The details about the dynamic objects are not known before the competition and will be chosen by the OC or TC on-site. Examples for obstacles are trash bins, boxes, big aluminium profiles or even other robots.
 
 
 \subsection{Service Areas} \label{ssec:serviceareas} Arenas contain one or more
@@ -286,8 +291,7 @@ floor and will be blue/white striped. The surounded area is
 covered by a white sheet of paper fixed by the tape. The OC is responsible
 to replace it in case of pollution or tears. This tape may be crossed, and does not
 count as a collision. If the robot touches an manipulation object while
-navigating, this will be handled as a collision. \jeanne{ \sout{If a service area will have a
-height of 5 cm there will be a wall with 10 cm height surrounding it.}}
+navigating, this will be handled as a collision.
 
 \begin{figure} [h!]
 \begin{center}
@@ -330,15 +334,13 @@ The shelf surface may be specially designed in order to serve specific purposes,
 \end{figure}
 
 
-\subsection{Setup of the Arena}
-\robin{\st{The arena must be surrounded by either walls or barrier tape. The only exceptions are the entrance and exit. There must be a route to all places and markers relevant for a test which has a minimum width of 55 cm.}}
-
-
-\section{Dessign of Navigation Tasks} \label{sec:NavigationTasks}
-\robin{Every task has some navigation involved in it. Successful navigation will be awarded in every test according to Table \ref{tab:InstancePoints}.  This rule has been implemented so that new teams can participate in every test and earn points, even if they are not capable of manipulating objects reliably.}
+\section{Design of Navigation Tasks} \label{sec:NavigationTasks}
+\robin{Every task has some navigation involved in it. Successful navigation will be awarded in every test according to Table \ref{tab:InstancePoints}. If not defined differently in the respective test, a navigation is successful when the robot reached the service area as defined in section \ref{ssec:Navigating}.}
+\par
+\robin{This rule has been implemented so that new teams can participate in every test and earn points, even if they are not capable of manipulating objects reliably.}
 
 \subsection{Reaching a Service Area} \label{ssec:Navigating}
-\robin{Service areas will be marked by floor markers as defined in Section 2.3.7. Before starting the manipulation, the robot is supposed to reach the service area. A service area counts as successfully reached if the robot covered the floor marker assigned to the respective service area for a certain amount of time and didn’t move (e.g.  wheels are not spinning significantly). The waiting period will be send with the task by the refbox. If not specified otherwise in the test the waiting period will always be 3 seconds, so it is easier for the referees to judge.}
+\robin{If not defined else by the respective test, a service area counts as successfully reached if the robot is within a reasonable range, which is usually its \quotes{arms reach}. The reasonable range will be subjectively evaluated by the referees.}
 
 
 \section{Design of Manipulation Tasks} \label{sec:ManipulationTasks}
@@ -484,7 +486,7 @@ The last point shall enable to let the robot pick up an object in order to analy
 If the robot handles an object, but does not fulfill all points above, the object does not count as being grasped, and neither points for grasping a required object, nor penalty points for grasping an unspecified object are given. Still, if the object drops to the ground or an uncontrolled collision occurs, the normal penalty points apply.
 
 \subsection{Placing Objects on Service Areas} \label{ssec:PlacingObjects}
-If not specified differently in a test, a manipulation object counts as placed on a target service area if any part of the object is touching the surface of the service area and the object is not moving at the end of the run. An objects does not count as placed when it is dropped (e.g. dropped from a height above 5 cm). \robin{This is to avoid that robots throw objects and potentially harm people or property.}
+If not specified differently in a test, a manipulation object counts as placed on a target service area if any part of the object is touching the surface of the service area and the object is not moving at the end of the run. An objects does not count as placed when it is dropped (e.g. dropped from a height above 5 cm). This is to avoid that robots throw objects and potentially harm people or property.
 \par
 The pose of the object on the service area can be chosen freely by the robot.
 
