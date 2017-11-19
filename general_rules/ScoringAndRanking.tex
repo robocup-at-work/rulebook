@@ -1,0 +1,193 @@
+% !TEX root = ../Rulebook.tex
+
+
+\newpage
+
+\section{Scoring} \label{ssec:ScoringAndRanking}
+For each test the calculation of scores is defined individually, comprising points for achieving certain subtasks, points for winning a run and penalty points.
+\par
+Each test provides a set of so-called feature variations encoding the overall variability of the test (e.g. whether obstacles can occur or not, number and type of manipulation objects). To enhance comparability among different test runs, all teams will have to perform the same test instances as specified in Table~\ref{tab:Instances}.
+\par
+If not specified otherwise, the following set of scoring rules applies for each test:
+
+
+Explanation of the terms:
+\begin{itemize}
+\item Correct navigating is defined in Section \ref{ssec:Navigating}
+\item Correct grasping is defined in Section \ref{ssec:GraspingObjects}
+\item Correct placing is defined in Section \ref{ssec:PlacingObjects}
+\end{itemize}
+
+\section{Simplifications}
+\robin{Omit this section?!?}
+Teams may use simplifications, which will result in a reduction of scores for the given run:
+
+\begin{itemize}
+	\item Use of external sensors: \hfill -200 points
+	\item Use of other external objects (e.g. to support localization): \hfill -100 points
+	\item Use of own loading or unloading areas: \hfill -200 points
+\end{itemize}
+
+Additional simplifications are specified for individual tests. These reductions do not count as penalty points. Teams that want to make use of the simplifications above have to announce them in advance of the competition to the TC. The TC might forbid the use of specific elements for simplification if these are not in the spirit of the league or may cause disproportionate advantages for a team.
+
+\section{Perfect Runs}
+All teams fully complete a perfect run will receive a completion bonus of 0.75 points per second left on the run time. These points are only awarded if the run is perfect, i.e. all objectives reached without any penalties.
+
+\section{Penalties}
+Penalty points are given as follows, each time again the incident occurs:
+
+\begin{itemize}
+	\item A manipulation object is lost or placed anywhere outside of a service areas: \hfill -100 points
+	\item Delivering a wrong manipulation object to service area \hfill -50 points
+	\item Minor collision (see Section \ref{sec:Collisions}): \hfill -50 points
+	\item Major collision (see Section \ref{sec:Collisions}): \hfill -50 points and abbortion of the run
+\end{itemize}
+
+\section{Collisions}\label{sec:Collisions}
+Collisions of the manipulator with the upside of the service area are allowed.
+
+Touching or Passing a Barrier Tape when entering or exiting the arena does not count as collision.
+
+\subsection{Minor Collision}
+If the robot collides with the environment, but does not move the environment and the wheels are not spinning, it is considered a minor collision. 
+
+\subsection{Major Collision}
+If the robot collides with the environment and moves it or its wheels are spinning, it is considered a major collision.
+
+\subsection{Barrier Tape collision}
+If any part of the robot touches a barrier tape, it is considered a barrier tape collision. The maximum penalty resulting from these collisions depends on the specific competition instance and is listed in Tab.~\ref{tab:InstancePoints}.
+
+
+%Some tests have three so-called complexity levels. A complexity level (low, medium and high) encodes the difficulty of the test such as the number of objects to manipulate or whether the arena is equipped with obstacles or without.
+
+%Every team decides for each run of a test in which complexity level they want to participate. This decision must be made by all teams when asked for by the OC, but at least before the first team starts a particular run.
+
+
+
+\section{Restarts}
+Teams might use one so-called restart in a run. Restarts have the following aspects:
+
+\begin{itemize}
+
+	\item Per run, at most one restart is allowed for a team, if not specified otherwise in a test.
+	\item At any time during a run, the team can call for a restart to the referees.
+	\item When the referees acknowledge the call for restart, the team may enter the arena. The time will continue running.
+	\item The arena and the robot will be reset exactly to the setup at the beginning of the run (except the timer for the run). Random elements such as obstacles or object positions remain like before.
+	\item The points for this run achieved so far are reset to zero
+	\item Scores that are received after a restart are multiplied by a factor of 0.75.
+	\item The referees decide when the arena is prepared again for the restart. If 	the robot is not yet ready, teams can keep trying to get it ready until the time for the run is over.
+	\item As soon as the team signals that the robot is ready, the task specification is sent again.
+	\item Afterwards the start signal is sent from the referee box.
+
+\end{itemize}
+
+
+\section{Ranking}
+The tests will occur in the instances shown in Table~\ref{tab:Instances}. Ranking of the teams will be based on the sum of the achieved points over all the tests.
+
+A team cannot get less than zero points for one run.
+The scores of the tests of the first stage are summed up, and the teams with the highest sums proceed to the next stage.
+
+In case of a tie, the OC will either schedule a deciding run or continue with a higher number of participants.
+
+%\setlength{\tabcolsep}{4.75pt}
+\renewcommand{\arraystretch}{1.1}
+\newcommand{\R}[2]{
+	\begin{turn}{90}
+		\begin{minipage}[][1em][c]{#2}
+		#1
+	  \end{minipage}
+	\end{turn}
+}
+
+\newcommand{\cir}[1]{\hspace{0.5em}\unitlength1ex\begin{picture}(2.8,2.8)%
+\put(0.75,0.75){\circle{2.8}}\put(0.75,0.75){\makebox(0,0){#1}}\end{picture}}
+\newcommand{\Y}{\tiny \CIRCLE}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\definecolor{headlineColor}{rgb}{.7,.7,.7}
+\definecolor{sectionColor}{rgb}{.7,.1,.1}
+
+\newcommand{\C}{\cellcolor{sectionColor}}
+
+\begin{landscape}
+\begin{table}[h!]
+ \centering
+ \begin{tabular}{|l|l|l|l*{12}{|P{1cm}}|}
+   \hhline{~~~~--------}
+   \multicolumn{4}{l|}{ } &  \multicolumn{8}{c|}{ Instances}\\
+   \hhline{~~~~--------}
+   \multicolumn{4}{l|}{ }          &\cir{1}&\cir{2}&\cir{3}&\cir{4}&\cir{5}&\cir{6}&\cir{7}&\cir{8}\\
+   \multicolumn{4}{r|}{     }        & BNT   & BMT   & BTT1  & BTT2  &  BTT3 &  PPT  &  RTT & Final\\
+   \hhline{~~~~--------} \hline
+    \multirow{17}{0.5cm}{\R{\centering Manipulation }{3cm}}
+     & \multirow{7}{0.5cm}{\R{\centering Objects }{2.0cm}}
+     & \C\RCAW \&  RoCKIn    & Team    &       &\C 2   &       &       &       &       &       &    \\ \hhline{~~~---------}
+     &    &                 & RefBox   &       &\C 3   & \C 5     &  \C 6   &  \C6   &  \C 3    &  \C3     & \C 10 \\ \hhline{~~----------}
+     &    & Decoy           & RefBox   &       &       &  3    &   3     &   3   &       &   3     & 5   \\ \hhline{~~----------}
+     &    & Table height    & RefBox   &       & 10 cm & 10 cm &  0 cm\newline 5 cm \newline 10 cm\newline 15 cm   & 10 cm  &  10 cm &    10 cm & 0 cm\newline 5 cm\newline 10 cm\newline 15 cm \\
+     \hhline{~-----------} \hhline{~-----------}
+     & \multirow{7}{0.5cm}{\R{\centering Grasping }{2cm}}
+         & Shelf unit       & RefBox   &       &       &       &       &   2   &       &    & 2   \\ \hhline{~~----------}
+      &  & Position         &          &       &   Ref  &   Ref  &  Ref  &  Ref   &   Team  &  Ref & Ref  \\ \hhline{~~----------}
+      &  & Rotation         &          &       &  Team &   Ref   &  Ref    &  Ref    &   Team  & Team& Ref   \\ \hhline{~~----------}
+      &  & Orientation      &          &       &  Team &   Team  &  Team   & \C Ref !  &  Team  &Team & \C Ref!   \\ \hhline{~~----------}
+      &  & Rotating turntable& RefBox  &       &       &       &       &       &        & 3  & 1   \\
+      \hhline{~-----------}
+      & \multirow{4}{0.5cm}{\R{\centering Placement}{2.5cm}}
+         & Shelf unit          & RefBox &       &       &       &       &   1     &        &   & 1   \\ \hhline{~~----------}
+      &  & Cavity platform with decoy& RefBox   &       &       &       &       &       &  3   &   & 1   \\ \hhline{~~----------}
+      &  & Red container       & RefBox &       &       &       &       &  \C 2   &       &   & \C 2   \\ \hhline{~~----------}
+      &  & Blue container      & RefBox &       &       &       &       &  \C 2   &       &   & \C 2   \\ \hhline{~~----------}
+      &  & Rotating turntable  & RefBox &       &       &       &   1   &      &       &   &    \\
+      \hhline{------------} \hhline{------------}
+	    \multirow{7}{0.5cm}{\R{\centering Arena}{3cm}}
+      & \multirow{3}{0.5cm}{\R{\centering Cavities}{1.5cm}}
+         & Position     & RefBox &       &       &       &      &      &   Ref	  &   &  Ref   \\ \hhline{~~----------}
+      &  & Rotatoion	& RefBox &       &       &       &      &      &   Ref    &   &  Ref   \\ \hhline{~~----------}
+      &  & Orientation	& RefBox &       &       &       &      &      &   Team   &   &  Team  \\
+    \hhline{~-----------} \hhline{~-----------}
+     & \multirow{3}{0.5cm}{\R{\centering }{1.5cm}}
+     &     Obstacles (static) & Referee &   2   &       &       &   2   &   2   &       &   & 2   \\ \hhline{~~----------}
+     &   & Barrier tape       & Referee &   2   &       &   1   &       &   1   &       &   & 2   \\ \hhline{~~----------}
+     &   & Waypoints          & RefBox  &   9   &       &       &       &       &       &   &    \\
+		\hline \hline
+		 \multicolumn{3}{|l|}{Duration}
+		                    & RefBox & 5 min & 5 min & 5 min  &   8 min &   8 min &   3 min & 3 min & 10min \\
+		\hline
+ \end{tabular}
+ \caption{Test specification in the instances of the \RCAW \YEAR competition.}
+ \label{tab:Instances}
+\end{table}
+\end{landscape}
+
+\begin{landscape}
+\begin{table}
+ \centering
+ \begin{tabular}{|p{5.5cm}*{9}{|P{1cm}}|}
+   \hhline{~--------}
+   \multicolumn{1}{l|}{ } &  \multicolumn{8}{c|}{ Instances}\\
+   \hhline{~--------}
+   \multicolumn{1}{l|}{ }          &\cir{1}&\cir{2}&\cir{3}&\cir{4}&\cir{5}  &\cir{6}&\cir{7}&\cir{8}\\
+   \multicolumn{1}{r|}{     }       & BNT   & BMT   & BTT1  & BTT2  &  BTT3 & PPT   &  RTT & Final\\
+   \hhline{~--------}
+   \hline
+    Correct destination reached     &  50  &      &       &       &       &       &       &      \\
+		  \hspace{0.5cm} \C{correct service area reached}&     &   \C{25}   &  \C{25}     &   \C{25}    &  \C{25}     &       &       &   \C{25}   \\ \hline
+    Correct object grasping standard&      & \C\sout{100} \newline 75  &  \C\sout{100} \newline 75   & \C\sout{100} \newline 75    &  \C\sout{100} \newline 75   &       &       &  \C\sout{100} \newline 75  \\
+		\hspace{0.5cm} round table        &      &      &       &       &       &       &   \C{200}       &   \C{200}   \\ \hline
+    Correct object placing standard &      & 100  &  100  & 100   &  100  &       &       &  100  \\
+		\hspace{0.5cm} PPT area           &      &      &       &       &       &  250   &       &   250  \\
+		\hspace{0.5cm} shelf upper level  &      &      &       &       & 150&       &       &   150  \\
+		\hspace{0.5cm} shelf lower level  &      &      &       &       & \C 300&       &       &   \C 300  \\ \hline
+    Incorrect object placing        &      & -100 & -100  & -100  & -100  & -100  &       & -100  \\
+    Incorrect object grasping       &      &      & -100  & -100  & -100  &       & -100  & -100  \\
+    Completing whole task           &  50  &  50  &  100  &  200   &   200  &        &       &  300   \\ \hline\hline
+    Maximum barrier \newline tape penalty    &  100  &      &  200  &       &  300  &       &       &  400  \\ \hline\hline
+    Maximum attainable points\newline (time bonus not included)
+	                                  & 500  & 1100 &  1100 & 1100  & 1500  & 1000  & 1000  &  2100 \\ \hline
+ \end{tabular}
+ \caption{Scoring in the instances of the \RCAW \YEAR competition.}
+  \label{tab:InstancePoints}
+\end{table}
+\end{landscape}
