@@ -1,3 +1,5 @@
+% !TEX root = ../Rulebook.tex
+
 \newpage
 \section{Line Following Test}
 
@@ -37,28 +39,27 @@ them to the TCP.
 
 
 \subsection{Task}
-A single robot is used. The robot starts at the defined start position outside
-the arena. The task consists of navigating to the specified location and then
-moving the pen along the defined contour. The task is finished if the robot
-leaves the workstation.
+The task consists of navigating to the specified location and then
+moving the pen along the defined contour. 
 \par
-The task specification consists of the specification of the workstation place
-(e.g. D0, S5).
+The task specification consists of the specification of the workstation place (e.g. \texttt{WS09}).
 
 \subsection{Rules}
 The following rules have to be obeyed:
 
 \begin{itemize}
+\item A single robot is used. 
+\item The robot has to start from outside the arena and to end in the final.
+\item The order in which the teams have to perform will be determined by a draw.
 \item The given trajectory is equal for all teams.
 \item The order in which the teams have to perform will be determined by a draw.
-\item At the beginning of a team's period, the team will get the task
-      specification.
-\item The team must start at in the designated start area.
+\item At the beginning of a team's period, the team will get the task specification.
+\item The run is over when the robot reached the final place or the designated time has expired.
 \end{itemize}
 
 \subsection{Scoring}
 The referees count the number of grids within the area of the correct line and
-grids with pen traces outside. At least 25 conherent grid elements has to be
+grids with pen traces outside. At least 25 coherent grid elements has to be
 identified for a valid run!
 
 \begin{itemize}
