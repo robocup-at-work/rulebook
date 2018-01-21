@@ -36,11 +36,11 @@ Penalty points are given as follows, each time again the incident occurs:
 	\item A manipulation object is lost or placed anywhere outside of a service areas: \hfill -100 points
 	\item Delivering a wrong manipulation object to service area \hfill -50 points
 	\item Minor collision (see Section \ref{sec:Collisions}): \hfill -50 points
-	\item Major collision (see Section \ref{sec:Collisions}): \hfill -50 points and abbortion of the run
+	\item Major collision (see Section \ref{sec:Collisions}): \hfill -50 points and termination of the run
 \end{itemize}
 
 \section{Collisions}\label{sec:Collisions}
-For reasons of safety of people and property it is strictly unwanted for the robot to collide with any of the environmental objects. Only collisions of the manipulator with the upside of the service area are allowed. The different kind of collisions that can occur a defined in the following subsections. 
+For reasons of safety of people and property it is strictly unwanted for the robot to collide with any of the environmental objects. Only collisions of the manipulator with the upside of the service area are allowed. The different kind of collisions that can occur are defined in the following subsections.
 
 \subsection{Minor Collision}
 If the robot collides with the environment, but does not move the environment and the wheels are not spinning, it is considered a minor collision. 
@@ -51,7 +51,7 @@ If the robot collides with the environment and moves it or its wheels are spinni
 \subsection{Barrier Tape collision}
 If any part of the robot touches a barrier tape, it is considered a barrier tape collision. The maximum penalty resulting from these collisions depends on the specific competition instance and is listed in Tab.~\ref{tab:InstancePoints}.
 
-Touching or Passing a Barrier Tape when entering or exiting the arena does not count as collision.
+Touching or passing a Barrier Tape when entering or exiting the arena does not count as collision.
 
 
 %Some tests have three so-called complexity levels. A complexity level (low, medium and high) encodes the difficulty of the test such as the number of objects to manipulate or whether the arena is equipped with obstacles or without.
@@ -69,7 +69,7 @@ Teams might use one so-called restart in a run. Restarts have the following aspe
 	\item At any time during a run, the team can call for a restart to the referees.
 	\item When the referees acknowledge the call for restart, the team may enter the arena. The time will continue running.
 	\item The arena and the robot will be reset exactly to the setup at the beginning of the run (except the timer for the run). Random elements such as obstacles or object positions remain like before.
-	\item The points for this run achieved so far are reset to zero
+	\item The points for this run achieved so far are reset to zero.
 	\item Scores that are received after a restart are multiplied by a factor of 0.75.
 	\item The referees decide when the arena is prepared again for the restart. If 	the robot is not yet ready, teams can keep trying to get it ready until the time for the run is over.
 	\item As soon as the team signals that the robot is ready, the task specification is sent again.
