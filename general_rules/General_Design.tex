@@ -49,6 +49,7 @@ The TC may require that robots are equipped with a wireless communication device
 \par
 Future competitions may foresee the use of RFID sensors in the scenario design.
 
+
 \subsection{Behavior and Safety} \label{ssec:RobotBehaviorAndSafety}
 In general, all robots shall be operated with maximum safety in mind. Any robot operation must be such that a robot neither harms humans nor damages the environment. A team must choose the operating parameters of their robot, e.g. the motion velocities for a robot base or a manipulator, or the grasp forces of a gripper, such that it can guarantee the safe operation of their robots.
 \par
@@ -228,7 +229,7 @@ The arena may include virtual walls marked by either striped yellow/black or whi
 There are two types of yellow/black barrier tape to be considered.
 \begin{itemize}
 \item The outer border of the arena that is not blocked by actual walls will be marked by this tape. If any part of a robot passes over such a tape it is considered as a collision with a usual wall and will be penalized according to section \ref{sec:ScoringAndRanking}.
-\item There may be barrier tapes on the floor of the arena that do not mark an outer border, but instead are supposed to mark a dangerous zone and are also not to be crossed. The penalty for those collisions can be found under section \ref{}. NOTE: These collisions will also be considered a major collision in following years.
+\item There may be barrier tapes on the floor of the arena that do not mark an outer border, but instead are supposed to mark a dangerous zone and are also not to be crossed. The penalty for those collisions can be found under section \ref{sec:penalties}. NOTE: These collisions will also be considered a major collision in following years.
 \end{itemize}
 
 The red/white tape is used to frame the entrance and exit area. The robot is allowed to cross this kind of barrier only at the beginning of a test to enter arena and at the end for leaving. In contrast, the yellow/black one denotes an obstacle which the robot is never allowed to cross.
@@ -277,19 +278,19 @@ An arena defined for a particular test may foresee the use of obstacles. Obstacl
 
 \all{We need a description of the arbitrary surfaces here}
 
-Arenas contain one or more
-service areas, which have specific purposes for a particular test. Examples
-include loading and unloading areas, rotators, storage areas,
-etc. Service areas may contain specific environment objects, such as shelves,
-racks, etc. They may be accessible from different locations, i.e. it might be
-possible to reach an area from two or more sides. Note that service areas can
-have different heights. If a service area has a height of zero cm, a tape will
-mark the area (see Figure \ref{fig:barrier_tape_0cm}). The tape will be on the
-floor and will be blue/white striped. The surounded area is
-covered by a white sheet of paper fixed by the tape. The OC is responsible
-to replace it in case of pollution or tears. This tape may be crossed, and does not
-count as a collision. If the robot touches an manipulation object while
-navigating, this will be handled as a collision.
+Arenas contain one or more service areas, which have specific purposes for a particular test.
+Examples include loading and unloading areas, rotators, storage areas, etc.
+Service areas may contain specific environment objects, such as shelves, racks, etc.
+They may be accessible from different locations, i.e. it might be possible to reach an area from two or more sides.
+Note that service areas can have different heights.
+If a service area has a height of zero cm, a tape will mark the area (see Figure \ref{fig:barrier_tape_0cm}).
+The tape will be on the floor and will be blue/white striped.
+The surounded area is covered by a white sheet of paper fixed by the tape.
+The OC is responsible to replace it in case of pollution or tears.
+This tape may be crossed, and does not count as a collision.
+If the robot touches an manipulation object while navigating, this will be handled as a collision.
+
+\all{Add variable heights for 2020}
 
 \begin{figure} [h!]
 \begin{center}
