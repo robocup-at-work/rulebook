@@ -1,14 +1,12 @@
 \newpage
 \section{Human-Robot Collaboration}
-
+\all{Please read and see if it makes sense :)}
 \subsection{Purpose and Focus of the Test}
-
-\benjamin{Can you please prepare a first draft?} ... jon
-I would like to name "1"  HUMAN-ROBOT COLLABORATION task: An Operator (referee member/TC) inside the arena takes one object  and places it in front of the robot. The robot recognise it and (as written above) looks for the duplicate and brings it to the operator. (here I would make mandatory to give the feedback of the object detected to the refbox).
+This test evaluates how well the robot can act in coordination with humans. For the first iterations of this test, mainly the object recognition abilities of the robot are tested. The purpose is to find and pick a previously unknown object, pointed out by a human, on a platform where it is situated among other objects.
 
 
 \subsection{Scenario Environment}
-The arena used for this test contains basically all elements as for the Basic Manipulation Test.
+The arena used for this test contains all elements as for the Basic Manipulation Test, plus at least two identical, but unspecified objects.
 
 \begin{figure}
 \begin{center}
@@ -17,20 +15,25 @@ The arena used for this test contains basically all elements as for the Basic Ma
 \end{figure}
 
 \subsection{Task}
-A single robot is used. The robot starts at the defined start position outside the arena. The task consists of navigating to the specified location and then ...
+A single robot is used. The robot starts at the defined start position outside the arena. The task consists of navigating to a platform on which a human placed a single object. The robot may scan the platform with all available sensors, then proceed to a second platform on which the same object is placed, among other both known and previously unseen objects. The robot has to pick the object that was present on the first platform. The object to be picked shall be within the size and weight range of the known {\RCAW} objects.
 
 
 \subsection{Complexity Options}
-
-So far no complexity objections exist.
+\begin{itemize}
+\item A different number of distractor-objects can be placed on the second platform.
+\item As a simplification, all the distractors could be known {\RCAW} objects.
+\item To increase difficulty, {\RCAW} objects may be present on the first platform, but should not be picked from the second.
+\item To increase difficulty even more, multiple unknown objects may be placed on the first platform, yet only one of them will be present on the second one which has to be picked.
+\end{itemize}
 
 \subsection{Rules}
 The following rules have to be obeyed:
-
 \begin{itemize}
-\item
+\item The time is limited to four minutes to discourage training a classifier during the challenge.
 \end{itemize}
 
 
 \subsection{Scoring}
 Points are awarded as follows:
+
+An attempted grasp (choosing the correct object, but not grasping it fully) shall be awarded 50 points. A completed grasp shall be awarded 100 points. If the robot attempts to grasp a wrong object, the task is failed.
