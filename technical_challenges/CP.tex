@@ -1,31 +1,47 @@
 \newpage
-\section{Cluttering Pick}
+\section{Cluttered Pick Test}
 
 \subsection{Purpose and Focus of the Test}
-The purpose of the \iaterm{Cluttering Pick Test}{CPT} is to evaluate an interactive
-mode of operation. One object is shown to the robot, it have to identify
-its specific type, "search" for other instances in the environment and deliver them. The scenario is motivated by
-the idea, that a human worker requires e.g. three nuts instead of one, and instructs the robot to provide them.
+The purpose of the \iaterm{Cluttered Pick Test}{CPT} is to evaluate the perception
+and manipulation of the robots in a cluttered scenario. The scenario is motivated by
+the fact that most of the objects in the factory or labs are always lying in a clutter.
+
 
 \subsection{Scenario Environment}
 The arena used for this test contains basically all elements as for the Basic
-Manipulation Test. Two service areas with a height of 10cm are involved in the test, a basic one with a white surface providing the desired object
-and a second area covered by an arbitrary surface and color. Here the referees distribute
-3 instances of the object in combination with decoys (see Fig.~\ref{fig:ast_example}). All geometrical definitions given in Fig.~\ref{fig:manipulation_zone} are considered here too.
+Manipulation Test. Two service areas with a height of 10cm are involved in the test,
+most probably near to each other. The objects mentioned by the referee box will be placed
+on both the service areas.(see Fig.~\ref{fig:clutter})  
+All geometrical definitions given in Fig.~\ref{fig:manipulation_zone} are considered here \textbf{except 
+for the rule of min 0.02m distance between objects} . The objects here can be placed near to each other,
+or on top of each other. 
 
+\begin{figure} [h!]
+\begin{center}
+\subfloat[]{\includegraphics[height = 3cm]{./images/cluttered_pick_1.jpg}} \hspace{1cm}
+\subfloat[]{\includegraphics[height = 3cm]{./images/cluttered_pick_2.jpg}}
+\end{center}
+\caption{objects places in cluttered environment}
+\label{fig:clutter}
+\end{figure}
+
+
+\subsection{Variation}
+A slight variation in the competition will be to run with 2 robots simultaneously competing with each other.
+For fairness of the competition the organizers should ensure that the distance between the robot starting 
+point and the corresponding service station be equal.
+ 
 \subsection{Task}
 The robot starts at the defined start position outside the arena.
-The task consists of navigating to the specified service area containing one instance of the
-requested object. The robot localizes and identifies the object, moves to the
-second service area and starts the picking operation. There will also be three to five decoy objects that must not be picked up.
-\par
+The task consists of navigating to the specified service area containing all the 
+requested object. The robot localizes and identifies the object and picks.
 The task consists of a sequence of grasp operations. The objective is to pick up all 3 instance of the requested type and avoid picking other objects.
 \par
 The task specification consists of:
 \begin{itemize}
 	\item[--] The specification of the initial place
-  \item[--] A location of service area containing an instance of the requested object type e.g. \texttt{WS08})
 	\item[--] A source location, given as place (e.g. \texttt{WS09})
+	\item[--] A list of objects to be manipulated from the source location.
 	\item[--] The specification of a final place for the robot
 \end{itemize}
 
