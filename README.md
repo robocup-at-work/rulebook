@@ -1,0 +1,23 @@
+Rulebook for RoboCup@Work
+========
+
+The process of altering the Rules for the Roboup@Work league is open to every one. Please feel free to contact the TC or the mailing list
+
+	rc-work@lists.robocup.org
+
+with questions.
+
+
+RoboCup@Work teams and team members are welcome to post GitHub issues for clarifications, questions or proposals of change.
+
+
+To build you will need to install:
+
+    $ sudo apt-get install texlive-science
+
+
+To have the latest version compiled for you online visit: http://latex.aslushnikov.com/compile?git=https://github.com/robocup-at-work/rulebook&target=Rulebook.tex
+
+
+
+
