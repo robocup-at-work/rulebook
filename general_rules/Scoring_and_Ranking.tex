@@ -41,8 +41,31 @@ Penalty points are given as follows, each time again the incident occurs:
 \end{itemize}
 
 \section{Collisions}\label{sec:Collisions}
+
+\szug{This sections needs to be adapted according to the collision categories proposed by Christoph.}
+
 For reasons of safety of people and property it is strictly unwanted for the robot to collide with any of the environmental objects. Only collisions of the manipulator with the upside of the service area are allowed. The different kind of collisions that can occur are defined in the following subsections.
 
+\begin{table}[h!]
+	\caption{Definition of minor and major collisions}
+	\label{tab:collisions}
+	\centering
+  \begin{tabular}{|l|p{1.5cm}|p{1.5cm}|}
+		\hline
+		Situation & Minor collision & Major collision \\ \hline
+    Collision with static elements of arena &  &  X\\
+    Collision with dynamic elements of arena &  & X\\
+    Robot Body Collision with workstation &  & \\
+    Robot Manipulator Collision with manipulation zone &  & \\
+    Robot Manipulator Collision with Round Table stopping it &  & \\
+    Robot Manipulator Collision with PPT Cavity surface &  & \\
+    Robot Manipulator Collision with Shelf &  & \\
+		Barrier tape collisions?  &  & \\
+    \hline
+	\end{tabular}
+\end{table}
+
+\color{red}
 \subsection{Minor Collision}
 If the robot collides with the environment, but does not move the environment and the wheels are not spinning, it is considered a minor collision.
 
@@ -54,12 +77,7 @@ If any part of the robot touches a barrier tape, it is considered a barrier tape
 
 Touching or passing a Barrier Tape when entering or exiting the arena does not count as collision.
 
-
-%Some tests have three so-called complexity levels. A complexity level (low, medium and high) encodes the difficulty of the test such as the number of objects to manipulate or whether the arena is equipped with obstacles or without.
-
-%Every team decides for each run of a test in which complexity level they want to participate. This decision must be made by all teams when asked for by the OC, but at least before the first team starts a particular run.
-
-
+\color{black}
 
 \section{Restarts}
 Teams might use one so-called restart in a run. Restarts have the following aspects:
