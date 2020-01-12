@@ -1,8 +1,39 @@
 % !TEX root = ../Rulebook.tex
 
-In order to value very specific capabilities required in {\RCAW}, technical challenges are part of \RCAW.
-These challenges are designed to be included into the major competition after they have shown a potential as a benchmark in industrial robotics, and have been solved in principle by at least one team.
-Each technical challenge is separately awarded. That means, teams can participate in any number of them.
+In the medium term, the \RCAW aims to transfer specific aspects of industrial scenarios in the tests and to demonstrate the practical applicability of the solutions. The challenges, which are adapted or redefined annually, serve as a test platform for the further development of the competitions. Each technical challenge is separately awarded. That means, teams can participate in any number of them.
+
+A challenge increases the level capabilities of a robot in \RCAW related to:
+
+\begin{itemize}
+  \item \textbf{Variability of the environmental conditions} ... The setup conditions of a run are designed variably including disturbances. The lighting situations in the arena are changed dynamically, the configuration of the tables (height, format) is adapted or manipulation objects are mixed with unknown decoy objects.
+  \item \textbf{Complexity of the scenarios} ... New arena elements are involved in a scenario
+  or its dimensions (size, duration) are increased. This includes, for example, multi-robot scenarios, assembly tasks or new interaction stations.
+\end{itemize}
+
+For a successful implementation either an existing solution has to be increased in robustness or a new approach for an additional task has to be developed. The challenges here lie in the fields of perception, manipulation, navigation and planning.
+
+\begin{figure}[h!]
+  \centering
+  \begin{tikzpicture}
+  	\begin{polaraxis}[
+        xtick ={0, 90, 180, 270},
+        xticklabels= {Manipulation, Perception, Navigation, Planning},
+        width=5.5cm,
+        height=5.5cm,
+        legend pos=outer north east,
+    ]
+  	\addplot
+  		coordinates {(0,1.5) (90,3) (180, 0.5) (270,0.5) (0, 1.5)};  % cp
+      \addlegendentry{Cluttered Pick Test}
+    \addplot
+    	coordinates {(0,3) (90,1.5) (180,1) (270,1) (0,3)};  % pfd
+      \addlegendentry{Pick from Drawer Test}
+  	\end{polaraxis}
+  \end{tikzpicture}
+  \label{Examplary Challenge introducing a long term operation based on an extended Final test}
+\end{figure}
+
+The challenges of 2020 focussing on perception and manipuation two scenarios. While "Cluttered Pick Test" (CP) adresses the robustness of perception, the "Pick from Drawer Test" (PFD) is focused on additional complexity by including objects in a drawer.
 
 
 \input{./technical_challenges/CP}

@@ -1,17 +1,44 @@
 \newpage
-\section{Pick from Drawer}
+\section{Pick from Drawer Test}
 
-\szug{Add the Pick from a drawer challenge!}
+\szug{Should we think about additional rules for collisions?}
 
 \subsection{Purpose and Focus of the Test}
-
-
+The collection of freely available objects lying on a manipulation zone is the core capability of \RCAW-robots. The \iaterm{Pick from Drawer Test}{PFD} goes beyond this level and considers objects stored in drawers too. In this way, the challenge
+extends the idea of the shelf where the robot has to plan the grasping operation in a limited space but it is not necessary to interact with the environment.
 
 \subsection{Scenario Environment}
+The first version of the challenge gives much freedom to the teams. They can choose an arbitrary drawer configuration. The drawer is wholly covered in the beginning and can only be linearly moved in one direction. The surrounding construction has to remain at its position.
 
-
-
-\subsection{Variation}
-
+\par
+Robot's movements must open the drawer directly. Self-driven, automatic solutions integrated into the drawer system are not allowed.
+The rules do not define the handling mechanism itself, the teams are completely free to design an appropriate concept. Any handle, knob, hole, or connector mounted to the drawer is permitted. Based on this interaction, the drawer has to be moved at least 25 cm.
 
 \subsection{Task}
+The drawer setup is located at an arbitrary position. The drawer contains at least one but not more than three  manipulation objects described in Table~\ref{tab:Instances}. It is stored directly on bottom of the drawer. Any other content is not permitted!
+
+The team configures the objects and the drawer during preparation phase.
+
+The robot starts from outside, moves directly to the drawer, open it, grasps the objects and place them in robot`s repository.
+
+\subsection{Rules}
+The following rules have to be obeyed:
+
+\begin{itemize}
+\item A single robot is used.
+\item The test runs for 5 minutes.
+\item The robot has to start from outside the arena and to end in the final.
+\item The order in which the teams have to perform will be determined by a draw.
+\item Each team is responsible for preparing the drawer system.
+\item The drawer is opened by at least 25cm.
+\item A manipulation object counts as successfully grasped as specified in Section~\ref{ssec:GraspingObjects}.
+\item The run is over when the robot reached the final place or the designated time has expired.
+\end{itemize}
+
+\subsection{Scoring}
+\begin{itemize}
+\item 100 points for opening the drawer
+\item 100 points are awarded for each correctly and successfully picked object
+\item 25 points for reaching the final position
+\item Time bonus of one point per second after collecting 3 objects successfully.
+\end{itemize}
