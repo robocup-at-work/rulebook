@@ -20,9 +20,14 @@ jobs:
         with:
         # The root LaTeX file to be compiled
             root_file: Rulebook.tex 
-    
+
+      - name: Prepare folder
+        run : |
+          mkdir output
+          mv Rulebook.pdf output/Rulebook.pdf
+
       - name: Storing pdf 
         uses: actions/upload-artifact@v2
         with: 
-          name: Rulebook.pdf
-          path: downloads
+          name: Current_Rulebook_state
+          path: output
