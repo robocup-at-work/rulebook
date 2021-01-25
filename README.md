@@ -16,8 +16,6 @@ To build you will need to install:
     $ sudo apt-get install texlive-science
 
 
-To have the latest version compiled for you online visit: http://latex.aslushnikov.com/compile?git=https://github.com/robocup-at-work/rulebook&target=Rulebook.tex
-
-
+The rulebook is automatically build and stored as artifact. Please visit [Link](https://github.com/robocup-at-work/rulebook/actions) to download the latest version. 
 
 
