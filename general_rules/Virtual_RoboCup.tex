@@ -1,8 +1,87 @@
 % !TEX root = ../Rulebook.tex
-\section{Camera Setup} \label{sec:CameraSetup}
+
+\section{General} 
+\label{sec:General}
+
+Due to the Covid-19 pandemic, the RoboCup 2021 will be held online. 
+Therefore, paricipating teams must provide some infrastructure to enable the TC and OC to evaluate their performance.
+This is new for everyone and requires extended communication, which is why every team should join the official discord server:
+
+https://discord.gg/z6Yn6UvhxU
+
+Please participate in discussions and ask questions if you have any.
+
+
+\section{Arena Setup} 
+\label{sec:VRCArenaSetup}
+
+\marco{Kenny pls add your rules here}
+
+\marco{Todo, take example images}
+
+
+\section{Camera Setup} 
+\label{sec:CameraSetup}
+
+\marco{Pls add some kind of sentence regarding the used service (zoom / undecided yet / will be announced}
 
 Since the referees are not present at the arena during the Virtual RoboCup, the arena and all activities of the robot must be shown via livestream. For this purpose, cameras must be able to monitor the entire arena for the referees and the cameras should be mounted at least at head height. No blind spots are allowed when streaming the arena so that the referees can see and evaluate every activity of the robot. One or more cameras can be used to stream the arena. Please contact the OC for the maximum number of streams available.
 \par
 In addition to the cameras for the arena, there must be a person who follows the robot with a mobile camera and shows the robot's activities from close up. This allows the referees to detect even small mistakes. The person is allowed to enter the arena during the run. However, the person is not allowed to interact with the robot.
 \par
-A camera can also be attached to the robot to better show the robot's activities to the referees and spectators. The camera on the robot is optional.
+A camera may also be attached to the robot to better show the robot's activities to the referees and spectators. The camera on the robot is optional.
+
+
+\section{Task Generation and Scoring} 
+\label{sec:VRCTaskGen}
+
+As normally the refbox would be provided by the OC onsite, no actual refbox will be used during the online competition.
+The new refbox implementation, which can be found here (https://github.com/robocup-at-work/atwork-commander), 
+gives great opportunity to generate individual tasks for every participating team.
+
+To enable the committee to generate fair tasks for every team, teams must provide detailed information about their arena and object inventory \textbf{1 month} prior to the first competition day. A zip-folder containing the following must be sent via our discord server:
+
+\begin{itemize}
+\item Atleast two images of the arena from different perspectives. If two cannot cover the whole arena, teams must provide as many as needed.
+\item A map of the arena with workstations marked (name + height). Teams may use an RVIZ screenshot containing \textbf{only} the grid (1m cell size) and the occupancy grid (your map), which may be annotated using e.g. gimp.
+\item A list of available workstations in their arena (height and amount).
+\item Images of the available arbitrary surfaces
+\item Images of the available barriertape and obstacles
+\item A list of available objects and containers (amount)
+\item Image of the objects and containers
+\item Images of the robot (all sides)
+\item Robot dimensions in meter
+\item Which tests the team intends to participate in
+\end{itemize}
+
+The folder must be named VRC2021-info-TEAM-NAME and shall contain the subfolders ARENA, OBSTACLES, OBJECT, ROBOT, TESTS. 
+File names must contain information about the data (e.g. Arena-Image-1) and must not have default names (e.g. IMG2012).
+
+The TC will decide if the individual arenas qualify for the tests defined in \ref{tab:Instances}. 
+The main requirements are already specified in \ref{sec:VRCArenaSetup}, while the table describes individual task requirements more precisely.
+ 
+If an arena does not qualify, the TC must notify the team \textbf{3 weeks} before competition starts, 
+briefing the team about shortcomings and possible solutions. 
+The team then has \textbf{1 week} to follow the TCs advice and provide a new zip-folder.
+If an arena does not qualify for a test, the TC may decide to exclude the associated team from those.
+If an arena only partly qualifies (e.g. no barriertape available), penalty points may be given to teams.
+Those penalties will resemble 
+
+The OC will create the tasks for the tests using the official refbox and the information provided by the teams. 
+A bagfile will be recorded, containing all topics published by the atwork\_commander.
+To prevent incompatible bagfiles during the competition, 
+the OC will provide test bagfiles \textbf{2 weeks} before official competitions begin.
+The working parameter and launchfiles will be saved and used to generate the specific task bagfiles for the competition.
+Teams must be able to play a bagfile on an external computer, which is connected to the robot via WiFi.
+
+Before a test begins, the OC will announce obstacle placements, object positions and arbitrary surface application to a team \textbf{10 minutes} prior to their timeslot. The task bagfile will be sent out to the team \textbf{5 minutes}  before their official timeslot. 
+Those durations may be modified during the competitions if they show to be unsuitable.
+
+The bagfile then must be played to start a competition. 
+The OC may count down before a competition (3, 2, 1, go), after which \textbf{only} the enter button may be pressed to start the bagfile. 
+The cameraman/-woman must show that to the audience.
+The OC will set a timer according to the test durations in \ref{tab:Instances}. 
+The run ends when the timer is up, with an optional margin of five seconds due to the possible network delay.
+
+As arena setups will not be easy to compare, no time bonus will be given after a perfect run. 
+The rest of the scoring will be the same as in a normal robocup scenario.
