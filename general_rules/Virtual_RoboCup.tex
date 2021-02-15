@@ -21,10 +21,10 @@ However, to ensure that the different robot performances can be compared using t
 \begin{itemize}
 \item Arena size must be atleast 4m x 2m
 \item The table placements should force the robot to move around the arena (not all the tables are next to each other)
-\item Workstations should be accessible via multiple paths, so one of them may be blocked with obstacles.
-\item Tables with the heights defined in (\ref{tab:Instances}) have to be provided (margin = 2cm). If a team has not enough workstations of one type for a test, alternative table heights may be used (especially BTT3 and Final). This rule does not apply for the conveyor belt, the shelf and the precise placement station.
+\item Workstations should be accessible via multiple paths, so one of them may be blocked with obstacles (\ref{fig:vrc_arena_example} orange dots). Some space must be available for non-blocking obstacles (\ref{fig:vrc_arena_example} dark green dots).
+\item Tables with the heights defined in (\ref{tab:Instances}) have to be provided (margin = 2cm). If a team doesn't have enough workstations of one type for a test, the TC may allow alternative table heights to be used (especially BTT3 and Final). This rule does not apply for the conveyor belt, the shelf and the precise placement station.
 \item PPT Cavitys (a)-(f) (see \ref{fig:ppt_tiles}) must be provided. Teams may 3D print the cavitys using the files in the leagues github. Standing objects are excluded. It must be possible to place ${N\_PLACE + 2}$ next to each other, so that atleast two decoy cavities can be used. 
-\item Required arbitrary surfaces types: artificial grass, pvc floor / wood, mirror / aluminium foil, (plexi-)glass. 
+\item Required arbitrary surfaces types: artificial grass, pvc floor / wood, mirror / aluminum foil, (plexi-)glass. 
 These can be found in your local homedepot. (See fig. \ref{fig:vrc_obst_arbi}(b))
 \item One path blocking and one small obstacle must be available both for physical objects and barriertape. (See fig. \ref{fig:vrc_obst_arbi}(a))
 \end{itemize}
@@ -32,7 +32,6 @@ These can be found in your local homedepot. (See fig. \ref{fig:vrc_obst_arbi}(b)
 Figure~\ref{fig:vrc_arena_example} shows one possible example of an arena configuration in a small area.
 Table heights are measured in cm. 
 The orange dots mark possible path blockades, while the dark green lines mark optional obstacle placements. 
-
 
 
 \begin{figure}[h!]
@@ -133,8 +132,21 @@ The run ends when the timer is up, with an optional margin of five seconds due t
 \label{sec:VRCScoring}
 
 The different arena setups make time bonuses unfair and will therefore not be given in the VRC 2021. 
-The rest of the scoring will be the same as in a normal robocup scenario, with score adjustments and/or penalty points possible to compensate for missing test elements (see \ref{sec:VRCArenaSetup}).
+The rest of the scoring will be the same as in a normal robocup scenario, with score/runtime adjustments and/or penalty points possible to compensate for missing test elements (see \ref{sec:VRCArenaSetup}). Such adjustments could be:
 
+\begin{itemize}
+\item The runtime for a test may be reduced if the arena is very small
+\item If no barriertape is available, all penalty points for crossing will be applied
+\item If no arbitrary surface is available, the object to pick will also be removed. 
+\item No containers = no placement points given
+\end{itemize}
+
+Depending on the arena setups of all teams, these rules will be defined more precisely before the competitions begin.
+
+\section{Technical Challenges} 
+\label{sec:VRCTecCha}
+
+The 2021 virtual robocup will focus on the main competition. No technical challenges will be performed this year. We hope that we can come back to them once we have provided a smooth experience for all teams in the normal tests. We also ask for suggestions for technical challenges for the 2022 season and forward.
 
 
 
