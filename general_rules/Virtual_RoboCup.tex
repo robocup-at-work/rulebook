@@ -1,7 +1,7 @@
 % !TEX root = ../Rulebook.tex
 
 \section{General} 
-\label{sec:General}
+\label{sec:VRCGeneral}
 
 Due to the Covid-19 pandemic, the RoboCup 2021 will be held online. 
 Therefore, paricipating teams must provide some infrastructure to enable the TC and OC to evaluate their performance.
@@ -23,7 +23,7 @@ However, to ensure that the different robot performances can be compared using t
 \item The table placements should force the robot to move around the arena (not all the tables are next to each other)
 \item Workstations should be accessible via multiple paths, so one of them may be blocked with obstacles (\ref{fig:vrc_arena_example} orange dots). Some space must be available for non-blocking obstacles (\ref{fig:vrc_arena_example} dark green dots).
 \item Tables with the heights defined in (\ref{tab:Instances}) have to be provided (margin = 2cm). If a team doesn't have enough workstations of one type for a test, the TC may allow alternative table heights to be used (especially BTT3 and Final). This rule does not apply for the conveyor belt, the shelf and the precise placement station.
-\item PPT Cavitys (a)-(f) (see \ref{fig:ppt_tiles}) must be provided. Teams may 3D print the cavitys using the files in the leagues github. Standing objects are excluded. It must be possible to place ${N\_PLACE + 2}$ next to each other, so that atleast two decoy cavities can be used. 
+\item PPT cavities (a)-(f) (see \ref{fig:ppt_tiles}) must be provided. Teams may 3D print the cavities using the files in the leagues github. Standing objects are excluded. It must be possible to place ${N\_PLACE + 2}$ next to each other, so that atleast two decoy cavities can be used. 
 \item Required arbitrary surfaces types: artificial grass, pvc floor / wood, mirror / aluminum foil, (plexi-)glass. 
 These can be found in your local homedepot. (See fig. \ref{fig:vrc_obst_arbi}(b))
 \item One path blocking and one small obstacle must be available both for physical objects and barriertape. (See fig. \ref{fig:vrc_obst_arbi}(a))
@@ -81,13 +81,17 @@ If an arena only partly qualifies (e.g. no barriertape available), score adjustm
 
 
 \section{Camera Setup} 
-\label{sec:CameraSetup}
+\label{sec:VRCCameraSetup}
 
 Since the referees are not present at the arena during the Virtual RoboCup, the arena and all activities of the robot must be shown via livestream. For this purpose, cameras must be able to monitor the entire arena for the referees and the cameras should be mounted at least at head height. No blind spots are allowed when streaming the arena, so that the referees can see and evaluate every activity of the robot. Furthermore, the PC used to start the runs should also be monitored with the cameras so that the referees can observe every interaction with the PC. One or more cameras can be used to stream the arena. The OC will announce the streaming software used and the maximum number of livestreams available before the competition.
 \par
 In addition to the cameras for the arena, there must be a person who follows the robot with a mobile camera and shows the robot's activities from close up. This allows the referees to detect even small mistakes. The person is allowed to enter the arena during the run. However, the person is not allowed to interact with the robot.
 \par
 A camera may also be attached to the robot to better show the robot's activities to the referees and spectators. The camera on the robot is optional.
+
+\section{RoCKIn manipulation object set} 
+\label{sec:VRCRoCKInSet}
+The RoCKIn objects (see table \ref{tab:manipulation_objects_rockin}) are no longer produced and sold. Because of this, it is allowed to create these objects with a 3D printer at the Virtual RoboCup. However, the 3D printed RoCKIn objects must not be mixed with original objects. This means that the complete RoCKIn object set is either original or 3D printed. Furthermore, the 3D printed objects must have the same color. This applies only to the RoCKIn object set and not to the RoboCup@Work object set (see table \ref{tab:manipulation_objects}). The RoboCup@Work object set must not be 3D printed.
 
 
 \section{Task Generation} 
