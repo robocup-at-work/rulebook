@@ -227,27 +227,23 @@ The floor is made of some firm material. Examples include floors made of concret
 \label{fig:example_floors}
 \end{figure}
 
-\subsection{Walls}
-The competition arena is partially surrounded by walls. Parts of the outer border that are not blocked by walls will be marked by yellow/black barrier tape and count as virtual walls as defined in \ref{ssec:barrier_tape}. The height of the walls is not less than 20 cm and not more than 40 cm. One or more gates may be foreseen, where robots can enter or leave the arena. Gates may or may not be closable. The walls have a mostly uniform color. Small visual elements like logos or advertisements may be placed on the walls.
+\subsection{Walls and Virtual Walls}
+The competition arena is partially surrounded by walls. Parts of the outer border that are not blocked by walls will be marked by red/white barrier tape and count as virtual walls. The height of the walls is not less than 20 cm and not more than 40 cm. One or more gates may be foreseen, where robots can enter or leave the arena. Gates are indicated by yellow/black tape, which may be crossed once per gate without penalty. Most of the walls are supposed to have a uniform color. Small visual elements like logos or advertisements may be placed on the walls. Virtual Walls are considered Walls regarding Penalization \ref{sec:ScoringAndRanking}.
 
 
-\subsection{Barrier Tape as Virtual Walls} \label{ssec:barrier_tape}
-The arena may include virtual walls marked by either striped yellow/black or white/red barrier tape on the floor (see Figure \ref{fig:barrier_tape}).
+\subsection{Barrier Tape} \label{ssec:barrier_tape}
+The arena may include virtual fences marked by yellow/black on the floor, which are called Barrier Tapes (see Figure \ref{fig:barrier_tape}).
 
-There are two types of yellow/black barrier tape to be considered.
-\begin{itemize}
-\item The outer border of the arena that is not blocked by actual walls will be marked by this tape. If any part of a robot passes over such a tape it is considered as a collision with a usual wall and will be penalized according to section \ref{sec:ScoringAndRanking}.
-\item There may be barrier tapes on the floor of the arena that do not mark an outer border, but instead are supposed to mark a dangerous zone and are also not to be crossed. The penalty for those collisions can be found under section \ref{sec:penalties}. NOTE: These collisions will also be considered a major collision in following years.
-\end{itemize}
+The barrier tapes on the floor of the arena mark dangerous zones and are not to be crossed. The penalty for those collisions can be found under section \ref{sec:penalties}.
 
-The red/white tape is used to frame the entrance and exit area. The robot is allowed to cross this kind of barrier only at the beginning of a test to enter arena and at the end for leaving. In contrast, the yellow/black one denotes an obstacle which the robot is never allowed to cross.
+The barrier tape is also used to frame the entrance and exit area. The robot is allowed to cross this kind of barrier only at the beginning of a test to enter arena and at the end for leaving.
 
-The blue/white tape is not considered a virtual wall but marks the areas of 0 cm height (see Section \ref{ssec:serviceareas}).
+The blue/white tape is not considered a barrier tape or a virtual wall but marks the service areas of 0 cm height (see Section \ref{ssec:serviceareas}).
 
 \begin{figure} [h!]
 \centering
 \includegraphics[width= 0.7\textwidth ]{./images/barrier_tapes_in_china15.jpg}
-\caption{Example of barrier tape used during \RC 2015. The red/white tape is used for the entrance and exit, while the yellow/black one denotes an obstacle.}
+\caption{Example of barrier tape used during \RC 2015. The red/white tape is used to indicate virtual walls , while the yellow/black one denotes a virtual fence.}
 \label{fig:barrier_tape}
 \end{figure}
 
@@ -255,27 +251,6 @@ The blue/white tape is not considered a virtual wall but marks the areas of 0 cm
 
 \subsection{Entrance and Exit}
 If possible, the arena should have one entrance and one exit, which are equipped with laser barriers. These barriers are used for timekeeping by the referee box.
-
-
-
-\subsection{Places}
-An arena designed for a particular test may foresee the definition of a set of designated places, which are locations in the arena that can be referred to by a unique, symbolic identifier. These identifiers are used e.g. for the task specification, possibly in conjunction with other information, such as an orientation. Places may be marked by markers of some sort.
-
-
-\subsection{Floor Markers}
-The arena used for a particular test may foresee the use of floor markers for designated places. The design of these floor markers are rectangular black-and-white images as used by the ARToolKit library:
-\begin{center}
-\url{http://www.hitl.washington.edu/artoolkit}
-\end{center}
-
-The black inner square of the markers is at least 8 cm x 8 cm large with an additional white border around of at least 12 cm side length. Figure \ref{fig:floor_marker} and \ref{fig:barrier_tape} depict some examples of these markers.
-
-\begin{figure} [h!]
-\centering
-\includegraphics[width= 0.4\textwidth ]{./images/example_floor_marker.png}
-\caption{Example of a floor marker.}
-\label{fig:floor_marker}
-\end{figure}
 
 
 \subsection{Obstacles}
@@ -312,8 +287,8 @@ In order to make the operating environment more realistic, different kinds of ar
 To facilitate the participation of newer teams that are yet focused on more basic functionalities, the integration of arbitrary surfaces is by now limited to:
 \begin{itemize}
 \item One service area during the BTT1.
-\item Two service areas during the BTT3.
 \item Two service areas during the BTT2.
+\item Two service areas during the BTT3.
 \item Three service areas during the final round.
 \end{itemize}
 

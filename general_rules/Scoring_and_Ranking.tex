@@ -26,15 +26,12 @@ Teams may use simplifications, which will result in a reduction of scores for th
 
 Additional simplifications are specified for individual tests. These reductions do not count as penalty points. Teams that want to make use of the simplifications above have to announce them in advance of the competition to the TC. The TC might forbid the use of specific elements for simplification if these are not in the spirit of the league or may cause disproportionate advantages for a team.
 
-\section{Perfect Runs}
-All teams fully complete a perfect run will receive a completion bonus of 0.75 points per second left on the run time. These points are only awarded if the run is perfect, i.e. all objectives reached without any penalties.
-
 \section{Penalties}
 \label{sec:penalties}
 Penalty points are given as follows, each time again the incident occurs:
 
 \begin{itemize}
-	\item A manipulation object is lost or placed anywhere outside of a service areas: \hfill -100 points
+	\item A manipulation object is dropped to the floor outside of a manipulation area: \hfill -100 points
 	\item Delivering a wrong manipulation object to service area \hfill -50 points
 	\item Minor collision (see Section \ref{sec:Collisions}): \hfill -50 points
 	\item Major collision (see Section \ref{sec:Collisions}): \hfill -50 points and termination of the run
@@ -46,38 +43,33 @@ Penalty points are given as follows, each time again the incident occurs:
 
 For reasons of safety of people and property it is strictly unwanted for the robot to collide with any of the environmental objects. Only collisions of the manipulator with the upside of the service area are allowed. The different kind of collisions that can occur are defined in the following subsections.
 
+\subsection{Minor Collision}
+If the robot collides with an interaction element of the arena (RTT, PPT Cavities, upper level of Shelf) it is considered a minor collision. The only exception is the collision of the manipulator of the robot with the surface of the manipulation area. Area Limit
+
+\subsection{Major Collision}
+If the robot collides with a static element of the environment it is considered a major collision.
+
+\subsection{Barrier Tape collision}
+If any part of the robot touches a barrier tape, it is considered a barrier tape collision. The maximum penalty resulting from these collisions depends on the specific competition instance and is listed in Tab.~\ref{tab:InstancePoints}. Upt to the maximum amount of barrier tape reduction, each barrier tape collision counts as a Minor Collision.
+
 \begin{table}[h!]
 	\caption{Definition of minor and major collisions}
 	\label{tab:collisions}
 	\centering
   \begin{tabular}{|l|p{1.5cm}|p{1.5cm}|}
 		\hline
-		Situation & Minor collision & Major collision \\ \hline
-    Collision with static elements of arena &  &  X\\
-    Collision with dynamic elements of arena &  & X\\
-    Robot Body Collision with workstation &  & \\
-    Robot Manipulator Collision with manipulation zone &  & \\
-    Robot Manipulator Collision with Round Table stopping it &  & \\
-    Robot Manipulator Collision with PPT Cavity surface &  & \\
-    Robot Manipulator Collision with Shelf &  & \\
-		Barrier tape collisions?  &  & \\
+		Situation                                                & Minor collision & Major collision \\ \hline
+    Collision with static elements of arena                  &                 & X               \\
+    Collision with dynamic elements of arena                 & X               &                 \\
+    Robot Body Collision with workstation                    &                 & X               \\
+    Robot Manipulator Collision with manipulation zone       &                 &                 \\
+    Robot Manipulator Collision with Round Table stopping it & X               &                 \\
+    Robot Manipulator Collision with PPT Cavity surface      & X               &                 \\
+    Robot Manipulator Collision with Shelf                   & X               &                 \\
+		Barrier tape collisions?                                 & X               &                 \\
     \hline
 	\end{tabular}
 \end{table}
-
-\color{red}
-\subsection{Minor Collision}
-If the robot collides with the environment, but does not move the environment and the wheels are not spinning, it is considered a minor collision.
-
-\subsection{Major Collision}
-If the robot collides with the environment and moves it or its wheels are spinning, it is considered a major collision.
-
-\subsection{Barrier Tape collision}
-If any part of the robot touches a barrier tape, it is considered a barrier tape collision. The maximum penalty resulting from these collisions depends on the specific competition instance and is listed in Tab.~\ref{tab:InstancePoints}.
-
-Touching or passing a Barrier Tape when entering or exiting the arena does not count as collision.
-
-\color{black}
 
 \section{Restarts}
 Teams might use one so-called restart in a run. Restarts have the following aspects:
