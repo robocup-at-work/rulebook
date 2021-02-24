@@ -1,29 +1,29 @@
 \newpage
 \section{Pick from Drawer Test}
 
-\szug{Should we think about additional rules for collisions?}
+%\szug{Should we think about additional rules for collisions?}
 
 \szug{I think an individual drawer avoids unpredictable configurations but generates of course additional effort. Probably we think about a "standard drawer construction" for 2021?}
 
-\szug{Should we include one or two decoy objects that are placed by a referee to avoid scripted solutions.}
+%\szug{Should we include one or two decoy objects that are placed by a referee to avoid scripted solutions.}
 
 \subsection{Purpose and Focus of the Test}
 The collection of freely available objects lying on a manipulation zone is the core capability of \RCAW-robots. The \iaterm{Pick from Drawer Test}{PFD} goes beyond this level and considers objects stored in drawers too. In this way, the challenge
 extends the idea of the shelf where the robot has to plan the grasping operation in a limited space but it is not necessary to interact with the environment.
 
 \subsection{Scenario Environment}
-The first version of the challenge gives much freedom to the teams. They can choose an arbitrary drawer configuration. The drawer is wholly covered in the beginning and can only be linearly moved in one direction. The surrounding construction has to remain at its position.
+The first version of the challenge gives much freedom to the teams. They can choose an arbitrary drawer configuration. The drawer is wholly covered in the beginning and can only be linearly moved in one direction parallel to the floor. The inside of the drawer has to have a uniform color and an uniform flat surface. The surrounding construction has to remain at its position. The inside and the handle of the drawer count as manipulation zones for collision detection purposes.
 
 \par
 Robot's movements must open the drawer directly. Self-driven, automatic solutions integrated into the drawer system are not allowed.
-The rules do not define the handling mechanism itself, the teams are completely free to design an appropriate concept. Any handle, knob, hole, or connector mounted to the drawer is permitted. Based on this interaction, the drawer has to be moved at least \textcolor{red}{15 cm}.
+The rules do not define the handling mechanism itself, the teams are completely free to design an appropriate concept. Any handle, knob, hole, or connector mounted to the drawer is permitted. Based on this interaction, the drawer has to be moved at least \textcolor{red}{15 cm}. 
 
 \subsection{Task}
-The drawer setup is located at an arbitrary position. The drawer contains at least one but not more than three  manipulation objects described in Table~\ref{tab:Instances}. It is stored directly on bottom of the drawer. Any other content is not permitted!
+The drawer setup is located at an arbitrary position. The drawer contains randoly chosen manipulation objects to be picked described in Table~\ref{tab:Instances}. It is stored directly on bottom of the drawer. Additionally, the drawer may contain three decoy objects and an arbitrary surface. 
 
 The team configures the objects and the drawer during preparation phase.
 
-\textcolor{red}{This test does not adress navigation capabilities. Hence the robot can start the run everywhere.} It moves directly to the drawer, open it, grasps the objects and place them in robot`s repository.
+\textcolor{red}{This test does not adress navigation capabilities. Hence the robot can start the run anywhere in the arena.} It moves directly to the drawer, opens it, grasps the objects and place them in the object inventory of the robot.
 
 \subsection{Rules}
 The following rules have to be obeyed:
@@ -31,7 +31,7 @@ The following rules have to be obeyed:
 \begin{itemize}
 \item A single robot is used.
 \item The test runs for 5 minutes.
-\item \textcolor{red}{The robot can start at an arbitrary position inside or outside the arena.}
+\item \textcolor{red}{The robot can start at an arbitrary position inside the arena.}
 \item The order in which the teams have to perform will be determined by a draw.
 \item Each team is responsible for preparing the drawer system. The team selects the objects and places them within the drawer.
 \item The drawer is opened by at least \textcolor{red}{15cm}.
@@ -42,6 +42,6 @@ The following rules have to be obeyed:
 \subsection{Scoring}
 \begin{itemize}
 \item 100 points for opening the drawer
-\item 100 points are awarded for each correctly and successfully picked object
+\item 100 points are awarded for each correctly and successfully picked object, +50 Points per object if decoys are present, +50 Points per object if the Abritrary Surface is present.
 \item Time bonus of one point per second after collecting 3 objects successfully.
 \end{itemize}
