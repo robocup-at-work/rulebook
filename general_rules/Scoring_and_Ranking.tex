@@ -1,9 +1,12 @@
 % !TEX root = ../Rulebook.tex
 \section{Scoring} \label{sec:ScoringAndRanking}
 
-For each test the calculation of scores is defined individually, comprising points for achieving certain subtasks, points for winning a run and penalty points.
+For each test the calculation of scores is defined individually, comprising points for achieving certain subtasks,
+points for winning a run and penalty points.
 \par
-Each test provides a set of so-called feature variations encoding the overall variability of the test (e.g. whether obstacles can occur or not, number and type of manipulation objects). To enhance comparability among different test runs, all teams will have to perform the same test instances as specified in Table~\ref{tab:Instances}.
+Each test provides a set of so-called feature variations encoding the overall variability of the test (e.g. whether
+obstacles can occur or not, number and type of manipulation objects). To enhance comparability among different test
+runs, all teams will have to perform the same test instances as specified in Table~\ref{tab:Instances}.
 \par
 If not specified otherwise, the following set of scoring rules applies for each test:
 
@@ -16,68 +19,86 @@ Explanation of the terms:
 \end{itemize}
 
 \section{Simplifications}
-Teams may use simplifications, which will result in a reduction of scores for the given run:
+Teams may use simplifications, which will result in a reduction of scores for the given run. The simplifications may be
+chosen per run, but need to be announced to the referees at least one hour before the start of the run.
 
 \begin{itemize}
 	\item Use of external sensors: \hfill -200 points
 	\item Use of other external objects (e.g. to support localization): \hfill -100 points
 	\item Use of own loading or unloading areas: \hfill -200 points
+  \item Deactivation of Barrier Tape: -15\% of total points of the run
 \end{itemize}
 
-Additional simplifications are specified for individual tests. These reductions do not count as penalty points. Teams that want to make use of the simplifications above have to announce them in advance of the competition to the TC. The TC might forbid the use of specific elements for simplification if these are not in the spirit of the league or may cause disproportionate advantages for a team.
-
-\section{Perfect Runs}
-All teams fully complete a perfect run will receive a completion bonus of 0.75 points per second left on the run time. These points are only awarded if the run is perfect, i.e. all objectives reached without any penalties.
+Additional simplifications are specified for individual tests. These reductions do not count as penalty points. Teams
+that want to make use of the simplifications above have to announce them in advance of the competition to the TC. The
+TC might forbid the use of specific elements for simplification if these are not in the spirit of the league or may
+cause disproportionate advantages for a team.
 
 \section{Penalties}
 \label{sec:penalties}
 Penalty points are given as follows, each time again the incident occurs:
 
 \begin{itemize}
-	\item A manipulation object is lost or placed anywhere outside of a service areas: \hfill -100 points
+	\item A manipulation object is dropped to the floor outside of a manipulation area: \hfill -100 points
 	\item Delivering a wrong manipulation object to service area \hfill -50 points
 	\item Minor collision (see Section \ref{sec:Collisions}): \hfill -50 points
 	\item Major collision (see Section \ref{sec:Collisions}): \hfill -50 points and termination of the run
+  \item Barrier Tape collision (see Section \ref{sec:Collisions}): \hfill -5\% of total points of current run up till
+  20\%
 \end{itemize}
 
 \section{Collisions}\label{sec:Collisions}
 
-\szug{This sections needs to be adapted according to the collision categories proposed by Christoph.}
+For reasons of safety of people and property it is strictly unwanted for the robot to collide with any of the
+environmental objects. Only collisions of the manipulator with the upside of the service area are allowed. The
+different kind of collisions that can occur are defined in the following subsections.
 
-For reasons of safety of people and property it is strictly unwanted for the robot to collide with any of the environmental objects. Only collisions of the manipulator with the upside of the service area are allowed. The different kind of collisions that can occur are defined in the following subsections.
+\subsection{Minor Collision}
+
+If the robot collides with an interaction element of the arena (RTT, PPT Cavities, upper level of Shelf) it is
+considered a minor collision. The only exception is the collision of the manipulator of the robot with the surface of
+the manipulation area.
+
+\subsection{Major Collision}
+
+If the robot collides with a static element of the environment it is considered a major collision.
+
+\subsection{Tape collisions}
+
+\begin{description}
+  \item[Yellow/Black Tape]: This tape is called Barrier Tape and represents a virtual fence. If any part of the robot
+  touches a barrier tape, it is considered a Barrier Tape Collision. Barrier Tape collision induce a point penalty
+  proportional to the final points of the run. With each collision 5\% of the final points are deducted up to a maximum
+  of 20\%. For beginner teams the option exists to opt-out of Barrier Tape and take a static deduction of 15\% of the
+  final points of the run.
+  \item[Red/White Tape]: This tape represents a virtual wall. This wall shall not be crossed. A robot touching this
+  tape is considered a major collision. This tape is typically used to limit the area of the arena.
+  \item[Blue/White Tape]: This tape is used to indicate 0cm workstations and gates. Robot Collisions with this tape
+  only induces a penalty if a gate is crossed twice. In this case a Major Collision occurred.
+\end{description}
 
 \begin{table}[h!]
 	\caption{Definition of minor and major collisions}
 	\label{tab:collisions}
 	\centering
-  \begin{tabular}{|l|p{1.5cm}|p{1.5cm}|}
+  \begin{tabular}{|l|p{1cm}|p{1cm}|p{1.5cm}|}
 		\hline
-		Situation & Minor collision & Major collision \\ \hline
-    Collision with static elements of arena &  &  X\\
-    Collision with dynamic elements of arena &  & X\\
-    Robot Body Collision with workstation &  & \\
-    Robot Manipulator Collision with manipulation zone &  & \\
-    Robot Manipulator Collision with Round Table stopping it &  & \\
-    Robot Manipulator Collision with PPT Cavity surface &  & \\
-    Robot Manipulator Collision with Shelf &  & \\
-		Barrier tape collisions?  &  & \\
+		Situation                                                & Minor & Major & Barrier Tape \\
+    \hline
+    Collision with static elements of arena                  &       & X     &              \\
+    Collision with dynamic elements of arena                 &       & X     &              \\
+    Robot Body Collision with workstation                    &       & X     &              \\
+    Robot Manipulator Collision with manipulation zone       &       &       &              \\
+    Robot Manipulator Collision with Round Table stopping it & X     &       &              \\
+    Robot Manipulator Collision with PPT Cavity surface      & X     &       &              \\
+    Robot Manipulator Collision with Shelf                   & X     &       &              \\
+		Yellow/Black Tape Collisions                             &       &       & X            \\
+    Red/White Tape Collisions                                &       & X     &              \\
+    Blue/White Tape Collision (1st time gate)                &       &       &              \\
+    Blue/White Tape Collision (2nd time gate)                &       & X     &              \\
     \hline
 	\end{tabular}
 \end{table}
-
-\color{red}
-\subsection{Minor Collision}
-If the robot collides with the environment, but does not move the environment and the wheels are not spinning, it is considered a minor collision.
-
-\subsection{Major Collision}
-If the robot collides with the environment and moves it or its wheels are spinning, it is considered a major collision.
-
-\subsection{Barrier Tape collision}
-If any part of the robot touches a barrier tape, it is considered a barrier tape collision. The maximum penalty resulting from these collisions depends on the specific competition instance and is listed in Tab.~\ref{tab:InstancePoints}.
-
-Touching or passing a Barrier Tape when entering or exiting the arena does not count as collision.
-
-\color{black}
 
 \section{Restarts}
 Teams might use one so-called restart in a run. Restarts have the following aspects:
@@ -128,42 +149,45 @@ In case of a tie, the OC will either schedule a deciding run or continue with a 
 \begin{landscape}
 \begin{table}[h!]
  \centering
- \begin{tabular}{|l|l|l*{12}{|P{1cm}}|}
+ \begin{tabular}{|l|l|l*{11}{|P{1cm}}|}
    \hhline{~~~--------}
-   \multicolumn{3}{l|}{ } &  \multicolumn{8}{c|}{ Instances}\\
+   \multicolumn{3}{l|}{ }                   &  \multicolumn{8}{c|}{Instances}                        \\
    \hhline{~~~--------}
-   \multicolumn{3}{l|}{ }          &\cir{1}&\cir{2}&\cir{3}&\cir{4}&\cir{5}&\cir{6}&\cir{7}&\cir{8}\\
-   \multicolumn{3}{r|}{     }        & BNT   & BMT   & BTT1  & BTT2  &  BTT3 &  PPT  &  RTT & Final\\
+   \multicolumn{3}{l|}{ }                   &\cir{1}&\cir{2}&\cir{3}&\cir{4}&\cir{5}&\cir{6}&\cir{7} \\
+   \multicolumn{3}{r|}{ }                   & BMT   & BTT1  & BTT2  &  BTT3 &  PPT  &  RTT  & Final  \\
    \hhline{~~~--------} \hline
-     \multirow{5}{0.5cm}{\R{\centering Objects}{3.0cm}}
-     &  \RCAW \&  RoCKIn    & RefBox   &       &   5   &  5     &   6   &  6   &   3    &  3  & 10 \\ \hhline{~----------}
-     &  Decoy               & RefBox   &       &       &  3    &   3     &   3   &       &   3     & 5   \\ \hhline{~----------}
-		 &  Position            &          &       &   Ref  &   Ref  &  Ref  &  Ref   &   Team  &  Ref & Ref  \\ \hhline{~----------}
-		 &  Rotation         &          &       &  Team &   Ref   &  Ref    &  Ref    &   Team  & Team& Ref   \\ \hhline{~----------}
-		 &  Orientation      &          &       &  Team &   Team  &  Team   &  Ref   &  Team  &Team &  Ref  \\ \hline
-     \multirow{6}{0.5cm}{\R{\centering Service area}{3.2cm}}
-     & Estimated Active & RefBox  &    10  & 2     & 3     &    4   &  5   &  2 & 1  & 8 \\ \hline
-     &  Table height    & RefBox   &       & 10 cm & 10 cm &  0 cm\newline 5 cm \newline 10 cm\newline 15 cm   & 10 cm  &  10 cm &    10 cm & 0 cm\newline 5 cm\newline 10 cm\newline 15 cm \\ \hhline{~----------}
-		 & Arbitrary surface & RefBox &       &       &   1     &   2   &  2   &        &    &  3  \\ \hline
-		 \multirow{3}{0.5cm}{\R{\centering Arena }{1.5cm}}
-	   & Obstacles (static) & Referee &   2   &       &       &   2   &   2   &       &   & 2   \\ \hhline{~----------}
-		 & Barrier tape       & Referee &   2   &       &    2   &       &   1   &       &   & 2   \\ \hhline{~----------}
-		 & Waypoints          & RefBox  &   9   &       &       &       &       &       &   &    \\ \hline
-    \multirow{3}{0.5cm}{\R{\centering Grasping }{1.65cm}}
-     & Shelf unit        & RefBox   &       &       &       &       &   2   &       &    & 2   \\ \hhline{~----------}
-		 & Rotating turntable& Referee  &      &       &       &       &       &        & 3  & 1   \\ \hhline{~----------}
-     & Rotating direction&          &      &       &       &       &       &        & Team & Ref   \\ \hline
-     \multirow{8}{0.5cm}{\R{\centering Placement}{2.5cm}}
-     & Cavity platform with decoy& RefBox   &       &       &       &       &       &  3   &   & 1   \\ \hhline{~----------}
-     & Shelf unit          & RefBox &       &       &       &       &   1     &        &   & 1   \\ \hhline{~----------}
-     & Red container       & RefBox &       &       &       &       &  2   &       &   &  2   \\ \hhline{~----------}
-     & Blue container      & RefBox &       &       &       &       &  2   &       &   &  2   \\ \hhline{~----------}
-     & Rotating turntable  & RefBox &       &       &       &   1   &      &       &   &    \\ \hhline{~----------}
-     & Cavities Position     & RefBox &       &       &       &      &      &   Ref	  &   &  Ref   \\ \hhline{~----------}
-     & Cavities Rotation	& RefBox &       &       &       &      &      &   Ref    &   &  Ref   \\ \hhline{~----------}
-     & Cavities Orientation	& RefBox &       &       &       &      &      &   Team   &   &  Team  \\ \hline \hline
-  	\multicolumn{2}{|l|}{Duration}
-    & RefBox & 5min & 5min & 6min  &   10min &   10min &  4min &  4min & 13min \\
+   \multirow{5}{0.5cm}{\R{\centering Objects}{3.0cm}}
+   & \RCAW \&  RoCKIn            & RefBox   & 5     & 5     & 6     & 6     & 3      & 3     & 10    \\ \hhline{~----------}
+   & Decoy                       & RefBox   &       & 3     & 3     & 3     &        & 3     & 5     \\ \hhline{~----------}
+	 & Position                    &          & Ref   & Ref   & Ref   & Ref   & Team   & Ref   & Ref   \\ \hhline{~----------}
+	 & Rotation                    &          & Team  & Ref   & Ref   & Ref   & Team   & Team  & Ref   \\ \hhline{~----------}
+	 & Orientation                 &          & Team  & Team  & Team  & Ref   & Team   & Team  & Ref   \\ \hline
+   \multirow{6}{0.5cm}{\R{\centering Service area}{3.5cm}}
+   & Estimated Active            & RefBox   & 2     & 3     & 4     & 5     & 2      & 1     & 8     \\ \hline
+   & Table height                & RefBox   &       &       & 0 cm  &       &        &       &  0 cm \\
+   &                             &          &       &       & 5 cm  &       &        &       &  5 cm \\
+   &                             &          & 10 cm & 10 cm & 10 cm & 10 cm &  10 cm & 10 cm & 10 cm \\
+   &                             &          &       &       & 15 cm &       &        &       & 15 cm \\ \hhline{~----------}
+	 & Arbitrary surface           & RefBox   &       & 1     & 2     & 2     &        &       & 3     \\ \hline
+	 \multirow{3}{0.5cm}{\R{\centering Arena }{1.5cm}}
+	 & Obstacles (static)          & Referee  &       &       & 2     & 2     &        &       & 2     \\ \hhline{~----------}
+	 & Barrier tape                & Referee  &       & 2     &       & 1     &        &       & 2     \\ \hhline{~----------}
+   &                             &          &       &       &       &       &        &       &       \\ \hhline{-----------}
+   \multirow{3}{0.5cm}{\R{\centering Grasping }{1.64cm}}
+   & Shelf unit                  & RefBox   &       &       &       & 2     &        &       & 2     \\ \hhline{~----------}
+	 & Rotating turntable          & Referee  &       &       &       &       &        & 3     & 1     \\ \hhline{~----------}
+   & Rotating direction          &          &       &       &       &       &        & Team  & Ref   \\ \hline
+   \multirow{8}{0.5cm}{\R{\centering Placement}{2.5cm}}
+   & Cavity platform with decoys & RefBox   &       &       &       &       & 3      &       & 1     \\ \hhline{~----------}
+   & Shelf unit                  & RefBox   &       &       &       & 1     &        &       & 1     \\ \hhline{~----------}
+   & Red container               & RefBox   &       &       &       & 2     &        &       & 2     \\ \hhline{~----------}
+   & Blue container              & RefBox   &       &       &       & 2     &        &       & 2     \\ \hhline{~----------}
+   & Rotating turntable          & RefBox   &       &       & 1     &       &        &       &       \\ \hhline{~----------}
+   & Cavities Position           & RefBox   &       &       &       &       & Ref	   &       & Ref   \\ \hhline{~----------}
+   & Cavities Rotation	         & RefBox   &       &       &       &       & Ref    &       & Ref   \\ \hhline{~----------}
+   & Cavities Orientation	       & RefBox   &       &       &       &       & Team   &       & Team  \\ \hline \hline
+   \multicolumn{2}{|l|}{Duration}
+                                 & RefBox   & 5min  & 6min  & 10min & 10min & 4min   & 4min  & 13min \\
  		\hline
  \end{tabular}
  \caption{Test specification in the instances of the \RCAW \YEAR competition.}
@@ -176,30 +200,28 @@ In case of a tie, the OC will either schedule a deciding run or continue with a 
  \centering
  \begin{tabular}{|p{5.5cm}*{9}{|P{1cm}}|}
    \hhline{~--------}
-   \multicolumn{1}{l|}{ } &  \multicolumn{8}{c|}{ Instances}\\
+   \multicolumn{1}{l|}{}                       & \multicolumn{8}{c|}{Instances}                               \\
    \hhline{~--------}
-   \multicolumn{1}{l|}{ }          &\cir{1}&\cir{2}&\cir{3}&\cir{4}&\cir{5}  &\cir{6}&\cir{7}&\cir{8}\\
-   \multicolumn{1}{r|}{     }       & BNT   & BMT   & BTT1  & BTT2  &  BTT3 & PPT   &  RTT & Final\\
+   \multicolumn{1}{l|}{}                       &\cir{1} &\cir{2} &\cir{3} &\cir{4} &\cir{5} &\cir{6} &\cir{7} \\
+   \multicolumn{1}{r|}{}                       & BMT    & BTT1   & BTT2   &  BTT3  & PPT    &  RTT   & Final  \\
    \hhline{~--------}
    \hline
-    Correct destination reached     &  50  &      &       &       &       &       &       &      \\
-		  \hspace{0.5cm} correct service area reached&     &   25   &  25     &   25    &  25     &  25    &  25    &  25   \\ \hline
-    Correct object grasping standard&      &  100   &  100    &  100     &     100    &    0   &       &   100  \\
-		\hspace{0.5cm} round table        &      &      &       &       &       &       &   300       &   200   \\
-		\hspace{0.5cm} PPT area           &      &      &       &       &       &       &       &   200  \\
-		\hspace{0.5cm} arbitrary surface  &      &      &  150  &   150 &  150  &       &       &   150  \\
-		\hspace{0.5cm} shelf upper level  &      &      &       &       &  150  &       &       &   150  \\
-		\hspace{0.5cm} shelf lower level  &      &      &       &       &  300  &       &       &  300  \\ \hline
-    Correct object placing standard   &      & 75   & 75    & 75    &  75   &       &       &  75  \\
-		\hspace{0.5cm} PPT area           &      &      &       &       &       &  200  &       &   200  \\
-		\hspace{0.5cm} shelf upper level  &      &      &       &       & 150   &       &       &   150  \\
-		\hspace{0.5cm} shelf lower level  &      &      &       &       &  150  &       &       &  150  \\ \hline
-    Incorrect object placing        &      & -100 & -100  & -100  & -100  & -100  &       & -100  \\
-    Incorrect object grasping       &      &      & -100  & -100  & -100  &       & -100  & -100  \\
-    Completing whole task           &  50  &  75  &   100  &   150   &   250  &    50    &   75   &  300   \\ \hline\hline
-    Maximum barrier \newline tape penalty    &  100  &      &  200  &       &  300  &       &       &  400  \\ \hline\hline
-    Maximum attainable points\newline (time bonus not included)
-	                                  & 500  &  1000 &  1100 &  1400  &  2000  &  700  &  1000  &  3200 \\ \hline
+	 Correct service area reached                &   25   &   25   &  25    &   25   &  25    &   25   &   25   \\ \hline
+   Correct object grasping standard            &  100   &  100   & 100    &  100   &   0    &        &  100   \\
+	 \hspace{0.5cm} round table                  &        &        &        &        &        &  300   &  200   \\
+	 \hspace{0.5cm} PPT area                     &        &        &        &        &        &        &  200   \\
+	 \hspace{0.5cm} arbitrary surface            &        &  150   & 150    &  150   &        &        &  150   \\
+	 \hspace{0.5cm} shelf upper level            &        &        &        &  150   &        &        &  150   \\
+	 \hspace{0.5cm} shelf lower level            &        &        &        &  300   &        &        &  300   \\ \hline
+   Correct object placing standard             &   75   &   75   &   75   &   75   &        &        &   75   \\
+	 \hspace{0.5cm} PPT area                     &        &        &        &        &  200   &        &  200   \\
+	 \hspace{0.5cm} shelf upper level            &        &        &        &  150   &        &        &  150   \\
+	 \hspace{0.5cm} shelf lower level            &        &        &        &  150   &        &        &  150   \\ \hline
+   Incorrect object placing                    & -100   & -100   & -100   & -100   & -100   &        & -100   \\
+   Incorrect object grasping                   &        & -100   & -100   & -100   &        & -100   & -100   \\
+   Completing whole task                       &   75   &  100   &  150   &  250   &   50   &   75   &  300   \\ \hline\hline
+   Maximum attainable points\newline (time bonus not included)
+	                                             & 1000   & 1100   & 1400   &  2000  &  700   &  1000  &  3200  \\ \hline
  \end{tabular}
  \caption{Scoring in the instances of the \RCAW \YEAR competition.}
   \label{tab:InstancePoints}

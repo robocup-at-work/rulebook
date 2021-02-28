@@ -2,27 +2,53 @@
 
 \chapter{Summary of Changes}
 
-This chapter provides an overview for experienced teams that know the rules and just need an update on what is new for the specific year. All new teams are strongly advised to read the whole rule book thoroughly.
+This chapter provides an overview for experienced teams that know the rules and just need an update on what is new for the specific year. 
+All new teams are strongly advised to read the whole rule book thoroughly.
+
+\section{Adjustments for the virtual RoboCups}
+
+Due to the Covid-19 pandemic, the 2020 and 2021 international robocups are cancelled. 
+Some of the leagues, including the RoboCup@Work league, will be held online.
+As this brings new challenges for the teams (e.g. arena building) and the committees (comparing teams and scoring),
+the technical committee decided to set some rules regarding the arena setup, scoring, general participation rules and the Technical Challenges.
+
+These can be found in chapter \ref{cha: VRC}.  
+
 
 \section{General Changes}
 \begin{itemize}
   \item BNT will be excluded from the instance list. According to the adapted scoring of the last year (rewards for reaching correct destinations) a separate run focusing on navigation is not necessary anymore.
   \item The preparation time was increased to 3 minutes (1 minute in 2019).
   \item The classification of a collision (major/minor) is more specific now (see \ref{tab:collisions}).
-  \item The refbox avoids object distribution patterns, where one manipulation zone is target AND source of
+  \item The Referee Box avoids object distribution patterns, where one manipulation zone is target AND source of a transportation task
+  \item The minimum passage width of 80cm was clarified in Section~\ref{sec:ArenaDesign}
+  \item The meaning of the different types of tape in the arena was modified. Please review Sections~\ref{sec:ArenaDesign},~\ref{sec:penalties}~and~\ref{sec:Collisions}
+\end{itemize}
+
+\section{Robot Requirements}
+\begin{itemize}
+  \item The size constraints for the robots were removed to allow more versatile robot designs. 
+  		However, the arena specification declares 80 cm as the minimum distance between fixed arena elements.
+  		Teams with bigger robots will have disadvantages regarding navigation, as they may get stuck in narrow arena passages. 
+  		See \ref{ssec:RobotDesignAndConstraints}.
+  \item A more precise definition of the emergency (hard) stop was defined.
+  \item A cap on the battery capacity of 500Wh was given
+  \item A speed cap of 1.5m/s was introduced for safety
 \end{itemize}
 
 \section{Team Requirements}
 \begin{itemize}
-  \item
+  \item All teams are required to bring appropriate storage equipment(e.g. lipo bags) for their batteries to the competition
+  \item All teams must educate their team members in correct battery usage 
 \end{itemize}
 
-\section{Rewards}
+\section{Scoring}
 \begin{itemize}
-  \item
+  \item The penalization of barrier tape was changed to a relative deduction. Barrier tape now induces a 5\% penalty on the final points of the run, up to 20\%.
 \end{itemize}
 
 \subsection{Technical Challenges}
 \begin{itemize}
-  \item
+  \item The Cluttered Pick Test was more clarified. The test involves now picking \textbf{and placing} of three objects. Also Points for navigation are not given anymore. 
+  \item Another challenge regarding the definition of a uniform simulation environment was added.
 \end{itemize}
