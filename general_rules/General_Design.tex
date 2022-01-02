@@ -186,103 +186,137 @@ The Referee box implementation and its documentation is available under the foll
 The referee box visualizes the current state of the competition run, time measurements, the task specification and robot positions for visitors. Team information (name, affiliation, contact information) are given too in this context.
 
 %\todo{NICO: add maybe some screenshots from the referee box, also make a reference to the FESTO referee box}
+\clearpage
 
 \section{Design of the Environment}
 \label{sec:ArenaDesign}
-\subsection{Size of the Arena}
 
-The size of a competition arena is a rectangular area not less than 2 m x 4 m and not more than 10 m x 12 m. The minimum distance between arena elements(service areas and walls) is 80cm if the passage should be passable for the robot.\par 
-An orientation is always associated with the arena. An arbitrary wall is designated as “North” orientation, and the wall to its right is designated as “East” and so on. The orientations will be assigned by the local league chair or/and the TC as soon as the arena is built up. Figure~\ref{fig:example_arena} shows one possible example of an arena configuration, while Figure~\ref{fig:example_topological_map} illustrates the topology.
+The competition is held in an arena resembling an example layout of industrial manufacturing facilities. 
+The arena is a static 2D environment consisting of walls, tables and obstacles with a size of atleast 10 m$^2$ and not more than 120 m$^2$. 
+An example layout is shown in fig. \ref{fig:arena_example}.
 
 \begin{figure} [h!]
-
-\includegraphics[width= \textwidth ]{./images/example_arena.jpg}
+\includegraphics[width= \textwidth ]{./images/general_rules/arena_example.jpg}
 \caption{An exemplary setup of a \RCAW environment.}
-\label{fig:example_arena}
+\label{fig:arena_example}
 \end{figure}
+
+Layouts may include rooms and hallways to create more realistic scenarios.
+Service areas (see section \ref{ssec:serviceareas}) mark the locations for robots to perform tasks.
+Each requested service area must be accessible via atleast one path of 80 cm width.
 
 \begin{figure} [h!]
-\includegraphics[width= \textwidth ]{./images/example_map.png}
-\caption{Topological map with five service areas (D1, D2, S1, S2, S3). The purple squares define places.}
-\label{fig:example_topological_map}
+\centering
+\includegraphics[width= 0.8\textwidth ]{./images/general_rules/arena_map_annotated}
+\caption{Annotated 2D map of the environment in fig. \ref{fig:arena_example}}
+\label{fig:arena_map_annotated}
 \end{figure}
 
+Each competition has a new and unique layout designed by the actual TC members.
+It should feature:
+\begin{itemize}
+\item Area 10 m$^2$ - 120 m$^2$
+\item Minimum distance between arena elements atleast 80 cm 
+\item Widespread service areas entailing robot movements
+\item Multiple paths between service areas
+\item Start and Finish areas
+\end{itemize}
 
-\subsection{Floor}
-The floor is made of some firm material. Examples include floors made of concrete, screed, timber, plywood, chipboard, laminated boards, linoleum, PVC flooring, or carpet. Some examples are illustrated in Figure \ref{fig:example_floors}. Floors may neither be made of loose material of any kind (gravel, sand, or any material which may damage the functioning of the robots' wheels) nor may such material be used on top of the floor. Liquids of any kind are not allowed. The floor may have spots of unevenness of up to 1 cm in any direction (clefts, rifts, ridges, etc.).
+
+\subsection{Service Areas} 
+\label{subsec: serviceareas}
+
+A service area indicates a location for a robot where tasks (e.g. picking or placing objects) have to be performed.
+Such a location is usually a table with a flat white top (see fig. \ref{fig:arena_example}), but can also be a rotating table, shelf, precise placement station or any other type needed for a specific task.
+In order to successfully reach a service area, robots must position themselves in front of the service area in a way that allows manipulation of the objects of interest. To enable robots to reach such a position, a rectangular area with 80 cm width must be kept free of obstacles (see fig. XX TODO). 
+
+The arena layout must define where the "front" of a table is.
+Figure \ref{fig:arena_map_annotated} gives an example for the definition of the position of each service area, marking them as WSx (Workstation x), SHx (Shelf x) and CBx (Conveyor Belt x). The orientation only indicates the direction of the service area. It does not specify the robot's heading, which may be chosen by teams according to their individual robot design.
+
+Tables that can be used from both sides (see fig. \ref{fig:arena_example}) are sometimes defined as two seperate workstations (e.g. WS5 & WS6). However, manipulation of a service area requires the robot to have its center in the rectangular area defined in fig. XX TODO. This means that manipulation of the opposite service area is NOT allowed (see \ref{ssec:ManipulationZone}), even though it would be physically possible.
+This rule also applies to the two positions for the rotating table (CB1 and CB2).
+This makes smaller physical layouts possible that still provide the ability to create complex navigation challenges due to the amount of locations to visit.
+
+Two special service areas are the START and FINISH positions. Both are rectangular areas for the robot to be positioned at the start or the end of a run. The service areas are marked using tape that may be crossed and are optionally equipped with light barriers used for time keeping.
+
+
+\subsection{Walls and virtual Walls}
+\label{subsec: Walls and virtual Walls}
+
+The arena consists of outer and inner walls used to build structures, create obstacles or function as protection barriers for teams and viewers. Walls may be either physical (plank) or virtual (tape).
+The arena is completely enclosed by walls (both types!), meaning robots are not allowed to exit the arena during a run.
+
+The height of a physical wall must be not less than 20 cm and no more than 40 cm.
+Most walls have a uniform main color (white), but may be enforced by metal (aluminum framework) and decorated with sponsor logos or ads.
+
+Virtual walls are made of red and white tape (Tesa signal red/white) of 5 cm width. This tape may never be crossed during a run and is mainly used to close gaps in the physical outside walls.
+
+\begin{figure} [h!]
+\centering
+\includegraphics[width= 0.7\textwidth ]{./images/general_rules/barrier_tapes_in_china15.jpg}
+\caption{Example of barrier tape used during \RC 2015. The red/white tape is used to indicate virtual walls , while the yellow/black one denotes a virtual fence.}
+\label{fig:walls_and_virt_walls}
+\end{figure}
+
+Figure \ref{fig:walls_and_virt_walls} also shows black and yellow tape (Tesa signal black/yellow). 
+This tape is referred to as 'Barrier Tape' and marks virtual fences. 
+Such tapes are mainly used inside the arena to add obstacles.
+
+
+\subsection{Obstacles}
+\label{subsec: Obstacles}
+
+In addition to the static arena elements, semi-dynamic obstacles may be placed inside the arena before a competition run begins. 
+The position of such obstacles is decided by the referees during the setup phase of the run and randomized between different run types.
+
+Obstacles may block paths partly or completely, as long as all active service areas are still reachable.
+There are three main obstacle placement types:
+
+\begin{itemize}
+\item \textbf{Blocking:} 
+A narrow section is completely blocked by the obstacle, which means that no robot can physically pass it ($<$ 20 cm).
+
+\item \textbf{Semi-Blocking:} 
+The obstacle reduces the distance between arena elements below the minimum width for a path. The path therefore counts as blocked, meaning that there must exist another valid path to all active service areas. Robots are still allowed to use all paths if they fit through the smaller gaps.
+
+\item \textbf{Non-Blocking:}
+The obstacle adds or enlarges an arena element but keeps all paths intact.
+\end{itemize}
+
+Obstacles can be either physical or virtual.
+Physical obstacles measure atleast 2 x 2 x 20 cm (l x b x h) and may be made of any non-transparent, firm material (wood, metal). Some examples are bins, shipping boxes and wall elements. Their color is not specified.
+All physical obstacles are treated like any other arena element during a run, including the rules for collisions.
+
+Virtual obstacles are marked using the Barrier Tape from section \ref{subsec: Walls and virtual Walls}. 
+These virtual fences recently have been introduced to the league, which is why collisions with them are treated differently (see REF SCORING).
+
+\subsection{Arena Element Specifications}
+\label{subsec: Arena Element Specifications}
+
+\subsubsection{Floor}
+The floor is made of some firm material. Examples include floors made of concrete, screed, timber, plywood, chipboard, laminated boards, linoleum, PVC flooring, or carpet. Some examples are illustrated in Figure \ref{fig:example_floors}. Floors may neither be made of loose material of any kind (gravel, sand, or any material which may damage the functioning of the robot's wheels) nor may such material be used on top of the floor. Liquids of any kind are not allowed. The floor may have spots of unevenness of up to 1 cm in any direction (clefts, rifts, ridges, etc.).
 
 \begin{figure} [h!]
 \begin{center}
-\subfloat[]{\includegraphics[height = 2cm]{./images/example_floor_1.jpg}} \hspace{0.1cm}
-\subfloat[]{\includegraphics[height = 2cm]{./images/example_floor_2.jpg}} \hspace{0.1cm}
-\subfloat[]{\includegraphics[height = 2cm]{./images/example_floor_3.jpg}} \hspace{0.1cm}
-\subfloat[]{\includegraphics[height = 2cm]{./images/example_floor_4.jpg}} \hspace{0.1cm}
-\subfloat[]{\includegraphics[height = 2cm]{./images/example_floor_5.jpg}}\\
-\subfloat[]{\includegraphics[height = 2cm]{./images/example_floor_6.jpg}} \hspace{0.1cm}
-\subfloat[]{\includegraphics[height = 2cm]{./images/example_floor_7.jpg}} \hspace{0.1cm}
-\subfloat[]{\includegraphics[height = 2cm]{./images/example_floor_8.jpg}} \hspace{0.1cm}
-\subfloat[]{\includegraphics[height = 2cm]{./images/example_floor_9.jpg}} \hspace{0.1cm}
-\subfloat[]{\includegraphics[height = 2cm]{./images/example_floor_10.jpg}}
+\subfloat{\includegraphics[height = 2cm]{./images/general_rules/example_floor_1.jpg}} \hspace{0.1cm}
+\subfloat{\includegraphics[height = 2cm]{./images/general_rules/example_floor_2.jpg}} \hspace{0.1cm}
+\subfloat{\includegraphics[height = 2cm]{./images/general_rules/example_floor_3.jpg}} \hspace{0.1cm}
+\subfloat{\includegraphics[height = 2cm]{./images/general_rules/example_floor_4.jpg}} \hspace{0.1cm}
+\subfloat{\includegraphics[height = 2cm]{./images/general_rules/example_floor_5.jpg}}\\
+\subfloat{\includegraphics[height = 2cm]{./images/general_rules/example_floor_6.jpg}} \hspace{0.1cm}
+\subfloat{\includegraphics[height = 2cm]{./images/general_rules/example_floor_7.jpg}} \hspace{0.1cm}
+\subfloat{\includegraphics[height = 2cm]{./images/general_rules/example_floor_8.jpg}} \hspace{0.1cm}
+\subfloat{\includegraphics[height = 2cm]{./images/general_rules/example_floor_9.jpg}} \hspace{0.1cm}
+\subfloat{\includegraphics[height = 2cm]{./images/general_rules/example_floor_10.jpg}}
 \end{center}
 \caption{Examples of floors that can be used for \RCAW arenas.}
 \label{fig:example_floors}
 \end{figure}
 
-\subsection{Walls and Virtual Walls}
-
-The competition arena is partially surrounded by walls. Parts of the outer border that are not blocked by walls will be
-marked by red/white barrier tape and count as virtual walls. The height of the walls is not less than 20 cm and not
-more than 40 cm. One or more gates may be foreseen, where robots can enter or leave the arena. Gates are indicated by
-blue/wite tape, which may be crossed once per gate without penalty. Most of the walls are supposed to have a uniform
-color. Small visual elements like logos or advertisements may be placed on the walls. Virtual Walls are considered
-Walls regarding Penalization \ref{sec:ScoringAndRanking}.
 
 
-\subsection{Barrier Tape} \label{ssec:barrier_tape}
+\subsubsection{Workstations - TODO}
 
-The arena may include virtual fences marked by yellow/black on the floor, which are called Barrier Tapes (see Figure
-\ref{fig:barrier_tape}).
-
-The barrier tapes on the floor of the arena mark dangerous zones and are not to be crossed. The penalty for those
-collisions can be found under section \ref{sec:penalties}.
-
-The blue/white tape is not considered a barrier tape or a virtual wall but marks the service areas of 0 cm height (see
-Section \ref{ssec:serviceareas}).
-
-Blue/White tape is used to frame the entrance and exit area. The robot is allowed to cross this kind of barrier only at
-the beginning of a test to enter the arena and at the end for leaving. Consequently, each blue tape not belonging to a
-0cm service area may only be crossed once.
-
-
-\begin{figure} [h!]
-\centering
-\includegraphics[width= 0.7\textwidth ]{./images/barrier_tapes_in_china15.jpg}
-\caption{Example of barrier tape used during \RC 2015. The red/white tape is used to indicate virtual walls , while the yellow/black one denotes a virtual fence.}
-\label{fig:barrier_tape}
-\end{figure}
-
-
-
-\subsection{Entrance and Exit}
-If possible, the arena should have one entrance and one exit, which are equipped with laser barriers. These barriers are used for timekeeping by the referee box.
-
-
-\subsection{Obstacles}
-
-An arena defined for a particular test may foresee the use of obstacles. Obstacles may by passive (i.e. not able to
-relocate by themselves) or active (e.g. other robots). The size of obstacles should be not lesser than 10 cm x 10 cm x
-5 cm; there is no upper bound on the size, but it is guaranteed that the surface of the obstacle is opaque and not
-shiny. The details about the dynamic objects are not known before the competition and will be chosen by the OC or TC
-on-site. Examples for obstacles are trash bins, boxes, big aluminium profiles or even other robots.
-
-
-\subsection{Service Areas} \label{ssec:serviceareas}
-
-Arenas contain one or more service areas, which have specific purposes for a particular test.
-Examples include loading and unloading areas, rotating tables, storage areas, etc.
-Service areas may contain specific environment objects, such as shelves, racks, etc.
-They may be accessible from different locations, i.e. it might be possible to reach an area from two or more sides.
-Note that service areas can have different heights, which are fixed at the arena setup time and mantained for the entire cometition.
 However, from 2020 on and in order to make the competition more realistic, the heights of the service areas will be variable, allowing the OC to adjust them before each test run.
 If a service area has a height of zero cm, a tape will mark the area (see Figure \ref{fig:barrier_tape_0cm}).
 The tape will be on the floor and will be blue/white striped.
@@ -335,7 +369,32 @@ To facilitate the participation of newer teams that are yet focused on more basi
 \label{fig:ast_example}
 \end{figure}
 
-\subsection{Containers}
+
+
+
+
+%\subsection{Racks}
+%Service areas, e.g. loading and unloading areas, may foresee the use of racks. Objects to be delivered or removed from racks have to be placed or picked up from the top. The height of the racks should be not lesser than 5 cm and not more than 40 cm. The color for the top surface of racks is a bright uniform color such as white or light gray, unless a test specifies a different color. The top surface of the rack may be specially designed in order to serve specific purposes, e.g. holding objects.
+
+\subsubsection{Shelves}\label{sec:Shelves}
+Service areas may foresee the use of shelves and shelf units as depicted in Figure~\ref{fig:shelf}. Objects to be delivered or removed from shelves have to be placed or picked sideways. The height of the shelves should be not lesser than 5 cm and not be more than 40 cm.
+The shelf surface may be specially designed in order to serve specific purposes, e.g.\, holding objects.
+
+\begin{figure} [h!]
+\centering
+\subcaptionbox{A shelf with two levels and uniform colored surfaces.}{%
+  \includegraphics[width=0.4\textwidth ]{./images/shelf.jpg}%
+}%
+\subcaptionbox{Technical draw of shelf configuration.}{%
+  \includegraphics[width=0.4\textwidth ]{./images/SketchShelf.jpeg}%
+}
+\caption{Exemplary shelf and generic technical drawing.}%
+\label{fig:shelf}
+\end{figure}
+
+\subsubsection{Rotating Turntable - TODO}
+
+\subsubsection{Containers - Move to manipulation?}
 As in many industrial settings, the \RCAW environment may be equipped with several containers (see Figure~\ref{fig:containers}). They can store any kind of manipulation object defined in Section~\ref{ssec:ManipulationObjects}. Robots are supposed either to grasp one or multiple objects out of containers or to place previously grasped objects into them. Several containers can be present in the environment and are always associated with a service area. That means that the container itself will be placed on top and within the manipulation zone defined in Section~\ref{ssec:ManipulationZone}.
 It is also possible that more than one container is placed on top of a single service area.
 The constraints defined in Section~\ref{ssec:ManipulationZone} apply also to the containers.
@@ -351,24 +410,6 @@ Currently, a container itself does to not need to be manipulated or transported 
 \label{fig:containers}
 \end{figure}
 
-%\subsection{Racks}
-%Service areas, e.g. loading and unloading areas, may foresee the use of racks. Objects to be delivered or removed from racks have to be placed or picked up from the top. The height of the racks should be not lesser than 5 cm and not more than 40 cm. The color for the top surface of racks is a bright uniform color such as white or light gray, unless a test specifies a different color. The top surface of the rack may be specially designed in order to serve specific purposes, e.g. holding objects.
-
-\subsection{Shelves}\label{sec:Shelves}
-Service areas may foresee the use of shelves and shelf units as depicted in Figure~\ref{fig:shelf}. Objects to be delivered or removed from shelves have to be placed or picked sideways. The height of the shelves should be not lesser than 5 cm and not be more than 40 cm.
-The shelf surface may be specially designed in order to serve specific purposes, e.g.\, holding objects.
-
-\begin{figure} [h!]
-\centering
-\subcaptionbox{A shelf with two levels and uniform colored surfaces.}{%
-  \includegraphics[width=0.4\textwidth ]{./images/shelf.jpg}%
-}%
-\subcaptionbox{Technical draw of shelf configuration.}{%
-  \includegraphics[width=0.4\textwidth ]{./images/SketchShelf.jpeg}%
-}
-\caption{Exemplary shelf and generic technical drawing.}%
-\label{fig:shelf}
-\end{figure}
 
 \section{Design of Navigation Tasks} \label{sec:NavigationTasks}
 Every task has some navigation involved in it. Successful navigation will be awarded in every test according to Table \ref{tab:InstancePoints}. If not defined differently in the respective test, a navigation is successful when the robot reached the service area as defined in section \ref{ssec:Navigating}. 
