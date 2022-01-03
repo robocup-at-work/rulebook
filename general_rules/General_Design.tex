@@ -233,6 +233,7 @@ In order to successfully reach a service area, robots must position themselves i
 The arena layout must define where the "front" of a table is.
 Figure \ref{fig:arena_map_annotated} gives an example for the definition of the position of each service area, marking them as WSx (Workstation x), SHx (Shelf x) and CBx (Conveyor Belt x). The orientation only indicates the direction of the service area. It does not specify the robot's heading, which may be chosen by teams according to their individual robot design.
 
+
 Tables that can be used from both sides (see fig. \ref{fig:arena_example}) are sometimes defined as two seperate workstations (e.g. WS5 \& WS6). However, manipulation of a service area requires the robot to have its center in the rectangular area defined in fig. XX TODO. This means that manipulation of the opposite service area is NOT allowed (see \ref{ssec:ManipulationZone}), even though it would be physically possible.
 This rule also applies to the two positions for the rotating table (CB1 and CB2).
 This makes smaller physical layouts possible that still provide the ability to create complex navigation challenges due to the amount of locations to visit.
@@ -289,6 +290,40 @@ All physical obstacles are treated like any other arena element during a run, in
 
 Virtual obstacles are marked using the Barrier Tape from section \ref{subsec: Walls and virtual Walls}. 
 These virtual fences recently have been introduced to the league, which is why collisions with them are treated differently (see REF SCORING).
+
+\subsection{Collisions}
+\label{subsec: Collisions}
+
+
+For reasons of safety of people and property it is strictly unwanted for the robot to collide
+with any of the environmental objects. Only collisions of the manipulator with the upside of
+the service area are allowed. The different kind of collisions that can occur are defined in the
+following subsections. Any Collisions cause a point penalty that is explained in section \ref{sec:ScoringAndRanking}. 
+
+\textbf{Major Collision:}
+
+If the robot (platform and arm) collides with a static element of the environment or touches a red white barrier tape it is considered as a major collision. If the manipulator cause a fundemental change of the environment at the service area it is counted as a major collision, this could be for example moving an arbitrary surface off the workspace. A major collision results in the termination of a run and the arena can be restored. 
+
+\textbf{Minor Collision:}
+
+If the manipulator collides with an interaction element of the arena (RTT, PPT Cavities, upper level
+of Shelf) it is considered a minor collision. The only exception is the collision of the manipulator
+of the robot with the surface of the manipulation area.
+
+\textbf{Tape Collision:}
+
+Red/White Tape: 
+This tape represents a virtual wall. This wall shall not be crossed. A robot touching this tape is considered as a major collision.
+
+Yellow/Black Tape: 
+This tape is called Barrier Tape and represents a virtual fence. If any
+part of the robot touches a barrier tape, it is considered as a Barrier Tape Collision. Barrier
+Tape collision induce a point penalty proportional to the final points of the run. With
+each collision 5\% of the final points are deducted up to a maximum of 20\%. For beginner
+teams the option exists to opt-out of Barrier Tape and take a static deduction of 15\% of
+the final points of the run.
+
+
 
 \subsection{Arena Element Specifications}
 \label{subsec: Arena Element Specifications}
@@ -394,10 +429,12 @@ The top shelf surface may be specially designed in order to serve specific purpo
 
 \begin{figure}[h!]
 \centering
-\subcaptionbox{A shelf with two levels and uniform colored surfaces.}{%
+
+\caption{A shelf with two levels and uniform colored surfaces.}{%
   \includegraphics[width=0.4\textwidth ]{./images/shelf.jpg}%
 }%
-\subcaptionbox{Technical draw of shelf configuration.}{%
+
+\caption{Technical draw of shelf configuration.}{%
   \includegraphics[width=0.4\textwidth ]{./images/shelfUpdate.pdf}%
 }
 \caption{Exemplary shelf and generic technical drawing.}%
@@ -405,11 +442,11 @@ The top shelf surface may be specially designed in order to serve specific purpo
 \end{figure}
 
 
-
 \subsection{Rotating Table}\label{sec:Rotating Table}
 \martin{minimum and maximum speed has to be discussed}
 For the Rotating Table Test (RTT in Section~\ref{sec:Rotating Table Test}) a rotating table as depicted in Figure~\ref{fig:rottable} is used. 
 Objects to be removed from the table have to be placed with a boarder of $2\si{\centi\meter}$ in a so defined grasp region. The height of the table should be not lesser than $8\si{\centi\meter}$ and not be more than $12\si{\centi\meter}$. The diameter of the table should be not lesser than $50\si{\centi\meter}$ and not more than $100\si{\centi\meter}$. The table has to have a white surface colour. The rotating speed of the table depends on the diameter. The objects speed should be able to vary between $0.2 \si{\meter\per\second} \le v_{object} \le 0.5 \si{\meter\per\second}$ and has to be adjusted by the referees before a team starts its run to a fixed value. This is changed after each run to another random chosen value in this range. During the run of a team the speed is static. Example: For a table with diameter $d_{table}=1\si{\meter}$, objects are placed on a grasp region with the diameter $d_{object}=0.8\si{\meter}$ with $\omega_{table} = \frac{2 \cdot v_{objects} }{d_{grasp}}=\frac{2 \cdot 0.2}{0.8}=0.5\si{\radian\per\second}$ and with $n_{table}=\frac{\omega_{table}}{2 \cdot \pi}=\frac{0.5}{2 \cdot \pi}$ the minimum rotational speed of the table $n_{table}= 0.0796 \si{\per\second}$ (rounds per second) can be calculated.  
+
 
 \begin{figure}[h!]
 	\centering
@@ -457,6 +494,7 @@ Note, the constraints do not permit, that objects can be partially occluded depe
 \subsection{Manipulation Objects} \label{ssec:ManipulationObjects}
 The manipulation objects in \RCAW shall include a wide range of objects relevant in industrial applications of robotics. They eventually cover any raw material, (semi-)finished parts or products as well as tools and possibly operating materials required for manufacturing processes.
 \par
+
 The intention is to start with a simple set of objects of different shapes and colors. Every year, the spectrum shall then be widen in at least one aspect. 
 The initial set of objects includes basic standard screws and nuts with various sizes and masses as well as so called rocking objects as shown in Table~\ref{tab:manipulation_objects} and Table~\ref{tab:manipulation_objects_rockin}. Objects of one kind can slightly vary e.g. considering the surface and coating colour. 
 Rocking objects are spare parts from the KUKA you-bot platform often used in the competition, due to the fact that the KUKA you-bot and the rocking objects are not longer produced in future those objects will be replaced with other standard parts used in industry. 
@@ -477,28 +515,33 @@ For the placement of manipulation objects the following terms are used:
 \newcommand{\rowpadding}{0.4cm}
 \setlength\extrarowheight{\rowpadding}
 \begin{table}[p]
+
 \begin{tabular}{|c|c|c|m{8cm}|}
 \hline
 Object & Symbolic Description & Mass & Details \\
 \hline
+
 \imageView{./images/F20_20_B.jpg} & \texttt{F20\_20\_B} & 49 g & Small aluminium profile \newline
  Coating/Colour: black anodized\newline
  Height: 20 mm \newline
  Width: 20 mm \newline
  Length: 100 mm \\ [\rowpadding]
 \hline
+
 \imageView{./images/F20_20_G.jpg} & \texttt{F20\_20\_G} & 49 g & Small aluminium profile \newline
  Coating/Colour: gray anodized\newline
  Height: 20 mm \newline
  Width: 20 mm \newline
  Length: 100 mm \\ [\rowpadding]
 \hline
+
 \imageView{./images/S40_40_B.jpg} & \texttt{S40\_40\_B} & 186 g & Big aluminium profile\newline
  Coating/Colour: black anodized\newline
  Height: 40 mm \newline
  Width: 40 mm \newline
  Length: 100 mm \\ [\rowpadding]
 \hline
+
 \imageView{./images/S40_40_G.jpg} & \texttt{S40\_40\_G} & 186 g & Big aluminium profile \newline
  Coating/Colour:  gray anodized\newline
  Height: 40 mm \newline
@@ -506,16 +549,19 @@ Object & Symbolic Description & Mass & Details \\
  Length: 100 mm \\ [\rowpadding]
 \hline
 \imageView{./images/M20_100.jpg} & \texttt{M20\_100} & 296 g & Screw\newline
+
  ISO4014, DIN 931, CSN 021101, PN 82101, UNI 5737, EU 24014 \newline
  Coating/Colour: blank, black burnished \newline
  Size: M$20\times 100$ \\ [\rowpadding]
 \hline
 \imageView{./images/M20.jpg} & \texttt{M20} & 56 g & Small nut\newline
+
  ISO4032, DIN934,  CSN 021401, PN 82144, UNI 5588, EU 24032  \newline
  Coating/Colour: blank, black burnished \newline
  Size: M20 \\ [\rowpadding]
 \hline
 \imageView{./images/M30.jpg} & \texttt{M30} & 217 g & Big nut\newline
+
  ISO4032, DIN934,  CSN 021401, PN 82144, UNI 5588, EU 24032  \newline
  Coating/Colour: blank, black burnished \newline
  Size: M30 \\ [\rowpadding]
