@@ -429,14 +429,9 @@ The top shelf surface may be specially designed in order to serve specific purpo
 
 \begin{figure}[h!]
 \centering
-
-\caption{A shelf with two levels and uniform colored surfaces.}{%
-  \includegraphics[width=0.4\textwidth ]{./images/shelf.jpg}%
-}%
-
-\caption{Technical draw of shelf configuration.}{%
-  \includegraphics[width=0.4\textwidth ]{./images/shelfUpdate.pdf}%
-}
+\subfloat[A shelf with two levels and uniform colored surfaces.]{\includegraphics[width=0.4\textwidth ]{./images/shelf.jpg}}
+\hspace{0.5cm}
+\subfloat[Technical draw of shelf configuration.]{ \includegraphics[width=0.4\textwidth ]{./images/shelfUpdate.pdf} }
 \caption{Exemplary shelf and generic technical drawing.}%
 \label{fig:shelf}
 \end{figure}
@@ -447,13 +442,12 @@ The top shelf surface may be specially designed in order to serve specific purpo
 For the Rotating Table Test (RTT in Section~\ref{sec:Rotating Table Test}) a rotating table as depicted in Figure~\ref{fig:rottable} is used. 
 Objects to be removed from the table have to be placed with a boarder of $2\si{\centi\meter}$ in a so defined grasp region. The height of the table should be not lesser than $8\si{\centi\meter}$ and not be more than $12\si{\centi\meter}$. The diameter of the table should be not lesser than $50\si{\centi\meter}$ and not more than $100\si{\centi\meter}$. The table has to have a white surface colour. The rotating speed of the table depends on the diameter. The objects speed should be able to vary between $0.2 \si{\meter\per\second} \le v_{object} \le 0.5 \si{\meter\per\second}$ and has to be adjusted by the referees before a team starts its run to a fixed value. This is changed after each run to another random chosen value in this range. During the run of a team the speed is static. Example: For a table with diameter $d_{table}=1\si{\meter}$, objects are placed on a grasp region with the diameter $d_{object}=0.8\si{\meter}$ with $\omega_{table} = \frac{2 \cdot v_{objects} }{d_{grasp}}=\frac{2 \cdot 0.2}{0.8}=0.5\si{\radian\per\second}$ and with $n_{table}=\frac{\omega_{table}}{2 \cdot \pi}=\frac{0.5}{2 \cdot \pi}$ the minimum rotational speed of the table $n_{table}= 0.0796 \si{\per\second}$ (rounds per second) can be calculated.  
 
-
 \begin{figure}[h!]
 	\centering
-	\subcaptionbox{A rotationg table with some objects.}{%
+	\subfloat[A rotationg table with some objects.]{%
 		\includegraphics[width=0.4\textwidth,angle=0 ]{./images/rotating_table.jpg}%
 	}%
-	\subcaptionbox{Technical draw of rotating table.}{%
+	\subfloat[Technical draw of rotating table.]{%
 		\includegraphics[width=0.4\textwidth ]{./images/rotating_table_schematic.pdf}
 	}
 	\caption{Exemplary rotating table and generic technical drawing.}%
