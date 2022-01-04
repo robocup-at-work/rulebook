@@ -228,12 +228,19 @@ It should feature:
 
 A service area indicates a location for a robot where tasks (e.g. picking or placing objects) have to be performed.
 Such a location is usually a table with a flat white top (see fig. \ref{fig:arena_example}), but can also be a rotating table, shelf, precise placement station or any other type needed for a specific task.
-In order to successfully reach a service area, robots must position themselves in front of the service area in a way that allows manipulation of the objects of interest. To enable robots to reach such a position, a rectangular area with 80 cm width must be kept free of obstacles (see fig. XX TODO). 
+In order to successfully reach a service area, robots must position themselves in front of the service area in a way that allows manipulation of the objects of interest. To enable robots to reach such a position, a rectangular area with 80 cm width must be kept free of obstacles (see fig. \ref{fig:arena_service_area_free}). 
+
+\begin{figure} [h!]
+\centering
+\includegraphics[width= 0.8\textwidth ]{./images/general_rules/arena_service_area_free_space}
+\caption{Free Space in front of a service Area}
+\label{fig:arena_service_area_free}
+\end{figure}
 
 The arena layout must define where the "front" of a table is.
 Figure \ref{fig:arena_map_annotated} gives an example for the definition of the position of each service area, marking them as WSx (Workstation x), SHx (Shelf x) and CBx (Conveyor Belt x). The orientation only indicates the direction of the service area. It does not specify the robot's heading, which may be chosen by teams according to their individual robot design.
 
-Tables that can be used from both sides (see fig. \ref{fig:arena_example}) are sometimes defined as two seperate workstations (e.g. WS5 & WS6). However, manipulation of a service area requires the robot to have its center in the rectangular area defined in fig. XX TODO. This means that manipulation of the opposite service area is NOT allowed (see \ref{ssec:ManipulationZone}), even though it would be physically possible.
+Tables that can be used from both sides (see fig. \ref{fig:arena_example}) are sometimes defined as two seperate workstations (e.g. WS5 & WS6). However, manipulation of a service area requires the robot to have its center in the rectangular area defined in fig. \ref{fig:arena_service_area_free}. This means that manipulation of the opposite service area is NOT allowed (see \ref{ssec:ManipulationZone}), even though it would be physically possible.
 This rule also applies to the two positions for the rotating table (CB1 and CB2).
 This makes smaller physical layouts possible that still provide the ability to create complex navigation challenges due to the amount of locations to visit.
 
