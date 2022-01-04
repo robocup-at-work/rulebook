@@ -12,6 +12,11 @@
 \usepackage{hhline}
 \usepackage{rotating}
 \usepackage{tikz}
+\usepackage{siunitx} %to have a nicer unit representation
+
+% Comment these both out for serif font
+\usepackage{lmodern}
+\renewcommand\familydefault{\sfdefault}
 
 \usetikzlibrary{arrows}
 \usetikzlibrary{calc}
@@ -104,11 +109,13 @@
 
 
 %%%%%%%%%%%%%%%%%% Please add your personal makro here %%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\szug}[1]{\todo[color=green!40, inline]{[Sebastian] #1}}
-\newcommand{\marco}[1]{\todo[color=green!40, inline]{[Marco     ] #1}}
-\newcommand{\deebul}[1]{\todo[color=yellow!40, inline]{[Deebul     ] #1}}
-\newcommand{\christoph}[1]{\todo[color=teal!40, inline]{[Christoph     ] #1}}
-\newcommand{\all}[1]{\todo[color=red!40, inline]{[all     ] #1}}
+\newcommand{\szug}[1]{\todo[color=green!40, inline, caption={}]{[Sebastian] #1}}
+\newcommand{\marco}[1]{\todo[color=green!40, inline, caption={}]{[Marco     ] #1}}
+\newcommand{\deebul}[1]{\todo[color=yellow!40, inline, caption={}]{[Deebul     ] #1}}
+\newcommand{\christoph}[1]{\todo[color=teal!40, inline, caption={}]{[Christoph     ] #1}}
+\newcommand{\martin}[1]{\todo[color=green!50, inline, caption={}]{[Martin          ] #1}}
+\newcommand{\leander}[1]{\todo[color=orange!50, inline, caption={}]{[Leander          ] #1}}
+\newcommand{\all}[1]{\todo[color=red!40, inline, caption={}]{[all     ] #1}}
 
 %%%%%%%%%%%%%%%%%%%\renewcommand{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
