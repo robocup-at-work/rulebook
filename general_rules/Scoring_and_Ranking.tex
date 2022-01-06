@@ -49,30 +49,32 @@ Penalty points are given as follows, each time again the incident occurs:
 
 \section{Collisions}\label{sec:Collisions}
 
-For reasons of safety of people and property it is strictly unwanted for the robot to collide with any of the
-environmental objects. Only collisions of the manipulator with the upside of the service area are allowed. The
-different kind of collisions that can occur are defined in the following subsections.
+For reasons of safety of people and property it is strictly unwanted for the robot to collide
+with any of the environmental objects. Only collisions of the manipulator with the upside of
+the service area are allowed. The different kind of collisions that can occur are defined in the
+following subsections. Any Collisions cause a point penalty that is explained in section \ref{sec:ScoringAndRanking}.  
 
-\subsection{Minor Collision}
+\textbf{Major Collision:}
 
-If the robot collides with an interaction element of the arena (RTT, PPT Cavities, upper level of Shelf) it is
-considered a minor collision. The only exception is the collision of the manipulator of the robot with the surface of
-the manipulation area.
+If the robot (platform and arm) collides with a static element of the environment or touches a red/white barrier tape it is considered as a major collision. If the manipulator cause a fundemental change of the environment at the service area it is counted as a major collision, this could be for example moving an arbitrary surface off the workspace. A major collision results in the termination of the run and the arena can be restored. 
 
-\subsection{Major Collision}
 
-If the robot collides with a static element of the environment it is considered a major collision.
+\textbf{Minor Collision:}
 
-\subsection{Tape collisions}
-\label{subsec: Tape collisions}
+If the manipulator collides with an interaction element of the arena (RTT, PPT Cavities, upper level
+of Shelf) it is considered a minor collision. The only exception is the collision of the manipulator
+of the robot with the surface of the manipulation area.
+
+\textbf{Tape Collision:}
 
 \begin{description}
+  \item[Red/White Tape]: This tape represents a virtual wall with an infinitely height. This wall shall not be crossed. If any part of the robot (including the manipulator) is above the tape, it is considered a major collision. 
+%  This tape is typically used to limit the area of the arena.
   \item[Yellow/Black Tape]: This tape is called Barrier Tape and represents a virtual fence. If any part of the robot
   touches a barrier tape, it is considered a Barrier Tape Collision. Barrier Tape collision induce a point penalty
   proportional to the final points of the run. With each collision 5\% of the final points are deducted up to a maximum
   of 20\%. For beginner teams the option exists to opt-out of Barrier Tape and take a static deduction of 15\% of the
   final points of the run.
-  \item[Red/White Tape]: This tape represents a virtual wall with an infinitely height. This wall shall not be crossed. If any part of the robot (including the manipulator, excluding cables) is above the tape, it is considered a major collision. This tape is typically used to limit the area of the arena.
   \item[Marking Tape]: This tape is used as an universal marker for several purposes and therefore a collision does not matter. 
 \end{description}
 

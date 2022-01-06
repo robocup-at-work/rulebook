@@ -6,7 +6,140 @@ A test is specified in terms of it's purpose and focus, environment features and
 
 Each test has different variability dimensions. That is, which objects to be manipulated, how many locations to visit, from which height to grasp etc. The test instances for \YEAR are defined based on the general test description and can be seen in Section~\ref{sec:ScoringAndRanking}.
 
-\input{./tests/BNT}
+
+
+
+
+\section{General}
+
+
+Every test has some navigation to a service area involved in it. Successful navigation will be awarded in every test according to Table \ref{tab:InstancePoints}. A navigation to a service area is successful when the robot reached the service area as defined in section \ref{ssec:Navigating}. The rewarded points for navigation to a servie area will be only awarded once per service area.
+
+
+
+
+\section{Referee Box}
+\label{sec:refbox}
+The TC shall provide a referee box that supports the evaluation of the competition. It applies the time measuring, generates the tasks according to the chosen test configuration and monitors the
+competition. For this purpose each robot has to transmit a keep-alive signal every second during all phases (initialization, preparation, game, finish).
+
+The referee box
+\begin{enumerate}
+	\item announces the start of the preparation time,
+	\item communicates the task specifications,
+	\item starts each competition run, and
+	\item closes a successful run after reaching the endzone, or
+	\item aborts the run in case of a time lapse (indicated by a sound signal of the refbox).
+\end{enumerate}
+
+% Figure \ref{fig:refbox} depicts the progress of a competition run.
+When the robot is initialized, it starts immediately to transmit its beacon
+signal. The referee box answers with a state information. If the previous robot
+has left the arena, one of the referees starts the seconded phase by pushing a
+button. The referee box transmits a new state message that informs the robot
+about the beginning of the initialization phase. Inside the referee box a
+timer is started which initiates the start of the execution phase after
+transmitting the test parameters. During the run the robot is able to activate
+the external devices and to receive their status information. This run phase is
+terminated by a second timer that alerts after the duration defined in the
+instance table.
+%
+% \begin{figure}
+% \centering
+% \input{./tikz/sequence.tikz}
+% \caption{Sequence diagram of a complete competition run monitored by the referee box}
+% \label{fig:refbox}
+% \end{figure}
+% \par
+The TC provides a \aterm{Robot Operating System}{ROS} based interface of the referee box as well as
+a reference implementation.
+The Referee box implementation and its documentation is available under the following link:
+\begin{center}
+	\url{https://github.com/robocup-at-work/atwork-commander}
+	
+\end{center}
+
+
+
+% The publish/subscribe communication with the referee box and the external
+% devices have to be mapped on the following topics:\note{We should not talk about @Work being a game, e.g. "gamestate". (Sven and Fred)}
+
+% \begin{table}[h!]
+% \centering
+%  \begin{tabular}{|l|c|c|p{5.9cm}|}
+%  \hline
+%  Topic & Robot & Refbox & Remarks \\ \hline\hline
+%  {\tt /atwork/refbox/gamestate} & S & P & {\tt uint8 gamestate \newline
+% uint8 PREPERATION  = 0\newline
+% uint8 RUNNING\_TASK = 1\newline
+% uint8 PAUSE    = 2  \newline
+% uint8 END\_TASK     = 3\newline
+% uint8 STOP     = 4 }\\ \hline
+%   {\tt /atwork/refbox/beacon} & P & S & {\tt
+%   geometry\_msgs/Pose2D position \newline
+% string  current\_action } \\ \hline
+%    {\tt /atwork/refbox/taskinfo } & S & P & {\tt BNT[] bnt\_tasks \newline
+% BMT[] bmt\_tasks  \newline
+% BTT[] btt\_tasks } \\ \hline
+%    {\tt /atwork/refbox/[device]/command} & P & S & {\tt int8 state \newline
+% int8 ERROR        = -1 \newline
+% int8 NOT\_RUNNING  = 0 \newline
+% int8 RUNNING      = 1   }\\\hline
+%    {\tt /atwork/refbox/[device]/status  } & S & P & {\tt int8 state \newline
+% int8 ERROR        = -1 \newline
+% int8 NOT\_RUNNING  = 0 \newline
+% int8 RUNNING      = 1   }\\\hline
+%  \end{tabular}
+%   \label{tab:RefBoxTopics}
+%  \caption{Referee box topics}
+% \end{table}
+%
+% \begin{table}[h!]
+% \centering
+%  \begin{tabular}{|l|p{6.3cm}|}
+%  \hline
+%  Message types & Remarks \\ \hline\hline
+%  {\tt Atworkobject} & {\tt uint8 name\newline
+% uint8 F20\_20\_B = 0 \newline
+% uint8 F20\_20\_G = 1 \newline
+% uint8 S40\_40\_B = 2 \newline
+% uint8 S40\_40\_G = 3 \newline
+% uint8 M20\_100  = 4 \newline
+% uint8 M20      = 5 \newline
+% uint8 M30      = 6 \newline
+% uint8 R20      = 7 \newline
+% \revdel{uint8 V20      = 8} \newline
+% string destination }\\ \hline
+%
+%  {\tt BNT} &  {\tt Waypoint[] waypoints }\\ \hline
+%
+%  {\tt BMT} &  {\tt string   startplace \newline
+% string[] pickObjects \newline
+% string   destination }\\ \hline
+%
+%   {\tt BTT} &  {\tt string destination  \newline
+% AtworkObject[] objects }\\ \hline
+%    {\tt Waypoint  } &  {\tt string position \newline
+% uint8  orientation \newline
+% uint8  WEST  = 0 \newline
+% uint8  EAST  = 1 \newline
+% uint8  SOUTH = 2 \newline
+% uint8  NORTH = 3 \newline
+% uint32  duration  }\\\hline
+%  \end{tabular}
+%  \caption{Refere box auxiliary message types \todo{can we provide a repository where the message files are stored? And make it consistent with items in Table \ref{tab:manipulation_objects} and \ref{tab:manipulation_objects_rockin}. And add the missing test like PPT, CBT, etc.}}
+%   \label{tab:RefBoxAUX}
+% \end{table}
+%
+% Table~\ref{tab:RefBoxAUX} summarizes the auxiliary types embedded in
+% the referee box messages. A detailed description of the referee box-API is given in the
+% corresponding documentation available on \todo{???????????????}.
+
+\par
+The referee box visualizes the current state of the competition run, time measurements, the task specification and robot positions for visitors. Team information (name, affiliation, contact information) are given too in this context.
+
+
+%\input{./tests/BNT}
 
 \input{./tests/BMT}
 
