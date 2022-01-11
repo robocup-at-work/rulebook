@@ -223,25 +223,39 @@ Green electrical tape is considered as markup Tape. This tape can be used everyw
 
 \subsection{Tables}
 \label{subsec: Tables}
+
+\leander{discuss $\pm 10\si{\centi\meter}$ for height and width\\ TODO: add picture}
+
 A Table is considered as a Service Area.
 
-52. However, from 2020 on and in order to make the competition more realistic, the heights of the Tables will be variable, allowing the OC to adjust them before each test run.-> No???
--> every height of the Tables can have a margin of $2\si{\centi\meter}$
--> Table height “fixed”, but may change due to Arbitrary Surface (margin of $2\si{\centi\meter}$)
-Leander
+%52. However, from 2020 on and in order to make the competition more realistic, the heights of the Tables will be variable, allowing the OC to adjust them before each test run.-> No???
+%-> every height of the Tables can have a margin of $2\si{\centi\meter}$
+%-> Table height “fixed”, but may change due to Arbitrary Surface (margin of $2\si{\centi\meter}$)
+%Leander
 
-54. Define Table Size:
--> 80cm x 50cm x X cm (0, 5, 10, 15)
--> same size for shelf
-Leander
+%54. Define Table Size:
+%-> 80cm x 50cm x X cm (0, 5, 10, 15)
+%-> same size for shelf
+%Leander
 
-However, from 2020 on and in order to make the competition more realistic, the heights of the service Areas will be variable, allowing the OC to adjust them before each test run. TODO...
+%However, from 2020 on and in order to make the competition more realistic, the heights of the service Areas will be variable, allowing the OC to adjust them before each test run. TODO...
 
-If a Table has a height of zero cm, a green electrical Tape (see \ref{subsubsec: Markup Tape}) will mark the area.
-% (see Figure \ref{fig:barrier_tape_0cm}).
-%The tape will be on the floor and will be blue/white striped.
-A $0\si{\centi\meter}$-Table can be active or inactive. Active means, that the current test (see \ref{sec:tests}) includes $0\si{\centi\meter}$-Table.
-If the Table is active, the surrounded area may be covered by a white sheet of paper or thin wood. The material is not fixed.
+The typical table has a width (the side the robot approaches) of $80\si{\centi\meter}$ and a depth of $50\si{\centi\meter}$. The used table heights are $0\si{\centi\meter}$, $5\si{\centi\meter}$, $10\si{\centi\meter}$ and $15\si{\centi\meter}$. See further down in this section for more information about the $0\si{\centi\meter}$-workstation. See figure \ref{fig:ws} for illustration.
+ The tolerance for both the width and depth are $\pm 10\si{\centi\meter}$. 
+The tolerance for the heigth is $\pm 1 \si{\centi\meter}$. During a competition the table size is only fixed in the margin of $\pm 1 \si{\centi\meter}$, because of arbitrary surfaces (see \ref{subsec:Arbitrary_Surfaces_and_Decoys} for an explanation of arbitrary surfaces). 
+The table is closed between the bottom and the table top. That's why the tables can be used as a reference for navigation when the height is sufficient for the robot. Note that the height may change slightly with arbitrary surfaces during a competition and thus the table can sometimes be visible to the laser scanners and sometimes not. 
+ 
+\begin{figure} [h!]
+	\begin{center}
+		%\includegraphics[height = 2.5cm]{./images/barrier_tape_0cm_area.jpg}
+		\missingfigure[figwidth=6cm]{}	
+	\end{center}
+	\caption{different workstations}
+	\label{fig:ws}
+\end{figure}
+
+If a Table has a height of zero cm, a green electrical Tape (see \ref{subsec:Tapes}) will mark the area. A $0\si{\centi\meter}$-Table can be active or inactive. Active means, that the current test (see \ref{sec:tests}) includes $0\si{\centi\meter}$-Tables.
+If the Table is active, the surrounded area may be covered by a white sheet of paper, thin wood or arbitrary surface. The material is not fixed.
 The OC is responsible to replace it in case of pollution or tears. To reduce the tear, it is removed when the $0\si{\centi\meter}$-Table are not active. If the floor is white or the workstation shall have an Arbitrary Surface, no cover needs to be installed.
 $0\si{\centi\meter}$-Table may be crossed, and does not count as a collision. If the laid out white Surface is moved, it is not a collision.
 If the robot touches an Object while navigating, this will be handled as a collision. Examples for $0\si{\centi\meter}$-workstations are shown in figure \ref{fig:0cmws}.
@@ -251,12 +265,14 @@ If the robot touches an Object while navigating, this will be handled as a colli
 		%\includegraphics[height = 2.5cm]{./images/barrier_tape_0cm_area.jpg}
 		\missingfigure[figwidth=6cm]{}	
 	\end{center}
-	\caption{$0\si{\centi\meter}$-workstations}
+	\caption{$0\si{\centi\meter}$-workstations, TODO: 3 pictures: active ws, inactive ws and with }
 	\label{fig:0cmws}
 \end{figure}
 
 \subsection{Shelves}\label{sec:Shelves}
-A Shelf is considered as a Service Area. The integration of Shelves into tests is according the table \ref{tab:Instances}. Service Areas may foresee the use of shelves and shelf units as depicted in Figure~\ref{fig:shelf}. 
+\leander{additional discussion necessary: is the lower part of the shelf a $10\si{\centi\meter}$ workstation or is any other height also allowed? \\
+clarification necessary}
+A Shelf is considered as a Service Area. The integration of Shelves into tests is according the table \ref{tab:Instances}. Service Areas may foresee the use of shelves and shelf units as depicted in Figure~\ref{fig:shelf}. The lower part of the shelf is a $10\si{\centi\meter}$-workstation as specified in \ref{subsec: Tables}.
 
 Objects to be delivered or removed from shelves have to be placed or picked sideways. The height of the shelves should be not lesser than $5\si{\centi\meter}$ and not be more than $40\si{\centi\meter}$.
 
