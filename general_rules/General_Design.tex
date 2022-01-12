@@ -272,11 +272,10 @@ If the robot touches an Object while navigating, this will be handled as a colli
 \subsection{Shelves}\label{sec:Shelves}
 \leander{additional discussion necessary: is the lower part of the shelf a $10\si{\centi\meter}$ workstation or is any other height also allowed? \\
 clarification necessary}
+
+
 A Shelf is considered as a Service Area. The integration of Shelves into tests is according the table \ref{tab:Instances}. Service Areas may foresee the use of shelves and shelf units as depicted in Figure~\ref{fig:shelf}. The lower part of the shelf is a $10\si{\centi\meter}$-workstation as specified in \ref{subsec: Tables}.
-
-Objects to be delivered or removed from shelves have to be placed or picked sideways. The height of the shelves should be not lesser than $5\si{\centi\meter}$ and not be more than $40\si{\centi\meter}$.
-
-The workspace on the bottom shelf is considered like a standard workspace on a $10\si{\centi\meter}$ Table. The first $15 \si{\centi\meter}\pm 2\si{\centi\meter} $ has not to be covered by the top shelf. 
+The maximum height of the shelves should be not more than $40\si{\centi\meter}$. In the example shown in Figure~\ref{fig:shelf} the first $15 \si{\centi\meter}\pm 2\si{\centi\meter} $ are not covered by the top shelf. The length of free space can be changed during competition and can not be seen as mandatory. Therefore all teams has to consider special picking behaviour to avoid collision.  
 
 The top shelf surface may be specially designed in order to serve specific purposes, e.g.\, holding Objects. Objects to pic up are always placed on the bottom shelf, during the competition a placement of a delivered Object has to be done on the top shelf.  
 
@@ -293,11 +292,10 @@ The top shelf surface may be specially designed in order to serve specific purpo
 
 
 \subsection{Rotating Table}\label{sec:Rotating Table}
-\martin{minimum and maximum speed has to be discussed}
 A Rotating Table is considered as a Service Area. The integration of Rotating Tables into tests is according the table \ref{tab:Instances}.  A Rotating Table as depicted in Figure~\ref{fig:rottable} is used for these tests. The Objects placement is the same like in section \ref{ssec:ManipulationZone}, so the maximal depth for Objects is $20 \si{\centi\meter}$ and there is gap of $2\si{\centi\meter}$ to the border of the Rotating Table.
 
 
-The height of the Rotating Table should be not lesser than $8\si{\centi\meter}$ and not be more than $12\si{\centi\meter}$. The diameter of the Rotating Table should be not lesser than $50\si{\centi\meter}$ and not more than $100\si{\centi\meter}$. The Rotating Table has to have a white surface colour. The rotating speed depends on the diameter. The Objects speed should be able to vary between $0.2 \si{\meter\per\second} \le v_{object} \le 0.5 \si{\meter\per\second}$ and has to be adjusted by the referees before a team starts its run to a fixed value. This is changed after each run to another random chosen value in this range. During the run of a team the speed is static. Example: For a Rotating Table with diameter $d_{table}=1\si{\meter}$, Objects are placed on a grasp region with the diameter $d_{object}=0.8\si{\meter}$ with $\omega_{table} = \frac{2 \cdot v_{objects} }{d_{grasp}}=\frac{2 \cdot 0.2}{0.8}=0.5\si{\radian\per\second}$ and with $n_{table}=\frac{\omega_{table}}{2 \cdot \pi}=\frac{0.5}{2 \cdot \pi}$ the minimum rotational speed of the Rotating Table $n_{table}= 0.0796 \si{\per\second}$ (rounds per second) can be calculated.  
+The height of the Rotating Table should be not lesser than $8\si{\centi\meter}$ and not be more than $12\si{\centi\meter}$. The diameter of the Rotating Table should be not lesser than $50\si{\centi\meter}$ and not more than $100\si{\centi\meter}$. The Rotating Table has to have a white surface colour. The rotating speed depends on the diameter. The Objects speed should be able to vary between $5 \si{\centi\meter\per\second} \le v_{object} \le 20 \si{\centi\meter\per\second}$ and has to be adjusted by the referees before a team starts its run to a fixed value. This is changed after each run to another random chosen value in this range. During the run of a team the speed is static. Example: For a Rotating Table with diameter $d_{table}=1\si{\meter}$, Objects are placed on a grasp region with the diameter $d_{object}=0.8\si{\meter}$ with $\omega_{table} = \frac{2 \cdot v_{objects} }{d_{grasp}}=\frac{2 \cdot 0.2}{0.8}=0.5\si{\radian\per\second}$ and with $n_{table}=\frac{\omega_{table}}{2 \cdot \pi}=\frac{0.5}{2 \cdot \pi}$ the minimum rotational speed of the Rotating Table $n_{table}= 0.0796 \si{\per\second}$ (rounds per second) can be calculated.  
 
 \begin{figure}[h!]
 	\centering
@@ -384,7 +382,8 @@ In order to make the operating environment more realistic, the Service Areas can
 
 
 \subsection{Containers}
-As in many industrial settings, the \RCAW environment may be equipped with several Containers (see Figure~\ref{fig:containers}). The Containers are defined as industrial plastic stacking boxes size 2B, outer dimensions: $135 \times 160 \times 82  \si{\milli\meter}$, usable dimensions: $120 \times 125 \times 65  \si{\milli\meter}$  in red and blue (\href{https://www.amazon.de/gp/product/B0062TUUOE/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1}{example Container from amazon}). 
+As in many industrial settings, the \RCAW environment may be equipped with several Containers (see Figure~\ref{fig:containers}). The Containers are defined as industrial plastic stacking boxes size 2B, outer dimensions: $135 \times 160 \times 82  \si{\milli\meter}$, usable dimensions: $120 \times 125 \times 65  \si{\milli\meter}$  in red ca. RAL 3020 and blue ca. RAL 5015.
+% \href{https://www.amazon.de/gp/product/B0062TUUOE/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1}{example Container from amazon} (visited Januar 2022). 
 They can store any kind of Object defined in Section~\ref{ssec:ManipulationObjects}. Robots are supposed either to grasp one or multiple Objects out of Containers or to place previously grasped Objects into them. Several Containers can be present in the environment and are always associated with a Service Area. That means that the Container itself will be placed within the manipulation zone defined in Section~\ref{ssec:ManipulationZone}.
 It is also possible that more than one Container is placed at a single Service Area, but not multiple Containers of the same color.
 The constraints defined in Section~\ref{ssec:ManipulationZone} apply also to the Containers.
@@ -435,9 +434,11 @@ The Objects in \RCAW shall include a wide range of Objects relevant in industria
 
 The intention is to start with a simple set of Objects of different shapes and colors. Every year, the spectrum shall then be widen in at least one aspect. 
 The initial set of Objects includes basic standard screws and nuts with various sizes and masses as well as so called rocking Objects as shown in table~\ref{tab:manipulation_objects} and table~\ref{tab:manipulation_objects_rockin}. Objects of one kind can slightly vary e.g. considering the surface and coating colour. 
-Rocking Objects are spare parts from the KUKA you-bot platform often used in the competition, due to the fact that the KUKA you-bot and the rocking Objects are not longer produced in future those Objects will be replaced with other standard parts used in industry. 
+Rocking Objects are spare parts from the KUKA you-bot platform often used in the competition, due to the fact that the KUKA you-bot and the rocking Objects are not longer produced in future those Objects will be replaced with other standard parts used in industry as shown in Section~\ref{sec:new_objects}. 
 
-\textbf{REMARK:} In 2022 teams has the option to use a set of original rocking Objects or a set of 3D printed rocking Objects. The set of 3D printed Objects has to be printed in standard grey/silver colour using fine quality settings and PLA as printing material. An example is given with PLA Silver, RAL number 9006, thickness 1.75 or 2.85, not specified in detail (\href{https://www.amazon.de/dp/B07F44HYL6/ref=cm_sw_em_r_mt_dp_T9K6ARS1AHSMBR2B6SPS  }{example material from amazon}). Figure~\ref{fig:rocking_printed} shows an example of all rocking Objects printed with a fused filament fabrication (FFF) 3D printer. 
+\textbf{REMARK:} In 2022 teams has the option to use a set of original rocking Objects or a set of 3D printed rocking Objects. The set of 3D printed Objects has to be printed in standard grey/silver colour using fine quality settings and PLA as printing material. An example is given with PLA Silver ( ca. RAL 9006), thickness 1.75 or 2.85, not specified in detail.
+%\href{https://www.amazon.de/-/en/TINMORRY-1-75mm-Filament-Printer-Spool/dp/B089YX78N5/ref=sr_1_6?crid=ZTL2O0EL3B3B&keywords=pla%2Bfilament%2Bgrau%2Bral%2B9006&qid=1641982915&s=industrial&sprefix=pla%2Bfilament%2Bgrau%2Bral9006%2Cindustrial%2C114&sr=1-6&th=1 }{example material from amazon} (visited Januar 2022). 
+Figure~\ref{fig:rocking_printed} shows an example of all rocking Objects printed with a fused filament fabrication (FFF) 3D printer. 
 
 
 
@@ -559,12 +560,9 @@ Length: 45 mm \\ [\rowpadding]
 		\vspace{0.05\textwidth}
 		\subfloat[]{\includegraphics[width=0.8\textwidth]{./images/rockingPrinted2.jpg}}
 	\end{center}
-	\caption{Examplary 3D printed rocking Objects (bearing box, bearing, axis, distance\_tube, motor, plastic tube R20). Material:  PLA silver, 2.85mm. Printer: Ultimaker 3 extended. Printer settings: fine}
+	\caption{Examplary 3D printed rocking Objects (bearing box, bearing, axis, distance\_tube, motor, plastic tube R20). Material:  PLA silver ( ca. RAL 9006), 2.85mm. Printer: Ultimaker 3 extended. Printer settings: fine}
 	\label{fig:rocking_printed}
 \end{figure}
-
-
-
 
 
 
