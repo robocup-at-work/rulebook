@@ -567,22 +567,8 @@ Length: 45 mm \\ [\rowpadding]
 
 
 
-\lucas{Content of Grasping/Placing Objects will/should be moved to chapter 4}
 
-\subsection{Grasping Objects} \label{ssec:GraspingObjects}
-If not specified differently in a test, the following definition applies to decide if an Object counts as being grasped from a Service Area.
-\par
-An Object counts as grasped from a Service Area, when the Object was moved outside of the source Service Area. Outside means, that the vertical projection of the Object's convex hull does not touch the Service Area any more.
 
-\par
-The last point shall enable to let the robot pick up an Object in order to analyse its type, e.g. by holding it close to a camera on the robot.
-\par
-If the robot handles an Object, but does not fulfill all points above, the Object does not count as being grasped, and neither points for grasping a required Object, nor penalty points for grasping an unspecified Object are given. Still, if the Object drops to the ground or an uncontrolled collision occurs, the normal penalty points apply.
 
-\lucas{Content of Grasping/Placing Objects will/should be moved to chapter 4}
 
-\subsection{Placing Objects on Service Areas} \label{ssec:PlacingObjects}
-If not specified differently in a test, a Object counts as placed on a target Service Area if any part of the Object is touching the surface of the Service Area and the Object is not moving at the end of the run. An Objects does not count as placed when it is dropped (e.g. dropped from a height above $5\si{\centi\meter}$). This is to avoid that robots throw Objects and potentially harm people or property.
-\par
-The pose of the Object on the Service Area can be chosen freely by the robot.
 

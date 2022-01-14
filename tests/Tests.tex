@@ -39,7 +39,18 @@ The reward
 
 Every test has some navigation to a service area involved in it. Successful navigation will be awarded in every test according to Table \ref{tab:InstancePoints}. A navigation to a service area is successful when the robot reached the service area as defined in section \ref{ssec:Navigating}. The rewarded points for navigation to a servie area will be only awarded once per service area.
 
+\subsection{Grasping Objects} \label{ssec:GraspingObjects}
 
+An Object counts as successfully grasped, if the robot grasps the correct Object of the correct Service Area and transport it to his platform. 
+
+If the Objects falls down from the platform, the robot drops the Object to the floor or on top of the Manipulation Zone from a height higher than $5\si{\centi\meter}$ it is counted as an incorrect Object grasping. A robot is allowed to grasps an incorrect Object as long as the Object don't leave the Manipulation Zone with his complete form. This enables a robot to grasp an Object to examine the Object with a camera. If an incorrect Object grasped and moved out of the Manipulation Zone it is counted as an incorrect Object grasping.
+
+
+\subsection{Placing Objects} \label{ssec:PlacingObjects}
+
+An Object counts as successfully placed, if the robot places an correct Object to a Manipulation Zone of the correct Service Area. The pose of the Object on the Manipulation Zone can be chosen freely by the robot.
+
+The robot has to place the Object so that the Object is lying with his complete form inside the Manipulation Zone. It is not allowed that a placed Object touches another Object or Container at the Manipulation Zone and the placed Object has to standing still at the end of the run. The placed Object has to be place on top of the Manipulation Zone from a height lower than $5\si{\centi\meter}$. If one of these situations happens it is counted as an incorrect Object placing.
 
 
 \section{Referee Box}
