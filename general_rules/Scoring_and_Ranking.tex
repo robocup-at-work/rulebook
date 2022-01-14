@@ -68,9 +68,9 @@ of the robot with the surface of the manipulation area.
 \textbf{Tape Collision:}
 
 \begin{description}
-  \item[Red/White Tape]: This tape represents a virtual wall with an infinitely height. This wall shall not be crossed. If any part of the robot (including the manipulator) is above the tape, it is considered a major collision. 
+  \item[Red/White Tape]: This tape represents a Virtual Wall with an infinitely height. This wall shall not be crossed. If any part of the robot (including the manipulator) is above the tape, it is considered a major collision. 
 %  This tape is typically used to limit the area of the arena.
-  \item[Yellow/Black Tape]: This tape is called Barrier Tape and represents a virtual fence. If any part of the robot
+  \item[Yellow/Black Tape]: This tape is called Barrier Tape and represents a Virtual Obstacle. If any part of the robot
   touches a barrier tape, it is considered a Barrier Tape Collision. Barrier Tape collision induce a point penalty
   proportional to the final points of the run. With each collision 5\% of the final points are deducted up to a maximum
   of 20\%. For beginner teams the option exists to opt-out of Barrier Tape and take a static deduction of 15\% of the
@@ -172,8 +172,8 @@ In case of a tie, the OC will either schedule a deciding run or continue with a 
    &                             &          &       &       & 15 cm &       &        &       & 15 cm \\ \hhline{~----------}
 	 & Arbitrary surface           & RefBox   &       & 1     & 2     & 2     &        &       & 3     \\ \hline
 	 \multirow{3}{0.5cm}{\R{\centering Arena }{1.5cm}}
-	 & Obstacles (static)          & Referee  &       &       & 2     & 2     &        &       & 2     \\ \hhline{~----------}
-	 & Barrier tape                & Referee  &       & 2     &       & 1     &        &       & 2     \\ \hhline{~----------}
+	 & Physical Obstacles          & Referee  &       &       & 2     & 2     &        &       & 2     \\ \hhline{~----------}
+	 & Virtual Obstacles           & Referee  &       & 2     &       & 1     &        &       & 2     \\ \hhline{~----------}
    &                             &          &       &       &       &       &        &       &       \\ \hhline{-----------}
    \multirow{3}{0.5cm}{\R{\centering Grasping }{1.64cm}}
    & Shelf unit                  & RefBox   &       &       &       & 2     &        &       & 2     \\ \hhline{~----------}
