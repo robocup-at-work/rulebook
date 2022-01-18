@@ -224,10 +224,6 @@ Green electrical tape is considered as markup Tape. This tape can be used everyw
 \subsection{Tables}
 \label{subsec: Tables}
 
-\leander{discuss $\pm 10\si{\centi\meter}$ for height and width\\ TODO: add picture}
-
-A Table is considered as a Service Area.
-
 %52. However, from 2020 on and in order to make the competition more realistic, the heights of the Tables will be variable, allowing the OC to adjust them before each test run.-> No???
 %-> every height of the Tables can have a margin of $2\si{\centi\meter}$
 %-> Table height “fixed”, but may change due to Arbitrary Surface (margin of $2\si{\centi\meter}$)
@@ -240,24 +236,23 @@ A Table is considered as a Service Area.
 
 %However, from 2020 on and in order to make the competition more realistic, the heights of the service Areas will be variable, allowing the OC to adjust them before each test run. TODO...
 
-The typical table has a width (the side the robot approaches) of $80\si{\centi\meter}$ and a depth of $50\si{\centi\meter}$. The used table heights are $0\si{\centi\meter}$, $5\si{\centi\meter}$, $10\si{\centi\meter}$ and $15\si{\centi\meter}$. See further down in this section for more information about the $0\si{\centi\meter}$-workstation. See figure \ref{fig:ws} for illustration.
- The tolerance for both the width and depth are $\pm 10\si{\centi\meter}$. 
-The tolerance for the heigth is $\pm 1 \si{\centi\meter}$. During a competition the table size is only fixed in the margin of $\pm 1 \si{\centi\meter}$, because of arbitrary surfaces (see \ref{subsec:Arbitrary_Surfaces_and_Decoys} for an explanation of arbitrary surfaces). 
-The table is closed between the bottom and the table top. That's why the tables can be used as a reference for navigation when the height is sufficient for the robot. Note that the height may change slightly with arbitrary surfaces during a competition and thus the table can sometimes be visible to the laser scanners and sometimes not. 
+The tables normally used have a width (the side the robot approaches) of $80\si{\centi\meter}$ and a depth of $50\si{\centi\meter}$. In general terms, the table shall be big enough to contain a manipulation zone as described in section \ref{ssec:ManipulationZone}. The used table heights are $0\si{\centi\meter}$, $5\si{\centi\meter}$, $10\si{\centi\meter}$ and $15\si{\centi\meter}$. See further down in this section for more information about the $0\si{\centi\meter}$-workstation. See figure \ref{fig:ws} for illustration. 
+The tolerance for the heigth is $\pm 2 \si{\centi\meter}$. During a competition the table size is only fixed in the margin of $\pm 2 \si{\centi\meter}$, because of arbitrary surfaces (see \ref{subsec:Arbitrary_Surfaces_and_Decoys} for an explanation of arbitrary surfaces). 
+The table is closed between the bottom and the table top. That's why the tables can be used as a reference for navigation, when the height is sufficient for the robot. Note that the height may change slightly with arbitrary surfaces during a competition and thus the table can sometimes be visible to the laser scanners and sometimes not. 
  
 \begin{figure} [h!]
 	\begin{center}
 		%\includegraphics[height = 2.5cm]{./images/barrier_tape_0cm_area.jpg}
 		\missingfigure[figwidth=6cm]{}	
 	\end{center}
-	\caption{different workstations}
+	\caption{different workstations... TODO Leander}
 	\label{fig:ws}
 \end{figure}
 
-If a Table has a height of zero cm, a green electrical Tape (see \ref{subsec:Tapes}) will mark the area. A $0\si{\centi\meter}$-Table can be active or inactive. Active means, that the current test (see \ref{sec:tests}) includes $0\si{\centi\meter}$-Tables.
+If a Table has a height of $0\si{\centi\meter}$, a green electrical Tape (see \ref{subsec:Tapes}) will mark the area. A $0\si{\centi\meter}$-Table can be active or inactive. Active means, that the current test (see table \ref{tab:Instances}) includes $0\si{\centi\meter}$-Tables.
 If the Table is active, the surrounded area may be covered by a white sheet of paper, thin wood or arbitrary surface. The material is not fixed.
-The OC is responsible to replace it in case of pollution or tears. To reduce the tear, it is removed when the $0\si{\centi\meter}$-Table are not active. If the floor is white or the workstation shall have an Arbitrary Surface, no cover needs to be installed.
-$0\si{\centi\meter}$-Table may be crossed, and does not count as a collision. If the laid out white Surface is moved, it is not a collision.
+The OC is responsible to replace it in case of pollution or tears. To reduce the tear, it is removed when the $0\si{\centi\meter}$-Table is not active. If the floor is white or the workstation shall have an Arbitrary Surface, no cover needs to be installed.
+$0\si{\centi\meter}$-Table may be crossed and does not count as a collision. If the laid out white Surface is moved, it is not a collision.
 If the robot touches an Object while navigating, this will be handled as a collision. Examples for $0\si{\centi\meter}$-workstations are shown in figure \ref{fig:0cmws}.
 
 \begin{figure} [h!]
@@ -265,21 +260,16 @@ If the robot touches an Object while navigating, this will be handled as a colli
 		%\includegraphics[height = 2.5cm]{./images/barrier_tape_0cm_area.jpg}
 		\missingfigure[figwidth=6cm]{}	
 	\end{center}
-	\caption{$0\si{\centi\meter}$-workstations, TODO: 3 pictures: active ws, inactive ws and with }
+	\caption{$0\si{\centi\meter}$-workstations, TODO Leander 3 pictures: active ws, inactive ws and with }
 	\label{fig:0cmws}
 \end{figure}
 
 \subsection{Shelves}\label{sec:Shelves}
-\leander{additional discussion necessary: is the lower part of the shelf a $10\si{\centi\meter}$ workstation or is any other height also allowed? \\
-clarification necessary}
 
-
-A Shelf is considered as a Service Area. The integration of Shelves into tests is according the table \ref{tab:Instances}. Service Areas may foresee the use of shelves and shelf units as depicted in Figure~\ref{fig:shelf}. The lower part of the shelf is a $10\si{\centi\meter}$-workstation as specified in \ref{subsec: Tables}.
+The integration of Shelves into tests is according the table \ref{tab:Instances}. Service Areas may foresee the use of shelves and shelf units as depicted in Figure~\ref{fig:shelf}. The lower part of the shelf is a $10\si{\centi\meter}$-workstation as specified in \ref{subsec: Tables}.
 The maximum height of the shelves should be not more than $40\si{\centi\meter}$. In the example shown in Figure~\ref{fig:shelf} the first $15 \si{\centi\meter}\pm 2\si{\centi\meter} $ are not covered by the top shelf. The length of free space can be changed during competition and can not be seen as mandatory. Therefore all teams has to consider special picking behaviour to avoid collision.  
 
 The top shelf surface may be specially designed in order to serve specific purposes, e.g.\, holding Objects. Objects to pic up are always placed on the bottom shelf, during the competition a placement of a delivered Object has to be done on the top shelf.  
-
-
 
 \begin{figure}[h!]
 	\centering
@@ -292,7 +282,7 @@ The top shelf surface may be specially designed in order to serve specific purpo
 
 
 \subsection{Rotating Table}\label{sec:Rotating Table}
-A Rotating Table is considered as a Service Area. The integration of Rotating Tables into tests is according the table \ref{tab:Instances}.  A Rotating Table as depicted in Figure~\ref{fig:rottable} is used for these tests. The Objects placement is the same like in section \ref{ssec:ManipulationZone}, so the maximal depth for Objects is $20 \si{\centi\meter}$ and there is gap of $2\si{\centi\meter}$ to the border of the Rotating Table.
+The integration of Rotating Tables into tests is according the table \ref{tab:Instances}.  A Rotating Table as depicted in Figure~\ref{fig:rottable} is used for these tests. The Objects placement is the same like in section \ref{ssec:ManipulationZone}, so the maximal depth for Objects is $20 \si{\centi\meter}$ and there is gap of $2\si{\centi\meter}$ to the border of the Rotating Table.
 
 
 The height of the Rotating Table should be not lesser than $8\si{\centi\meter}$ and not be more than $12\si{\centi\meter}$. The diameter of the Rotating Table should be not lesser than $50\si{\centi\meter}$ and not more than $100\si{\centi\meter}$. The Rotating Table has to have a white surface colour. The rotating speed depends on the diameter. The Objects speed should be able to vary between $5 \si{\centi\meter\per\second} \le v_{object} \le 20 \si{\centi\meter\per\second}$ and has to be adjusted by the referees before a team starts its run to a fixed value. This is changed after each run to another random chosen value in this range. During the run of a team the speed is static. Example: For a Rotating Table with diameter $d_{table}=1\si{\meter}$, Objects are placed on a grasp region with the diameter $d_{object}=0.8\si{\meter}$ with $\omega_{table} = \frac{2 \cdot v_{objects} }{d_{grasp}}=\frac{2 \cdot 0.2}{0.8}=0.5\si{\radian\per\second}$ and with $n_{table}=\frac{\omega_{table}}{2 \cdot \pi}=\frac{0.5}{2 \cdot \pi}$ the minimum rotational speed of the Rotating Table $n_{table}= 0.0796 \si{\per\second}$ (rounds per second) can be calculated.  
