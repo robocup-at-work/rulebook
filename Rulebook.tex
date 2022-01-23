@@ -18,6 +18,11 @@
 \usepackage{lmodern}
 \renewcommand\familydefault{\sfdefault}
 
+% Glossary
+\usepackage[numberedsection, nogroupskip, nonumberlist, nopostdot]{glossaries}
+\makeglossaries
+\input{./glossary.tex}
+
 \usetikzlibrary{arrows}
 \usetikzlibrary{calc}
 \usetikzlibrary{fit}
@@ -170,6 +175,12 @@
 \label{cha: Future}
 \input{./general_rules/Future_Changes.tex}
 
+\renewcommand{\glsnamefont}[1]{\textbf{#1}}
+%\setlength{\glslistdottedwidth}{.3\linewidth}
+\glsaddall
+%\printglossary[style=long, title=Special Terms]
+%\printglossary[style=listdotted, title=Special Terms]
+\printglossary[style=altlist, title=Special Terms]
 \chapter{Appendix}
 \input{./appendix.tex}
 %\chapter{Open Source Award}
