@@ -27,10 +27,8 @@ There are no constraints regarding the size and weight of the used robots, but t
 
 The used batteries may not exceed 500Wh of capacity for safety. 300Wh of capacity is recommended. See subsection \ref{ssec:RobotBehaviorAndSafety} as well.\par 
 
-The maximum speed of the robots may not exceed 1.5 m/s. The robot should also be able to halt in a reasonable space on concrete floor.\par 
-\par
-All robots must have an emergency stop button. The emergency stop has to be a hard stop mechanism, that ensures that the energy transfer to all actuators is stopped immediately and the robot halts. The mechanism must be a red emergency stop button that is clearly visible, easily accessible and per wire attached to the robot. A wireless emergency stop button is optional but not sufficient.
-The OC may request the proof of a robot's safety (e.g. the correct operation of an emergency stop) anytime during the competition and exclude teams that cannot satisfy safety requirements.
+The maximum speed of the robots may not exceed 1.5 m/s. The robot should also be able to halt in a reasonable space on concrete floor.
+
 \par
 Electric, pneumatic, and hydraulic actuation mechanisms are permitted, provided that they are constructed and produced according to professional standards and meet safety constraints. Combustion engines and any kind of explosives are strictly forbidden. Robots may not pollute or harm their environment in any way, e.g. by loss of chemicals or oil, spilling liquids, or exhausting gases.
 \par
@@ -65,7 +63,21 @@ The TC may require that robots are equipped with a wireless communication device
 For safety the robots have to meet the constraints in section \ref{ssec:RobotDesignAndConstraints}. In general, all robots shall be operated with maximum safety in mind. Any robot operation must be such that a robot neither harms humans nor damages the environment. 
 The used batteries shall be handled with care and all team members must be educated in the correct usage, charging and storage of the batteries of the team. For lithium batteries appropriate storage bags must be used by the teams. The OC supplies a fire extinguisher for lithium batteries at the competition. If this is not sufficient for the used batteries of a team. The team is responsible for supplying an appropriate fire extinguisher by themselfs. The OC and TC control the observance of this rules.
 
+All robots must have an emergency stop button. The emergency stop has to be a hard stop mechanism, that ensures that the energy transfer to all actuators is stopped immediately and the robot halts. The mechanism must be a red emergency stop button that is clearly visible, easily accessible and per wire attached to the robot. A wireless emergency stop button is optional but not sufficient.
+The OC may request the proof of a robot's safety (e.g. the correct operation of an emergency stop) anytime during the competition and exclude teams that cannot satisfy safety requirements.
+
 When participating in a competition, the team may operate the robot only in their own team area, in the arenas provided (possibly constrained by a schedule assigning periods of time for exclusive use of the arena by a team or a group of teams), and in any other areas designated by the organizers for robot operation. Any operation of robots outside of these areas, e.g. in public areas or emergency paths, require prior permission by the OC.
+
+\textbf{Safety test procedure:}
+
+After all teams are registered and every team area is fixed. Each robot has to perform a safety test procedure. This will be included in the competition schedule given by the OC.
+\begin{itemize}
+	\item Inspection of the robot platform (sharp edges and general construction)
+	\item Description of the included safety developments by the team captain 
+	\item Test of emergency stop while standing still
+	\item Test of emergency stop while driving 
+	\item Test of emergency stop while manipulation
+\end{itemize}
 
 \clearpage
 
@@ -213,7 +225,7 @@ The yellow/black Tape (Tesa signal $5\si{\centi\meter}$ width) is considered as 
 
 \textbf{Markup Tape:}
 
-Green electrical tape is considered as markup Tape. This tape can be used everywhere, where it is useful. It is intended as a marker for the referees and teams and not for the robot. Therefore the color may deviate, but the color is not red or yellow to guarantee a clear difference to the other tapes. The tape is used to mark the START and FINISH area. Furthermore the tape can be used to mark the position of workstations (especially $0\si{\centi\meter}$) and Walls. The latter ones are useful for restoring the arena in case of a Major Collision.
+Green electrical tape is considered as markup Tape. This tape can be used everywhere, where it is useful. It is intended as a marker for the referees and teams and not for the robot. Therefore the color may deviate, but the color is not red or yellow to guarantee a clear difference to the other tapes. The tape is used to mark the START and FINISH area. Furthermore the tape can be used to mark the position of tables (especially $0\si{\centi\meter}$) and Walls. The latter ones are useful for restoring the arena in case of a Major Collision.
 
 
 \subsection{Tables}
@@ -231,7 +243,7 @@ Green electrical tape is considered as markup Tape. This tape can be used everyw
 
 %However, from 2020 on and in order to make the competition more realistic, the heights of the service Areas will be variable, allowing the OC to adjust them before each test run. TODO...
 
-The tables normally used have a width (the side the robot approaches) of $80\si{\centi\meter}$ and a depth of $50\si{\centi\meter}$. In general terms, the table shall be big enough to contain at least one manipulation zone as described in section \ref{ssec:ManipulationZone}. In general two manipulation zones are included in one table (one zone on each side of the table). The used table heights are $0\si{\centi\meter}$, $5\si{\centi\meter}$, $10\si{\centi\meter}$ and $15\si{\centi\meter}$. See further down in this section for more information about the $0\si{\centi\meter}$-workstation. See figure \ref{fig:ws} for illustration. 
+The tables normally used have a width (the side the robot approaches) of $80\si{\centi\meter}$ and a depth of $50\si{\centi\meter}$. In general terms, the table shall be big enough to contain at least one manipulation zone as described in section \ref{ssec:ManipulationZone}. In general two manipulation zones are included in one table (one zone on each side of the table). The used table heights are $0\si{\centi\meter}$, $5\si{\centi\meter}$, $10\si{\centi\meter}$ and $15\si{\centi\meter}$. See further down in this section for more information about the $0\si{\centi\meter}$-Table. See figure \ref{fig:ws} for illustration. 
 The tolerance for the heigth is $\pm 2 \si{\centi\meter}$. During a competition the table size is only fixed in the margin of $\pm 2 \si{\centi\meter}$, because of arbitrary surfaces (see \ref{subsec:Arbitrary_Surfaces_and_Decoys} for an explanation of arbitrary surfaces). 
 The table is closed between the bottom and the table top. That's why the tables can be used as a reference for navigation, when the height is sufficient for the robot. Note that the height may change slightly with arbitrary surfaces during a competition and thus the table can sometimes be visible to the laser scanners and sometimes not. 
  
@@ -240,28 +252,30 @@ The table is closed between the bottom and the table top. That's why the tables 
 		%\includegraphics[height = 2.5cm]{./images/barrier_tape_0cm_area.jpg}
 		\missingfigure[figwidth=6cm]{}	
 	\end{center}
-	\caption{different workstations... TODO Leander}
+	\caption{different tables... TODO Leander}
 	\label{fig:ws}
 \end{figure}
 
 If a Table has a height of $0\si{\centi\meter}$, a green electrical Tape (see \ref{subsec:Tapes}) will mark the area. A $0\si{\centi\meter}$-Table can be active or inactive. Active means, that the current test (see table \ref{tab:Instances}) includes $0\si{\centi\meter}$-Tables.
 If the Table is active, the surrounded area may be covered by a white sheet of paper, thin wood or arbitrary surface. The material is not fixed.
-The OC is responsible to replace it in case of pollution or tears. To reduce the tear, it is removed when the $0\si{\centi\meter}$-Table is not active. If the floor is white or the workstation shall have an Arbitrary Surface, no cover needs to be installed.
+The OC is responsible to replace it in case of pollution or tears. To reduce the tear, it is removed when the $0\si{\centi\meter}$-Table is not active. If the floor is white or the table shall have an Arbitrary Surface, no cover needs to be installed.
 $0\si{\centi\meter}$-Table may be crossed and does not count as a collision. If the laid out white Surface is moved, it is not a collision.
-If the robot touches an Object while navigating, this will be handled as a collision. Examples for $0\si{\centi\meter}$-workstations are shown in figure \ref{fig:0cmws}.
+If the robot touches an Object while navigating, this will be handled as a collision. Examples for $0\si{\centi\meter}$-Table are shown in figure \ref{fig:0cmws}.
+
+If the service area located on a table is just used for pic and place purpose it will be referenced as \iaterm{Service areas placed on $0\si{\centi\meter}$, $5\si{\centi\meter}$, $10\si{\centi\meter}$ and $15\si{\centi\meter}$-tables used for pic and place operations}{workstation}. 
 
 \begin{figure} [h!]
 	\begin{center}
 		%\includegraphics[height = 2.5cm]{./images/barrier_tape_0cm_area.jpg}
 		\missingfigure[figwidth=6cm]{}	
 	\end{center}
-	\caption{$0\si{\centi\meter}$-workstations, TODO Leander 3 pictures: active ws, inactive ws and with }
+	\caption{$0\si{\centi\meter}$-Table, TODO Leander 3 pictures: active ws, inactive ws and with }
 	\label{fig:0cmws}
 \end{figure}
 
 \subsection{Shelves}\label{sec:Shelves}
 
-The integration of Shelves into tests is according the table \ref{tab:Instances}. Service Areas may foresee the use of shelves and shelf units as depicted in Figure~\ref{fig:shelf}. The lower part of the shelf is a $10\si{\centi\meter}$-workstation as specified in \ref{subsec: Tables}.
+The integration of Shelves into tests is according the table \ref{tab:Instances}. Service Areas may foresee the use of shelves and shelf units as depicted in Figure~\ref{fig:shelf}. The lower part of the shelf is a $10\si{\centi\meter}$-table as specified in \ref{subsec: Tables}.
 The maximum height of the shelves should be not more than $40\si{\centi\meter}$. In the example shown in Figure~\ref{fig:shelf} the first $15 \si{\centi\meter}\pm 2\si{\centi\meter} $ are not covered by the top shelf. The length of free space can be changed during competition and can not be seen as mandatory. Therefore all teams has to consider special picking behaviour to avoid collision.  
 
 The top shelf surface may be specially designed in order to serve specific purposes, e.g.\, holding Objects. Objects to pic up are always placed on the bottom shelf, during the competition a placement of a delivered Object has to be done on the top shelf.  
@@ -349,7 +363,7 @@ In order to successfully reach a Service Area, robots must position themselves i
 The arena layout must define where the "front" of a table is.
 Figure \ref{fig:arena_map_annotated} gives an example for the definition of the position of each Service Area, marking them as WSx (Workstation x), SHx (Shelf x) and RTx (Rotating Table x). The orientation only indicates the direction of the Service Area. It does not specify the robot's heading, which may be chosen by teams according to their individual robot design.
 
-Tables that can be used from both sides (see fig. \ref{fig:arena_example}) are sometimes defined as two seperate workstations (e.g. WS5 \& WS6). However, manipulation of theses Service Area requires the robot to have its center in the rectangular area defined in fig. XX TODO. This means that manipulation of the opposite Service Area is NOT allowed (see \ref{ssec:ManipulationZone}), even though it would be physically possible.
+Tables that includes Service Areas which can be used from both sides (see fig. \ref{fig:arena_example}) are defined as two seperate workstations (e.g. WS5 \& WS6). However, manipulation of theses Service Area requires the robot to have its center in the rectangular area defined in fig. XX TODO. This means that manipulation of the opposite Service Area is NOT allowed (see \ref{ssec:ManipulationZone}), even though it would be physically possible.
 
 This rule also applies to the two positions for the Rotating table (RT1 and RT2).
 This makes smaller physical layouts possible that still provide the ability to create complex navigation challenges due to the amount of locations to visit.
