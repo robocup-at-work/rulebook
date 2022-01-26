@@ -13,9 +13,14 @@ The actual competition currently includes a total of 7 tests.
 These are spread across available competition days, with test having time buffers in between each other.
 An example for the schedule can be found here: \url{https://atwork.robocup.org/rc2021/}.
 As on site events have tighter schedules and additionally require teams to prepare everything for an unknown environment, there will usually only be two setup and four competition days, maybe even less.
-Teams should prepare for something like fig. REF. 
+Teams should prepare for something like fig. \ref{fig:example_schedule}. 
 
-TODO ADD TABLE 
+\begin{figure}[h!]
+\centering
+\includegraphics[width= 0.8\textwidth ]{./images/competition/example_schedule}
+\caption{Example of a time schedule for a \RCAW competition.}
+\label{fig:example_schedule}
+\end{figure}
 
 Team leaders are required to announce wether their team likes to participate in a test 1 hour prior to the start time to allow the OC to plan the schedule and create scoring sheets.
 
@@ -26,7 +31,11 @@ Rules similar to motorsports apply: The robot must not be worked on or changed i
 serious damage must be repaired. This intends to encourage teams to watch other performances while still give teams the chance to remain in the competition. It is allowed to attach a charger to the robot.
 
 The location of the parc fermé will be towards the spectators for entertainment.
-The robots may (are wished to) be turned on and ready to perform, enabling teams to set robot arm positions and illumination for the visitors.
+The robots may (are wished to) be turned on and ready to perform, enabling teams to set robot arm positions and illumination for the visitors. 
+
+If the power management of a robot does not enable it to be turned on during the runs of other teams,
+the specific team may power-on and boot their robot once the run of the previous team has ended.
+They may not change or modify their robot in any way during this time (hardware and software).
 
 \section{Test Procedure}
 
@@ -41,7 +50,9 @@ The job of each ref is to ensure that the arena state before each performance is
 They also rate each performance. This ensures that the interests of every team are respected equally.
 
 A performance slot for a team includes a preparation phase, the run phase and the end phase.
+
 During the prep phase, teams are allowed to move their robot from the parc fermé to the defined start pose in the arena either by hand or by carefully driving manually. They should prepare their robot for their run and can therefore remote access the robot and/or make minor changes.
+It is explicitly forbidden to hardcode solutions for specific requirements of a test during this phase (e.g. position of obstacles). Also, if the robot passes and detects obstacles during this phase, they must be erased from the memory (e.g. clear costmap) unless they can be detected from the START location.
 
 The run phase begins once the start time is up or when the teamleader announces that the team is ready. 
 The task is then sent to the robot and from there on, the robot must act fully autonomously and must not be controlled by a human in any kind.
