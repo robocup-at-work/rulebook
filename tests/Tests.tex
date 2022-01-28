@@ -10,15 +10,17 @@
 Unless stated other, the following rules apply to all test types:
 
 \begin{itemize}
-\item The order in which the teams have to perform will be determined by a draw.
+\item The order in which the teams have to perform will be determined by a draw from the OC.
 \item Teams must not hardcode information gained from runs of previous teams.
 \item A single robot is used.
 \item The robot must not leave the arena.
-\item The maximum objects a robot is allowed to carry is THREE.
-\item The robot has to start and end at the respective arena location.
+\item The maximum objects a robot is allowed to carry is 3.
+\item The robot has to start and end at the respective arena location (START, FINISH).
 \item The robot will get the task specification from the referee box.
-\item Service areas count as reached as defined in section \ref{sec:ArenaDesign}.
-\item Manipulation tasks count as successful as defined in \ref{sec:Objects}.
+\item Reaching succesfully a Service Area is rewarded as defined in \ref{tab:InstancePoints}.
+\item The reward for reaching a Service Area will be only rewared once for a Service Area.
+\item Service Areas count as succesfully reached as defined in section \ref{sec:ArenaDesign}.
+\item Manipulation tasks count as successful as defined in \ref{ssec:GraspingObjects} and \ref{ssec:PlacingObjects}.
 \item The score for this test will be calculated as defined in \ref{sec:ScoringAndRanking}.
 \item Exact test specification is displayed in table \ref{tab:Instances}.
 \end{itemize}
@@ -42,15 +44,18 @@ Unless stated other, the following rules apply to all test types:
 
 An Object counts as successfully grasped, if the robot grasps the correct Object of the correct Service Area and transport it to his platform. 
 
-If the Objects falls down from the platform, the robot drops the Object to the floor or on top of the Manipulation Zone from a height higher than $5\si{\centi\meter}$ it is counted as an incorrect Object grasping. A robot is allowed to grasps an incorrect Object as long as the Object don't leave the Manipulation Zone with his complete form. This enables a robot to grasp an Object to examine the Object with a camera. If an incorrect Object grasped and moved out of the Manipulation Zone it is counted as an incorrect Object grasping.
+If the Objects falls down from the platform, the robot drops the Object to the floor or on top of the Manipulation Zone from a height higher than $5\si{\centi\meter}$ while the grasping rocess it is counted as an incorrect Object grasping. A robot is allowed to grasps an incorrect Object as long as the Object don't leave the Service Area with his complete form. This enables a robot to grasp an Object to examine the Object with a camera. If an incorrect Object grasped and moved out of the Manipulation Zone it is counted as an incorrect Object grasping.
 
 
 \subsection{Placing Objects} \label{ssec:PlacingObjects}
 
-An Object counts as successfully placed, if the robot places an correct Object to a Manipulation Zone of the correct Service Area. The pose of the Object on the Manipulation Zone can be chosen freely by the robot.
+An Object counts as successfully placed, if the robot places an correct Object to a Manipulation Zone of the correct Service Area. The pose of the Object on the Manipulation Zone can be chosen freely by the robot. The robot has to place the Object so that the Object is lying with his complete form inside the Manipulation Zone. 
 
-The robot has to place the Object so that the Object is lying with his complete form inside the Manipulation Zone. It is not allowed that a placed Object touches another Object or Container at the Manipulation Zone and the placed Object has to standing still at the end of the run. The placed Object has to be place on top of the Manipulation Zone from a height lower than $5\si{\centi\meter}$. If one of these situations happens it is counted as an incorrect Object placing.
+It is not allowed that a placed Object touches another Objects or Containers while the placing process at the Manipulation Zone and the placed Object has to standing still at the end of the run. It is not allowed to place the Object from a height higher than $5\si{\centi\meter}$ to the top of the Manipulation Zon. If one of these situations happens it is counted as an incorrect Object placing.
 
+\lucas{What if the object is placed/falls down with a height higher than 5cm? 0 points or even penalty}
+\lucas{placing otuside the Manipulation zone halfs the total rewarded points for suc placing}
+\lucas{touching another Objects/container halfs the total rewarded points for suc placing}
 
 \section{Referee Box}
 \label{sec:refbox}
