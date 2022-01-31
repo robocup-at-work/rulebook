@@ -296,7 +296,8 @@ The top shelf surface may be specially designed in order to serve specific purpo
 The integration of Rotating Tables into tests is according the table \ref{tab:Instances}.  A Rotating Table as depicted in Figure~\ref{fig:rottable} is used for these tests. The Objects placement is the same like in section \ref{ssec:ManipulationZone}, so the maximal depth for Objects is $20 \si{\centi\meter}$ and there is gap of $2\si{\centi\meter}$ to the border of the Rotating Table.
 
 
-The height of the Rotating Table should be not lesser than $8\si{\centi\meter}$ and not be more than $12\si{\centi\meter}$. The diameter of the Rotating Table should be not lesser than $50\si{\centi\meter}$ and not more than $100\si{\centi\meter}$. The Rotating Table has to have a white surface colour. The rotating speed depends on the diameter. The Objects speed should be able to vary between $5 \si{\centi\meter\per\second} \le v_{object} \le 20 \si{\centi\meter\per\second}$ and has to be adjusted by the referees before a team starts its run to a fixed value. This is changed after each run to another random chosen value in this range. During the run of a team the speed is static. Example: For a Rotating Table with diameter $d_{table}=1\si{\meter}$, Objects are placed on a grasp region with the diameter $d_{object}=0.8\si{\meter}$ with $\omega_{table} = \frac{2 \cdot v_{objects} }{d_{grasp}}=\frac{2 \cdot 0.2}{0.8}=0.5\si{\radian\per\second}$ and with $n_{table}=\frac{\omega_{table}}{2 \cdot \pi}=\frac{0.5}{2 \cdot \pi}$ the minimum rotational speed of the Rotating Table $n_{table}= 0.0796 \si{\per\second}$ (rounds per second) can be calculated.  
+The height of the Rotating Table should be not lesser than $8\si{\centi\meter}$ and not be more than $12\si{\centi\meter}$. The diameter of the Rotating Table should be not lesser than $50\si{\centi\meter}$ and not more than $100\si{\centi\meter}$. The Rotating Table has to have a white surface colour. The rotating speed of the table depends on the diameter so that the Objects speed is able able to vary between $5 \si{\centi\meter\per\second} \le v_{object} \le 20 \si{\centi\meter\per\second}$. This has to be adjusted by the referees before a team starts its run to a fixed value (some small variations in boarders of  technical feasibility are allowed). This is changed after each run to another random chosen value in this range. During the run of a team the speed is static. Example: For a Rotating Table with diameter $d_{table}=1\si{\meter}$, Objects are placed on a grasp region with the diameter $d_{object}=0.8\si{\meter}$ with $\omega_{table} = \frac{2 \cdot v_{objects} }{d_{grasp}}=\frac{2 \cdot 0.2}{0.8}=0.5\si{\radian\per\second}$ and with $n_{table}=\frac{\omega_{table}}{2 \cdot \pi}=\frac{0.5}{2 \cdot \pi}$ the minimum rotational speed of the Rotating Table $n_{table}= 0.0796 \si{\per\second}$ (rounds per second) can be calculated.  
+\martin{same speed for all teams or changed after each team??}
 
 \begin{figure}[h!]
 	\centering
@@ -314,7 +315,7 @@ The height of the Rotating Table should be not lesser than $8\si{\centi\meter}$ 
 
 \subsection{Precision Placement Tables}\label{sec:Precision Placement}
 
-The precision placement table as shown in Figure~\ref{fig:ppt_table} includes object-specific cavities as shown in the Figure~\ref{fig:ppt_tiles}. It is based on a standard $10\si{\centi\meter}$ table described in Section~\ref{subsec: Tables}. For each object used in the test, there will be one specific cavity. The cavity has the dimension of the object plus a $2 \si{\milli\meter}$ offset for each dimension. At most five cavities are used in the test. The cavities are in an random order on the table and are located within the standard manipulation zone defined in Figure~\ref{fig:manipulation_zone}. 
+The precision placement table as shown in Figure~\ref{fig:ppt_table} includes object-specific cavities tiles as shown in the Figure~\ref{fig:ppt_tiles}. It is based on a standard $10\si{\centi\meter}$ table described in Section~\ref{subsec: Tables}. For each object used in the test, there will be one specific cavity. The cavity has the dimension of the object plus a $2 \si{\milli\meter}$ offset for each dimension. At most five cavities are used in the test. The cavities are in an random order on the table and are located within the standard manipulation zone defined in Figure~\ref{fig:manipulation_zone}. One cavity tile has the dimensions of $140 \si{\milli\meter} \times 140 \si{\milli\meter} $ and each individual cavity has to have a boarder of $3\si{\milli\meter} \times 3\si{\milli\meter}$ as shown in Figure~\ref{fig:exampleCavity}. Placing five cavities on a standard $10\si{\centi\meter}$ table leaves a boarder of $5 \si{\centi\meter}$ on each side of the table.
 
 \begin{figure} [h!]
 	\begin{center}
@@ -336,10 +337,24 @@ The precision placement table as shown in Figure~\ref{fig:ppt_table} includes ob
 \end{figure}
 
 
-\begin{figure}
+
+\begin{figure} [h!]
 	\centering
-	\includegraphics[width=0.6\textwidth ]{./images/ppt_plattform.jpg}
-	\caption{The PPT platform including five cavity tiles}
+	\includegraphics[width= 0.4\textwidth ]{./images/ExampleCavity.jpg}
+	\caption{Example Cavity for F20\_B and G horizontal including $3\si{\milli\meter}$ boarder. }
+	\label{fig:exampleCavity}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\subfloat[The PPT platform including five cavity tile.]{%
+	\includegraphics[width=0.45\textwidth ]{./images/ppt_plattform.jpg}
+	}%
+	\hspace{0.05\textwidth}
+	\subfloat[Technical draw of Precision Placement table.]{%
+		\includegraphics[width=0.45\textwidth ]{./images/PPTtable.pdf}
+	}
+	\caption{Exemplary Precision Placement table and generic technical drawing.}%
 	\label{fig:ppt_table}
 \end{figure}
 
