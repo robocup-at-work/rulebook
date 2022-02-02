@@ -7,8 +7,7 @@ Due to the Covid-19 pandemic, the RoboCup 2021 will be held online.
 Therefore, paricipating teams must provide some infrastructure to enable the TC and OC to evaluate their performance.
 This is new for everyone and requires extended communication, which is why every team should join the official discord server:
 
-https://discord.gg/z6Yn6UvhxU
-
+\href{Official Discort Server}{https://discord.gg/z6Yn6UvhxU}
 Please participate in discussions and ask questions if you have any.
 
 \section{Arena Setup} 
@@ -64,7 +63,7 @@ To enable the committee to generate fair tasks for every team, teams must provid
 \item Images of the robot (all sides)
 \item Robot dimensions in meter
 \item Which tests the team intends to participate in
-\item Refbox launchfiles
+\item atWork-commande launchfiles
 \end{itemize}
 
 The folder must be named VRC2021-info-TEAM-NAME and shall contain the subfolders ARENA, OBSTACLES, OBJECT, ROBOT, TESTS, REFBOX. 
@@ -97,13 +96,13 @@ The RoCKIn objects (see table \ref{tab:manipulation_objects_rockin}) are no long
 \section{Task Generation} 
 \label{sec:VRCTaskGen}
 
-The new refbox implementation, which can be found here (https://github.com/robocup-at-work/atwork-commander), 
+The new atWork-commander implementation, which can be found here (https://github.com/robocup-at-work/atwork-commander), 
 gives great opportunity to generate individual tasks for every participating team.
 
 We advise all teams to use and test the new refbox. Teams must send configuration files for the new refbox with their arena design, so that the TC/OC can generate tasks for their arena. The config file for the arena shall contain the workstation names and heights and the available objects for a team. Teams may contact the committee via Discord if they face problems with this.  
 
-As normally the refbox would be provided by the OC onsite, no actual refbox will be used during the online competition.
-The OC will create the tasks for the tests using the official refbox and the parameters provided by the teams. 
+As normally the atWork-commander would be provided by the OC onsite, no actual atWork-commander will be used during the online competition.
+The OC will create the tasks for the tests using the official atWork-commander and the parameters provided by the teams. 
 For each test, a single bagfile (10s) will be recorded which contains all topics published by the atwork\_commander.
 
 Teams must be able to play a bagfile on an external computer, which is connected to the robot via WiFi.
