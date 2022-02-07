@@ -47,6 +47,8 @@ Penalty points are given as follows, each time again the incident occurs:
   20\%
 \end{itemize}
 
+\leander{add penalties for not successful place or at least a reference}
+
 \section{Collisions}\label{sec:Collisions}
 
 For reasons of safety of people and property it is strictly unwanted for the robot to collide
@@ -209,17 +211,19 @@ In case of a tie, the OC will either schedule a deciding run or continue with a 
    \hhline{~--------}
    \hline
 	 Correct service area reached                &   25   &   25   &  25    &   25   &  25    &   25   &   25   \\ \hline
-   Correct object grasping standard            &  100   &  100   & 100    &  100   &   0    &        &  100   \\
+   Correct object grasping           &    &    &     &    &     &        &    \\
+     \hspace{0.5cm} standard            &  100   &  100   & 100    &  100   &   0    &        &  100   \\
 	 \hspace{0.5cm} round table                  &        &        &        &        &        &  300   &  200   \\
 	 \hspace{0.5cm} PPT area                     &        &        &        &        &        &        &  200   \\
-	 \hspace{0.5cm} arbitrary surface            &        &  150   & 150    &  150   &        &        &  150   \\
+	 \hspace{0.5cm} arbitrary surface (tbdiscussed... reduce points)           &        &  150   & 150    &  150   &        &        &  150   \\
 	 \hspace{0.5cm} shelf upper level            &        &        &        &  150   &        &        &  150   \\
 	 \hspace{0.5cm} shelf lower level            &        &        &        &  300   &        &        &  300   \\ \hline
-   Correct object placing standard             &   75   &   75   &   75   &   75   &        &        &   75   \\
+   Correct object placing standard (tbdiscussed... increase, more than grasping to motivate the teams to implement placement with collision avoidance?)            &   75   &   75   &   75   &   75   &        &        &   75   \\
 	 \hspace{0.5cm} PPT area                     &        &        &        &        &  200   &        &  200   \\
 	 \hspace{0.5cm} shelf upper level            &        &        &        &  150   &        &        &  150   \\
 	 \hspace{0.5cm} shelf lower level            &        &        &        &  150   &        &        &  150   \\ \hline
-   Incorrect object placing                    & -100   & -100   & -100   & -100   & -100   &        & -100   \\
+   Incorrect object placing tbdiscussed... (wrong service area?)                   & -100   & -100   & -100   & -100   & -100   &        & -100   \\
+	Incorrect object placing tbdiscussed... (outside manipulation zone and/or touching other objects)                    & 50   & 50   & 50   & 50   & 50   &        & 50   \\
    Incorrect object grasping                   &        & -100   & -100   & -100   &        & -100   & -100   \\
    Completing whole task                       &   75   &  100   &  150   &  250   &   50   &   75   &  300   \\ \hline\hline
    Maximum attainable points\newline (time bonus not included)
