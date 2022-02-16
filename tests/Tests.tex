@@ -48,7 +48,6 @@ A robot is allowed to grasps an incorrect Object as long as the Object don't lea
 
 If the Objects falls down from the platform, the robot drops the Object to the floor after leaving the Service Area or the Object falls on top of the Service Area from a height higher than $5\si{\centi\meter}$ while the grasping process it is counted as an Object Loss.
 
-\lucas{Is it allowed to touch another object or container, decoy with the manipulator while the grasping Process.}
 
 \subsection{Placing Objects} \label{ssec:PlacingObjects}
 
@@ -56,21 +55,19 @@ If the Objects falls down from the platform, the robot drops the Object to the f
 
 An Object counts as successfully placed, if the robot places an correct Object to a Manipulation Zone of the correct Service Area. The robot has to place the Object so that the Object is lying with his complete form inside the Manipulation Zone. The pose of the Object on the Manipulation Zone can be chosen freely by the robot.
 
-There is a Placement Deduction that will be subtracted from the points of the successfull Grasping. The Placement Deduction will we applied at the following situations, if multiple situations happen while the same placing process the Placement Deduction will applied only once.:
+There is a Placement Deduction that will be subtracted from the points of the successfull Grasping. The Placement Deduction will be applied at the following situations, if multiple situations happen while the same placing process the Placement Deduction will applied only once:
 
 \begin{itemize}
 	\item If the placed Object or the Manipulator touches another Object, Container or Decoy while the placing process at the Manipulation Zone 
 	\item If the placed Object is not lying with his complete form within the Manipulation Zone at the end of the placement process
 \end{itemize}
 
-The placement process starts when the Manipulator with the Object enters the Manipulation Zone  and ends when the placed Object doesn't move anymore and the Manipulator has left the Manipulation Zone. In thiese cases the Manipulation Zone has an infinte height.
+The placement process starts when the Manipulator with the Object enters the Manipulation Zone and ends when the placed Object doesn't move anymore and the Manipulator has left the Manipulation Zone. In these cases the Manipulation Zone has an infinte height.
 
 
 If an Object is placed from a height higher than $5\si{\centi\meter}$ to the top of the Manipulation Zone it is considered as an Object Loss and no points are given for a successfull Placing.
 
-If a placed Object is either incorrect or the corresponding Service Area is incorrect the Placement is considered as an Incorrect Placement. If at this Incorrect Placement a Placement Deductions occurs then the amount of points for the Placement Deduction will be added to the penalty of the Incorrect Placement.  
-\lucas{Penalty, Incorrect Placement?? Placement Deduction also aplly at incorrect Placement?}
-
+If a placed Object is either incorrect or the corresponding Service Area is incorrect, the Placement is considered as an Incorrect Placement. If at this Incorrect Placement a Placement Deductions occurs then no additional penalty points will be added to the Incorrect Placement penalty.
 
 \textbf{Shelf}
 
@@ -79,12 +76,17 @@ The Placement at the upper part of the Shelf has to be in the Manipulation Zone 
 
 \textbf{Precision Placement}
 
-At the Precision Placement Table it is allowed to poke with the Object in the Gripper to place the Object into the cavity. This  ensures the use of a force sensor for placing the Object into the cavity.
+A successfull Placement of the Object into the cavity will rewarded with a successfull Precision Placement. A successfull Precions Placement is if a  correct Object falls thorugh the correct cavity tile. If the Object is not falling down through the cavity but is lying at the end of the run at the correct cavity it will be rewarded with an successfull Cavity Tile Placement. However The Object has to be lying with his complete form within the correct cavity.
+
+If an Object is placed on the wrong cavity tile then no points are given and in this case there is also no incorrect Object Placing penalty as long as the Object has to be placed at this Precision Table. If an Object is placed on a Precision Table that shouldn't be placed there, then the incorrect Object Placement penalty will be apllied. 
+
+There are recovery stragedies allowed at the Precion Table to put the Objects into the cavity.
+For example it is allowed to poke with the Object in the Gripper to place the Object into the cavity. This  allows the use of a force sensor for placing the Object into the cavity.
 It is also allowed to move the Object on the cavity as long as the Object stays on the same cavity. This ensures that a movement of a Object over the complete Table is not allowed.
 
-A successfull Placement of the Object into the cavity will rewarded with a successfull Precision Placement. If the Object is not falling down through the cavity but is lying at the end of the run at the corect cavity it will be rewarded with an successfull Cavity Placement. However The Object has to be lying with his complete form within the correct cavity. 
+ 
 
-\lucas{Incorrect placement of the Object into/on the wrong cavity, 0points or penalty??}
+
 
 %\input{./tests/BNT}
 
