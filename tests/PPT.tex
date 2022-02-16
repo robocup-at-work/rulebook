@@ -4,12 +4,13 @@
 
 The \iaterm{Precision Placement Test}{PPT} requires high precision while detecting, grasping, transporting and placing objects. Three objects are initially placed on a 10cm service area and must be placed into the respective cavity on a precision placement table as described in Section~\ref{sec:Precision Placement}.
 
-The position of the cavities on the table is random, meaning robots must recognize the correct cavity for an object class. Objects must completely pass the table surface and must not be stuck in a cavity in order to be placed successful. It is allowed to perform recovery strategies if a robot can detect a stuck object.
-However, cavities must not be moved or damaged during this process.
+The position of the cavities on the table is random, meaning robots must recognize the correct cavity for an object class. Objects must completely pass the table surface to count as placed successfully.
+Some reduced placement points will be awarded if an object gets stuck on the correct tile but does not fall trough the hole.
+ 
+It is allowed to perform recovery strategies if a robot can detect objects that have not fallen through (e.g. force fitting, swiping, unstuck), but only if the respective object is already on the correct tile.
+It is not allowed to move or damage the cavities during this process.
 
 As navigation is not the focus of this test, the source location will be close to the precise placement table and no obstacles are placed inside the arena. The robot does not have to move to the FINISH location. The run ends once the third object has been successfully placed or a rule violation has been called by the referees.
-
-\martin{placement on the correct cavetie field gives points}
 
 %The same arena as for the Basic Manipulation Test is used. In case that the arena does not already include a modified service area as shown in Figure \ref{fig:ppt_plattform}, it will be added only for this particular test.
 %\paragraph{Purpose and Focus of the Test}

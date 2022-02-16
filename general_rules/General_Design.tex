@@ -373,7 +373,7 @@ A Service Area indicates a location for a robot where tasks (e.g. picking or pla
 \label{subsec:Service_Areas_General}
 
 
-Such a location is usually a Table with a flat white top (see fig. \ref{fig:arena_example}), but can also be a Rotating Table, Shelf, precise placement station or any other type needed for a specific task.
+Such a location is usually a Table with a flat white top (see fig. \ref{fig:arena_example}), commonly referred to as Workstation, but can also be a Rotating Table, Shelf, Precise Placement station or any other type needed for a specific task.
 In order to successfully reach a Service Area, robots must position themselves in front of the Service Area in a way that allows manipulation of the Objects of interest and the robot has to stand still. To enable robots to reach such a position, a rectangular area with $80\si{\centi\meter}$ width must be kept free of Obstacles (see fig. \ref{fig:arena_service_area_free}). 
 
 \begin{figure} [h!]
@@ -384,7 +384,7 @@ In order to successfully reach a Service Area, robots must position themselves i
 \end{figure}
 
 The arena layout must define where the "front" of a table is.
-Figure \ref{fig:arena_map_annotated} gives an example for the definition of the position of each Service Area, marking them as WSx (Workstation x), SHx (Shelf x) and RTx (Rotating Table x). The orientation only indicates the direction of the Service Area. It does not specify the robot's heading, which may be chosen by teams according to their individual robot design.
+Figure \ref{fig:arena_map_annotated} gives an example for the definition of the position of each Service Area, marking them as WSx (Workstation x), SHx (Shelf x), PPx (Precise Placement x)and RTx (Rotating Table x). The orientation only indicates the direction of the Service Area. It does not specify the robot's heading, which may be chosen by teams according to their individual robot design.
 
 Tables that includes Service Areas which can be used from both sides (see fig. \ref{fig:arena_example}) are defined as two seperate workstations (e.g. WS5 \& WS6). However, manipulation of theses Service Area requires the robot to have its center in the rectangular area defined in fig. XX TODO. This means that manipulation of the opposite Service Area is NOT allowed (see \ref{ssec:ManipulationZone}), even though it would be physically possible.
 
@@ -395,7 +395,7 @@ This makes smaller physical layouts possible that still provide the ability to c
 \subsection{Arbitrary Surfaces and Decoys}
 \label{subsec:Arbitrary_Surfaces_and_Decoys}
 
-In order to make the operating environment more realistic, the Service Areas can contain different kinds of Arbitrary Surfaces (Figure \ref{fig:ast_surface_example}) with industrial items as Decoys (Figure \ref{fig:ast_example}). The Arbitrary Surfaces don't have to be fixed mounted at the Service Areas. Examples of Arbitrary Surfaces can be different wood pattern, grass, alufoil, plexiglas etc. The integration of Arbitrary Surfaces and Decoys into tests is according the table \ref{tab:Instances}.
+In order to make the operating environment more realistic, the Service Areas may contain different kinds of Arbitrary Surfaces (Figure \ref{fig:ast_surface_example}) with industrial items as Decoys (Figure \ref{fig:ast_example}). The Arbitrary Surfaces don't have to be fixed mounted at the Service Areas. Examples of Arbitrary Surfaces can be different wood pattern, grass, alufoil, plexiglas etc. The integration of Arbitrary Surfaces and Decoys into tests is according the table \ref{tab:Instances}.
 
 \lucas{I can do new photos next week with even dimensions and additional with alufoil and plexiglas}
 \begin{figure}[h!]
