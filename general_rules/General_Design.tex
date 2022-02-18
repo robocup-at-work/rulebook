@@ -126,7 +126,7 @@ It should feature:
 \textbf{START and FINISH area:}
 \label{subsubsec: Start and Goal Area}
 
-One or two parts of the arena are separated with marking Tape and considered as START and FINISH area. The START and FINISH area can be the same or two independent areas. The robot may leave the START area and enter the FINISH area only once. An area is leaved or entered when more than $50\%$ of the robot crossed the marking Tape. In figure \ref{fig:tapeconfig} an exemplary Tape configuration is shown.
+One or two parts of the arena are separated with marking Tape and considered as START and FINISH area. The START and FINISH area can be the same or two independent areas. The robot may leave the START area and enter the FINISH area only once. The START/FINISH area is leaved/entered when the robot completely cross the corresponding Marking Tape. In figure \ref{fig:tapeconfig} an exemplary Tape configuration is shown. As soon as the robot enters the FINISH area or re-enters the START area the run ends.
 
 \begin{figure} [h!]
 	\begin{center}
@@ -169,7 +169,7 @@ The floor is made of some firm material. Examples include floors made of concret
 The arena consists of outer and inner Walls used to build structures, create obstacles or function as protection barriers for teams and viewers. Walls may be either physical (plank) or virtual (red/white Tape). Walls have an infinitely height.
 The arena is completely enclosed by Walls (both types possible), meaning robots are not allowed to exit the arena during a run. All types of Walls won't be changed during the competition. If the robot touches a Wall or Virtual Wall it results in a Major Collision.
 
-The height of a physical Wall must be not less than $20\si{\centi\meter}$ and no more than $40\si{\centi\meter}$.
+The height of a physical Wall must be not less than $20\si{\centi\meter}$ and not more than $40\si{\centi\meter}$.
 Most Walls have a uniform main color (white), but may be enforced by metal (aluminum framework) and decorated with sponsor logos or ads.
 
 Virtual Walls are made of red/white Tape and may never be crossed during a run. The arena can contain Walls and Virtual Walls inside.
@@ -185,7 +185,7 @@ Virtual Walls are made of red/white Tape and may never be crossed during a run. 
 \label{subsec: Obstacles}
 
 In addition to the static arena elements, semi-dynamic Obstacles may be placed inside the arena before a competition run begins. 
-The position of such Obstacles is decided by the referees during the setup phase of the run and randomized between different run types. Obstacles can be either physical or virtual.
+The position of such Obstacles is decided by the TC during the setup phase of the run and randomized between different run types. Obstacles can be either physical or virtual.
 
 Obstacles may block paths partly or completely, as long as all active Service Areas are still reachable.
 There are three main Obstacle placement types:
@@ -202,10 +202,10 @@ The Obstacle adds or enlarges an arena element but keeps all paths intact.
 \end{itemize}
 
 
-Physical Obstacles measure atleast $2\si{\centi\meter}$ x $2\si{\centi\meter}$ x $20\si{\centi\meter}$ (l x w x h) and may be made of any non-transparent, firm material (wood, metal). Some examples are bins, shipping boxes and Wall elements. Their color is not specified.
-All physical Obstacles are treated like any other arena element during a run, including the rules for collisions.
+Physical Obstacles (see figure \ref{fig:walls_and_virt_walls}) measure atleast $2\si{\centi\meter}$ x $2\si{\centi\meter}$ x $20\si{\centi\meter}$ (l x w x h) and may be made of any non-transparent, firm material (wood, metal). Some examples are bins, shipping boxes and Wall elements. Their color is not specified.
+All physical Obstacles are treated like any other arena element during a run, including the rules for collisions (Major Collision).
 
-Virtual Obstacles are marked using the yellow/black Tape from section \ref{subsec:Tapes}. The collisions with these Virtual Obstacles will treated different (see REF SCORING).
+Virtual Obstacles are marked using the yellow/black Tape from section \ref{subsec:Tapes}. The collisions with these Virtual Obstacles will treated as Tape Collision (see \ref{sec:penalties}).
 
 
 \subsection{Tapes}
@@ -217,7 +217,7 @@ The red/white Tape (Tesa signal $5\si{\centi\meter}$ width) is considered as a V
 
 \textbf{Yellow/black Tape:}
 
-The yellow/black Tape (Tesa signal $5\si{\centi\meter}$ width) is considered as a Virtual Obstacles and has an infinite height. The yellow/black Tape will be placed by the Referees before a run that contains Virtual Obstacles. Touching the yellow/black Tape is considered as a Tape Collision.
+The yellow/black Tape (Tesa signal $5\si{\centi\meter}$ width) is considered as a Virtual Obstacles and has an infinite height. The yellow/black Tape will be placed by the TC before a run that contains Virtual Obstacles. Touching the yellow/black Tape is considered as a Tape Collision.
 
 \begin{figure} [h!]
 	\centering
@@ -263,9 +263,9 @@ If a Table has a height of $0\si{\centi\meter}$, a green electrical Tape (see \r
 If the Table is active, the surrounded area may be covered by a white sheet of paper, thin wood or arbitrary surface. The material is not fixed.
 The OC is responsible to replace it in case of pollution or tears. To reduce the tear, it is removed when the $0\si{\centi\meter}$-Table is not active. If the floor is white or the table shall have an Arbitrary Surface, no cover needs to be installed.
 $0\si{\centi\meter}$-Table may be crossed and does not count as a collision. If the laid out white Surface is moved, it is not a collision.
-If the robot touches an Object while navigating, this will be handled as a collision. Examples for $0\si{\centi\meter}$-Table are shown in figure \ref{fig:0cmws}.
+If the robot touches an Object while navigating, this will be handled as a Major Collision. Examples for $0\si{\centi\meter}$-Table are shown in figure \ref{fig:0cmws}.
 
-If the service area located on a table is just used for pic and place purpose it will be referenced as \iaterm{Service areas placed on $0\si{\centi\meter}$, $5\si{\centi\meter}$, $10\si{\centi\meter}$ and $15\si{\centi\meter}$-tables used for pic and place operations}{workstation}. 
+If the service area located on a table is just used for pick and place purpose it will be referenced as \iaterm{Service areas placed on $0\si{\centi\meter}$, $5\si{\centi\meter}$, $10\si{\centi\meter}$ and $15\si{\centi\meter}$-tables used for pic and place operations}{workstation}. 
 
 \begin{figure} [h!]
 	\begin{center}
@@ -281,7 +281,7 @@ If the service area located on a table is just used for pic and place purpose it
 The integration of Shelves into tests is according the table \ref{tab:Instances}. Service Areas may foresee the use of shelves and shelf units as depicted in Figure~\ref{fig:shelf}. The lower part of the shelf is a $10\si{\centi\meter}$-table as specified in \ref{subsec: Tables}.
 The maximum height of the shelves should be not more than $40\si{\centi\meter}$. In the example shown in Figure~\ref{fig:shelf} the first $15 \si{\centi\meter}\pm 2\si{\centi\meter} $ are not covered by the top shelf. The length of free space can be changed during competition and can not be seen as mandatory. Therefore all teams has to consider special picking behaviour to avoid collision.  
 
-The top shelf surface may be specially designed in order to serve specific purposes, e.g.\, holding Objects. Objects to pic up are always placed on the bottom shelf, during the competition a placement of a delivered Object has to be done on the top shelf.  
+The top shelf surface may be specially designed in order to serve specific purposes, e.g.\, holding Objects. Objects for grasping are always placed on the bottom shelf. The placement of a delivered Object has to be done on the top shelf.  
 
 \begin{figure}[h!]
 	\centering
@@ -297,9 +297,9 @@ The top shelf surface may be specially designed in order to serve specific purpo
 The integration of Rotating Tables into tests is according the table \ref{tab:Instances}.  A Rotating Table as depicted in Figure~\ref{fig:rottable} is used for these tests. The Objects placement is the same like in section \ref{ssec:ManipulationZone}, so the maximal depth for Objects is $20 \si{\centi\meter}$ and there is gap of $2\si{\centi\meter}$ to the border of the Rotating Table.
 
 
-The height of the Rotating Table should be not lesser than $8\si{\centi\meter}$ and not be more than $12\si{\centi\meter}$. The diameter of the Rotating Table should be not lesser than $50\si{\centi\meter}$ and not more than $100\si{\centi\meter}$. The Rotating Table has to have a white surface colour. The rotating speed of the table depends on the diameter so that the Objects speed is able able to vary between $5 \si{\centi\meter\per\second} \le v_{object} \le 20 \si{\centi\meter\per\second}$. This has to be adjusted by the referees before a team starts its run to a fixed value (some small variations in boarders of  technical feasibility are allowed). This is changed after each run to another random chosen value in this range. During the run of a team the speed is static. Example: For a Rotating Table with diameter $d_{table}=1\si{\meter}$, Objects are placed on a grasp region with the diameter $d_{object}=0.8\si{\meter}$ with $\omega_{table} = \frac{2 \cdot v_{objects} }{d_{grasp}}=\frac{2 \cdot 0.2}{0.8}=0.5\si{\radian\per\second}$ and with $n_{table}=\frac{\omega_{table}}{2 \cdot \pi}=\frac{0.5}{2 \cdot \pi}$ the minimum rotational speed of the Rotating Table $n_{table}= 0.0796 \si{\per\second}$ (rounds per second) can be calculated.  
+The height of the Rotating Table should be not lesser than $8\si{\centi\meter}$ and not be more than $12\si{\centi\meter}$. The diameter of the Rotating Table should be not lesser than $50\si{\centi\meter}$ and not more than $100\si{\centi\meter}$. The Rotating Table has to have a white surface colour. The rotating speed of the table depends on the diameter so that the Objects speed is able to vary between $5 \si{\centi\meter\per\second} \le v_{object} \le 20 \si{\centi\meter\per\second}$. This has to be adjusted by the referees before a team starts its run to a fixed value (some small variations in boarders of  technical feasibility are allowed). This is changed after each run type to another random chosen value in this range. During the run of a team the speed is static. Example: For a Rotating Table with diameter $d_{table}=1\si{\meter}$, Objects are placed on a grasp region with the diameter $d_{object}=0.8\si{\meter}$ with $\omega_{table} = \frac{2 \cdot v_{objects} }{d_{grasp}}=\frac{2 \cdot 0.2}{0.8}=0.5\si{\radian\per\second}$ and with $n_{table}=\frac{\omega_{table}}{2 \cdot \pi}=\frac{0.5}{2 \cdot \pi}$ the minimum rotational speed of the Rotating Table $n_{table}= 0.0796 \si{\per\second}$ (rounds per second) can be calculated.  
 \martin{same speed for all teams or changed after each team??}
-
+\lucas{same speed for all teams}
 \begin{figure}[h!]
 	\centering
 	\subfloat[A Rotationg table with some Objects.]{%
@@ -316,10 +316,7 @@ The height of the Rotating Table should be not lesser than $8\si{\centi\meter}$ 
 
 \subsection{Precision Placement Tables}\label{sec:Precision Placement}
 
-The precision placement table as shown in Figure~\ref{fig:ppt_table} includes object-specific cavities tiles as shown in the Figure~\ref{fig:ppt_tiles}. It is based on a standard $10\si{\centi\meter}$ table described in Section~\ref{subsec: Tables}. For each object used in the test, there will be one specific cavity. The cavity has the dimension of the object plus a $2 \si{\milli\meter}$ offset for each dimension. At most five cavities are used in the test. The cavities are in an random order on the table and are located within the standard manipulation zone defined in Figure~\ref{fig:manipulation_zone}. One cavity tile has the dimensions of $140 \si{\milli\meter} \times 140 \si{\milli\meter} $.
-%and each individual cavity has to have a boarder of $3\si{\milli\meter} \times 3\si{\milli\meter}$ as shown in Figure~\ref{fig:exampleCavity}. 
-
-Placing five cavities on a standard $10\si{\centi\meter}$ table leaves a boarder of $5 \si{\centi\meter}$ on each side of the table.
+The precision placement table as shown in Figure~\ref{fig:ppt_table} includes object-specific cavities tiles as shown in the Figure~\ref{fig:ppt_tiles}. It is based on a standard $10\si{\centi\meter}$ table described in Section~\ref{subsec: Tables}. For each object used in the test, there will be one specific cavity. The cavity has the dimension of the object plus a $2 \si{\milli\meter}$ offset for each dimension. At most five cavities are used in the test. The cavities are in an random order on the table and are located within the standard manipulation zone defined in Figure~\ref{fig:manipulation_zone}. One cavity tile has the dimensions of $140 \si{\milli\meter} \times 140 \si{\milli\meter} $. Placing five cavities on a standard $10\si{\centi\meter}$ table leaves a boarder of $5 \si{\centi\meter}$ on each side of the table. The additional decoy cavity tiles will be chosen by the referees. For the Precision Placement Table only the RoboCup@Work Object Set will be used.
 
 \begin{figure} [h!]
 	\begin{center}
@@ -374,7 +371,7 @@ A Service Area indicates a location for a robot where tasks (e.g. picking or pla
 \label{subsec:Service_Areas_General}
 
 
-Such a location is usually a Table with a flat white top (see fig. \ref{fig:arena_example}), commonly referred to as Workstation, but can also be a Rotating Table, Shelf, Precise Placement station or any other type needed for a specific task.
+Such a location is usually a Table with a flat white top (see fig. \ref{fig:arena_example}), commonly referred to as Workstation (only in a case of a normal Table), but can also be a Rotating Table, Shelf, Precise Placement station or any other type needed for a specific task.
 In order to successfully reach a Service Area, robots must position themselves in front of the Service Area in a way that allows manipulation of the Objects of interest and the robot has to stand still. To enable robots to reach such a position, a rectangular area with $80\si{\centi\meter}$ width must be kept free of Obstacles (see fig. \ref{fig:arena_service_area_free}). 
 
 \begin{figure} [h!]
@@ -436,7 +433,7 @@ As in many industrial settings, the \RCAW environment may be equipped with sever
 They can store any kind of Object defined in Section~\ref{ssec:ManipulationObjects}. Robots are supposed either to grasp one or multiple Objects out of Containers or to place previously grasped Objects into them. Several Containers can be present in the environment and are always associated with a Service Area. That means that the Container itself will be placed within the manipulation zone defined in Section~\ref{ssec:ManipulationZone}.
 It is also possible that more than one Container is placed at a single Service Area, but not multiple Containers of the same color.
 The constraints defined in Section~\ref{ssec:ManipulationZone} apply also to the Containers.
-Currently, a Container itself does not need to be manipulated or transported by the robot.
+Currently, a Container itself does not need to be manipulated or transported by the robot. The position of the Containers will be decided by the referees before every run type.
 
 \begin{figure} [h!]
 	\begin{center}
@@ -455,7 +452,7 @@ Currently, a Container itself does not need to be manipulated or transported by 
 The manipulation zone defines the area where Objects can be placed. Thereby, the following constraints need to be satisfied:
 \begin{itemize}
 	\item The maximum depth of the manipulation zone is $20\si{\centi\meter}$.
-	\item The minimum distance between Objects to each other is $20\si{\centi\meter}$.
+	\item The minimum distance between Objects to each other is $2\si{\centi\meter}$.
 	\item The minimum distance of the beginning of the manipulation zone to a Wall is $10\si{\centi\meter}$.
 	\item There as an offset of $2\si{\centi\meter}$ from the border of the Service Area to the manipulation zone.
 \end{itemize}
@@ -485,7 +482,7 @@ The intention is to start with a simple set of Objects of different shapes and c
 The initial set of Objects includes basic standard screws and nuts with various sizes and masses as well as so called rocking Objects as shown in table~\ref{tab:manipulation_objects} and table~\ref{tab:manipulation_objects_rockin}. Objects of one kind can slightly vary e.g. considering the surface and coating colour. 
 Rocking Objects are spare parts from the KUKA you-bot platform often used in the competition, due to the fact that the KUKA you-bot and the rocking Objects are not longer produced in future those Objects will be replaced with other standard parts used in industry as shown in Section~\ref{sec:new_objects}. 
 
-\textbf{REMARK:} In 2022 teams has the option to use a set of original rocking Objects or a set of 3D printed rocking Objects. The set of 3D printed Objects has to be printed in standard grey/silver colour using fine quality settings and PLA as printing material. An example is given with PLA Silver ( ca. RAL 9006), thickness 1.75 or 2.85, not specified in detail.
+\textbf{REMARK:} In 2022 teams has the option to use a set of original rocking Objects or a set of 3D printed rocking Objects. The set of 3D printed Objects has to be printed in standard grey/silver colour using fine quality settings and PLA as printing material. An example is given with PLA Silver (ca. RAL 9006), thickness 1.75 or 2.85, not specified in detail.
 %\href{https://www.amazon.de/-/en/TINMORRY-1-75mm-Filament-Printer-Spool/dp/B089YX78N5/ref=sr_1_6?crid=ZTL2O0EL3B3B&keywords=pla%2Bfilament%2Bgrau%2Bral%2B9006&qid=1641982915&s=industrial&sprefix=pla%2Bfilament%2Bgrau%2Bral9006%2Cindustrial%2C114&sr=1-6&th=1 }{example material from amazon} (visited Januar 2022). 
 Figure~\ref{fig:rocking_printed} shows an example of all rocking Objects printed with a fused filament fabrication (FFF) 3D printer. 
 
@@ -530,19 +527,16 @@ Object & Symbolic Description & Mass & Details \\
  Length: 100 mm \\ [\rowpadding]
 \hline
 \imageView{./images/M20_100.jpg} & \texttt{M20\_100} & 296 g & Screw\newline
-
  ISO4014, DIN 931, CSN 021101, PN 82101, UNI 5737, EU 24014 \newline
  Coating/Colour: blank, black burnished \newline
  Size: M$20\times 100$ \\ [\rowpadding]
 \hline
 \imageView{./images/M20.jpg} & \texttt{M20} & 56 g & Small nut\newline
-
  ISO4032, DIN934,  CSN 021401, PN 82144, UNI 5588, EU 24032  \newline
  Coating/Colour: blank, black burnished \newline
  Size: M20 \\ [\rowpadding]
 \hline
 \imageView{./images/M30.jpg} & \texttt{M30} & 217 g & Big nut\newline
-
  ISO4032, DIN934,  CSN 021401, PN 82144, UNI 5588, EU 24032  \newline
  Coating/Colour: blank, black burnished \newline
  Size: M30 \\ [\rowpadding]
