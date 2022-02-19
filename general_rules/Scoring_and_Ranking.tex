@@ -1,8 +1,7 @@
 % !TEX root = ../Rulebook.tex
 \section{Scoring} \label{sec:ScoringAndRanking}
 
-For each test the calculation of scores is defined individually, comprising points for achieving certain subtasks,
-points for winning a run and penalty points.
+For each test the calculation of scores is defined individually, comprising points for achieving certain subtasks and penalty points.
 \par
 Each test provides a set of so-called feature variations encoding the overall variability of the test (e.g. whether
 obstacles can occur or not, number and type of manipulation objects). To enhance comparability among different test
@@ -19,31 +18,31 @@ Explanation of the terms:
 \end{itemize}
 
 \section{Simplifications}
-Teams may use simplifications, which will result in a reduction of scores for the given run. The simplifications may be
-chosen per run, but need to be announced to the referees at least one hour before the start of the run.
+Teams may use simplifications, which will result in a reduction of scores for the given run. The simplifications may be chosen per run, but need to be announced to the referees before the start of the run.
 
 \begin{itemize}
-	\item Use of external sensors: \hfill -200 points
-	\item Use of other external objects (e.g. to support localization): \hfill -100 points
-	\item Use of own loading or unloading areas: \hfill -200 points
-  \item Deactivation of Barrier Tape: -15\% of total points of the run
+%	\item Use of external sensors: \hfill -200 points
+%	\item Use of other external objects (e.g. to support localization): \hfill -100 points
+%	\item Use of own loading or unloading areas: \hfill -200 points
+  \item Deactivation of Virtual Obstacles (Barrier Tape): -15\% of total points of the run
 \end{itemize}
 
-Additional simplifications are specified for individual tests. These reductions do not count as penalty points. Teams
-that want to make use of the simplifications above have to announce them in advance of the competition to the TC. The
-TC might forbid the use of specific elements for simplification if these are not in the spirit of the league or may
-cause disproportionate advantages for a team.
+%Additional simplifications are specified for individual tests. These reductions do not count as penalty points. Teams
+%that want to make use of the simplifications above have to announce them in advance of the competition to the TC. The
+%TC might forbid the use of specific elements for simplification if these are not in the spirit of the league or may
+%cause disproportionate advantages for a team.
 
 \section{Penalties}
 \label{sec:penalties}
 Penalty points are given as follows, each time again the incident occurs:
 
 \begin{itemize}
-	\item A manipulation object is dropped to the floor outside of a manipulation area: \hfill -100 points
-	\item Delivering a wrong manipulation object to service area \hfill -50 points
+	\item Object Loss: \hfill -100 points
+	\item Incorrect Object Placement \hfill -50 points
+	\item Placement Deduction \hfill -50\%
 	\item Minor collision (see Section \ref{sec:Collisions}): \hfill -50 points
 	\item Major collision (see Section \ref{sec:Collisions}): \hfill -50 points and termination of the run
-  \item Barrier Tape collision (see Section \ref{sec:Collisions}): \hfill -5\% of total points of current run up till
+  \item Tape collision (see Section \ref{sec:Collisions}): \hfill -5\% of total points of current run up till
   20\%
 \end{itemize}
 
@@ -55,11 +54,11 @@ Penalty points are given as follows, each time again the incident occurs:
 For reasons of safety of people and property it is strictly unwanted for the robot to collide
 with any of the environmental objects. Only collisions of the gripper with the upside of
 the service areas are allowed while a Grasping or Placing process. In all collision cases the Virtual Walls/Obstacles have an infinite height. The different kind of collisions that can occur are defined in the
-following section. Any Collisions cause a point penalty that is explained in section \ref{sec:ScoringAndRanking}.  
+following section. Any Collisions cause a point penalty that is explained in section \ref{sec:penalties}.  
 
 \textbf{Major Collision:}
 
-If the robot (platform and manipulator) collides with a static element of the environment or touches a Virtual Wall it is considered as a major collision. An exception of this rule is when the cables of the manipulator touches the environment while the Grasping or Placing process. As stated before a collision with the  gripper with the upside of the service areas are allowed as long as there is no fundemental change of the environment at the service area. In this case it would be considered as a major collision. This could be for example moving an arbitrary surface off the workspace. A major collision results in the termination of the run and the arena can be restored afterwards. 
+If the robot (platform and manipulator) collides with a static element of the environment or touches a Virtual Wall it is considered as a major collision. An exception of this rule is when the cables of the manipulator touches the environment while the Grasping or Placing process. As stated before a collision with the  gripper with the upside of the service areas are allowed as long as there is no fundemental change of the environment at the service area. In this case it would be considered as a major collision. This could be for example moving an arbitrary surface off the workspace. A major collision results in the termination of the run and the arena can be restored afterwards. Causing a second Major Collision in run will end the run completely for this team.
 
 
 \textbf{Minor Collision:}
@@ -71,7 +70,7 @@ of Shelf) it is considered a minor collision. The only exception is the collisio
 \textbf{Tape Collision:}
 
 The yellow/black tape is called Barrier Tape and represents a Virtual Obstacle. If any part of the robot
-touches a barrier tape, it is considered a Barrier Tape Collision. Tape Collision induce a point penalty
+touches a barrier tape, it is considered a Tape Collision. Tape Collision induce a point penalty
 proportional to the final points of the run. With each collision 5\% of the final points are deducted up to a maximum
 of 20\%. For beginner teams the option exists to opt-out of Barrier Tape and take a static deduction of 15\% of the
 final points of the run.
@@ -95,17 +94,17 @@ A Collions with the Marking Tape will not be penalized.
 	\centering
   \begin{tabular}{|l|p{1cm}|p{1cm}|p{1.5cm}|}
 		\hline
-		Situation                                                & Minor & Major & Barrier Tape \\
+		Situation                                                & Minor & Major &  Tape \\
     \hline
     Collision with static elements of arena                  &       & X     &              \\
     Collision with dynamic elements of arena                 &       & X     &              \\
     Robot Body Collision with workstation                    &       & X     &              \\
-    Robot Manipulator Collision with manipulation zone       &       &       &              \\
+    Robot Manipulator Collision with top surface of manipulation zone       &       &       &              \\
     Robot Manipulator Collision with Round Table stopping it & X     &       &              \\
     Robot Manipulator Collision with PPT Cavity surface      & X     &       &              \\
     Robot Manipulator Collision with Shelf                   & X     &       &              \\
-		Yellow/Black Tape Collisions                             &       &       & X            \\
-    Red/White Tape Collisions                                &       & X     &              \\
+	Virtual Obstacle (Yellow/Black Tape) Collisions                             &       &       & X            \\
+    Virtual Wall (Red/White Tape) Collisions                                &       & X     &              \\
     %Blue/White Tape Collision (1st time gate)                &       &       &              \\
     %Blue/White Tape Collision (2nd time gate)                &       & X     &              \\
     Marking Tape & & & \\
