@@ -5,12 +5,12 @@ The competition is held in the form of so called tests.
 A test requires a robot to perform various abilities, including navigation, manipulation, task planning and autonomous decision making.
 Different kinds of tests each have their focus a current research field, e.g. picking moving objects or efficient task execution.
 
-All tests require a robot to autonomously navigate the arena defined in \ref{sec:ArenaDesign} without causing a collision. Each team can enter the arena before actual competitions to create a map of the environment and test their robot. The OC will organize time slots for each team respecting the amount of teams and available slots. Usually there will be some setup days that can be used only for training.
+All tests require a robot to autonomously navigate through the arena defined in \ref{sec:ArenaDesign} without causing a collision. Each team can enter the arena before actual competitions to create a map of the environment and test their robot. The OC will organize time slots for each team respecting the amount of teams and available slots. Usually there will be some setup days that can be used only for training.
 
 \section{Time Schedule}
 
 The actual competition currently includes a total of 7 tests.
-These are spread across available competition days, with test having time buffers in between each other.
+These are spread across available competition days with time buffers in between each other.
 An example for the schedule can be found here: \url{https://atwork.robocup.org/rc2021/}.
 As on site events have tighter schedules and additionally require teams to prepare everything for an unknown environment, there will usually only be two setup and four competition days, maybe even less.
 Teams should prepare for something like fig. \ref{fig:example_schedule}. 
@@ -42,12 +42,11 @@ They may not change or modify their robot in any way during this time (hardware 
 15 minutes before a competition slot the arena is set up for the upcoming test.
 Therefore, the position of each static arena element is checked and objects are placed on active 
 Service Areas.
-The TC will decide where dynamic arena elements are placed 
-and which orientation an object gets to create a starting setup for the test.
-\lucas{TC or referees decide dynamic elements and only orientation?} 
+The TC will decide where dynamic arena elements are placed. See table \ref{tab:Instances} for the different responsibilities of placing arena elements, Objects (Pose), Decoys, Containers etc.
+
 
 Each team must nominate one person which acts as a referee during all tests.
-The job of each ref is to ensure that the arena state before each performance is the same as the setup.
+The job of each ref is to ensure that the arena state before each performance is the same as the initial run setup.
 They also rate each performance. This ensures that the interests of every team are respected equally.
 
 A performance slot for a team includes a preparation phase, the run phase and the end phase.
@@ -114,13 +113,13 @@ Please access the github for detailed interface desciptions.
 \subsection{On Site}
 
 During a robocup, one unique test configuration is created and being used for each individual test.
-All teams must perform this (the same) test configuration in their assigned competition slot.
+All teams must perform this (the same) test configuration in their assigned performance slot.
 For training purposes, other configurations may be created and sent to a robot during a test slot of the team.
 
-Depending on the organization and possibilities on site, the TC must either provide all teams with atleast one "public" PC with a running AC to allow them to test their connection setup, or decide before the first competition day if only bagfiles are being used.
+Depending on the organization and possibilities on site, the TC must either provide all teams with atleast one "public" PC with a running AC to allow them to test their connection setup or decide before the first competition day if only bagfiles are being used.
 
 In this case, robots do not have to connect to the atwork commander during a run, but may rather process the contents of the rosbag and start the task execution.
-The run phase of a team then starts once the robot operator announces his starting action (executing a 'rosbag play NAME' command. 
+The run phase of a team then starts once the robot operator announces his starting action (executing a 'rosbag play NAME' command). 
 
 
 

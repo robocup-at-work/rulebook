@@ -16,7 +16,7 @@ Unless stated other, the following rules apply to all test types:
 \item The robot must not leave the arena.
 \item The maximum objects a robot is allowed to carry is 3.
 \item The robot has to start and end at the respective arena location (START, FINISH).
-\item The robot will get the task specification from the referee box.
+\item The robot will get the task specification from the AC.
 \item Reaching succesfully a Service Area is rewarded as defined in \ref{tab:InstancePoints}.
 \item The reward for reaching a Service Area will be only rewared once for a Service Area.
 \item Service Areas count as succesfully reached as defined in section \ref{sec:ArenaDesign}.
@@ -44,10 +44,11 @@ Unless stated other, the following rules apply to all test types:
 
 An Object counts as successfully grasped, if the robot grasps the correct Object of the correct Service Area and transport it out of the corresponding Service Area. In that case the Service Area has an infinite height.
 
-A robot is allowed to grasps an incorrect Object as long as the Object don't leave the Service Area with his complete form. This enables a robot to grasp an Object to examine the Object with a camera. If an incorrect Object grasped and moved out of the Manipulation Zone it is counted as an incorrect Object Grasping.
+A robot is allowed to grasps an incorrect Object as long as the Object don't leave the Service Area with his complete form. This enables a robot to grasp an Object to examine the Object with a camera. If an incorrect Object grasped and moved out of the Service Area it is counted as an incorrect Object Grasping.
 
 If the Objects falls down from the platform, the robot drops the Object to the floor after leaving the Service Area or the Object falls on top of the Service Area from a height higher than $5\si{\centi\meter}$ while the grasping process it is counted as an Object Loss.
 
+The grasping process starts when the Manipulator enters the Service Area und ends when it leaves the Service Area.
 
 \subsection{Placing Objects} \label{ssec:PlacingObjects}
 
@@ -62,7 +63,7 @@ There is a Placement Deduction that will be subtracted from the points of the su
 	\item If the placed Object is not lying with his complete form within the Manipulation Zone at the end of the placement process
 \end{itemize}
 
-The placement process starts when the Manipulator with the Object enters the Manipulation Zone and ends when the placed Object doesn't move anymore and the Manipulator has left the Manipulation Zone. In these cases the Manipulation Zone has an infinte height.
+The placement process starts when the Manipulator with the Object enters the Service Area and ends when the placed Object doesn't move anymore and the Manipulator has left the Service Area. In these cases the Service Area has an infinte height.
 
 
 If an Object is placed from a height higher than $5\si{\centi\meter}$ to the top of the Manipulation Zone it is considered as an Object Loss and no points are given for a successfull Placing.
@@ -76,18 +77,18 @@ The Placement at the upper part of the Shelf has to be in the Manipulation Zone 
 
 \textbf{Precision Placement}
 
-A successfull Placement of the Object into the cavity will rewarded with a successfull Precision Placement. A successfull Precions Placement is if a  correct Object falls thorugh the correct cavity tile. If the Object is not falling down through the cavity but is lying at the end of the run at the correct cavity it will be rewarded with an successfull Cavity Tile Placement. However The Object has to be lying with his complete form within the correct cavity.
+A successfull Placement of the Object into the cavity will rewarded with a successfull Precision Placement. A successfull Precions Placement is if a  correct Object falls through the correct cavity tile. If the Object is not falling down through the cavity but is stuck in the cavity or is lying at the end of the run at the correct cavity it will be rewarded with an successfull Cavity Placement. However The Object has to be lying with his complete form within the correct cavity.
 
 If an Object is placed on the wrong cavity tile then no points are given and in this case there is also no incorrect Object Placing penalty as long as the Object has to be placed at this Precision Table. If an Object is placed on a Precision Table that shouldn't be placed there, then the incorrect Object Placement penalty will be apllied. 
 
-There are recovery stragedies allowed at the Precion Table to put the Objects into the cavity.
+There are recovery stragedies allowed at the Precision Table to put the Objects into the cavity.
 For example it is allowed to poke with the Object in the Gripper to place the Object into the cavity. This  allows the use of a force sensor for placing the Object into the cavity.
 It is also allowed to move the Object on the cavity as long as the Object stays on the same cavity. This ensures that a movement of a Object over the complete Table is not allowed.
 
  
 
 
-
+\newpage
 %\input{./tests/BNT}
 
 \input{./tests/BMT}
