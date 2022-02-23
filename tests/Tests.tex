@@ -42,13 +42,26 @@ Unless stated other, the following rules apply to all test types:
 
 \subsection{Grasping Objects} \label{ssec:GraspingObjects}
 
+\textbf{General}
+
 An Object counts as successfully grasped, if the robot grasps the correct Object of the correct Service Area and transport it out of the corresponding Service Area. In that case the Service Area has an infinite height.
 
 A robot is allowed to grasps an incorrect Object as long as the Object don't leave the Service Area with his complete form. This enables a robot to grasp an Object to examine the Object with a camera. If an incorrect Object grasped and moved out of the Service Area it is counted as an incorrect Object Grasping.
 
+The grasping process starts when the Manipulator enters the Service Area und ends when it leaves the Service Area.
+
 If the Objects falls down from the platform, the robot drops the Object to the floor after leaving the Service Area or the Object falls on top of the Service Area from a height higher than $5\si{\centi\meter}$ while the grasping process it is counted as an Object Loss.
 
-The grasping process starts when the Manipulator enters the Service Area und ends when it leaves the Service Area.
+If the robot collides with an Object, Decoy or Container at the Manipulation Zone it is considered as a Minor Collision.
+
+\textbf{Rotating Table}
+
+It is explicitly NOT allowed to stop the table (e.g. by pushing the gripper into the table surface).
+
+It is also explicitly NOT allowed to position the gripper in a way that blocks the objects 
+unless it is during the grasping process of a target object and does not affect the table rotation or other objects.
+
+If one of these both situations happen while a grasping process then no points are rewarded for the following successful grasping of the Object.
 
 \subsection{Placing Objects} \label{ssec:PlacingObjects}
 
@@ -69,6 +82,8 @@ The placement process starts when the Manipulator with the Object enters the Ser
 If an Object is placed from a height higher than $5\si{\centi\meter}$ to the top of the Manipulation Zone it is considered as an Object Loss and no points are given for a successfull Placing.
 
 If a placed Object is either incorrect or the corresponding Service Area is incorrect, the Placement is considered as an Incorrect Placement. If at this Incorrect Placement a Placement Deductions occurs then no additional penalty points will be added to the Incorrect Placement penalty.
+
+If the robot collides with an Object, Decoy or Container at the Manipulation Zone it is considered as a Minor Collision.
 
 \textbf{Shelf}
 
