@@ -261,7 +261,7 @@ The OC is responsible to replace it in case of pollution or tears. To reduce the
 $0\si{\centi\meter}$-Table may be crossed and does not count as a collision. If the laid out white Surface is moved, it is not a collision.
 If the robot touches an Object while navigating, this will be handled as a Major Collision. Examples for $0\si{\centi\meter}$-Table are shown in figure \ref{fig:0cmws}.
 
-If the service area located on a Table is just used for pick and place purpose it will be referenced as \iaterm{Service areas placed on $0\si{\centi\meter}$, $5\si{\centi\meter}$, $10\si{\centi\meter}$ and $15\si{\centi\meter}$-Tables used for pic and place operations}{workstation}. 
+
 
 \begin{figure} [h!]
 		\begin{center}
@@ -379,7 +379,7 @@ In order to successfully reach a Service Area, robots must position themselves i
 The arena layout must define where the "front" of a table is.
 Figure \ref{fig:arena_map_annotated} gives an example for the definition of the position of each Service Area, marking them as WSx (Workstation x), SHx (Shelf x), PPx (Precise Placement x)and RTx (Rotating Table x). The orientation only indicates the direction of the Service Area. It does not specify the robot's heading, which may be chosen by teams according to their individual robot design.
 
-Tables that includes Service Areas which can be used from both sides (see fig. \ref{fig:arena_example}) are defined as two seperate workstations (e.g. WS5 \& WS6). However, manipulation of theses Service Area requires the robot to have its center in the rectangular area defined in fig. \todo{XX TODO figure}. This means that manipulation of the opposite Service Area is NOT allowed (see \ref{ssec:ManipulationZone}), even though it would be physically possible.
+Tables that includes Service Areas which can be used from both sides (see fig. \ref{fig:arena_example}) are defined as two seperate workstations (e.g. WS5 \& WS6). However, manipulation of theses Service Area requires the robot to have its center in the rectangular area defined in fig.~\ref{fig:arena_service_area_free}. This means that manipulation of the opposite Service Area is NOT allowed (see \ref{ssec:ManipulationZone}), even though it would be physically possible.
 
 This rule also applies to the two positions for the Rotating table (RT1 and RT2).
 This makes smaller physical layouts possible that still provide the ability to create complex navigation challenges due to the amount of locations to visit.
