@@ -1,6 +1,44 @@
 % !TEX root = ../Rulebook.tex
 \label{sec:Competition}
 
+\section{Teams and Roles}
+
+The TC and OC will jointly determine the number of teams permitted to participate in a competition well in advance. The rules shall enable a competition with up to at least 24 teams lasting not more than four full days. The number of people to register per team is not restricted by default, but may be limited due to local arrangements. Teams that plan to bring more than four members are advised to contact the OC beforehand.
+
+During registration, each team has to designate one member as teamleader. A change of the teamleader must be communicated to the OC. 
+The teamleader is the only person who can officially communicate with the referees during the competition, e.g. aborting a run, to call a restart, etc. 
+The teamleader may ask the OC to accept additional teammembers for these tasks.
+
+Each team must also nominate one person which acts as a referee during all tests.
+The job of each ref is to ensure that the arena state before each performance is the same as the initial run setup.
+They also rate the robot performances during a run. 
+This ensures that the interests of every team are respected equally.
+It also involves the refs in discussions with other teams and the league officials,
+which helps getting to know each other.
+
+Teams are asked (and wished) to comment their robots performance during their run.
+This makes the competition more entertaining while also sharing knowledge about robots, 
+the challenges of a task and smart solutions.
+The commentator may be any teammember and is optional during competitions.
+
+\section{Meetings and Language of Communication}
+
+Both the TC and the OC may organize several special meetings during a competition, 
+such as referee meetings, teamleader meetings, etc.
+The meetings are held in english and will be planned and announced locally.
+They are used to clarify rules, assign timeslots, request test participation or for any other exchange of information between teams and commitee members.
+It is the responsibility of each team to inform themselves about the organization and scheduling of such meetings.
+Each team is expected to send at least one representative to such meetings. If the meeting refers to specific roles, such as 'referee' or 'team leader', the person designated by the team to fill this role is expected to participate.
+
+
+\section{Code of Conduct and Disqualification}
+Teams and team members are expected to maintain a friendly and cooperative atmosphere throughout a competition and contribute to a vivid work environment and to scientific exchange before, during and after a competition.
+\par
+The TC may disqualify individual team members or a whole teams during a competition for severe reasons, such as repeated breach of rules.
+
+
+\section{Competition Procedure}
+
 The competition is held in the form of so called tests.
 A test requires a robot to perform various abilities, including navigation, manipulation, task planning and autonomous decision making.
 Different kinds of tests each have their focus a current research field, e.g. picking moving objects or efficient task execution.
@@ -22,7 +60,29 @@ Teams should prepare for something like fig. \ref{fig:example_schedule}.
 \label{fig:example_schedule}
 \end{figure}
 
-Team leaders are required to announce wether their team likes to participate in a test 1 hour prior to the start time to allow the OC to plan the schedule and create scoring sheets.
+
+\section{Practice Slots}
+
+The teams will be given an opportunity to practice with their robots either in the competition arenas or in special test arenas, if available. The frequency and lengths of practice periods will be decided by the OC on site. The OC will also decide about if and how many teams may use an arena simultaneously and can decide on a practice schedule for teams wishing to use the arenas. Arenas may be modified between practice time and competition runs.
+
+
+\section{Qualification for a Test}
+
+Depending on the amount of participating teams and available timeslots, 
+the competition may be seperated into different stages.
+Starting with the rather easy tests including all teams, 
+only high performing teams might be allowed to participate in later (more difficult) tests.
+
+The OC must create an onsite schedule during the setup days and announce it before the first competition day. 
+The schedule should include all teams in all tests if possible,
+but might introduce special stages in the following order:
+\begin{enumerate}
+\item Stage One: limit the maximum amount of teams in the final test, only the X best teams may participate
+\item Stage Two: limit the maximum amount of teams in the BTT2 and later tests, only the X best teams may participate
+\end{enumerate}
+
+Teamleaders of qualified teams are required to announce 1 hour before the respective time slot wether their team likes to participate in a test or not. 
+This enables the OC to plan the schedule and create scoring sheets.
 
 \section{Parc ferm\'e}
 
@@ -39,28 +99,55 @@ They may not change or modify their robot in any way during this time (hardware 
 
 \section{Test Procedure}
 
-15 minutes before a competition slot the arena is set up for the upcoming test.
+15 minutes before a competition slot, the arena is set up for the upcoming test.
 Therefore, the position of each static arena element is checked and objects are placed on active 
 Service Areas.
 The TC will decide where dynamic arena elements are placed. See table \ref{tab:Instances} for the different responsibilities of placing arena elements, Objects (Pose), Decoys, Containers etc.
 
-
-Each team must nominate one person which acts as a referee during all tests.
-The job of each ref is to ensure that the arena state before each performance is the same as the initial run setup.
-They also rate each performance. This ensures that the interests of every team are respected equally.
-
-A performance slot for a team includes a preparation phase, the run phase and the end phase.
+A competition slot consists of multiple performance slots (one for each team), 
+including a preparation phase, the run phase and the end phase.
 
 \textbf{Preparation Phase}
 
 During the prep phase, teams are allowed to move their robot from the parc ferm\'e to the defined start pose in the arena either by hand or by carefully driving manually. They should prepare their robot for their run and can therefore remote access the robot and/or make minor changes.
-It is explicitly forbidden to hardcode solutions for specific requirements of a test during this phase (e.g. drawing position of obstacles in the map). Also, if the robot passes and detects obstacles during this phase, they must be erased from the memory (e.g. clear costmap) unless they can be detected from the START location.
+It is explicitly forbidden to hardcode solutions for specific requirements of a test during this phase (e.g. drawing position of obstacles in the map). Also, if the robot passes and detects obstacles during this phase, they must be erased from the memory (e.g. clear costmap) unless they can be detected from the START location. The TC might disqualify teams that try to gain unfair advantages from the current or even the following tests.
 
 \textbf{Run Phase}
 
-The run phase begins once the start time is up or when the teamleader announces that the team is ready. 
-The task is then sent to the robot and from there on, the robot must act fully autonomously. It is forbidden to interact or control the robot in any human kind (keyboard/mouse actions, gestures, voice). The unplugging of a LAN cable to ensure that the task was send to the robot at bad WLAN connections is the only interaction with the robot that is allowed.
-The run phase ends once the robot has stopped at the FINISH location of the arena, when the run time is up, when the teamleader says 'stop' or the robot caused a second Major Collision.
+The run phase begins once the preparation time is up or when the teamleader announces that the team is ready. 
+The task is then sent to the robot and from there on, the robot must act fully autonomously. 
+It is forbidden to interact or control the robot in any human kind (keyboard/mouse actions, gestures, voice). 
+The only interaction allowed is the unplugging of a LAN cable connecting the robot and the controlling pc
+when relying on wired communication due to onsite WiFi jams.
+
+During the run phase, the robot must not leave, nor may any person enter the arena.
+Teammembers of the performing team are allowed to enter the arena to prevent damage in case of an error (e.g. remove a dropped object from the robots path), but receive a penalty for each interaction.
+If a robot behaves uncontrolled and poses a potential threat to the environment,
+any person may approach the robot and press the emergency stop.
+However, it is requested and strongly advised that only the developers touch their robot.
+
+The run phase regularly ends when:
+\begin{itemize}
+\item The robot has reached the FINISH location of the arena
+\item The run time is up
+\item The teamleader says 'stop'
+\end{itemize}
+
+During a run, the teamleader can restart the test execution once.
+Therefore he must say 'restart', which brings the team back to their preparation phase.
+Their run time is stopped but does NOT reset, meaning the team can retry the specific test with the remaining run time.
+Such a restart is instantly triggered once a robot has caused a first major collision.
+In this case, all successful robot actions are discarded and a penalty will be applied.
+
+The run phase ends early when:
+\begin{itemize}
+\item The robot has caused a second major collision
+\item The emergency stop button had to be pressed before a restart call
+\item A team was identified to be cheating
+\end{itemize}
+
+The end of a run phase must be announced by the OC by saying 'end'.
+Once this happened, the team may touch and control their robot to bring it to a full stop.
 
 \textbf{End Phase}
 
@@ -76,11 +163,18 @@ Once the score has been accepted by a team,
 the arena must be set up for the next run if necessary.
 The prep time of the next team begins once the arena state is declared as ready by all refs.
 
+\textbf{Performance Slot Example}
+
 TODO ADD TABLE 
 
 \section{Skipping Tests}
 
-If a team decides not to participate in a test during the official time slot, this test type may be repeated once during a following time slot. This should enable struggling teams to do the more simpler tests later in the competition. This option should only be used by teams if really necessary to keep the structure of the overall competition. Also, teams are only allowed to perform a test with a lower potential total score than the current test.
+If a team decides not to participate in a test during the official time slot, 
+this test type may be repeated once during a following time slot. 
+This should enable struggling teams to do the more simpler tests later in the competition,
+but should only be used by teams if really necessary to keep the structure of the overall competition.
+It is only allowed to perform a test with a lower potential total score than the one of the replaced test.
+Also, this option might be cancelled if the schedule is too tight otherwise.
 
 \section{Atwork Commander (AC)}
 \label{sec:atwork-commander}
