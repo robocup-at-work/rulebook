@@ -2,20 +2,32 @@
 \section{Scoring} \label{sec:ScoringAndRanking}
 
 For each test the calculation of scores is defined individually, comprising points for achieving certain subtasks and penalty points.
-\par
+
 Each test provides a set of so-called feature variations encoding the overall variability of the test (e.g. whether
 obstacles can occur or not, number and type of manipulation objects). To enhance comparability among different test
 runs, all teams will have to perform the same test instances as specified in Table~\ref{tab:Instances}.
-\par
-If not specified otherwise, the following set of scoring rules applies for each test:
 
+For example in a \textbf{perfect} BMT run (perfect means all tasks fulfilled and no penalties given) a team could achieve 1200 points (without time bonus). This points are calculated using the values out of table \ref{tab:InstancePoints}.
 
-Explanation of the terms:
 \begin{itemize}
-\item Correct navigating is defined in Section \ref{ssec:Navigating}
-\item Correct grasping is defined in Section \ref{ssec:GraspingObjects}
-\item Correct placing is defined in Section \ref{ssec:PlacingObjects}
+	\item 2 Service areas reached: $2 \times 25 = 50$ points
+	\item Finish reached: $1 \times 50 = 50 $ points
+	\item 5 Objects grasped: $5 \times 100 = 500 $ points
+	\item 5 Objects placed: $5 \times 100 = 500  $ points
+	\item perfect run bonus: $1 \times 100 = 100 $ points
 \end{itemize}
+
+%Explanation of the terms:
+%\begin{itemize}
+%\item Correct navigating is defined in Section \ref{ssec:Navigating}
+%\item Correct grasping is defined in Section \ref{ssec:GraspingObjects}
+%\item Correct placing is defined in Section \ref{ssec:PlacingObjects}
+%\end{itemize}
+
+\section{Time Bonus}
+If a team finishes a test in the required time frame, the left over time will be added as time bonus to the points. 
+Time bonus is calculated using the left over time in seconds multiplied by 10. 
+\martin{formula ????}
 
 \section{Simplifications}
 Teams may use simplifications, which will result in a reduction of scores for the given run. The simplifications may be chosen per run, but need to be announced to the referees before the start of the run.
@@ -136,10 +148,10 @@ Teams might use one so-called restart in a run. Restarts have the following aspe
 \section{Ranking}
 The tests will occur in the instances shown in Table~\ref{tab:Instances}. Ranking of the teams will be based on the sum of the achieved points over all the tests.
 
-A team cannot get less than zero points for one run.
-The scores of the tests of the first stage are summed up, and the teams with the highest sums proceed to the next stage.
+A team cannot get less than zero points for one run. If it is necessary to divide the competition into two stages (see section ~\ref{sec:qulaification for a test}), the scores of the first stage tests are summed up, and the teams with the highest sums proceed to the next stage (depending on overall number of teams). Depending on the number of teams and if there is enough time, all teams are allowed to enter the second stage.
 
-In case of a tie, the OC will either schedule a deciding run or continue with a higher number of participants.
+In case of a tie of the first three places a deciding run will be scheduled. A point tie down from 4th place will result in to sharing the achieved place. 
+\martin{wording ??}
 
 %\setlength{\tabcolsep}{4.75pt}
 %\renewcommand{\arraystretch}{1.1}
