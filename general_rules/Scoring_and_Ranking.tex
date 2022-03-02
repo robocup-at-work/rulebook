@@ -106,43 +106,31 @@ A Collions with the Marking Tape will not be penalized.
 	\caption{Definition of minor and major collisions}
 	\label{tab:collisions}
 	\centering
-  \begin{tabular}{|l|p{1cm}|p{1cm}|p{1.5cm}|}
+	\begin{tabular}{|l|p{1cm}|p{1cm}|p{1.5cm}|}
 		\hline
 		Situation                                                & Minor & Major &  Tape \\
-    \hline
-    Collision with static elements of arena                  &       & X     &              \\
-    Collision with dynamic elements of arena                 &       & X     &              \\
-    Robot Body Collision with workstation                    &       & X     &              \\
-    Robot Manipulator Collision with top surface of manipulation zone       &       &       &              \\
-    Robot Manipulator Collision with Round Table stopping it & X     &       &              \\
-    Robot Manipulator Collision with PPT Cavity surface      & X     &       &              \\
-    Robot Manipulator Collision with Shelf                   & X     &       &              \\
-	Virtual Obstacle (Yellow/Black Tape) Collisions                             &       &       & X            \\
-    Virtual Wall (Red/White Tape) Collisions                                &       & X     &              \\
-    %Blue/White Tape Collision (1st time gate)                &       &       &              \\
-    %Blue/White Tape Collision (2nd time gate)                &       & X     &              \\
-    Marking Tape & & & \\
-    \hline
+		\hline
+		Collision with static elements of arena                  &       & X     &              \\
+		Collision with dynamic elements of arena                 &       & X     &              \\
+		Robot Body Collision with workstation                    &       & X     &              \\
+		Robot Manipulator Collision with top surface of manipulation zone       &       &       &              \\
+		Robot Manipulator Cable Collision with Environment      &       &       &              \\
+		Robot Manipulator Collision with Objects, Container, Decoys & X     &       &              \\
+		Robot Manipulator Collision with Round Table stopping it &      & X      &              \\
+		Robot Manipulator Collision with PPT Cavity surface      &      & X      &              \\
+		Robot Manipulator Collision with Shelf                   &      & X      &              \\
+		Virtual Obstacle (Yellow/Black Tape) Collisions          &       &       & X            \\
+		Virtual Wall (Red/White Tape) Collisions                 &       & X     &              \\
+		%Blue/White Tape Collision (1st time gate)                &       &       &              \\
+		%Blue/White Tape Collision (2nd time gate)                &       & X     &              \\
+		Marking Tape & & & \\
+		\hline
 	\end{tabular}
 \end{table}
 
+
 \section{Restarts}
-Teams might use one so-called restart in a run. Restarts have the following aspects:
-
-\begin{itemize}
-
-	\item Per run, at most one restart is allowed for a team, if not specified otherwise in a test.
-	\item At any time during a run, the team can call for a restart to the referees.
-	\item When the referees acknowledge the call for restart, the team may enter the arena. The time will continue running.
-	\item The arena and the robot will be reset exactly to the setup at the beginning of the run (except the timer for the run). Random elements such as obstacles or object positions remain like before.
-	\item The points for this run achieved so far are reset to zero.
-	\item Scores that are received after a restart are multiplied by a factor of 0.75.
-	\item The referees decide when the arena is prepared again for the restart. If the robot is not yet ready, teams can keep trying to get it ready until the time for the run is over.
-	\item As soon as the team signals that the robot is ready, the task specification is sent again.
-	\item Afterwards the start signal is sent from the referee box.
-
-\end{itemize}
-
+Teams might use one so-called restart in a run. Scores that are received after a restart are multiplied by a factor of 0.75.
 \lucas{add/rename points : correct Object Placement, successfull Precision Placement, successfull Cavity Placement}
 
 \section{Ranking}
