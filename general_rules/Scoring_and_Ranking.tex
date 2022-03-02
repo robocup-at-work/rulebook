@@ -26,8 +26,8 @@ For example in a \textbf{perfect} BMT run (perfect means all tasks fulfilled and
 
 \section{Time Bonus}
 If a team finishes a test in the required time frame, the left over time will be added as time bonus to the points. 
-Time bonus is calculated using the left over time in seconds multiplied by 10. 
-\martin{formula ????}
+Time bonus is calculated using the left over time in seconds multiplied by 1. 
+
 
 \section{Simplifications}
 Teams may use simplifications, which will result in a reduction of scores for the given run. The simplifications may be chosen per run, but need to be announced to the referees before the start of the run.
@@ -53,13 +53,13 @@ Penalty points are given as follows, each time again the incident occurs:
 	\item Incorrect Object Placement \hfill -50 points
 	\item Placement Deduction \hfill -50\%
 	\item Minor collision (see Section \ref{sec:Collisions}): \hfill -50 points
-	\item Major collision (see Section \ref{sec:Collisions}): \hfill -50 points and termination of the run
+	\item Major collision (see Section \ref{sec:Collisions}): \hfill reset all points to 0
   \item Tape collision (see Section \ref{sec:Collisions}): \hfill -5\% of total points of current run up till
   20\%
+  \item Human interaction during the run: \hfill  -100 points
+  \item Cheating: \hfill reset all points to 0
 \end{itemize}
 
-\leander{add penalties for not successful place or at least a reference}
-\lucas{add/rename penalties : Object Loss, incorrect Object Placement, Placement Deductions, Major Collision, Minor Collision, Tape Collision }
 
 \section{Collisions}\label{sec:Collisions}
 
@@ -112,13 +112,14 @@ A Collions with the Marking Tape will not be penalized.
 		\hline
 		Collision with static elements of arena                  &       & X     &              \\
 		Collision with dynamic elements of arena                 &       & X     &              \\
-		Robot Body Collision with workstation                    &       & X     &              \\
-		Robot Manipulator Collision with top surface of manipulation zone       &       &       &              \\
-		Robot Manipulator Cable Collision with Environment      &       &       &              \\
-		Robot Manipulator Collision with Objects, Container, Decoys & X     &       &              \\
-		Robot Manipulator Collision with Round Table stopping it &      & X      &              \\
-		Robot Manipulator Collision with PPT Cavity surface      &      & X      &              \\
-		Robot Manipulator Collision with Shelf                   &      & X      &              \\
+		Body Collision with workstation                    &       & X     &              \\
+		Manipulator Collision with top surface of manipulation zone       &       &       &              \\
+		Manipulator Cable Collision with Env, Obj, Dec or Con (platform movement)    &  X     &       &              \\
+		Manipulator Cable Collision with Env, Obj, Dec or Con (placing/grasping process)    &       &       &              \\
+		Manipulator Collision with Objects, Container, Decoys & X     &       &              \\
+		Manipulator Collision with Round Table stopping it &      & X      &              \\
+		Manipulator Collision with PPT Cavity surface      &      & X      &              \\
+		Manipulator Collision with Shelf                   &      & X      &              \\
 		Virtual Obstacle (Yellow/Black Tape) Collisions          &       &       & X            \\
 		Virtual Wall (Red/White Tape) Collisions                 &       & X     &              \\
 		%Blue/White Tape Collision (1st time gate)                &       &       &              \\
@@ -129,9 +130,13 @@ A Collions with the Marking Tape will not be penalized.
 \end{table}
 
 
+
 \section{Restarts}
-Teams might use one so-called restart in a run. Scores that are received after a restart are multiplied by a factor of 0.75.
-\lucas{add/rename points : correct Object Placement, successfull Precision Placement, successfull Cavity Placement}
+Teams might use one so-called restart in a run. Scores achieved before the restart are set to zero. 
+\begin{itemize}
+	\item Self called: Scores that are received after a restart are not reduced.
+	\item Major collision: Scores that are received after a restart are reduced with multiplication of 0.75.
+\end{itemize}
 
 \section{Ranking}
 The tests will occur in the instances shown in Table~\ref{tab:Instances}. Ranking of the teams will be based on the sum of the achieved points over all the tests.
@@ -139,7 +144,7 @@ The tests will occur in the instances shown in Table~\ref{tab:Instances}. Rankin
 A team cannot get less than zero points for one run. If it is necessary to divide the competition into two stages (see section ~\ref{sec:qulaification for a test}), the scores of the first stage tests are summed up, and the teams with the highest sums proceed to the next stage (depending on overall number of teams). Depending on the number of teams and if there is enough time, all teams are allowed to enter the second stage.
 
 In case of a tie of the first three places a deciding run will be scheduled. A point tie down from 4th place will result in to sharing the achieved place. 
-\martin{wording ??}
+
 
 %\setlength{\tabcolsep}{4.75pt}
 %\renewcommand{\arraystretch}{1.1}
@@ -162,37 +167,45 @@ In case of a tie of the first three places a deciding run will be scheduled. A p
 %\newcommand{\C}{\cellcolor{sectionColor}}
 
 
-\begin{landscape}
-\begin{table}
- \centering
- \begin{tabular}{|p{5.5cm}*{9}{|P{1cm}}|}
-   \hhline{~--------}
-   \multicolumn{1}{l|}{}                       & \multicolumn{8}{c|}{Instances}                               \\
-   \hhline{~--------}
-   \multicolumn{1}{l|}{}                       &\cir{1} &\cir{2} &\cir{3} &\cir{4} &\cir{5} &\cir{6} &\cir{7} \\
-   \multicolumn{1}{r|}{}                       & BMT    & BTT1   & BTT2   &  BTT3  & PPT    &  RTT   & Final  \\
-   \hhline{~--------}
-   \hline
-	 Correct service area reached                &   25   &   25   &  25    &   25   &  25    &   25   &   25   \\ \hline
-   Correct object grasping           &    &    &     &    &     &        &    \\
-     \hspace{0.5cm} standard            &  100   &  100   & 100    &  100   &   0    &        &  100   \\
-	 \hspace{0.5cm} round table                  &        &        &        &        &        &  300   &  200   \\
-	 \hspace{0.5cm} PPT area                     &        &        &        &        &        &        &  200   \\
-	 \hspace{0.5cm} arbitrary surface (tbdiscussed... reduce points)           &        &  150   & 150    &  150   &        &        &  150   \\
-	 \hspace{0.5cm} shelf upper level            &        &        &        &  150   &        &        &  150   \\
-	 \hspace{0.5cm} shelf lower level            &        &        &        &  300   &        &        &  300   \\ \hline
-   Correct object placing standard (tbdiscussed... increase, more than grasping to motivate the teams to implement placement with collision avoidance?)            &   75   &   75   &   75   &   75   &        &        &   75   \\
-	 \hspace{0.5cm} PPT area                     &        &        &        &        &  200   &        &  200   \\
-	 \hspace{0.5cm} shelf upper level            &        &        &        &  150   &        &        &  150   \\
-	 \hspace{0.5cm} shelf lower level            &        &        &        &  150   &        &        &  150   \\ \hline
-   Incorrect object placing tbdiscussed... (wrong service area?)                   & -100   & -100   & -100   & -100   & -100   &        & -100   \\
-	Incorrect object placing tbdiscussed... (outside manipulation zone and/or touching other objects)                    & 50   & 50   & 50   & 50   & 50   &        & 50   \\
-   Incorrect object grasping                   &        & -100   & -100   & -100   &        & -100   & -100   \\
-   Completing whole task                       &   75   &  100   &  150   &  250   &   50   &   75   &  300   \\ \hline\hline
-   Maximum attainable points\newline (time bonus not included)
-	                                             & 1000   & 1100   & 1400   &  2000  &  700   &  1000  &  3200  \\ \hline
- \end{tabular}
- \caption{Scoring in the instances of the \RCAW \YEAR competition.}
-  \label{tab:InstancePoints}
-\end{table}
-\end{landscape}
+%\begin{landscape}
+%\begin{table}
+% \centering
+% \begin{tabular}{|p{5.5cm}*{9}{|P{1cm}}|}
+%   \hhline{~--------}
+%   \multicolumn{1}{l|}{}                       & \multicolumn{8}{c|}{Instances}                               \\
+%   \hhline{~--------}
+%   \multicolumn{1}{l|}{}                       &\cir{1} &\cir{2} &\cir{3} &\cir{4} &\cir{5} &\cir{6} &\cir{7} \\
+%   \multicolumn{1}{r|}{}                       & BMT    & BTT1   & BTT2   &  BTT3  & PPT    &  RTT   & Final  \\
+%   \hhline{~--------}
+%   \hline
+%	 Correct service area reached                &   25   &   25   &  25    &   25   &  25    &   25   &   25   \\ \hline
+%   Correct object grasping           &    &    &     &    &     &        &    \\
+%     \hspace{0.5cm} standard            &  100   &  100   & 100    &  100   &   0    &        &  100   \\
+%	 \hspace{0.5cm} round table                  &        &        &        &        &        &  300   &  200   \\
+%	 \hspace{0.5cm} PPT area                     &        &        &        &        &        &        &  200   \\
+%	 \hspace{0.5cm} arbitrary surface (tbdiscussed... reduce points)           &        &  150   & 150    &  150   &        &        &  150   \\
+%	 \hspace{0.5cm} shelf upper level            &        &        &        &  150   &        &        &  150   \\
+%	 \hspace{0.5cm} shelf lower level            &        &        &        &  300   &        &        &  300   \\ \hline
+%   Correct object placing standard (tbdiscussed... increase, more than grasping to motivate the teams to implement placement with collision avoidance?)            &   75   &   75   &   75   &   75   &        &        &   75   \\
+%	 \hspace{0.5cm} PPT area                     &        &        &        &        &  200   &        &  200   \\
+%	 \hspace{0.5cm} shelf upper level            &        &        &        &  150   &        &        &  150   \\
+%	 \hspace{0.5cm} shelf lower level            &        &        &        &  150   &        &        &  150   \\ \hline
+%   Incorrect object placing tbdiscussed... (wrong service area?)                   & -100   & -100   & -100   & -100   & -100   &        & -100   \\
+%	Incorrect object placing tbdiscussed... (outside manipulation zone and/or touching other objects)                    & 50   & 50   & 50   & 50   & 50   &        & 50   \\
+%   Incorrect object grasping                   &        & -100   & -100   & -100   &        & -100   & -100   \\
+%   Completing whole task                       &   75   &  100   &  150   &  250   &   50   &   75   &  300   \\ \hline\hline
+%   Maximum attainable points\newline (time bonus not included)
+%	                                             & 1000   & 1100   & 1400   &  2000  &  700   &  1000  &  3200  \\ \hline
+% \end{tabular}
+% \caption{Scoring in the instances of the \RCAW \YEAR competition.}
+%  \label{tab:InstancePoints}
+%\end{table}
+%\end{landscape}
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width= 1.0\textwidth]{./images/tabels/table_points.png}
+	\caption{Scoring in the instances of the \RCAW \YEAR competition.}
+	\label{fig:test_scoring}
+\end{figure}
