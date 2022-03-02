@@ -126,18 +126,14 @@ If a robot behaves uncontrolled and poses a potential threat to the environment,
 any person may approach the robot and press the emergency stop.
 However, it is requested and strongly advised that only the developers touch their robot.
 
+\clearpage
+
 The run phase regularly ends when:
 \begin{itemize}
 \item The robot has reached the FINISH location of the arena
 \item The run time is up
 \item The teamleader says 'stop'
 \end{itemize}
-
-During a run, the teamleader can restart the test execution once.
-Therefore he must say 'restart', which brings the team back to their preparation phase.
-Their run time is stopped but does NOT reset, meaning the team can retry the specific test with the remaining run time.
-Such a restart is instantly triggered once a robot has caused a first major collision.
-In this case, all successful robot actions are discarded and a penalty will be applied.
 
 The run phase ends early when:
 \begin{itemize}
@@ -172,6 +168,14 @@ The prep time of the next team begins once the arena state is declared as ready 
 	\caption{Performance Slot Example: each team gets one per test, following the random team order}
 	\label{fig:performance slot example}
 \end{figure}
+
+
+\section{Restarting a Run}
+
+During a run, the teamleader can restart the test execution once.
+Therefore he/she must say 'restart', which stops the current run phase. The robot must be stopped using the emergency switches, which then allows the refs to reset the arena state.
+The remaining run time will be noted and used after the restart. Once the refs have finished resetting the arena, the performing team is brought back to their prep phase, which allows them to move the robot back to the start area and prepare it for the restarted run.
+Note: The first major collision of a robot instantly triggers a restart.
 
 \section{Skipping Tests}
 
