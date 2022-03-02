@@ -1,0 +1,14 @@
+% !TEX root = ../Rulebook.tex
+
+\section{Coworker Assembly Test}
+
+In the \iaterm{Coworker Assembly Test}{COT}, 
+the goal is for a robot to produce a product while cooperating with a human worker.
+
+Therefore, the robot has to collect three components scattered in the arena and bring them to a single workstation where the human worker waits on the other side of the table.
+The robot has to place the objects and then wait for the human to assemble the objects to a product.
+Once the human worker (a teammember of the performing team) has assembled the product, he/she must place the product back onto the table and give the robot a completion signal. This may be done via sign (visual) or voice (acoustic). It is not allowed to use controller or keyboard input.
+
+Once the robot has recognized the signal, 
+it must detect the assembled product, grasp it and then deliver it to another workstation.
+This step concludes the assembly process by imitating the transport of the product to a warehouse.
