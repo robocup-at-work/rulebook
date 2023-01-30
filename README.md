@@ -11,11 +11,12 @@ Currently the latest one is called 'RulebookFinal2022.pdf'.
 
 The release of the official rulebook for the season of 2023 is planned for March 2023.
 You can keep track of the most important changes in our GitHub Issues.
+Please note especially [#64](https://github.com/robocup-at-work/rulebook/issues/64) as it is a quite major change!
+
 
 You can also switch to the "Alpha_2023" branch if you want to track our progress more detailed.
 However, until we announce otherwise, the releases there are NOT official.
 
-Please note especially [#64](https://github.com/robocup-at-work/rulebook/issues/64) as it is a quite major change!
 
 
 
