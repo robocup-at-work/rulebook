@@ -18,8 +18,8 @@ Unless stated other, the following rules apply to all test types:
 \item The maximum objects a robot is allowed to carry is 3.
 \item The robot has to start and end at the respective arena location (START, FINISH).
 \item The robot will get the task specification from the AC.
-\item Reaching succesfully a Service Area is rewarded as defined in \ref{tab:InstancePoints}.
-\item The reward for reaching a Service Area will be only rewared once for a Service Area.
+\item Reaching a Service Area successfully is rewarded as defined in \ref{tab:InstancePoints}.
+\item The reward for reaching an active Service Area will be only rewared once per SA.
 \item Service Areas count as succesfully reached as defined in section \ref{sec:ArenaDesign}.
 \item Manipulation tasks count as successful as defined in \ref{ssec:GraspingObjects} and \ref{ssec:PlacingObjects}.
 \item The score for this test will be calculated as defined in \ref{sec:ScoringAndRanking}.
@@ -107,13 +107,17 @@ It is also allowed to move the Object on the cavity as long as the Object stays 
 \newpage
 %\input{./tests/BNT}
 
+\input{./tests/New_Test_Structure}
+
 \input{./tests/BMT}
 
 \input{./tests/BTT}
 
-\input{./tests/PPT}
+\input{./tests/ATT}
 
-\input{./tests/RTT}
+%\input{./tests/PPT}
+
+%\input{./tests/RTT}
 
 \input{./tests/Final.tex}
 

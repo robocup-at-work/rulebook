@@ -1,61 +1,18 @@
 \section{Final}
 \label{sec:Final}
 
-The \iaterm{Final Run}{Final} acts as the full benchmark for robots, including all previous test types in a single run. Basically it is a BTT with both PPT and RTT included.
-As the total amount of target Objects is higher than in all previous tests, task order optimization plays a major role in this test.
+The \iaterm{Final Run}{Final} acts as the full benchmark for robots, including all elements of \RCAW.
+With the number of objects and active service areas at its peak, task planning and execution speed may become a limiting factor for competing robots. 
 
 \paragraph{Final}
 \begin{itemize}
-\item Ten objects have to be transported.
-\item There will be eight estimated active service areas.
-\item All table types are used.
-\item Both physical and virtual Obstacles (Barriertapes) are placed inside the arena (two blocking, one semi-blocking, one non-blocking).
-\item Three service areas will have an arbitrary surface.
-\item Two objects must be grasped from the shelf.
-\item One object must be grasped from the rotating table.
-\item Four objects must be placed inside of a container (two red, two blue). 
-\item One object must be placed on a shelf.
-\item One object must be placed inside of the corresponding ppt cavity.
+\item Ten randomly selected objects have to be transported.
+\item There will be eight active service areas (four tables,  one shelf and one Precise Placement table)
+\item All table heights are used (0-15 $\si{\centi\meter}$).
+\item Two objects must be picked from a shelf (lower part).
+\item Two objects must be placed on a shelf (top part).
+\item Two objects must be Precise Placed.
+\item Four objects must be placed into a container (preferably two to each color).
+\item Two visual and two physical obstacles are placed inside the arena (two blocking, one semi-blocking, one non-blocking).
+\item Four service areas will have an arbitrary surface.
 \end{itemize}
-
-
-%
-%\begin{itemize}
-%\item Time limit is 10 min.
-%\item 5 objects will have to be transported in total.
-%\item Two objects will be used twice.
-%\item 3 service and 3 destination areas will be used. One service area is a PPT area.
-%\item The robot will have to start at the entrance, and to complete the run exit through the exit.
-%\end{itemize}
-%
-%
-%\subsection{Complexity}
-%	
-%\begin{itemize}
-%\item Obstacle complexity (BNT)
-%\item Barrier Tape complexity (BNT)
-%\item Manipulation object complexity (BMT)
-%\item Decoy object complexity (BMT)
-%\item Orientation complexity (BMT)
-%\item Rotation complexity (BMT)
-%\item Position complexity (BMT)
-%\item Speed Complexity (CBT)
-%\item PPT Orientation Complexity (PPT)
-%\item PPT Rotation Complexity(PPT)
-%\end{itemize}
-%
-%		
-%\subsection{Scoring}
-%
-%\begin{itemize}
-%\item 50 points for (the first time) reaching a service or destination area. An area counts as reached when any part of the robot is within 1m of the area and the robot is oriented towards the area. The robot does not have to stand still. 
-%\item 50 points for grasping a (correct) object. Grasping is defined like in BTT. 
-%\item 50 points for transporting and putting to the correct destination area. 
-%\item 50 points for placing into the correct cavity of a PPT plate. 
-%\item If an object is placed into the wrong cavity or to the wrong area no penalty points apply. 
-%\item 50 points for completing the test, + time bonus points according to rules.
-%\item Other penalty points like losing objects etc. apply according to the BTT test, if not stated otherwise above.
-%\end{itemize}
-%
-%.
-%
