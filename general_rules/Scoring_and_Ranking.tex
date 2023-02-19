@@ -84,7 +84,14 @@ following section. Any Collisions cause a point penalty that is explained in sec
 
 \textbf{Major Collision:}
 
-If the robot (platform and manipulator) collides with a static element of the environment or touches a Virtual Wall it is considered as a major collision. An exception of this rule is when the cables of the manipulator touches the environment while the Grasping or Placing process. As stated before a collision with the  gripper with the upside of the service areas are allowed as long as there is no fundemental change of the environment at the service area. In this case it would be considered as a major collision. This could be for example moving an arbitrary surface off the workspace. A major collision results in the termination of the run and the arena can be restored afterwards. Causing a second Major Collision in a run will end the run completely for this team.
+If the robot (platform and manipulator) collides with a static element of the environment or touches a Virtual Wall it is considered as a major collision. An exception of this rule is when the cables of the manipulator touches the environment while the Grasping or Placing process. As stated before a collision with the  gripper with the upside of the service areas \textcolor{red}{is} allowed as long as there is no \textcolor{red}{fundamental} change of the environment at the service area. In this case it would be considered as a major collision. This could be for example moving an arbitrary surface off the workspace. A major collision results in the termination of the run and the arena can be restored afterwards. Causing a second Major Collision in a run will end the run completely for this team.
+
+\textcolor{red}{Since the impact of a major collision on the scoring is very high, the declaration of a major collision is clarified in the following. A major collision is declared by shouting through authorized persons. Nobody is allowed to call a major collision, except the following persons depending on the number of available referees:
+\begin{itemize}
+	\item only referees, when at least 4 referees (and 1 additional head referee) are available
+	\item referees and TC members, when less than 4 referees (without the additional head referee) are available
+\end{itemize}
+The idea of the two cases is to guarantee a proper number of observers (at least one on each side of the arena). This topic should be highlighted in the referee briefing prior the competition. If a team stops or restarts the run just before the major collision, the major collision is ignored. In this case, the teams knowledge about there robot is rewarded.}
 
 
 \textbf{Minor Collision:}
