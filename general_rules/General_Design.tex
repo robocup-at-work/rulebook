@@ -474,27 +474,24 @@ For the placement of Objects the following terms are used:
 \section{Objects} 
 \label{ssec:ManipulationObjects}
 
-The Objects in \RCAW include a wide range of Objects relevant in industrial applications of robotics. They eventually cover any raw material, (semi-)finished parts or products as well as tools and possibly operating materials required for manufacturing processes. Object types are selected by the TC and shall vary in complexity due to different shapes, colors and uses of objects.
-\par 
+The Objects in \RCAW include a wide range of Objects relevant in industrial applications of robotics. They eventually cover any raw material, (semi-)finished parts or products as well as tools and possibly operating materials required for manufacturing processes. \textcolor{red}{Object types are selected by the TC and shall vary in complexity due to different shapes, colors and uses of objects.}
 
-The basic set of Objects includes standard profile rails, screws and nuts with various sizes and masses (see table~\ref{tab:manipulation_objects}).
+\textcolor{red}{The basic set of Objects (called @work Object Set) includes standard profile rails, screws and nuts with various sizes and masses (see table~\ref{tab:manipulation_objects}).}
 
-TODO: Still need this or can we remove it with introduction of new object set?
-
-Additionally, a set of so called RoCKIn objects is used in the competition (see table~\ref{tab:manipulation_objects_rockin}). 
-These parts build a drive train of a KUKA youbot and might be used for assembly tasks.
-\textbf{REMARK:} Due to poor availability of the original RoCKin object set, teams are allowed to to use a set of 3D printed copies. The material used for fabrication has to be in standard grey/silver colour using fine quality settings and PLA as printing material. 
-An example is given with PLA Silver (ca. RAL 9006), thickness 1.75 or 2.85, not specified in detail.
+%TODO: Still need this or can we remove it with introduction of new object set?
+%
+%Additionally, a set of so called RoCKIn objects is used in the competition (see table~\ref{tab:manipulation_objects_rockin}). 
+%These parts build a drive train of a KUKA youbot and might be used for assembly tasks.
+%\textbf{REMARK:} Due to poor availability of the original RoCKin object set, teams are allowed to to use a set of 3D printed copies. The material used for fabrication has to be in standard grey/silver colour using fine quality settings and PLA as printing material. 
+%An example is given with PLA Silver (ca. RAL 9006), thickness 1.75 or 2.85, not specified in detail.
 
 %\href{https://www.amazon.de/-/en/TINMORRY-1-75mm-Filament-Printer-Spool/dp/B089YX78N5/ref=sr_1_6?crid=ZTL2O0EL3B3B&keywords=pla%2Bfilament%2Bgrau%2Bral%2B9006&qid=1641982915&s=industrial&sprefix=pla%2Bfilament%2Bgrau%2Bral9006%2Cindustrial%2C114&sr=1-6&th=1 }{example material from amazon} (visited Januar 2022). 
-Figure~\ref{fig:RoCKIn_printed} shows an example set of the printed RoCKIn Objects created using fused filament fabrication (FFF) printing. 
+%Figure~\ref{fig:RoCKIn_printed} shows an example set of the printed RoCKIn Objects created using fused filament fabrication (FFF) printing. 
 
+\textcolor{red}{In 2023, the RoCKIn object set (see 2022 rulebook or previous ones) is finally replaced by a selection of better available parts for a drive train, as well as some tools (see Section~
+\ref{sec:new_objects}). The new object set was introduced in a technical challenge in 2022 and is called Advanced Object Set.}
 
-
-For 2023, the RoCKIn object set is replaced by a selection of more available parts for a drive train, as well as some tools (see Section~
-\ref{sec:new_objects}). 
-
-The exact appearance of the object used in the competition can slightly vary, e.g. different coating colors for some standard parts.
+\textcolor{red}{The exact appearance of the object used in the competition can slightly vary, e.g. different coating colors for some standard parts.}
 
 % as shown in  and . Objects of one kind can slightly vary e.g. considering the surface and coating colour. 
 
@@ -504,7 +501,7 @@ The exact appearance of the object used in the competition can slightly vary, e.
 
 
 
-\subsection{Standard Object Set}
+\subsection{\textcolor{red}{@work} Object Set}
 
 
 \newcommand{\imageView}[1]{\includegraphics[width=2cm, valign=c]{#1}}
@@ -571,82 +568,82 @@ ID & Object & Symbolic Description & Mass & Details \\
 
 
 \clearpage
-\subsection{RoCKIn Object Set}
-
-\subsubsection{Original Set}
-
-
-\begin{table}[h!]
-\begin{tabular}{|c|c|c|c|m{6cm}|}
-\hline
-ID & Object & Symbolic Description & Mass & Details \\
-\hline
-
-\texttt{8} & \imageView{./images/bearingBoxA.jpg} & \texttt{Bearing\_Box} & 102 g & Bearing box\newline
- Height: 25 mm \newline
- Width: 45 mm \newline
- Length: 50 mm \newline
- Inner diameter: 32 mm \\ [\rowpadding]
-\hline
-
-\texttt{9} & \imageView{./images/bearing.jpg} & \texttt{Bearing} & 42 g & Bearing\newline
- Height: 13 mm \newline
- Inner diameter: 15 mm \newline
- Outer diameter: 32 mm \\ [\rowpadding]
-\hline
-
-\texttt{10} & \imageView{./images/axis.jpg} & \texttt{Axis} & 40 g & Axis\newline
- Diameter: 27 mm \newline
- Length: 96 mm \\ [\rowpadding]
-\hline
-
-\texttt{11} & \imageView{./images/distanceTube.jpg} & \texttt{Distance\_Tube} & 5 g & Distance tube\newline
- Height: 10 mm \newline
- Inner diameter: 28 mm \newline
- Outer diameter: 32 mm \\ [\rowpadding]
-\hline
-
-\texttt{12} & \imageView{./images/motor.jpg} & Motor & 20 g & Motor\newline
- Diameter: 42 mm \newline
- Length: 87 mm \\ [\rowpadding]
-\hline
-
-\texttt{13} & \imageView{./images/R20.jpg} & \texttt{R20} & 14 g & Plastic tube\newline
-Inner diameter: 20 mm \newline
-Outer diameter: 30 mm \newline
-Length: 45 mm \\ [\rowpadding]
-\hline
-%\imageView{./images/V20.jpg} & \texttt{V20} & 14 g & Inner diameter: 20 mm \newline
-%Outer diameter: 30 mm \newline
-%Length: 45 mm \\
+%\subsection{RoCKIn Object Set}
+%
+%\subsubsection{Original Set}
+%
+%
+%\begin{table}[h!]
+%\begin{tabular}{|c|c|c|c|m{6cm}|}
 %\hline
-\end{tabular}
-\caption{RoCKIn Object set.}
-\label{tab:manipulation_objects_rockin}
-\end{table}
-}
+%ID & Object & Symbolic Description & Mass & Details \\
+%\hline
+%
+%\texttt{8} & \imageView{./images/bearingBoxA.jpg} & \texttt{Bearing\_Box} & 102 g & Bearing box\newline
+% Height: 25 mm \newline
+% Width: 45 mm \newline
+% Length: 50 mm \newline
+% Inner diameter: 32 mm \\ [\rowpadding]
+%\hline
+%
+%\texttt{9} & \imageView{./images/bearing.jpg} & \texttt{Bearing} & 42 g & Bearing\newline
+% Height: 13 mm \newline
+% Inner diameter: 15 mm \newline
+% Outer diameter: 32 mm \\ [\rowpadding]
+%\hline
+%
+%\texttt{10} & \imageView{./images/axis.jpg} & \texttt{Axis} & 40 g & Axis\newline
+% Diameter: 27 mm \newline
+% Length: 96 mm \\ [\rowpadding]
+%\hline
+%
+%\texttt{11} & \imageView{./images/distanceTube.jpg} & \texttt{Distance\_Tube} & 5 g & Distance tube\newline
+% Height: 10 mm \newline
+% Inner diameter: 28 mm \newline
+% Outer diameter: 32 mm \\ [\rowpadding]
+%\hline
+%
+%\texttt{12} & \imageView{./images/motor.jpg} & Motor & 20 g & Motor\newline
+% Diameter: 42 mm \newline
+% Length: 87 mm \\ [\rowpadding]
+%\hline
+%
+%\texttt{13} & \imageView{./images/R20.jpg} & \texttt{R20} & 14 g & Plastic tube\newline
+%Inner diameter: 20 mm \newline
+%Outer diameter: 30 mm \newline
+%Length: 45 mm \\ [\rowpadding]
+%\hline
+%%\imageView{./images/V20.jpg} & \texttt{V20} & 14 g & Inner diameter: 20 mm \newline
+%%Outer diameter: 30 mm \newline
+%%Length: 45 mm \\
+%%\hline
+%\end{tabular}
+%\caption{RoCKIn Object set.}
+%\label{tab:manipulation_objects_rockin}
+%\end{table}
+%}
+%
+%\clearpage
+%\subsubsection{Printed Set}
+%
+%
+%\begin{figure}[h!]
+%	\begin{center}
+%		\subfloat[]{\includegraphics[width=0.8\textwidth]{./images/rockingPrinted1.jpg}}
+%		\vspace{0.05\textwidth}
+%		\subfloat[]{\includegraphics[width=0.8\textwidth]{./images/rockingPrinted2.jpg}}
+%	\end{center}
+%	\caption{Examplary 3D printed RoCKIn Objects (bearing box, bearing, axis, distance\_tube, motor, plastic tube R20). Material:  PLA silver ( ca. RAL 9006), 2.85mm. Printer: Ultimaker 3 extended. Printer settings: fine}
+%	\label{fig:RoCKIn_printed}
+%\end{figure}
+
+
 
 \clearpage
-\subsubsection{Printed Set}
+\subsection{\textcolor{red}{Advanced Object Set}}
 
 
-\begin{figure}[h!]
-	\begin{center}
-		\subfloat[]{\includegraphics[width=0.8\textwidth]{./images/rockingPrinted1.jpg}}
-		\vspace{0.05\textwidth}
-		\subfloat[]{\includegraphics[width=0.8\textwidth]{./images/rockingPrinted2.jpg}}
-	\end{center}
-	\caption{Examplary 3D printed RoCKIn Objects (bearing box, bearing, axis, distance\_tube, motor, plastic tube R20). Material:  PLA silver ( ca. RAL 9006), 2.85mm. Printer: Ultimaker 3 extended. Printer settings: fine}
-	\label{fig:RoCKIn_printed}
-\end{figure}
-
-
-
-\clearpage
-\subsection{Advanced Object Set}
-
-
-A new object set was introduced in 2022 that is intended to introduce objects that are closer to a real-life scenario. The set includes different tools and an updated drive shaft to replace the RoCKIn set. Links for purchase can be found in \ref{sec:new_objects}.
+\textcolor{red}{A new object set was introduced in 2022 as a technical challenge that is intended to introduce objects that are closer to a real-life scenario. The set includes different tools and an updated drive shaft to replace the RoCKIn set. Links for purchase can be found in \ref{sec:new_objects}.}
 
 \begin{table}[h!]
 	\begin{tabular}{|c|m{2cm}|c|c|m{8cm}|}
@@ -698,7 +695,7 @@ A new object set was introduced in 2022 that is intended to introduce objects th
 						\hline
 
 \end{tabular}
-\caption{\RCAW New set of manipulation objects (components set).}
+\caption{\textcolor{red}{Advanced Object Set}}
 \label{tab:new_objects1}
 \end{table}
 
