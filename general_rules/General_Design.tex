@@ -445,8 +445,6 @@ Currently, a Container itself does not need to be manipulated or transported by 
 \end{figure}
 
 
-
-
 \subsection{Manipulation Zone} \label{ssec:ManipulationZone}
 The manipulation zone defines the area where Objects can be placed. Thereby, the following constraints need to be satisfied:
 \begin{itemize}
@@ -467,7 +465,7 @@ For the placement of Objects the following terms are used:
 \end{itemize}
 \begin{figure} [h!]
 \centering
-\includegraphics[width=0.8\textwidth ]{./images/manipulation_zone.pdf}
+\includegraphics[width=0.8\textwidth ]{./images/manipulation_zone2023.pdf}
 \caption{Manipulation zone: the green color indicates the area where Objects can be placed on a Service Area by the referees.}
 \label{fig:manipulation_zone}
 \end{figure}
@@ -750,48 +748,129 @@ ID & Object & Symbolic Description & Mass & Details \\
 \label{tab:new_objects2}
 \end{table}
 
-
 \clearpage
 \subsection{April Tagged Object Set}
 \label{ssec: April Tagged Object Set}
 
-For the season 2023 and onwards, 3D printed cubes marked with April tags might be used in the competition.
+For the season 2023 and onwards, 3D printed cubes marked with April tags might be used in the competition. Further on this cubes will be called April Tag Tagged Cubes (ATTC).
 This shall prepare the possibility to design tasks that focus on other areas than object recognition by simplifying the detection. 
+All April Tags will be $40 \si{\milli\meter} \times 40 \si{\milli\meter}$ and out of the \textit{36h11} April Tag Family, including 1bit black, 1bit white boarder as shown in fig. \ref{fig:singleAprilTag}. 
 
-\subsubsection{Cubes as Manipulation Objects}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width= 0.4\textwidth ]{./images/singleAprilTAG42.png}
+	\caption{Example of an April Tag with the ID: 42 out of the 36h11-April Tag Family.}
+	\label{fig:singleAprilTag}
+\end{figure}
 
-The standard tagged cube measures 4x4x4\si{\centi\meter} and has slightly rounded edges, similar to the shape of aluminum profile rails.
-It is manufactured by 3D printing using PLA filament of any color.
-The april tag is glued to the top side of the cube and is encoded with an ID matching one of the objects.
-The exact design and size is specified in TODO:TABLE
-and can be downloaded from the official league repository (TODO: add link).
+All the used April Tag ID numbers will fit to the ID numbers used by the AtWork Commander. 
+%
+%uint16 EMPTY = 0
+%
+%# atwork
+%uint16 ATWORK_START = 11
+%uint16 F20_20_B = 11
+%uint16 F20_20_G = 12
+%uint16 S40_40_B = 13
+%uint16 S40_40_G = 14
+%uint16 M20_100 = 15
+%uint16 M20 = 16
+%uint16 M30 = 17
+%uint16 R20 = 18
+%uint16 ATWORK_END = 19
+%
+%# rockin
+%uint16 ROCKIN_START = 21
+%uint16 BEARING_BOX = 21
+%uint16 BEARING = 22
+%uint16 AXIS = 23
+%uint16 DISTANCE_TUBE = 24
+%uint16 MOTOR = 25
+%uint16 ROCKIN_END = 26
+%
+%# container
+%uint16 CONTAINER_START = 31
+%uint16 CONTAINER_RED = 31
+%uint16 CONTAINER_BLUE = 32
+%uint16 CONTAINER_END = 33
+%
+%# cavity
+%uint16 CAVITY_START = 41
+%uint16 F20_20_H  = 41
+%uint16 F20_20_V  = 42
+%uint16 F20_20_F  = 43
+%uint16 S40_40_H  = 44
+%uint16 S40_40_V  = 45
+%uint16 S40_40_F  = 46
+%uint16 M20_H     = 47
+%uint16 M20_V     = 48
+%uint16 M20_F     = 49
+%uint16 M20_100_H = 50
+%uint16 M20_100_V = 51
+%uint16 M20_100_F = 52
+%uint16 M30_H     = 53
+%uint16 M30_V     = 54
+%uint16 M30_F     = 55
+%uint16 R20_H     = 56
+%uint16 R20_V     = 57
+%uint16 R20_F     = 58
+%uint16 CAVITY_END = 59 
+
+
+
+
+\subsubsection{ATTC as Manipulation Objects}
+
+The standard ATTC measures $42\si{\milli\meter} \times 42\si{\milli\meter} \times 42 \si{\milli\meter}$ and has slightly rounded edges, similar to the shape of aluminum profile rails. On the top there is a $1\si{\milli\meter}$ deep cavatie ( $40.5\si{\milli\meter} \times 40.5\si{\milli\meter}$) to place the individual April Tag. It is manufactured by 3D printing using PLA filament of any color. The april tag is glued to the top side of the ATTC and is encoded with an ID matching one of the objects.
+The exact design and size is specified in fig. \ref{fig:cubeObject} and can be downloaded from the official league repository: \href{https://github.com/robocup-at-work/rulebook/tree/alpha_2023/images}{3D STL file of manipulation Cube.}
 The sides are marked with the ID in numeric numbers to make the cubes also identifyable by humans.
 
-TODO: Add Images of an example cube raw and one finished.
-
+\begin{figure}[h!]
+	\centering
+	\subfloat[April Tag Tagged Cube (ATTC), including overall dimensions.]{\includegraphics[width=0.375\textwidth ]{./images/AprilTags/AprilTagCube2023_2.png}}
+	\hspace{0.05\textwidth}
+	\subfloat[Detailed dimensions of the ATTC cavaty to fix a certain April Tag.]{ \includegraphics[width=0.375\textwidth ]{./images/AprilTags/AprilTagCube2023_1.png} }
+	\caption{3D construction of the ATTC as manipulation object.}%
+	\label{fig:cubeObject}
+\end{figure}
 
 \subsubsection{Tagged Targets}
 
-Target objects, such as a precise placement cavity or a container, might also be marked with an april tag.
+Target objects, such as a precise placement cavity or a container, might also be marked with an April Tag.
 
-For the PP cavities, one design will be used for all cubes with any object ID. 
-The design foresees a matching hole and two square cut-outs where tagged plates can be inserted.
-Each cavity gets two plates, one with the april tag and one with a numeric number.
-The ID used matches the object ID of the cube that should go into that hole.
-See the schematics below for more details
+For the PP cavaty tiles, one design will be used for all ATTC with any object ID. The design foresees a matching hole and two square cut-outs where tagged plates can be inserted. Additional to the April Tag also the April Tag ID will be shown on the tile.
+The ID used matches the ID used in the Atwork Commander so it should also mach with the correct ATTC.
+See the schematics shown in fig. \ref{fig:cubeObjectTile} for details. 
 
-TODO: Add Schematics of ppt tile and plate, aswell as image of finished product
+\begin{figure}[h!]
+	\centering
+	\subfloat[ATTC cavity tile, including overall dimensions.]{\includegraphics[width=0.375\textwidth ]{./images/AprilTags/CubeTile2023_2.png}}
+	\hspace{0.05\textwidth}
+	\subfloat[Detailed dimensions of the ATTC tile April Tag cavatie.]{ \includegraphics[width=0.375\textwidth ]{./images/AprilTags/CubeTile2023_1.png} }
+	\caption{3D construction  of the ATTC Precision Placement cavaty tile.}%
+	\label{fig:cubeObjectTile}
+\end{figure}
 
+Containers get an April tag glued onto the inside of the bottom surface with centric placement as shown in fig. \ref{fig:redContainerTagged}.
 
-Containers get an April tag glued onto the inside of the bottom surface with centric placement.
-
-TODO: Add Images of example containers
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width= 0.5\textwidth ]{./images/AprilTags/container_redTAG.png}
+	\caption{Example of a red container, tagged with the April Tag ID: "31".}
+	\label{fig:redContainerTagged}
+\end{figure}
 
 
 \subsubsection{April Tags}
+April Tags can be easy generated. The usage of any ROS package to identify the April Tag is allowed. For example the \href{http://wiki.ros.org/apriltag_ros}{April Tag ROS package} can easy be adapted to be used within the competition. Example April Tags out of the April Tag Family  36h11 are shown in fig. \ref{fig:AprilTagExamples}. 
 
-TODO: Add list of april tags
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width= 0.8\textwidth ]{./images/AprilTags/AprilTags0TO31.png}
+	\caption{Examples of April Tags with $0 \le April Tag ID \le 31$.}
+	\label{fig:AprilTagExamples}
+\end{figure}
 
 
 
