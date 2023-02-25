@@ -18,8 +18,7 @@ Unless stated other, the following rules apply to all test types:
 \item The maximum objects a robot is allowed to carry is 3.
 \item The robot has to start and end at the respective arena location (START, FINISH).
 \item The robot will get the task specification from the AC.
-\item Reaching a Service Area successfully is rewarded as defined in \ref{tab:InstancePoints}.
-\item The reward for reaching an active Service Area will be only rewared once per SA.
+\item Reaching each active Service Area successfully is rewarded once with points defined in \ref{tab:InstancePoints}.
 \item Service Areas count as succesfully reached as defined in section \ref{sec:ArenaDesign}.
 \item Manipulation tasks count as successful as defined in \ref{ssec:GraspingObjects} and \ref{ssec:PlacingObjects}.
 \item The score for this test will be calculated as defined in \ref{sec:ScoringAndRanking}.
@@ -70,16 +69,15 @@ If one of these both situations happen while a grasping process then no points a
 
 An Object counts as successfully placed, if the robot places an correct Object to a Manipulation Zone of the correct Service Area. The robot has to place the Object so that the Object is lying with his complete form inside the Manipulation Zone. The pose of the Object on the Manipulation Zone can be chosen freely by the robot.
 
-There is a Placement Deduction and this Placement Deduction will be applied at the following situations, if multiple situations happen while the same placing process the Placement Deduction will applied only once:
+There is a Placement Deduction that will be subtracted from the points of the successfull Grasping. The Placement Deduction will be applied at the following situations, if multiple situations happen while the same placing process the Placement Deduction will applied only once:
 
 \begin{itemize}
 	\item If the placed Object or the Manipulator touches another Object, Container or Decoy while the placing process at the Manipulation Zone 
 	\item If the placed Object is not lying with his complete form within the Manipulation Zone at the end of the placement process
 \end{itemize}
 
-If one of these situations happens the teams will get 50 points. These 50 points are not depending on the type (arbitrary surface, PPT, Container ...) of the placement. If multipled Placement Deductions appears they will be only applied once (only 50 points).
-
 The placement process starts when the Manipulator with the Object enters the Service Area and ends when the placed Object doesn't move anymore and the Manipulator has left the Service Area. In these cases the Service Area has an infinte height.
+
 
 If an Object is placed from a height higher than $5\si{\centi\meter}$ to the top of the Manipulation Zone it is considered as an Object Loss and no points are given for a successfull Placing.
 
