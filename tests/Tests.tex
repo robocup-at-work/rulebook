@@ -44,15 +44,15 @@ Unless stated other, the following rules apply to all test types:
 
 \textbf{General}
 
-An Object counts as successfully grasped, if the robot grasps the correct Object of the correct Service Area and transport it out of the corresponding Service Area. In that case the Service Area has an infinite height.
+An Object counts as successfully grasped, if the robot grasps the correct Object of the correct Service Area and transport it out of the corresponding Manipulation Zone. In that case the Manipulation Zone has an infinite height. 
 
-A robot is allowed to grasps an incorrect Object as long as the Object don't leave the Service Area with his complete form. This enables a robot to grasp an Object to examine the Object with a camera. If an incorrect Object grasped and moved out of the Service Area it is counted as an incorrect Object Grasping.
+A robot is allowed to grasps an incorrect Object as long as the Object don't leave the Manipulation Zone with his complete form. This enables a robot to grasp an Object to examine the Object with a camera. If an incorrect Object grasped and moved out of the Service Area it is counted as an \textbf{Incorrect Object Manipulation}.
 
-The grasping process starts when the Manipulator enters the Service Area und ends when it leaves the Service Area.
+The grasping process starts when the Manipulator enters the Manipulation Zone und ends when it leaves the Manipulation Zone. In these cases the Manipulation Zone has an infinite height.
 
-If the Objects falls down from the platform, the robot drops the Object to the floor after leaving the Service Area or the Object falls on top of the Service Area from a height higher than $5\si{\centi\meter}$ while the grasping process it is counted as an Object Loss.
+If the Objects falls down from the robot platform, the robot drops the Object to the floor after leaving the Manipulation Zone, the Object falls from the Manipulation Zone to the floor or the Object falls on top of the Service Area from a height higher than $5\si{\centi\meter}$ while the grasping process it is counted as an \textbf{Object Loss}.
 
-If the robot collides with an Object, Decoy or Container at the Manipulation Zone it is considered as a Minor Collision.
+If the robot collides with an Object, Decoy or Container at the Manipulation Zone while the grasping process it is considered as a \textbf{Manipulation Deduction}.
 
 \textbf{Rotating Table}
 
@@ -69,39 +69,37 @@ If one of these both situations happen while a grasping process then no points a
 
 An Object counts as successfully placed, if the robot places an correct Object to a Manipulation Zone of the correct Service Area. The robot has to place the Object so that the Object is lying with his complete form inside the Manipulation Zone. The pose of the Object on the Manipulation Zone can be chosen freely by the robot.
 
-There is a Placement Deduction that will be subtracted from the points of the successfull Grasping. The Placement Deduction will be applied at the following situations, if multiple situations happen while the same placing process the Placement Deduction will applied only once:
+The placement process starts when the Manipulator with the Object enters the Manipulation Zone and ends when the placed Object doesn't move anymore and the Manipulator has left the Manipulation Zone. In these cases the Manipulation Zone has an infinite height.
+
+If one (or more) of the following situations occur the fixed \textbf{Manipulation Deduction} will be applied. The fixed \textbf{Manipulation Deduction} is not depending on the type of the manipulation (RT, SH, arbitrary surface etc):
 
 \begin{itemize}
-	\item If the placed Object or the Manipulator touches another Object, Container or Decoy while the placing process at the Manipulation Zone 
-	\item If the placed Object is not lying with his complete form within the Manipulation Zone at the end of the placement process
+	\item The placed Object or the Manipulator touches another Object, Container or Decoy while the placing process at the Manipulation Zone 
+	\item The placed Object is not lying with his complete form within the Manipulation Zone at the end of the placement process
 \end{itemize}
 
 
-If one of these situations happens the teams will get \textcolor{red}{a penalty of minus} 50 points. \textcolor{red}{This penalty} is not depending on the type (arbitrary surface, PPT, Container ...) of the placement. If \textcolor{red}{multiple} Placement Deductions appears they will be only applied once (only \textcolor{red}{minus} 50 points).
-
-The placement process starts when the Manipulator with the Object enters the Service Area and ends when the placed Object doesn't move anymore and the Manipulator has left the Service Area. In these cases the Service Area has an infinte height.
 
 
-If an Object is placed from a height higher than $5\si{\centi\meter}$ to the top of the Manipulation Zone it is considered as an Object Loss and no points are given for a successfull Placing.
+If an Object is placed from a height higher than $5\si{\centi\meter}$ to the top of the Manipulation Zone it is considered as an \textbf{Object Loss} and no points are given for a successfull Placing.
 
-If a placed Object is either incorrect or the corresponding Service Area is incorrect, the Placement is considered as an Incorrect Placement. If at this Incorrect Placement a Placement Deductions occurs then no additional penalty points will be added to the Incorrect Placement penalty.
+If a placed Object is either incorrect or the corresponding Service Area is incorrect, the Placement is considered as an \textbf{Incorrect Object Manipulation}. 
 
-If the robot collides with an Object, Decoy or Container at the Manipulation Zone it is considered as a Minor Collision.
 
 \textbf{Shelf}
 
-The Placement at the upper part of the Shelf has to be in the Manipulation Zone of the upper part of the shelf and it is allowed that the Object is moving down to the lower area of the upper part of the shelf after the placement. 
+The Placement at the upper part of the Shelf has to be in the Manipulation Zone of the upper part of the shelf and it is allowed that the Object is moving down to the lower area of the upper part of the shelf after the placement. If the placed Object collides with an already placed object it is considered as a fixed \textbf{Manipulation Deduction}.
 
 
 \textbf{Precision Placement}
 
-A successfull Placement of the Object into the cavity will rewarded with a successfull Precision Placement. A successfull Precions Placement is if a  correct Object falls through the correct cavity tile. If the Object is not falling down through the cavity but is stuck in the cavity or is lying at the end of the run at the correct cavity it will be rewarded with an successfull Cavity Placement. However The Object has to be lying with his complete form within the correct cavity.
+A successfull Placement of the Object into the cavity will rewarded with a successfull \textbf{Precision Placement}. A successfull Precions Placement is if a  correct Object falls through the correct cavity tile. If the Object is not falling down through the cavity but is stuck in the cavity or is lying with his complete form at the correct cavity at the end of the run it will be rewarded with an successfull \textbf{Cavity Placement}.
 
-If an Object is placed on the wrong cavity tile then no points are given and in this case there is also no incorrect Object Placing penalty as long as the Object has to be placed at this Precision Table. If an Object is placed on a Precision Table that shouldn't be placed there, then the incorrect Object Placement penalty will be apllied. 
+If an Object is placed on the wrong cavity tile then no points are given and in this case there is also no Incorrect Object Manipulation penalty as long as the Object has to be placed at this Precision Table. If an Object is placed on a Precision Table that shouldn't be placed there, then the \textbf{Incorrect Object Manipulation} penalty will be apllied. 
 
 There are recovery stragedies allowed at the Precision Table to put the Objects into the cavity.
 For example it is allowed to poke with the Object in the Gripper to place the Object into the cavity. This  allows the use of a force sensor for placing the Object into the cavity.
-It is also allowed to move the Object on the cavity as long as the Object stays on the same cavity. This ensures that a movement of a Object over the complete Table is not allowed.
+It is also allowed to move the Object on the cavity as long as the Object stays on the same cavity. This ensures that a movement of an Object over the complete Table is not allowed and will be considered as zero points.
 
  
 

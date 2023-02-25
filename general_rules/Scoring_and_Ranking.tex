@@ -64,8 +64,8 @@ Penalty points are given as follows, each time again the incident occurs:
 
 \begin{itemize}
 	\item Object Loss: \hfill -100 points
-	\item Incorrect Object Placement (see Section \ref{ssec:PlacingObjects}): \hfill -50 points
-	\item Placement Deduction (see Section \ref{ssec:PlacingObjects}): \hfill 50 points (the placement type doesn't matter)
+	\item Incorrect Object Manipulation (see Section \ref{ssec:PlacingObjects}): \hfill -50 points
+	\item Manipulation Deduction (see Section \ref{ssec:PlacingObjects}): \hfill \textcolor{red}{fixed 50 points (in any Manipulation szenarios)}
 	\item Minor collision (see Section \ref{sec:Collisions}): \hfill -50 points
 	\item Major collision (see Section \ref{sec:Collisions}): \hfill \textcolor{red}{restart or -50\% penalty}
   \item Tape collision (see Section \ref{sec:Collisions}): \hfill -5\% of total points of current run up till
@@ -74,6 +74,9 @@ Penalty points are given as follows, each time again the incident occurs:
   \item Cheating: \hfill reset all points to 0
 \end{itemize}
 
+\textcolor{red}{Manipulation Deduction:}
+
+\textcolor{red}{The Manipulation Deduction is a fixed point reward (50) if one or more Deductions happen while a grasping or placing process. The type of manipulation (like PP, SH, RT, arbitrary surface etc) when the Deductions happens doesn't affect the fixed points of 50.}
 
 \section{Collisions}\label{sec:Collisions}
 
@@ -104,7 +107,7 @@ The idea of the two cases is to guarantee a proper number of observers (at least
 
 \textbf{Minor Collision:}
 
-If the Robot collides with Objects, Decoys or Container it is considered as a Minor Collision. 
+\textcolor{red}{If the Robot collides with (Manipulation) Objects, Decoys or Containers while moving through the arena. Collisions with Objects, Decoys or Containers while grasping or placing process is considered as Manipulation Deduction. }
 
 %If the manipulator collides with an interaction element of the arena (RTT, upper level
 %of Shelf) it is considered a minor collision. The only exception is the collision of the gripper
@@ -132,7 +135,7 @@ A Collions with the Marking Tape will not be penalized.
 %\end{description}
 
 \begin{table}[h!]
-	\caption{Definition of minor and major collisions}
+	\caption{\textcolor{red}{Definition of minor and major collisions}}
 	\label{tab:collisions}
 	\centering
 	\begin{tabular}{|p{10cm}|p{1cm}|p{1cm}|p{1.5cm}|}
@@ -141,13 +144,10 @@ A Collions with the Marking Tape will not be penalized.
 		\hline
 		Collision with static elements of arena                  &       & X     &              \\
 		Collision with dynamic elements of arena                 &       & X     &              \\
-		Body Collision with workstation                    &       & X     &              \\
+		Body Collision with WS, SH, RT, PP                     &       & X     &              \\
 		Manipulator Collision with top surface of manipulation zone       &       &       &              \\
-		Manipulator Cable Collision with Env, Obj, Dec or Con (platform movement)    &  X     &       &              \\
-		Manipulator Cable Collision with Env, Obj, Dec or Con (placing/grasping process)    &       &       &              \\
-		Manipulator Collision with Objects, Container, Decoys & X     &       &              \\
-		Manipulator Collision with Round Table stopping it &      & X      &              \\
-		Manipulator Collision with PPT Cavity surface      &      & X      &              \\
+		Robot Collision with Objecht, Decoy or Container (platform movement)    &  X     &       &              \\
+
 		Manipulator Collision with Shelf                   &      & X      &              \\
 		Virtual Obstacle (Yellow/Black Tape) Collisions          &       &       & X            \\
 		Virtual Wall (Red/White Tape) Collisions                 &       & X     &              \\
@@ -234,7 +234,7 @@ In case of a tie of the first three places a deciding run will be scheduled. A p
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width= 1.1\textwidth, angle =90 ]{./images/tabels/table_points.png}
+	\includegraphics[width= 1\textwidth,  ]{./images/tabels/robocup_penalty_points.png}
 	\caption{Scoring in the instances of the \RCAW \YEAR competition.}
 	\label{fig:test_scoring}
 \end{figure}
