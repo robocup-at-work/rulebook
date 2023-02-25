@@ -197,6 +197,8 @@ A narrow section is completely blocked by the Obstacle, which means that no robo
 
 \item \textbf{Semi-Blocking:} 
 The Obstacle reduces the distance between arena elements below the minimum width for a path ($<$ $80\si{\centi\meter}$). The path therefore counts as blocked, meaning that there must exist another valid path to all active Service Areas. Robots are still allowed to use all paths if they fit through the smaller gaps.
+The gap width is fixed and its value is calculated using the width of the biggest robot in the competition plus $ 10\si{\centi\meter}$. This usually adds up to around $ 60\si{\centi\meter}$,
+but might be higher or lower, depending on the participating robots.
 
 \item \textbf{Non-Blocking:}
 The Obstacle adds or enlarges an arena element but keeps all paths intact.
