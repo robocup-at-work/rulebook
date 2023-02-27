@@ -23,7 +23,8 @@ Please note especially [#64](https://github.com/robocup-at-work/rulebook/issues/
 The process of altering the Rules for the Roboup@Work league is open to every one. Please feel free to contact the TC or the [mailing list](mailto:rc-work@lists.robocup.org) 
 with questions.
 
-Participating teams should also join our [Discord Server](https://discord.gg/z6Yn6UvhxU).
+Participating teams should also join our [Discord Server](https://discord.gg/z6Yn6UvhxU) as it is the go-to-location for discussions,
+announcements, questions and feedback!
 
 ## Issues
 
