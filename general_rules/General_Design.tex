@@ -474,9 +474,9 @@ For the placement of Objects the following terms are used:
 \section{Objects} 
 \label{ssec:ManipulationObjects}
 
-The Objects in \RCAW include a wide range of Objects relevant in industrial applications of robotics. They eventually cover any raw material, (semi-)finished parts or products as well as tools and possibly operating materials required for manufacturing processes. \textcolor{red}{Object types are selected by the TC and shall vary in complexity due to different shapes, colors and uses of objects.}
+The Objects in \RCAW include a wide range of Objects relevant in industrial applications of robotics. They eventually cover any raw material, (semi-)finished parts or products as well as tools and possibly operating materials required for manufacturing processes. Object types are selected by the TC and shall vary in complexity due to different shapes, colors and uses of objects.
 
-\textcolor{red}{The basic set of Objects (called @work Object Set) includes standard profile rails, screws and nuts with various sizes and masses (see table~\ref{tab:manipulation_objects}).}
+The basic set of Objects (called @work Object Set) includes standard profile rails, screws and nuts with various sizes and masses (see table~\ref{tab:manipulation_objects}).
 
 %TODO: Still need this or can we remove it with introduction of new object set?
 %
@@ -488,10 +488,10 @@ The Objects in \RCAW include a wide range of Objects relevant in industrial appl
 %\href{https://www.amazon.de/-/en/TINMORRY-1-75mm-Filament-Printer-Spool/dp/B089YX78N5/ref=sr_1_6?crid=ZTL2O0EL3B3B&keywords=pla%2Bfilament%2Bgrau%2Bral%2B9006&qid=1641982915&s=industrial&sprefix=pla%2Bfilament%2Bgrau%2Bral9006%2Cindustrial%2C114&sr=1-6&th=1 }{example material from amazon} (visited Januar 2022). 
 %Figure~\ref{fig:RoCKIn_printed} shows an example set of the printed RoCKIn Objects created using fused filament fabrication (FFF) printing. 
 
-\textcolor{red}{In 2023, the RoCKIn object set (see 2022 rulebook or previous ones) is finally replaced by a selection of better available parts for a drive train, as well as some tools (see Section~
-\ref{sec:new_objects}). The new object set was introduced in a technical challenge in 2022 and is called Advanced Object Set.}
+In 2023, the RoCKIn object set (see 2022 rulebook or previous ones) is finally replaced by a selection of better available parts for a drive train, as well as some tools (see Section~
+\ref{sec:new_objects}). The new object set was introduced in a technical challenge in 2022 and is called Advanced Object Set.
 
-\textcolor{red}{The exact appearance of the object used in the competition can slightly vary, e.g. different coating colors for some standard parts.}
+The exact appearance of the object used in the competition can slightly vary, e.g. different coating colors for some standard parts.
 
 % as shown in  and . Objects of one kind can slightly vary e.g. considering the surface and coating colour. 
 
@@ -499,10 +499,7 @@ The Objects in \RCAW include a wide range of Objects relevant in industrial appl
 %\ref{sec:new_objects}. 
 
 
-
-
-\subsection{\textcolor{red}{Basic} Object Set}
-
+\subsection{Basic Object Set}
 
 \newcommand{\imageView}[1]{\includegraphics[width=2cm, valign=c]{#1}}
 {
@@ -640,10 +637,10 @@ ID & Object & Symbolic Description & Mass & Details \\
 
 
 \clearpage
-\subsection{\textcolor{red}{Advanced Object Set}}
+\subsection{Advanced Object Set}
 
 
-\textcolor{red}{A new object set was introduced in 2022 as a technical challenge that is intended to introduce objects that are closer to a real-life scenario. The set includes different tools and an updated drive shaft to replace the RoCKIn set. Links for purchase can be found in \ref{sec:new_objects}.}
+A new object set was introduced in 2022 as a technical challenge that is intended to introduce objects that are closer to a real-life scenario. The set includes different tools and an updated drive shaft to replace the RoCKIn set. Links for purchase can be found in \ref{sec:new_objects}.
 
 \begin{table}[h!]
 	\begin{tabular}{|c|m{2cm}|c|c|m{8cm}|}
@@ -695,7 +692,7 @@ ID & Object & Symbolic Description & Mass & Details \\
 						\hline
 
 \end{tabular}
-\caption{\textcolor{red}{Advanced Object Set}}
+\caption{Advanced Object Set}
 \label{tab:new_objects1}
 \end{table}
 
@@ -749,12 +746,15 @@ ID & Object & Symbolic Description & Mass & Details \\
 \end{table}
 
 \clearpage
+
+
 \subsection{April Tagged Object Set}
 \label{ssec: April Tagged Object Set}
 
 For the season 2023 and onwards, 3D printed cubes marked with April tags might be used in the competition. Further on this cubes will be called April Tag Tagged Cubes (ATTC).
 This shall prepare the possibility to design tasks that focus on other areas than object recognition by simplifying the detection. 
 All April Tags will be $40 \si{\milli\meter} \times 40 \si{\milli\meter}$ and out of the \textit{36h11} April Tag Family, including 1bit black, 1bit white boarder as shown in fig. \ref{fig:singleAprilTag}. 
+
 
 \begin{figure}[h!]
 	\centering
@@ -817,8 +817,6 @@ All the used April Tag ID numbers will fit to the ID numbers used by the AtWork 
 %uint16 CAVITY_END = 59 
 
 
-
-
 \subsubsection{ATTC as Manipulation Objects}
 
 The standard ATTC measures $42\si{\milli\meter} \times 42\si{\milli\meter} \times 42 \si{\milli\meter}$ and has slightly rounded edges, similar to the shape of aluminum profile rails. On the top there is a $1\si{\milli\meter}$ deep cavatie ( $40.5\si{\milli\meter} \times 40.5\si{\milli\meter}$) to place the individual April Tag. It is manufactured by 3D printing using PLA filament of any color. The april tag is glued to the top side of the ATTC and is encoded with an ID matching one of the objects.
@@ -871,6 +869,8 @@ April Tags can be easy generated. The usage of any ROS package to identify the A
 	\caption{Examples of April Tags with $0 \le April Tag ID \le 31$.}
 	\label{fig:AprilTagExamples}
 \end{figure}
+
+
 
 
 
