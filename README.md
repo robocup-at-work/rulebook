@@ -6,6 +6,17 @@ The rulebook is automatically build and stored as artifact. Please visit [Link](
 You can also just use the PDF version inside of this Repo.
 Currently the latest one is called 'RulebookFinal2022.pdf'.
 
+
+## First Draft Release for 2023
+
+We have released the first draft of the Official Rulebook for the Season 2023!
+You will find the latest version in Branch 'Alpha_2023'.
+
+The official release of the official rulebook for the season of 2023 is planned for end of March 2023.
+You can keep track of the most important changes in our GitHub Issues.
+Please note especially [#64](https://github.com/robocup-at-work/rulebook/issues/64) as it is a quite major change!
+
+
 ## Contact
 
 
