@@ -39,7 +39,7 @@ Further, the following assumptions are made about the kind of robots used in the
 \par
 \begin{itemize}
 	\item At least one of the robots used by a team is mobile and moves on wheels. No specific assumptions are made about the kinematic design, but the mobile robots should be able to move on basically flat, sufficiently firm surfaces. Aerial robots are not allowed in this competition. 
-	\item The robots have at least one manipulator and are able to grasp Objects, which are used in the individual task. See Table~\ref{tab:manipulation_objects}, Table~\ref{tab:manipulation_objects_rockin} and Table~\ref{tab:new_objects1} as well as Table~\ref{tab:new_objects2}.
+	\item The robots have at least one manipulator and are able to grasp Objects, which are used in the individual task. See Table~\ref{tab:manipulation_objects} and Table~\ref{tab:new_objects1} as well as Table~\ref{tab:new_objects2}.
 	\item The manipulator of the robot should be designed and mounted on the robot such that it can grasp Objects from different heights between $0\si{\centi\meter}$ and $40\si{\centi\meter}$ above the floor.
 	\item The robots use sensors to obtain information about their whereabouts in the environment and the task-relevant Objects. The major types of sensors that may be used by the robots include:
 	\begin{itemize}
@@ -261,7 +261,7 @@ The table is closed between the bottom and the table top. That's why the Table c
 	\label{fig:ws}
 \end{figure}
 
-If a table has a height of $0\si{\centi\meter}$, a green electrical Tape (see \ref{subsec:Tapes}) will mark the area. A $0\si{\centi\meter}$-Table can be active or inactive. Active means, that the current test (see table \ref{tab:Instances}) includes $0\si{\centi\meter}$-Tables.
+If a table has a height of $0\si{\centi\meter}$, a green electrical Tape (see \ref{subsec:Tapes}) will mark the area. A $0\si{\centi\meter}$-Table can be active or inactive. Active means, that the current test (see table \ref{fig:test_specifications_instance}) includes $0\si{\centi\meter}$-Tables.
 If the table is active, the surrounded area may be covered by a white sheet of paper or arbitrary surface. The material is not fixed.
 The OC is responsible to replace it in case of pollution or tears. To reduce the tear, it is removed when the $0\si{\centi\meter}$-Table is not active. If the floor is white or the table shall have an Arbitrary Surface, no cover needs to be installed.
 $0\si{\centi\meter}$-Table may be crossed and does not count as a collision. If the laid out white Surface is moved, it is not a collision.
@@ -280,7 +280,7 @@ If the robot touches an Object while navigating, this will be handled as a Minor
 
 \subsection{Shelves}\label{sec:Shelves}
 
-The integration of Shelves into tests is according the table \ref{tab:Instances}. Service Areas may foresee the use of shelves and shelf units as depicted in Figure~\ref{fig:shelf}. The lower part of the Shelf is a $10\si{\centi\meter}$-Table as specified in \ref{subsec: Tables}.
+The integration of Shelves into tests is according the table \ref{fig:test_specifications_instance}. Service Areas may foresee the use of shelves and shelf units as depicted in Figure~\ref{fig:shelf}. The lower part of the Shelf is a $10\si{\centi\meter}$-Table as specified in \ref{subsec: Tables}.
 The maximum height of the shelves should be not more than $40\si{\centi\meter}$. In the example shown in Figure~\ref{fig:shelf} the first $15 \si{\centi\meter}\pm 2\si{\centi\meter} $ are not covered by the top shelf. The length of free space can be changed during competition and can not be seen as mandatory. Therefore all teams has to consider special picking behavior to avoid collision.  
 
 The top shelf surface may be specially designed in order to serve specific purposes, e.g.\, holding Objects. Objects for grasping are always placed on the bottom shelf. The placement of a delivered Object has to be done on the top shelf.  
@@ -296,7 +296,7 @@ The top shelf surface may be specially designed in order to serve specific purpo
 
 
 \subsection{Rotating Tables}\label{sec:Rotating Table}
-The integration of Rotating Tables into tests is according the table \ref{tab:Instances}.  A Rotating Table as depicted in Figure~\ref{fig:rottable} is used for these tests. The Objects placement is the same like in section \ref{ssec:ManipulationZone}, so the maximal depth for Objects is $20 \si{\centi\meter}$ and there is gap of $2\si{\centi\meter}$ to the border of the Rotating Table.
+The integration of Rotating Tables into tests is according the table \ref{fig:test_specifications_instance}.  A Rotating Table as depicted in Figure~\ref{fig:rottable} is used for these tests. The Objects placement is the same like in section \ref{ssec:ManipulationZone}, so the maximal depth for Objects is $20 \si{\centi\meter}$ and there is gap of $2\si{\centi\meter}$ to the border of the Rotating Table.
 
 
 The height of the Rotating Table should be not lesser than $8\si{\centi\meter}$ and not be more than $12\si{\centi\meter}$. The diameter of the Rotating Table should be not lesser than $50\si{\centi\meter}$ and not more than $100\si{\centi\meter}$. The Rotating Table has to have a white surface colour. The rotating speed of the table depends on the diameter so that the Objects speed is able to vary between $5 \si{\centi\meter\per\second} \le v_{object} \le 20 \si{\centi\meter\per\second}$. This has to be adjusted by the referees before a team starts its run to a fixed value (some small variations in boarders of  technical feasibility are allowed). This is changed after each run type to another random chosen value in this range. During the run of a team the speed is static and each team will have the same table speed. Example: For a Rotating Table with diameter $d_{table}=1\si{\meter}$, Objects are placed on a grasp region with the diameter $d_{object}=0.8\si{\meter}$ with $\omega_{table} = \frac{2 \cdot v_{objects} }{d_{grasp}}=\frac{2 \cdot 0.2}{0.8}=0.5\si{\radian\per\second}$ and with $n_{table}=\frac{\omega_{table}}{2 \cdot \pi}=\frac{0.5}{2 \cdot \pi}$ the minimum rotational speed of the Rotating Table $n_{table}= 0.0796 \si{\per\second}$ (rounds per second) can be calculated.  
@@ -395,7 +395,7 @@ This makes smaller physical layouts possible that still provide the ability to c
 \subsection{Arbitrary Surfaces and Decoys}
 \label{subsec:Arbitrary_Surfaces_and_Decoys}
 
-In order to make the operating environment more realistic, the Service Areas may contain different kinds of Arbitrary Surfaces (Figure \ref{fig:ast_surface_example}) with industrial items as Decoys (Figure \ref{fig:ast_example}). The Arbitrary Surfaces don't have to be fixed mounted at the Service Areas. Examples of Arbitrary Surfaces can be different wood pattern, grass, alufoil, plexiglas etc. The integration of Arbitrary Surfaces and Decoys into tests is according the table \ref{tab:Instances}.
+In order to make the operating environment more realistic, the Service Areas may contain different kinds of Arbitrary Surfaces (Figure \ref{fig:ast_surface_example}) with industrial items as Decoys (Figure \ref{fig:ast_example}). The Arbitrary Surfaces don't have to be fixed mounted at the Service Areas. Examples of Arbitrary Surfaces can be different wood pattern, grass, alufoil, plexiglas etc. The integration of Arbitrary Surfaces and Decoys into tests is according the table \ref{fig:test_specifications_instance}.
 
 
 \begin{figure}[h!]
@@ -429,7 +429,8 @@ Placement of Decoys and arbitrary surfaces are done by the referees. Decoys coul
 \subsection{Containers}
 As in many industrial settings, the \RCAW environment may be equipped with several Containers (see Figure~\ref{fig:containers}). The Containers are defined as industrial plastic stacking boxes size 2B, outer dimensions: $135 \times 160 \times 82  \si{\milli\meter}$, usable dimensions: $120 \times 125 \times 65  \si{\milli\meter}$  in red ca. RAL 3020 and blue ca. RAL 5015.
 % \href{https://www.amazon.de/gp/product/B0062TUUOE/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1}{example Container from amazon} (visited Januar 2022). 
-They can store any kind of Object defined in Section~\ref{ssec:ManipulationObjects}. Robots are supposed either to grasp one or multiple Objects out of Containers or to place previously grasped Objects into them. Several Containers can be present in the environment and are always associated with a Service Area. That means that the Container itself will be placed within the manipulation zone defined in Section~\ref{ssec:ManipulationZone}.
+They can store any kind of Object defined in Section~\ref{ssec:ManipulationObjects}. Robots are supposed to place previously grasped Objects into containers. 
+(Grasping from containers might be included in future competitions.) Several Containers can be present in the environment and are always associated with a Service Area. That means that the Container itself will be placed within the manipulation zone defined in Section~\ref{ssec:ManipulationZone}.
 It is also possible that more than one Container is placed at a single Service Area, but not multiple Containers of the same color.
 The constraints defined in Section~\ref{ssec:ManipulationZone} apply also to the Containers.
 Currently, a Container itself does not need to be manipulated or transported by the robot. The position of the Containers will be decided by the referees before every run type.
@@ -476,7 +477,7 @@ For the placement of Objects the following terms are used:
 
 The Objects in \RCAW include a wide range of Objects relevant in industrial applications of robotics. They eventually cover any raw material, (semi-)finished parts or products as well as tools and possibly operating materials required for manufacturing processes. Object types are selected by the TC and shall vary in complexity due to different shapes, colors and uses of objects.
 
-The basic set of Objects (called @work Object Set) includes standard profile rails, screws and nuts with various sizes and masses (see table~\ref{tab:manipulation_objects}).
+The Basic Object Set includes standard profile rails, screws and nuts with various sizes and masses (see table~\ref{tab:manipulation_objects}).
 
 %TODO: Still need this or can we remove it with introduction of new object set?
 %
@@ -655,7 +656,7 @@ A new object set was introduced in 2022 as a technical challenge that is intende
 		Coating/Colour: blank, black burnished \newline
 		Length: 68 mm \newline
 		Diameter: 17mm, M20 \newline
-		see Figure~\ref{fig:welle2Schematic} \newline
+		%see Figure~\ref{fig:welle2Schematic} \newline
 		
 		\href{https://de.misumi-ec.com/vona2/detail/110302635710/?CategorySpec=00000146753%3a%3ab%2cc}{Misumi} (visited Januar 2022)\\
 

@@ -75,12 +75,12 @@ The Manipulation Deduction is a fixed point reward (50) if one or more Deduction
 
 For reasons of safety of people and property it is strictly unwanted for the robot to collide
 with any of the environmental objects. Only collisions of the gripper with the upside of
-the service areas are allowed while a Grasping or Placing process. In all collision cases the Virtual Walls/Obstacles have an infinite height. The different kind of collisions that can occur are defined in the
+the service areas are allowed while a Grasping or Placing process. In all collision cases the (Virtual) Walls and Obstacles have an infinite height. The different kind of collisions that can occur are defined in the
 following section and the table \ref{tab:collisions} gives an overview. Any Collisions cause a point penalty that is explained in section \ref{sec:penalties}.  
 
 \textbf{Major Collision:}
 
-If the robot (platform and manipulator) collides with a static element of the environment or touches a Virtual Wall it is considered as a major collision. An exception of this rule is when the cables of the manipulator touches the environment while the Grasping or Placing process. As stated before a collision with the  gripper with the upside of the service areas \textcolor{red}{is} allowed as long as there is no \textcolor{red}{fundamental} change of the environment at the service area. In this case it would be considered as a major collision. This could be for example moving an arbitrary surface off the workspace. 
+If the robot (platform and manipulator) collides with a static element of the environment or touches a Virtual Wall it is considered as a major collision. An exception of this rule is when the cables of the manipulator touches the environment while the Grasping or Placing process. As stated before a collision with the  gripper with the upside of the service areas is allowed as long as there is no fundamental change of the environment at the service area. In this case it would be considered as a major collision. This could be for example moving an arbitrary surface off the workspace. 
 
 If a major collision occurs the first time, the team can decide between the following two options:
 \begin{itemize}
@@ -152,14 +152,14 @@ A Collions with the Marking Tape will not be penalized.
 
 
 \section{Restarts}
-Teams might use one so-called restart in a run. Scores achieved before the restart are set to zero. 
+Teams might use one so-called restart in a run. Scores achieved before the restart are set to zero. Please refer to section \ref{sec:restartingarun} for a more detailed explanation.
 %\begin{itemize}
 %	\item Self called: Scores that are received after a restart are not reduced.
 %	\item Major collision: Scores that are received after a restart are reduced with multiplication of 0.75.
 %\end{itemize}
 
 \section{Ranking}
-The tests will occur in the instances shown in Table~\ref{tab:Instances}. Ranking of the teams will be based on the sum of the achieved points over all the tests.
+The tests will occur in the instances shown in Table~\ref{fig:test_specifications_instance}. Ranking of the teams will be based on the sum of the achieved points over all the tests.
 
 A team cannot get less than zero points for one run. If it is necessary to divide the competition into two stages (see section ~\ref{sec:qulaification for a test}), the scores of the first stage tests are summed up, and the teams with the highest sums proceed to the next stage (depending on overall number of teams). Depending on the number of teams and if there is enough time, all teams are allowed to enter the second stage.
 

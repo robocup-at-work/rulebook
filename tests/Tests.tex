@@ -12,17 +12,17 @@ Unless stated other, the following rules apply to all test types:
 \begin{itemize}
 \item The order in which the teams have to perform will be determined by a draw from the OC.
 \item The prep phase has a time limit of 3 minutes.
-\item Teams must not hardcode information gained from runs of previous teams.
+\item Teams must not hardcode information gained from runs of previous teams. This is considered as cheating.
 \item A single robot is used.
 \item The robot must not leave the arena.
-\item The maximum objects a robot is allowed to carry is 3.
+\item The maximum objects a robot is allowed to carry is 3. If more than 3 objects are above the robot's footprint, the same rule as for a major collision applies (run stopped or optional restart, stop after 2nd time). 
 \item The robot has to start and end at the respective arena location (START, FINISH).
 \item The robot will get the task specification from the AC.
-\item Reaching each active Service Area successfully is rewarded once with points defined in \ref{tab:InstancePoints}.
+\item Reaching each active Service Area successfully is rewarded once with points defined in table \ref{fig:test_scoring}.
 \item Service Areas count as succesfully reached as defined in section \ref{sec:ArenaDesign}.
 \item Manipulation tasks count as successful as defined in \ref{ssec:GraspingObjects} and \ref{ssec:PlacingObjects}.
 \item The score for this test will be calculated as defined in \ref{sec:ScoringAndRanking}.
-\item Exact test specification is displayed in table \ref{tab:Instances}.
+\item Exact test specification is displayed in table \ref{fig:test_specifications_instance}.
 \end{itemize}
 
 
@@ -103,9 +103,9 @@ It is also allowed to move the Object on the cavity as long as the Object stays 
 
  
 
-\textbf{Container place examples}
+\textbf{Container Placement}
 
-Here some valid (fig. \ref{fig:example_allenkeyOK}) and some wrong (fig. \ref{fig:example_allenkeyNOTOK}) container placements are shown. On the rulebook github page even more pictures can be found. 
+A container placement is considered as successful when the object touches the bottom of the container. Here are some valid (fig. \ref{fig:example_allenkeyOK}) and some wrong (fig. \ref{fig:example_allenkeyNOTOK}) container placements shown. On the rulebook github page even more pictures can be found. 
 
 \begin{figure}[h!]
 	\begin{center}
