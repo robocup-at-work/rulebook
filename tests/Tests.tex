@@ -15,14 +15,14 @@ Unless stated other, the following rules apply to all test types:
 \item Teams must not hardcode information gained from runs of previous teams. This is considered as cheating.
 \item A single robot is used.
 \item The robot must not leave the arena.
-\item The maximum objects a robot is allowed to carry is 3. If more than 3 objects are above the robot's footprint, the same rule as for a major collision applies (run stopped or optional restart, stop after 2nd time). 
+\item Robots are allowed to carry three objects max. If more than 3 objects are above the robot's footprint, the same rule as for a major collision applies (run stopped or optional restart, stop after 2nd time). 
 \item The robot has to start and end at the respective arena location (START, FINISH).
-\item The robot will get the task specification from the AC.
+\item The robot will get the task specification from the AC or an official bagfile.
 \item Reaching each active Service Area successfully is rewarded once with points defined in table \ref{fig:test_scoring}.
 \item Service Areas count as succesfully reached as defined in section \ref{sec:ArenaDesign}.
 \item Manipulation tasks count as successful as defined in \ref{ssec:GraspingObjects} and \ref{ssec:PlacingObjects}.
-\item The score for this test will be calculated as defined in \ref{sec:ScoringAndRanking}.
-\item Exact test specification is displayed in table \ref{fig:test_specifications_instance}.
+\item The score for each test will be calculated as defined in \ref{sec:ScoringAndRanking}.
+\item Exact test specifications are displayed in table \ref{fig:test_specifications_instance}.
 \end{itemize}
 
 
@@ -44,15 +44,17 @@ Unless stated other, the following rules apply to all test types:
 
 \textbf{General}
 
-An Object counts as successfully grasped, if the robot grasps the correct Object of the correct Service Area and transport it out of the corresponding Manipulation Zone. In that case the Manipulation Zone has an infinite height. 
+An Object counts as successfully grasped if the robot picks the correct Object type from the correct Service Area and carries it out of the Manipulation Zone, which is treated with imaginary boundaries of infinite height. 
+The object must be above the robot's footprint for a successful grasp.
 
-A robot is allowed to grasps an incorrect Object as long as the Object don't leave the Manipulation Zone with his complete form. This enables a robot to grasp an Object to examine the Object with a camera. If an incorrect Object grasped and moved out of the Service Area it is counted as an \textbf{Incorrect Object Manipulation}.
+A robot is allowed to lift other Objects, as long as the Objects are not moved out of the Manipulation Zone with their complete form. 
+This enables a robot to pick and inspect all Objects on the workstation with its camera from multiple angles. 
+Removing an incorrect Object from the Manipulation zone is treated as an \texttt{Incorrect Object Manipulation}.
 
-The grasping process starts when the Manipulator enters the Manipulation Zone und ends when it leaves the Manipulation Zone. In these cases the Manipulation Zone has an infinite height.
+An \textbf{Object Loss} occurs when the robot drops an Object to either the floor or from a height of $5\si{\centi\meter}$ above the Service Area. If any Object (starts rolling and) falls off the edge of a Service Area after it has been touched by the robot, it is also considered as an \texttt{Object Loss}. 
 
-If the Objects falls down from the robot platform, the robot drops the Object to the floor after leaving the Manipulation Zone, the Object falls from the Manipulation Zone to the floor or the Object falls on top of the Service Area from a height higher than $5\si{\centi\meter}$ while the grasping process it is counted as an \textbf{Object Loss}.
-
-If the robot collides with an Object, Decoy or Container at the Manipulation Zone while the grasping process it is considered as a \textbf{Manipulation Deduction}.
+The grasping process starts once the Manipulator enters the Manipulation Zone und ends when it leaves the Manipulation Zone.
+If the robot collides with an Object, Decoy or Container inside the Manipulation Zone during the grasping process it is considered as a \texttt{Manipulation Deduction}.
 
 \textbf{Rotating Table}
 
@@ -61,51 +63,46 @@ It is explicitly NOT allowed to stop the table (e.g. by pushing the gripper into
 It is also explicitly NOT allowed to position the gripper in a way that blocks the objects 
 unless it is during the grasping process of a target object and does not affect the table rotation or other objects.
 
-If one of these both situations happen while a grasping process then no points are rewarded for the following successful grasping of the Object.
+A breach of one or both of these rules causes that no points are rewarded if the Object is successfully picked.
 
 \subsection{Placing Objects} \label{ssec:PlacingObjects}
 
 \textbf{General}
 
-An Object counts as successfully placed, if the robot places an correct Object to a Manipulation Zone of the correct Service Area. The robot has to place the Object so that the Object is lying with his complete form inside the Manipulation Zone. The pose of the Object on the Manipulation Zone can be chosen freely by the robot.
+An Object counts as successfully placed if the robot places the correct Object type inside of the Manipulation Zone of the correct Service Area. The orientation of the object may be chosen freely by the robot, but the Object's footprint must lie completely inside of the Manipulation Zone.
+Neither the placed object nor the robot are not allowed to touch other Objects or Containers on the Service Area.
+Breaches of these rules result in a \texttt{Manipulation Deduction}, which will only be applied once, independent of the actual amount of breaches.
 
-The placement process starts when the Manipulator with the Object enters the Manipulation Zone and ends when the placed Object doesn't move anymore and the Manipulator has left the Manipulation Zone. In these cases the Manipulation Zone has an infinite height.
-
-If one (or more) of the following situations occur the fixed \textbf{Manipulation Deduction} will be applied. The fixed \textbf{Manipulation Deduction} is not depending on the type of the manipulation (RT, SH, arbitrary surface etc):
-
-\begin{itemize}
-	\item The placed Object or the Manipulator touches another Object, Container or Decoy while the placing process at the Manipulation Zone 
-	\item The placed Object is not lying with his complete form within the Manipulation Zone at the end of the placement process
-\end{itemize}
-
-
-
-
-If an Object is placed from a height higher than $5\si{\centi\meter}$ to the top of the Manipulation Zone it is considered as an \textbf{Object Loss} and no points are given for a successfull Placing.
-
-If a placed Object is either incorrect or the corresponding Service Area is incorrect, the Placement is considered as an \textbf{Incorrect Object Manipulation}. 
+If a placed Object either has an incorrect type or if it has been placed on the wrong Service Area, 
+the placement is considered as an \texttt{Incorrect Object Manipulation}. 
+Objects dropped from a height of $5\si{\centi\meter}$ or more above the Service Area are not counted as successfully placed but are rather treated as an \texttt{Object Loss}. This requires robots to carefully handle Objects as some might be damaged otherwise.
 
 
 \textbf{Shelf}
 
-The Placement at the upper part of the Shelf has to be in the Manipulation Zone of the upper part of the shelf and it is allowed that the Object is moving down to the lower area of the upper part of the shelf after the placement. If the placed Object collides with an already placed object it is considered as a fixed \textbf{Manipulation Deduction}.
+Objects must be placed on the upper part of the Shelf.
+The Manipulation Zone also applies for the tilted surface, but is extended until the edge of the Shelf to allow for Objects to slide down after a successful placement. Objects sliding onto other previously placed Objects cause a \textbf{Manipulation Deduction}.
 
+\clearpage
 
 \textbf{Precision Placement}
 
-A successfull Placement of the Object into the cavity will rewarded with a successfull \textbf{Precision Placement}. A successfull Precions Placement is if a  correct Object falls through the correct cavity tile. If the Object is not falling down through the cavity but is stuck in the cavity or is lying with his complete form at the correct cavity at the end of the run it will be rewarded with an successfull \textbf{Cavity Placement}.
+Objects must be placed onto the matching cavity tile with their complete form, which is then rewarded with a \texttt{Cavity Placement}.
+If the object drops through the cavity and fully passes the cavity tile, the precision placement is considered as successful and is rewarded with an additional \texttt{Precision Placement}. 
 
-If an Object is placed on the wrong cavity tile then no points are given and in this case there is also no Incorrect Object Manipulation penalty as long as the Object has to be placed at this Precision Table. If an Object is placed on a Precision Table that shouldn't be placed there, then the \textbf{Incorrect Object Manipulation} penalty will be apllied. 
+It is allowed to perform form fitting strategies, such as wiggling the object after placement or using force sensors during manipulation,
+as long as the cavity tile is not damaged during that process. A damaged cavity is treated as a \texttt{Incorrect Object Manipulation} and no points will be rewarded.
 
-There are recovery stragedies allowed at the Precision Table to put the Objects into the cavity.
-For example it is allowed to poke with the Object in the Gripper to place the Object into the cavity. This  allows the use of a force sensor for placing the Object into the cavity.
-It is also allowed to move the Object on the cavity as long as the Object stays on the same cavity. This ensures that a movement of an Object over the complete Table is not allowed and will be considered as zero points.
-
+Objects placed on a mismatching cavity tile do not cause an \texttt{Incorrect Object Manipulation} penalty if they had to be precise placed in the first place. This relaxes the risk of performing this task as it reduces potential bad outcome from false cavity detections.
  
 
 \textbf{Container Placement}
 
-A container placement is considered as successful when the object touches the bottom of the container. Here are some valid (fig. \ref{fig:example_allenkeyOK}) and some wrong (fig. \ref{fig:example_allenkeyNOTOK}) container placements shown. On the rulebook github page even more pictures can be found. 
+Container placements are considered as successful if an Object is placed inside of the container from a height less than $5\si{\centi\meter}$ above it's inside bottom. With container edges taller than $5\si{\centi\meter}$, robots must therefore "insert" their gripper fingers into the container during manipulation. Touching the container while placing the object is allowed, as long as the container is not moved substantially.
+If the container moves more than $1\si{\centi\meter}$, is tilted or forcefully moved, a \texttt{Manipulation Deduction} penalty will be applied.
+
+Placed Objects must touch the inside bottom of the container to count as successfully placed.
+Figure \ref{fig:example_allenkeyOK} shows correct final object positions placement examples. 
 
 \begin{figure}[h!]
 	\begin{center}
@@ -118,8 +115,7 @@ A container placement is considered as successful when the object touches the bo
 	\label{fig:example_allenkeyOK}
 \end{figure}
 
-Especially with the new advanced object set it is important to not produce an object loss during placement. The object has to be placed so that the fingers are not more than 5cm above the ground (here the bottom of the red container). That means the gripper finger has to be below the container edge (inside the container). 
-
+Figure \ref{fig:example_allenkeyNOTOK} shows examples for incorrect placements, which result in no points rewarded for that container placement and a \texttt{Manipulation Deduction} penalty given.
 
 \begin{figure}[h!]
 	\begin{center}

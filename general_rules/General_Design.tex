@@ -60,7 +60,7 @@ Figure~\ref{fig:example_robots} shows three examples how a robot suitable to the
 		\subfloat{\includegraphics[width=0.31\textwidth]{./images/robots/tyrolics2.jpg}} \hfill
 		\subfloat{\includegraphics[width=0.3\textwidth]{./images/robots/robotto_bot_small.jpg}} 
 	\end{center}
-	\caption{Examples mobile robot platforms that can be used for \RCAW. Robots from the teams AutonOHM (Nuernberg-Germany), Tyrolics (Innsbruck-Austria) and robOTTO (Magdeburg-Germany) -- from left to right. }
+	\caption{Examples mobile robot platforms that can be used for \RCAW. Robots from the teams AutonOHM (Nuremberg-Germany), Tyrolics (Innsbruck-Austria) and robOTTO (Magdeburg-Germany) -- from left to right. }
 	\label{fig:example_robots}
 \end{figure}
 
@@ -371,7 +371,7 @@ One or two parts of the arena are separated with marking Tape and considered as 
 
 \textbf{Referee Zone}
 
-The arena is enclosed by a padded strip of 1m. This area is reserved for the referees to enable them to move freely while judging a robot's performance.
+The arena is enclosed by a padded strip of 1m. This area is reserved for the referees to enable them to move freely while judging a robot's performance. See section \ref{sec: teams and roles}.
 
 
 \clearpage
@@ -482,13 +482,15 @@ The Objects in \RCAW include a wide range of Objects relevant in industrial appl
 
 \subsection{Basic Object Set}
 
-The Basic Object Set includes standard profile rails, screws and nuts with various sizes and masses (see table~\ref{tab:manipulation_objects}).
+The Basic Object Set includes standard profile rails, screws and nuts with various sizes and masses.
+% (see table~\ref{tab:manipulation_objects}).
 
 \newcommand{\imageView}[1]{\includegraphics[width=2cm, valign=c]{#1}}
-{
 \newcommand{\rowpadding}{0.4cm}
 \setlength\extrarowheight{\rowpadding}
-\begin{table}[p]
+
+
+\begin{table}[h!]
 
 \begin{tabular}{|c|c|c|c|m{8cm}|}
 \hline
@@ -497,47 +499,39 @@ ID & Object & Symbolic Description & Mass & Details \\
 
 \texttt{1} & \imageView{./images/F20_20_B.jpg} & \texttt{F20\_20\_B} & 49 g & Small aluminium profile \newline
  Coating/Colour: black anodized\newline
- Height: 20 mm \newline
- Width: 20 mm \newline
- Length: 100 mm \\ [\rowpadding]
+ Size: $20 \times 20 \times 100 mm$ \\ [\rowpadding]
 \hline
 
 \texttt{2} & \imageView{./images/F20_20_G.jpg} & \texttt{F20\_20\_G} & 49 g & Small aluminium profile \newline
  Coating/Colour: gray anodized\newline
- Height: 20 mm \newline
- Width: 20 mm \newline
- Length: 100 mm \\ [\rowpadding]
+ Size: $20 \times 20 \times 100 mm$ \\ [\rowpadding]
 \hline
 
-\texttt{3} & \imageView{./images/S40_40_B.jpg} & \texttt{S40\_40\_B} & 186 g & Big aluminium profile\newline
+\texttt{3} & \imageView{./images/S40_40_B.jpg} & \texttt{S40\_40\_B} & 186 g & Large aluminium profile\newline
  Coating/Colour: black anodized\newline
- Height: 40 mm \newline
- Width: 40 mm \newline
- Length: 100 mm \\ [\rowpadding]
+ Size: $40 \times 40 \times 100 mm$ \\ [\rowpadding]
 \hline
 
-\texttt{4} & \imageView{./images/S40_40_G.jpg} & \texttt{S40\_40\_G} & 186 g & Big aluminium profile \newline
+\texttt{4} & \imageView{./images/S40_40_G.jpg} & \texttt{S40\_40\_G} & 186 g & Large aluminium profile \newline
  Coating/Colour:  gray anodized\newline
- Height: 40 mm \newline
- Width: 40 mm \newline
- Length: 100 mm \\ [\rowpadding]
+ Size: $40 \times 40 \times 100 mm$ \\[\rowpadding]
 \hline
 
 \texttt{5} & \imageView{./images/M20_100.jpg} & \texttt{M20\_100} & 296 g & Screw\newline
- ISO4014, DIN 931, CSN 021101, PN 82101, UNI 5737, EU 24014 \newline
+ ISO4014, DIN 931, EU 24014 \newline
  Coating/Colour: blank, black burnished \newline
  Size: M$20\times 100$ \\ [\rowpadding]
 \hline
 
 \texttt{6} & \imageView{./images/M20.jpg} & \texttt{M20} & 56 g & Small nut\newline
- ISO4032, DIN934,  CSN 021401, PN 82144, UNI 5588, EU 24032  \newline
- Coating/Colour: blank, black burnished \newline
+ ISO4032, DIN934, EU 24032  \newline
+ Coating/Color: blank, black burnished \newline
  Size: M20 \\ [\rowpadding]
 \hline
 
-\texttt{7} & \imageView{./images/M30.jpg} & \texttt{M30} & 217 g & Big nut\newline
- ISO4032, DIN934,  CSN 021401, PN 82144, UNI 5588, EU 24032  \newline
- Coating/Colour: blank, black burnished \newline
+\texttt{7} & \imageView{./images/M30.jpg} & \texttt{M30} & 217 g & Large nut\newline
+ ISO4032, DIN934, EU 24032  \newline
+ Coating/Color: blank, black burnished \newline
  Size: M30 \\ [\rowpadding]
  \hline
 \end{tabular}
@@ -655,7 +649,7 @@ For 2023, the RoCKIn object set (see 2022 rulebook or previous ones) is replaced
 		SKF P40\newline
 		Coating/Colour: gray \newline
 		Useable with bearing\newline
-		\textbf{Remark:} needs two hex socket screw M8x10 (DIN EN ISO 4762, DIN 912, CSN 021143, PN 82302, UNI 5931) and two M8 nuts (ISO 4032, DIN 934) \newline
+		\textbf{Remark:} needs two hex socket screw M8x10 (ISO 4762, DIN 912) and two M8 nuts (ISO 4032, DIN 934) \newline
 		\href{https://www.skf.com/sg/products/mounted-bearings/ball-bearing-units/pillow-block-ball-bearing-units/productid-P%2040}{SKF}  (visited Januar 2022)\\
 		\hline
 %%%%%%%%%%%%	
@@ -734,15 +728,17 @@ For 2023, the RoCKIn object set (see 2022 rulebook or previous ones) is replaced
 \subsection{April Tagged Object Set}
 \label{ssec: April Tagged Object Set}
 
-For the season 2023 and onwards, 3D printed cubes marked with April tags might be used in the competition. Further on this cubes will be called April Tag Tagged Cubes (ATTC).
-This shall prepare the possibility to design tasks that focus on other areas than object recognition by simplifying the detection. 
-All April Tags will be $40 \si{\milli\meter} \times 40 \si{\milli\meter}$ and out of the \textit{36h11} April Tag Family, including 1bit black, 1bit white boarder as shown in fig. \ref{fig:singleAprilTag}. 
+For the season 2023 and onwards, 3D printed cubes marked with April tags might be used in the competition. 
+This should allow teams to focus on other areas than object recognition by simplifying the detection of Objects. 
+These cubes will be called April Tag Tagged Cubes (ATTC) in the following.
+
+The April Tags used in \RCAW measure $40 \si{\milli\meter} \times 40 \si{\milli\meter}$ and have an encoding taken from the \textit{36h11} April Tag family, including a 1bit black and 1bit white border as shown in fig. \ref{fig:singleAprilTag}. 
 
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width= 0.4\textwidth ]{./images/singleAprilTAG42.png}
-	\caption{Example of an April Tag with the ID: 42 out of the 36h11-April Tag Family.}
+	\caption{Example of an April Tag with the ID 42. Encoding is from the 36h11-April Tag Family.}
 	\label{fig:singleAprilTag}
 \end{figure}
 
