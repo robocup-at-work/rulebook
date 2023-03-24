@@ -1,20 +1,16 @@
+
 Rulebook for RoboCup@Work
 ========
 
-The rulebook is automatically build and stored as artifact. Please visit [Link](https://github.com/robocup-at-work/rulebook/actions) to download the latest version. 
+This repository contains the current rulebook for the RoboCup@Work competitions.
+The PDF 'Rulebook.pdf' is usually up-to-date, but you can always check out this repository and build it yourself,
+especially if you want to keep track of newer inofficial releases.
 
-You can also just use the PDF version inside of this Repo.
-Currently the latest one is called 'RulebookFinal2022.pdf'.
+## Release for 2023
 
-
-## First Draft Release for 2023
-
-We have released the first draft of the Official Rulebook for the Season 2023!
-You will find the latest version in Branch 'Alpha_2023'.
-
-The official release of the official rulebook for the season of 2023 is planned for end of March 2023.
-You can keep track of the most important changes in our GitHub Issues.
-Please note especially [#64](https://github.com/robocup-at-work/rulebook/issues/64) as it is a quite major change!
+We have released the Official Rulebook for the Season 2023!
+Please note the changelog but also read the rest carefully!
+Issue [#64](https://github.com/robocup-at-work/rulebook/issues/64) has caused quite major changes!
 
 ## Contact
 
@@ -35,6 +31,4 @@ If you want to start a discussion, you might also want to contact us via Discord
 To build you will need to install:
 
     $ sudo apt-get install texlive-science
-
-
 

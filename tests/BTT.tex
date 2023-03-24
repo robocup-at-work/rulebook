@@ -3,94 +3,24 @@
 \section{Basic Transportation Test}
 \label{sec:Basic Transportation Test}
 
-The \iaterm{Basic Transportation Test}{BTT} targets both navigation and manipulation, aswell as logistical optimization. Objects are initially placed on randomly selected service areas and must be transported to their specific target location. As some paths may be blocked by obstacles (see section \ref{subsec: Obstacles}), robots must choose alternative routes and optionally replan the order in which they want to perform tasks.
+The \iaterm{Basic Transportation Test}{BTT} targets both navigation and manipulation, aswell as logistical optimization. Objects are initially placed on randomly selected service areas and must be transported to their specific target location.
+As their total number now exceeds the inventory size, robots will have to manage their inventory content and optimize their payload. The object pool consists of the complete Basic Object Set.
 
-As such requirements for autonomous robots are hard to meet perfectly,
-a total of three BTT's are performed during a competition, each with a different degree of difficulty.
-They also slowly introduce the more challenging elements of \RCAW .
-The following paragraphs explain the different levels but DO NOT override the test specification in table \ref{tab:Instances}.
+There are currently two versions of the BTT. 
+They gradually introduce more elements of the league to the competition, including the randomness of the used objects, the increase of active Service Areas and them not being next to each other anymore, using different table heights and the placement of physical obstacles.
+The following paragraphs summarize the two different levels but DO NOT override the test specification in table \ref{fig:test_specifications_instance}.
 
 \paragraph{BTT1}
 \begin{itemize}
-\item Five objects have to be transported.
-\item There will be three estimated active service areas.
+\item Four randomly selected objects have to be transported.
+\item There will be three active service areas and they are not next to each other.
 \item Only tables with a height of 10cm are used. 
-\item Virtual Obstacles (Barriertapes) are placed inside the arena (one blocking, one non-blocking).
-\item One service area will have an arbitrary surface.
 \end{itemize}
 
 \paragraph{BTT2}
 \begin{itemize}
-\item Six objects have to be transported.
-\item There will be four estimated active service areas.
-\item All table heights are used (0-15 $\si{\centi\meter}$).
+\item Five randomly selected objects have to be transported.
+\item Two randomly selected decoy objects are placed onto one or more randomly selected service areas.
+\item There will be four active service areas with each covering one of the four table heights (0, 5, 10, 15 $\si{\centi\meter}$).
 \item Physical Obstacles are placed inside the arena (one blocking, one semi-blocking).
-\item Two service areas will have an arbitrary surface.
 \end{itemize}
-
-\paragraph{BTT3}
-\begin{itemize}
-\item Six objects have to be transported.
-\item There will be five estimated active service areas.
-\item Only tables with a height of 10cm and shelfs are used.
-\item Both physical and virtual Obstacles (Barriertapes) are placed inside the arena (one blocking, one semi-blocking, one non-blocking).
-\item Two service areas will have an arbitrary surface.
-\item Two objects must be grasped from the shelf (bottom-part).
-\item Four objects must be placed inside of a container (two red, two blue). 
-\item One object must be placed on a shelf (top-part).
-\end{itemize}
-
-
-
-%\paragraph{Purpose and Focus of the Test}
-%The purpose of the \iaterm{Basic Transportation Test}{BTT} is to assess the ability of the robots for combined navigation and manipulation tasks as well as its task planning capabilities.
-%The robots have to deal with flexible task specifications, especially concerning information about object constellations in source and target locations, and task constraints such as limits on the number of objects allowed to be carried simultaneously, etc.
-%
-%\paragraph{Scenario Environment}
-%The arena used for this test contains all elements as for the Basic Manipulation Test. Besides that all areas may contain objects.
-%
-%\paragraph{Manipulation Objects}
-%The manipulation objects used in this test are defined by the instances described in Table~\ref{tab:Instances}.
-%
-%\paragraph{Task}
-%The task is to get several objects from the source service areas (such as \texttt{SH02}, \texttt{WS09}, or \texttt{CB02}) and to deliver them to the destination service areas (e.g. \texttt{WS11} and \texttt{SH05}). 
-%\par
-%The task specification consists of two lists: The first list contains for each service area a list of manipulation object descriptions. The descriptions are similar as those used for the Basic Manipulation Test. The second list contains for each destination service area a configuration of manipulation objects the robot is supposed to achieve. The configuration specification is similar as used in the Basic Manipulation Test. 
-%
-%The term \quotes{line} in the task specification can be ignored.
-%
-%%
-%%\subsection{Complexity Options}
-%%The same complexity scoring as in BMT applies.
-%
-%\paragraph{Rules}
-%The following rules have to be obeyed:
-%
-%\begin{itemize}
-%\item A single robot is used.
-%\item The robot has to start from outside the arena and to end in the final.
-%\item The order in which the teams have to perform will be determined by a draw.
-%\item The robot will get the task specification from the referee box.
-%\item A service area counts as successfully reached as defined in Section~\ref{ssec:Navigating}
-%\item A manipulation object counts as successfully grasped as specified in Section~\ref{ssec:GraspingObjects}.
-%\item A manipulation object counts as successfully placed as specified in Section~\ref{ssec:PlacingObjects}.
-%\item It is not allowed to place manipulation objects anywhere except for the robot itself and the correct service areas.
-%\item A robot may carry up to three objects at the same time.
-%\item The run is over when the robot reached the final place or the designated time has expired.
-%\item The score for this test will be calculated as defined in \ref{sec:ScoringAndRanking}.
-%
-%\end{itemize}
-%
-
-%
-%\subsection{Scoring}
-%Points are awarded as follows:
-%
-%\begin{itemize}
-%\item 75 points are awarded for successfully grasping a manipulation object required in the task specification.. 
-%\item - 75 points if a wrong object has been grasped
-%\item 75 points are awarded for successfully placing a manipulation object into the destination service area.
-%\item 50 points are awarded for completing the task specification completely correct. 
-%\item The reached points of a test will be multiplied with a defined complexity factor depending on the previously chosen complexity level
-%\end{itemize}
-%

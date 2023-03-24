@@ -2,6 +2,7 @@
 \label{sec:Competition}
 
 \section{Teams and Roles}
+\label{sec: teams and roles}
 
 The TC and OC will jointly determine the number of teams permitted to participate in a competition well in advance. The rules shall enable a competition with up to at least 24 teams lasting not more than four full days. The number of people to register per team is not restricted by default, but may be limited due to local arrangements. Teams that plan to bring more than four members are advised to contact the OC beforehand.
 
@@ -15,6 +16,7 @@ They also rate the robot performances during a run.
 This ensures that the interests of every team are respected equally.
 It also involves the refs in discussions with other teams and the league officials,
 which helps getting to know each other.
+Each referee gets a referee sheet from the OC which is used to evaluate the performance. An additional referee is the head referee which measures the time and organizes the referees. If less than 4 referees without the head referee are available (so less than 4 teams participate), TC members can also be referees to fill this up to 4. 4 referees are beneficial, because there is at least one on each side of the arena. A referee briefing is held before a competition by the TC and OC. The goal is to discuss questions and to sensitize the referees for their task. Only briefed refs are allowed to judge the future runs. Teams are asked to send at least two members to the briefing, if possible.
 
 Teams are asked (and wished) to comment their robots performance during their run.
 This makes the competition more entertaining while also sharing knowledge about robots, 
@@ -55,7 +57,7 @@ Teams should prepare for something like fig. \ref{fig:example_schedule}.
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width= 0.8\textwidth ]{./images/competition/example_schedule}
+\includegraphics[width= 0.9\textwidth ]{./images/competition/Competition_Schedule_2023.PNG}
 \caption{Example of a time schedule for a \RCAW competition.}
 \label{fig:example_schedule}
 \end{figure}
@@ -78,7 +80,7 @@ The schedule should include all teams in all tests if possible,
 but might introduce special stages in the following order:
 \begin{enumerate}
 \item Stage One: limit the maximum amount of teams in the final test, only the X best teams may participate
-\item Stage Two: limit the maximum amount of teams in the BTT2 and later tests, only the X best teams may participate
+\item Stage Two: limit the maximum amount of teams in the Advanced Transportation and later tests, only the X best teams may participate
 \end{enumerate}
 
 Teamleaders of qualified teams are required to announce 1 hour before the respective time slot wether their team likes to participate in a test or not. 
@@ -102,7 +104,7 @@ They may not change or modify their robot in any way during this time (hardware 
 15 minutes before a competition slot, the arena is set up for the upcoming test.
 Therefore, the position of each static arena element is checked and objects are placed on active 
 Service Areas.
-The TC will decide where dynamic arena elements are placed. See table \ref{tab:Instances} for the different responsibilities of placing arena elements, Objects (Pose), Decoys, Containers etc.
+The TC will decide where dynamic arena elements are placed. See table \ref{fig:test_specifications_instance} for the different responsibilities of placing arena elements, Objects (Pose), Decoys, Containers etc.
 
 A competition slot consists of multiple performance slots (one for each team), 
 including a preparation phase, the run phase and the end phase.
@@ -111,6 +113,8 @@ including a preparation phase, the run phase and the end phase.
 
 During the prep phase, teams are allowed to move their robot from the parc ferm\'e to the defined start pose in the arena either by hand or by carefully driving manually. They should prepare their robot for their run and can therefore remote access the robot and/or make minor changes.
 It is explicitly forbidden to hardcode solutions for specific requirements of a test during this phase (e.g. drawing position of obstacles in the map). Also, if the robot passes and detects obstacles during this phase, they must be erased from the memory (e.g. clear costmap) unless they can be detected from the START location. The TC might disqualify teams that try to gain unfair advantages from the current or even the following tests.
+
+\clearpage
 
 \textbf{Run Phase}
 
@@ -126,7 +130,6 @@ If a robot behaves uncontrolled and poses a potential threat to the environment,
 any person may approach the robot and press the emergency stop.
 However, it is requested and strongly advised that only the developers touch their robot.
 
-\clearpage
 
 The run phase regularly ends when:
 \begin{itemize}
@@ -159,6 +162,8 @@ Once the score has been accepted by a team,
 the arena must be set up for the next run if necessary.
 The prep time of the next team begins once the arena state is declared as ready by all refs.
 
+\clearpage
+
 \textbf{Performance Slot Example}
 
 \begin{figure} [h!]
@@ -170,21 +175,29 @@ The prep time of the next team begins once the arena state is declared as ready 
 \end{figure}
 
 
+
 \section{Restarting a Run}
+\label{sec:restartingarun}
 
 During a run, the teamleader can restart the test execution once.
 Therefore he/she must say 'restart', which stops the current run phase. The robot must be stopped using the emergency switches, which then allows the refs to reset the arena state.
 The remaining run time will be noted and used after the restart. Once the refs have finished resetting the arena, the performing team is brought back to their prep phase, which allows them to move the robot back to the start area and prepare it for the restarted run.
-Note: The first major collision of a robot instantly triggers a restart.
+A so called tactical call of a restart (e.g. to prevent a major collision) is allowed, because this rewards the teams knowledge about the robot.
+Note: When the first major collision occurs, the team can decide whether they stop the run or they restart the run (see section \ref{sec:Collisions}).
+
 
 \section{Skipping Tests}
 
-If a team decides not to participate in a test during the official time slot, 
-this test type may be repeated once during a following time slot. 
+If a team decides to not participate in a test during the official time slot, 
+they may repeat that test type once in one of the following competition slots.
+Their performance slot for the later test type is then replaced by one that suits the previously skipped test type, 
+and they then can perform that test type instead of the originally scheduled one.
+
 This should enable struggling teams to do the more simpler tests later in the competition,
-but should only be used by teams if really necessary to keep the structure of the overall competition.
-It is only allowed to perform a test with a lower potential total score than the one of the replaced test.
-Also, this option might be cancelled if the schedule is too tight otherwise.
+but should only be used by teams if it is really necessary in order to keep the structure of the overall competition. 
+It is not allowed to repeat a test that has been replaced with this option.
+
+Please note that this option might not be available at all if the schedule is too tight otherwise.
 
 \section{Atwork Commander (AC)}
 \label{sec:atwork-commander}
