@@ -18,39 +18,42 @@ In this chapter the general rules will be explained that are valid for all tests
 %In order to avoid excessive development efforts for each specific test and to allow reuse of partial functionalities the scenarios are built from a reasonably small set of components, which are later put together in different ways. This section describes these elements.
 
 \section{Robots}
-The robots used for competition shall satisfy professional quality standards. The concrete definition of these standards is to be assessed by the TC, comprising aspects such as sturdy construction, general safety, and robust operation. It is not required that the robots are certified for industrial use.
+The robots used for competition shall satisfy professional quality standards. The concrete definition of these standards is to be assessed by the TC, comprising aspects such as sturdy construction, general safety, and robust operation. It is not required that the robots are certified for industrial use to allow for a faster and easier implementation of research work. However, some requirements have to be met to ensure the safety of all participants of the competition. If there are even vague doubts about the eligibility of using particular designs, parts, or mechanisms, the team should consult the TC well in advance.
 
 \subsection{Design and Constraints} \label{ssec:RobotDesignAndConstraints}
 %The robots need to comply with certain size constraints. A robot, including all parts attached to it as used in the competition, must be able to move by itself into a configuration so that it fits into a box of side lengths 80 cm x 55 cm x 110 cm (length x width x height). If all the robot's parts, such as manipulator or anything able to protrude outside of the previously specified box, are fully extended, the system must still not exceed a box of side lengths 120 cm x 80 cm x 160 cm (length x width x height). The organizers may specify further constraints, such as weight limits. If a team would like to apply a robot with deviating robot dimensions, it should contact the TC. Exceptions for specific robots are possible in case of small differences.
 
+\paragraph{Perks}
+The following assumptions are made about the kind of robots used in the competition:
 
-There are no constraints regarding the size and weight of the used robots, but that they have to fit in the arena defined in section \ref{sec:ArenaDesign}. The minimum passage width is $80\si{\centi\meter}$. The used robots must be able to maneuver in that space.\par
-
-The used batteries may not exceed 500Wh of capacity for safety. 300Wh of capacity is recommended. The maximum voltage that is allowed on the robotic system is 60 V DC.
-
-See subsection \ref{ssec:RobotBehaviorAndSafety} as well.\par 
-
-The maximum speed of the robots may not exceed 1.5 m/s. The robot should also be able to stop within a reasonable distance on concrete floor.
-
-\par
-Electric, pneumatic, and hydraulic actuation mechanisms are permitted, provided that they are constructed and produced according to professional standards and meet safety constraints. Combustion engines and any kind of explosives are strictly forbidden. Robots may not pollute or harm their environment in any way, e.g. by loss of chemicals or oil, spilling liquids, or exhausting gases.
-\par
-Further, the following assumptions are made about the kind of robots used in the competition:
-\par
 \begin{itemize}
 	\item At least one of the robots used by a team is mobile and moves on wheels. No specific assumptions are made about the kinematic design, but the mobile robots should be able to move on basically flat, sufficiently firm surfaces. Aerial robots are not allowed in this competition. 
-	\item The robots have at least one manipulator and are able to grasp Objects, which are used in the individual task. See Table~\ref{tab:manipulation_objects} and Table~\ref{tab:new_objects1} as well as Table~\ref{tab:new_objects2}.
-	\item The manipulator of the robot should be designed and mounted on the robot such that it can grasp Objects from different heights between $0\si{\centi\meter}$ and $40\si{\centi\meter}$ above the floor.
-	\item The robots use sensors to obtain information about their whereabouts in the environment and the task-relevant Objects. The major types of sensors that may be used by the robots include:
-	\begin{itemize}
-		\item Laser range finders (cf. models by Hokuyo or Sick)
-		\item Color CCD cameras (cf. any kind of USB camera)
-		\item 3D cameras (cf. any kind of camera with depth information)
-	\end{itemize}
-	\item The design of the scenario should be such that the robots can solve the tasks safely and robustly using (all or a subset of) these sensors.
+	\item Robots are equipped at least one manipulator and are able to handle the Objects defined in Table~\ref{tab:manipulation_objects}, Table~\ref{tab:new_objects1} and Table~\ref{tab:new_objects2}.
+	\item The manipulator of the robot should be designed and mounted on the robot such that it can handle the Objects at different heights, usually between $0\si{\centi\meter}$ and $40\si{\centi\meter}$ above the floor.
+	\item The robots use sensors to obtain information about their whereabouts in the environment and the task-relevant Objects. 
+	Usual types of sensors used are 2D-LiDARs, (3D-) Cameras, RaDAR, Ultrasonic range finders and other. 
+	Sensors must not harm humans due to their physical properties (e.g. no laser class 2 or above).
+
 \end{itemize}
-If there are even vague doubts about the eligibility of using particular designs, parts, or mechanisms, the team should consult the TC well in advance.
-The TC may require that robots are equipped with a wireless communication device of some sort (e.g. 802.11n), in order to communicate task specifications to the robots. Figure~\ref{fig:example_robots} shows three examples how a robot suitable to the competition can look like. 
+
+\paragraph{Size}
+There are no constraints regarding the size and weight of the used robots, but they have to fit in the arena defined in section \ref{sec:ArenaDesign}. The minimum passage width is $80\si{\centi\meter}$. The used robots must be able to maneuver in that space.
+
+\paragraph{Electrical}
+The used batteries may not exceed a capacity of 500Wh. 300Wh of capacity is recommended. The maximum voltage allowed on the robotic system is 60 V DC.
+
+\paragraph{Movement}
+The maximum speed of the robots may not exceed 1.5 m/s. The robot should also be able to stop within a reasonable distance on concrete floor.
+
+\paragraph{Actuator Types}
+Electric, pneumatic, and hydraulic actuation mechanisms are permitted, provided that they are constructed and produced according to professional standards and meet safety constraints. Combustion engines and any kind of explosives are strictly forbidden. Robots may not pollute or harm their environment in any way, e.g. by loss of chemicals or oil, spilling liquids, or exhausting gases.
+
+\paragraph{Connectivity} The TC may require that robots are equipped with a wireless communication device of some sort (e.g. 802.11n), in order to communicate task specifications to the robots. 
+
+\subsection{Example Robots}
+
+Figure~\ref{fig:example_robots} shows three examples how a robot suitable to the competition can look like. 
+
 \begin{figure} [h!]
 	\begin{center}
 		\subfloat{\includegraphics[width=0.3\textwidth]{./images/robots/AutonOhm_Ohmn3.jpg}} \hfill
@@ -77,69 +80,20 @@ When participating in a competition, the team may operate the robot only in thei
 Before the competition starts each robot has to perform a safety test procedure. This will be included in the competition schedule given by the OC.
 \begin{itemize}
 	\item Inspection of the robot platform (sharp edges and general construction)
-	\item Description of the included safety systems by the team captain 
+	\item Description of the included safety systems by the team leader 
 	\item Test of emergency stop while standing still
-	\item Test of emergency stop while driving 
-	\item Test of emergency stop while manipulation
+	\item Test of emergency stop during navigation 
+	\item Test of emergency stop during manipulation
 \end{itemize}
+
 
 \clearpage
 
 \section{Arena Environment}
 \label{sec:ArenaDesign}
 The competition is held in an arena resembling an example layout of industrial manufacturing facilities. In this Section different parts of the environment are explained.
-\subsection{General}
-\label{ssec:ArenaGeneral}
 
-%\textbf{Layout:}
-The arena is a static 2D environment consisting of Walls, Tables and Obstacles etc. with a size of atleast 10 m$^2$ and not more than 120 m$^2$. 
-An example layout is shown in fig. \ref{fig:arena_example}.
-
-\begin{figure} [h!]
-\centering
-\includegraphics[width= 1\textwidth ]{./images/general_rules/arena_example.jpg}
-\caption{An exemplary setup of a \RCAW environment.}
-\label{fig:arena_example}
-\end{figure}
-
-Layouts may include rooms and hallways to create more realistic scenarios.
-Service Areas (see section \ref{sec:Service_Areas}) mark the locations for robots to perform tasks.
-Each requested Service Area must be accessible via atleast one path of $80\si{\centi\meter}$ width.
-
-\textcolor{red}{Between the area where the robot is and where the spectators stand is the referee zone. The referee zone should allow the referees to move freely around the arena.}
-
-\begin{figure} [h!]
-\centering
-\includegraphics[width= 0.8\textwidth ]{./images/general_rules/arena_map_annotated}
-\caption{Annotated 2D map of the environment in fig. \ref{fig:arena_example}}
-\label{fig:arena_map_annotated}
-\end{figure}
-
-Each competition has a new and unique layout designed by the actual TC members.
-It should feature:
-\begin{itemize}
-\item Area 10 m$^2$ - 120 m$^2$
-\item Minimum distance between arena elements at least $80\si{\centi\meter}$ 
-\item Widespread Service Areas entailing robot movements
-\item Multiple paths between Service Areas
-\item START and FINISH area
-\end{itemize}
-
-
-\textbf{START and FINISH area:}
-\label{subsubsec: Start and Goal Area}
-
-One or two parts of the arena are separated with marking Tape and considered as START and FINISH area. The START and FINISH area can be the same or two independent areas. The robot may leave the START area and enter the FINISH area only once. The START/FINISH area is leaved/entered when the robot completely cross the corresponding Marking Tape. In figure \ref{fig:tapeconfig} an exemplary Tape configuration is shown. As soon as the robot enters the FINISH area or re-enters the START area the run ends. The FINISH area counts as a Service Area and reaching the FINISH area gives additional points. 
-
-\begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width= 0.6\linewidth]{./images/arena/tabes.pdf}
-	\end{center}
-	\caption{Exemplary tape configuration: black lines are physical walls, red white dashed lines are virtual walls, yellow black dashed lines are barrier tape and green lines are marking tape}
-	\label{fig:tapeconfig}
-\end{figure}
-
-\textbf{Floor}
+\subsection{Floor}
 
 The floor is made of some firm material. This includes among others floors made of concrete, screed, timber, plywood, chipboard, laminated boards, linoleum, PVC flooring, or carpet. Some examples are illustrated in Figure \ref{fig:example_floors}. Floors may neither be made of loose material of any kind (gravel, sand, or any material which may damage the functioning of the robot's wheels) nor may such material be used on top of the floor. Liquids of any kind are not allowed. The floor may have spots of unevenness of up to $1\si{\centi\meter}$ in any direction (clefts, rifts, ridges, etc.).
 
@@ -160,8 +114,6 @@ The floor is made of some firm material. This includes among others floors made 
 	\caption{Examples of floors that can be used for \RCAW arenas.}
 	\label{fig:example_floors}
 \end{figure}
-
-
 
 
 
@@ -318,6 +270,7 @@ The height of the Rotating Table should be not lesser than $8\si{\centi\meter}$ 
 \subsection{Precision Placement Tables}\label{sec:Precision Placement}
 
 The precision placement table as shown in Figure~\ref{fig:ppt_table} includes object-specific cavities tiles as shown in the Figure~\ref{fig:ppt_tiles}. It is based on a standard $10\si{\centi\meter}$ table described in Section~\ref{subsec: Tables}. For each object used in the test, there will be one specific cavity. The cavity has the dimension of the object plus a $2 \si{\milli\meter}$ offset for each dimension. At most five cavities are used in the test. The cavities are in an random order on the table and are located within the standard manipulation zone defined in Figure~\ref{fig:manipulation_zone}. One cavity tile has the dimensions of $140 \si{\milli\meter} \times 140 \si{\milli\meter} $. Placing five cavities on a standard $10\si{\centi\meter}$ table leaves a boarder of $5 \si{\centi\meter}$ on each side of the table. The additional decoy cavity tiles will be chosen by the referees. For the Precision Placement Table only the RoboCup@Work Object Set will be used.
+\clearpage
 
 \begin{figure} [h!]
 	\begin{center}
@@ -348,8 +301,6 @@ The precision placement table as shown in Figure~\ref{fig:ppt_table} includes ob
 %\end{figure}
 
 
-
-
 \begin{figure}[h!]
 	\centering
 
@@ -363,6 +314,65 @@ The precision placement table as shown in Figure~\ref{fig:ppt_table} includes ob
 	\caption{Exemplary Precision Placement table and generic technical drawing.}%
 	\label{fig:ppt_table}
 \end{figure}
+
+
+
+\subsection{Arena Layout}
+\label{ssec:ArenaGeneral}
+
+%\textbf{Layout:}
+The arena is a static 2D environment consisting of Walls, Tables and Obstacles etc. with a size of atleast 10 m$^2$ and not more than 120 m$^2$. 
+An example layout is shown in fig. \ref{fig:arena_example}.
+
+\begin{figure} [h!]
+	\centering
+	\includegraphics[width= 1\textwidth ]{./images/general_rules/arena_example.jpg}
+	\caption{An exemplary setup of a \RCAW environment.}
+	\label{fig:arena_example}
+\end{figure}
+
+Layouts may include rooms and hallways to create more realistic scenarios.
+Service Areas (see section \ref{sec:Service_Areas}) mark the locations for robots to perform tasks.
+Each requested Service Area must be accessible via atleast one path of $80\si{\centi\meter}$ width.
+
+\begin{figure} [h!]
+	\centering
+	\includegraphics[width= 0.8\textwidth ]{./images/general_rules/arena_map_annotated}
+	\caption{Annotated 2D map of the environment in fig. \ref{fig:arena_example}}
+	\label{fig:arena_map_annotated}
+\end{figure}
+
+Each competition has a new and unique layout designed by the actual TC members.
+It should feature:
+\begin{itemize}
+	\item Area 10 m$^2$ - 120 m$^2$
+	\item Minimum distance between arena elements at least $80\si{\centi\meter}$ 
+	\item Widespread Service Areas entailing robot movements
+	\item Multiple paths between Service Areas
+	\item START and FINISH area
+\end{itemize}
+
+\clearpage
+\textbf{START and FINISH area:}
+\label{subsubsec: Start and Goal Area}
+
+One or two parts of the arena are separated with marking Tape and considered as START and FINISH area. The START and FINISH area can be the same or two independent areas. The robot may leave the START area and enter the FINISH area only once. The START/FINISH area is leaved/entered when the robot completely cross the corresponding Marking Tape. In figure \ref{fig:tapeconfig} an exemplary Tape configuration is shown. As soon as the robot enters the FINISH area or re-enters the START area the run ends. The FINISH area counts as a Service Area and reaching the FINISH area gives additional points. 
+
+\begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width= 0.6\linewidth]{./images/arena/tabes.pdf}
+	\end{center}
+	\caption{Exemplary tape configuration: black lines are physical walls, red white dashed lines are virtual walls, yellow black dashed lines are barrier tape and green lines are marking tape}
+	\label{fig:tapeconfig}
+\end{figure}
+
+
+
+
+\textbf{Referee Zone}
+
+The arena is enclosed by a padded strip of 1m. This area is reserved for the referees to enable them to move freely while judging a robot's performance.
+
 
 \clearpage
 
@@ -446,38 +456,12 @@ Currently, a Container itself does not need to be manipulated or transported by 
 \end{figure}
 
 
-\subsection{Manipulation Zone} \label{ssec:ManipulationZone}
-The manipulation zone defines the area where Objects can be placed. Thereby, the following constraints need to be satisfied:
-\begin{itemize}
-	\item The maximum depth of the manipulation zone is $20\si{\centi\meter}$.
-	\item The minimum distance between Objects to each other is $2\si{\centi\meter}$.
-	\item The minimum distance of the beginning of the manipulation zone to a Wall is $10\si{\centi\meter}$.
-	\item There as an offset of $2\si{\centi\meter}$ from the border of the Service Area to the manipulation zone.
-\end{itemize}
-Note, the constraints do not permit, that Objects can be partially occluded dependent on the viewpoint.
-
-For the placement of Objects the following terms are used:
-
-\begin{itemize}
-	\item Position: point within 2D coordinate system of a Manipulation Zone,
-	\item Rotation: rotation around vertical axis of a Manipulation Zone,
-	\item Orientation: rotation around horizontal axes of a Manipulation Zone, i.e. whether the Object is standing upright or lying on its side
-	\item Pose: combination of position, rotation and orientation.
-\end{itemize}
-\begin{figure} [h!]
-\centering
-\includegraphics[width=0.8\textwidth ]{./images/manipulation_zone2023.pdf}
-\caption{Manipulation zone: the green color indicates the area where Objects can be placed on a Service Area by the referees.}
-\label{fig:manipulation_zone}
-\end{figure}
-
-\clearpage
 \section{Objects} 
 \label{ssec:ManipulationObjects}
 
-The Objects in \RCAW include a wide range of Objects relevant in industrial applications of robotics. They eventually cover any raw material, (semi-)finished parts or products as well as tools and possibly operating materials required for manufacturing processes. Object types are selected by the TC and shall vary in complexity due to different shapes, colors and uses of objects.
+The Objects in \RCAW include a wide range of Objects relevant in industrial applications of robotics. They eventually cover any raw material, (semi-)finished parts or products as well as tools and possibly operating materials required for manufacturing processes. Object types are selected by the TC and shall vary in complexity due to different shapes, colors and uses of objects. Currently there are three sets of Objects used in the competition: Basic, Advanced and April Tagged. The following sections provide details about those sets. The exact appearance of the object used in the competition can slightly vary due to availability, e.g. different coating colors for some standard parts.
 
-The Basic Object Set includes standard profile rails, screws and nuts with various sizes and masses (see table~\ref{tab:manipulation_objects}).
+
 
 %TODO: Still need this or can we remove it with introduction of new object set?
 %
@@ -489,10 +473,6 @@ The Basic Object Set includes standard profile rails, screws and nuts with vario
 %\href{https://www.amazon.de/-/en/TINMORRY-1-75mm-Filament-Printer-Spool/dp/B089YX78N5/ref=sr_1_6?crid=ZTL2O0EL3B3B&keywords=pla%2Bfilament%2Bgrau%2Bral%2B9006&qid=1641982915&s=industrial&sprefix=pla%2Bfilament%2Bgrau%2Bral9006%2Cindustrial%2C114&sr=1-6&th=1 }{example material from amazon} (visited Januar 2022). 
 %Figure~\ref{fig:RoCKIn_printed} shows an example set of the printed RoCKIn Objects created using fused filament fabrication (FFF) printing. 
 
-In 2023, the RoCKIn object set (see 2022 rulebook or previous ones) is finally replaced by a selection of better available parts for a drive train, as well as some tools (see Section~
-\ref{sec:new_objects}). The new object set was introduced in a technical challenge in 2022 and is called Advanced Object Set.
-
-The exact appearance of the object used in the competition can slightly vary, e.g. different coating colors for some standard parts.
 
 % as shown in  and . Objects of one kind can slightly vary e.g. considering the surface and coating colour. 
 
@@ -501,6 +481,8 @@ The exact appearance of the object used in the competition can slightly vary, e.
 
 
 \subsection{Basic Object Set}
+
+The Basic Object Set includes standard profile rails, screws and nuts with various sizes and masses (see table~\ref{tab:manipulation_objects}).
 
 \newcommand{\imageView}[1]{\includegraphics[width=2cm, valign=c]{#1}}
 {
@@ -641,7 +623,7 @@ ID & Object & Symbolic Description & Mass & Details \\
 \subsection{Advanced Object Set}
 
 
-A new object set was introduced in 2022 as a technical challenge that is intended to introduce objects that are closer to a real-life scenario. The set includes different tools and an updated drive shaft to replace the RoCKIn set. Links for purchase can be found in \ref{sec:new_objects}.
+For 2023, the RoCKIn object set (see 2022 rulebook or previous ones) is replaced by a selection of better available parts for a drive train, as well as some tools (see Section~\ref{sec:new_objects}). The new object set was introduced in a technical challenge in 2022 and is called Advanced Object Set.
 
 \begin{table}[h!]
 	\begin{tabular}{|c|m{2cm}|c|c|m{8cm}|}
@@ -873,6 +855,31 @@ April Tags can be easy generated. The usage of any ROS package to identify the A
 
 
 
+
+\subsection{Manipulation Zone} \label{ssec:ManipulationZone}
+The manipulation zone defines the area where Objects can be placed. Thereby, the following constraints need to be satisfied:
+\begin{itemize}
+	\item The maximum depth of the manipulation zone is $20\si{\centi\meter}$.
+	\item The minimum distance between Objects to each other is $2\si{\centi\meter}$.
+	\item The minimum distance of the beginning of the manipulation zone to a Wall is $10\si{\centi\meter}$.
+	\item There as an offset of $2\si{\centi\meter}$ from the border of the Service Area to the manipulation zone.
+\end{itemize}
+Note, the constraints do not permit, that Objects can be partially occluded dependent on the viewpoint.
+
+For the placement of Objects the following terms are used:
+
+\begin{itemize}
+	\item Position: point within 2D coordinate system of a Manipulation Zone,
+	\item Rotation: rotation around vertical axis of a Manipulation Zone,
+	\item Orientation: rotation around horizontal axes of a Manipulation Zone, i.e. whether the Object is standing upright or lying on its side
+	\item Pose: combination of position, rotation and orientation.
+\end{itemize}
+\begin{figure} [h!]
+	\centering
+	\includegraphics[width=0.8\textwidth ]{./images/manipulation_zone2023.pdf}
+	\caption{Manipulation zone: the green color indicates the area where Objects can be placed on a Service Area by the referees.}
+	\label{fig:manipulation_zone}
+\end{figure}
 
 
 
