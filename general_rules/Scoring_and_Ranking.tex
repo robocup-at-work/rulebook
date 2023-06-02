@@ -58,7 +58,7 @@ Penalty points are given as follows, each time again the incident occurs:
 \begin{itemize}
 	\item Object Loss: \hfill -100 points
 	\item Incorrect Object Manipulation (see Section \ref{ssec:PlacingObjects}): \hfill -50 points
-	\item Manipulation Deduction (see Section \ref{ssec:PlacingObjects}): \hfill fixed 50 points (in any Manipulation szenarios)
+	\item Manipulation Deduction (see Section \ref{ssec:PlacingObjects}): \hfill fixed -50 points (for the corresponding grasping or placing)
 	\item Minor collision (see Section \ref{sec:Collisions}): \hfill -50 points
 	\item Major collision (see Section \ref{sec:Collisions}): \hfill restart or -50\% penalty
   \item Tape collision (see Section \ref{sec:Collisions}): \hfill -5\% of total points of current run up till
@@ -69,7 +69,7 @@ Penalty points are given as follows, each time again the incident occurs:
 
 Manipulation Deduction:
 
-The Manipulation Deduction is a fixed point reward (50) if one or more Deductions happen while a grasping or placing process. The type of manipulation (like PP, SH, RT, arbitrary surface etc) when the Deductions happens doesn't affect the fixed points of 50.
+The Manipulation Deduction is a fixed negative point reward (50) if one or more Deductions happen while a grasping or placing process. The type of manipulation (like PP, SH, RT, arbitrary surface etc) when the Deductions happens doesn't affect the fixed points of 50.
 
 \section{Collisions}\label{sec:Collisions}
 
