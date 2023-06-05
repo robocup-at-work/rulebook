@@ -70,8 +70,8 @@ A breach of one or both of these rules causes that no points are rewarded if the
 \textbf{General}
 
 An Object counts as successfully placed if the robot places the correct Object type inside of the Manipulation Zone of the correct Service Area. The orientation of the object may be chosen freely by the robot, but the Object's footprint must lie completely inside of the Manipulation Zone.
-Neither the placed object nor the robot are not allowed to touch other Objects or Containers on the Service Area.
-Breaches of these rules result in a \texttt{Manipulation Deduction}, which will only be applied once, independent of the actual amount of breaches.
+Neither the placed object nor the robot are allowed to touch other Objects or Containers on the Service Area.
+Breaches of these rules result in a \texttt{Manipulation Deduction}, which will only be applied once, independent of the actual amount of breaches, but for each grasping or placing.
 
 If a placed Object either has an incorrect type or if it has been placed on the wrong Service Area, 
 the placement is considered as an \texttt{Incorrect Object Manipulation}. 
@@ -115,7 +115,7 @@ Figure \ref{fig:example_allenkeyOK} shows correct final object positions placeme
 	\label{fig:example_allenkeyOK}
 \end{figure}
 
-Figure \ref{fig:example_allenkeyNOTOK} shows examples for incorrect placements, which result in no points rewarded for that container placement and a \texttt{Manipulation Deduction} penalty given.
+Figure \ref{fig:example_allenkeyNOTOK} shows examples for incorrect placements, which result in no points rewarded for that container placement (but the normal placement points are given) and a \texttt{Manipulation Deduction} penalty given.
 
 \begin{figure}[h!]
 	\begin{center}
