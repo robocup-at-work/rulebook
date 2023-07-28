@@ -30,7 +30,7 @@ This version is also what will be used during the World Cup in July 2023 in Bord
 The process of altering the Rules for the Roboup@Work league is open to every one. Please feel free to contact the TC or the [mailing list](mailto:rc-work@lists.robocup.org) 
 with questions.
 
-Participating teams should also join our [Discord Server](https://discord.gg/z6Yn6UvhxU) as it is the go-to-location for discussions,
+Participating teams should also join our [Discord Server](https://discord.gg/6jg7Yv49Dn) as it is the go-to-location for discussions,
 announcements, questions and feedback!
 
 ## Issues
