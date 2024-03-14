@@ -1,5 +1,5 @@
 % makeindex style file created by the glossaries package
-% for document 'Rulebook' on 2023-7-28
+% for document 'Rulebook' on 2024-3-14
 actual '?'
 encap '|'
 level '!'
@@ -27,3 +27,5 @@ heading_suffix "\}\\relax \\glsresetentrylist "
 symhead_positive "glssymbols"
 numhead_positive "glsnumbers"
 page_compositor "."
+suffix_2p ""
+suffix_3p ""
