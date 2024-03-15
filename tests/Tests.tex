@@ -84,9 +84,8 @@ Objects dropped from a height of $5\si{\centi\meter}$ or more above the Service 
 \textbf{Shelf}
 
 Objects must be placed on the upper part of the Shelf.
-The Manipulation Zone also applies for the tilted surface, but is extended until the edge of the Shelf to allow for Objects to slide down after a successful placement. Objects sliding onto other previously placed Objects cause a \textbf{Manipulation Deduction}.
+The Manipulation Zone also applies for the tilted surface, but is extended until the edge of the Shelf to allow for Objects to slide down after a successful placement. Objects sliding onto other previously placed Objects cause a \texttt{Manipulation Deduction}.
 
-\clearpage
 
 \textbf{Precision Placement}
 
@@ -118,7 +117,7 @@ Figure \ref{fig:example_allenkeyOK} shows correct final object positions placeme
 	\label{fig:example_allenkeyOK}
 \end{figure}
 
-Figure \ref{fig:example_allenkeyNOTOK} shows examples for incorrect placements, which result in no points rewarded for that container placement (but the normal placement points are given) and a \texttt{Manipulation Deduction} penalty given.
+Figure \ref{fig:example_allenkeyNOTOK} shows examples for incorrect placements, which cause a \texttt{Manipulation Deduction} and the bonus points for that container placement NOT being given. In this case, the placement is considered as a normal placement with all associated rules. 
 
 \begin{figure}[h!]
 	\begin{center}
@@ -130,6 +129,10 @@ Figure \ref{fig:example_allenkeyNOTOK} shows examples for incorrect placements, 
 	\caption{Examples of incorrect AllenKey and Drill  in container placement.}
 	\label{fig:example_allenkeyNOTOK}
 \end{figure}
+
+If more than one object must be placed inside the same container, those objects are allowed to touch. 
+The placement of the second object is also considered successful if the object does not touch the container bottom, 
+if it is blocked by the first object (e.g. two large aluminum profiles into the same container) and its final position complies with the examples shown in fig. \ref{fig:example_allenkeyOK} without causing the mistakes shown in fig. \ref{fig:example_allenkeyNOTOK}.
 
 
 \newpage
