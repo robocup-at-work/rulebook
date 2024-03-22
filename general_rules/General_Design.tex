@@ -201,7 +201,9 @@ Green electrical tape is considered as markup Tape. This tape can be used everyw
 
 %However, from 2020 on and in order to make the competition more realistic, the heights of the service Areas will be variable, allowing the OC to adjust them before each test run. TODO...
 
-Tables normally used have a width (the side the robot approaches) of $80\si{\centi\meter}$ and a depth of $50\si{\centi\meter}$. In general terms, the table shall be big enough to contain at least one manipulation zone as described in section \ref{ssec:ManipulationZone}. In general two manipulation zones are included on one table (one zone on each side of the Table). The used table heights are $0\si{\centi\meter}$, $5\si{\centi\meter}$, $10\si{\centi\meter}$ and $15\si{\centi\meter}$. See further down in this section for more information about the $0\si{\centi\meter}$-Table. See figure \ref{fig:ws} for illustration. 
+
+
+Tables in the league typically measure $80\si{\centi\meter}$ wide (the side the robot approaches) and $50\si{\centi\meter}$ deep. These are the intended dimensions, but a margin of +/- $10\si{\centi\meter}$ is allowed to accommodate potential construction variations. In general terms, the table shall be big enough to contain at least one manipulation zone as described in section \ref{ssec:ManipulationZone}. In general two manipulation zones are included on one table (one zone on each side of the Table). The used table heights are $0\si{\centi\meter}$, $5\si{\centi\meter}$, $10\si{\centi\meter}$ and $15\si{\centi\meter}$. See further down in this section for more information about the $0\si{\centi\meter}$-Table. See figure \ref{fig:ws} for illustration. 
 The tolerance for the heigth is $\pm 2 \si{\centi\meter}$. During a competition the Table size is only fixed in the margin of $\pm 2 \si{\centi\meter}$, because of arbitrary surfaces (see \ref{subsec:Arbitrary_Surfaces_and_Decoys} for an explanation of arbitrary surfaces). 
 The table is closed between the bottom and the table top. That's why the Table can be used as a reference for navigation, when the height is sufficient for the robot. Note that the height may change slightly with arbitrary surfaces during a competition and thus the table can sometimes be visible to the laser scanners and sometimes not. 
  
@@ -405,7 +407,7 @@ This makes smaller physical layouts possible that still provide the ability to c
 \subsection{Arbitrary Surfaces and Decoys}
 \label{subsec:Arbitrary_Surfaces_and_Decoys}
 
-In order to make the operating environment more realistic, the Service Areas may contain different kinds of Arbitrary Surfaces (Figure \ref{fig:ast_surface_example}) with industrial items as Decoys (Figure \ref{fig:ast_example}). The Arbitrary Surfaces don't have to be fixed mounted at the Service Areas. Examples of Arbitrary Surfaces can be different wood pattern, grass, alufoil, plexiglas etc. The integration of Arbitrary Surfaces and Decoys into tests is according the table \ref{fig:test_specifications_instance}.
+In order to make the operating environment more realistic, the Service Areas may contain different kinds of Arbitrary Surfaces (Figure \ref{fig:ast_surface_example}) with industrial items as Decoys (Figure \ref{fig:ast_example}). The Decoys are limited in height to max. 10~cm. The width and depth of decoys are only limited by the size of the manipulation area. The Arbitrary Surfaces don't have to be fixed mounted at the Service Areas. Examples of Arbitrary Surfaces can be different wood pattern, grass, alufoil, plexiglas etc. The integration of Arbitrary Surfaces and Decoys into tests is according the table \ref{fig:test_specifications_instance}. If a team choose AprilTag objects in a test then no arbitrary surfaces will be used.
 
 
 \begin{figure}[h!]
@@ -437,6 +439,7 @@ Placement of Decoys and arbitrary surfaces are done by the referees. Decoys coul
 
 
 \subsection{Containers}
+\label{subsec:containers}
 As in many industrial settings, the \RCAW environment may be equipped with several Containers (see Figure~\ref{fig:containers}). The Containers are defined as industrial plastic stacking boxes size 2B, outer dimensions: $135 \times 160 \times 82  \si{\milli\meter}$, usable dimensions: $120 \times 125 \times 65  \si{\milli\meter}$  in red ca. RAL 3020 and blue ca. RAL 5015.
 % \href{https://www.amazon.de/gp/product/B0062TUUOE/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1}{example Container from amazon} (visited Januar 2022). 
 They can store any kind of Object defined in Section~\ref{ssec:ManipulationObjects}. Robots are supposed to place previously grasped Objects into containers. 
@@ -535,7 +538,7 @@ ID & Object & Symbolic Description & Mass & Details \\
  Size: M30 \\ [\rowpadding]
  \hline
 \end{tabular}
-\caption{\RCAW Object set.}
+\caption{\RCAW Basic Object Set}
 \label{tab:manipulation_objects}
 \end{table}
 
@@ -669,7 +672,7 @@ For 2023, the RoCKIn object set (see 2022 rulebook or previous ones) is replaced
 						\hline
 
 \end{tabular}
-\caption{Advanced Object Set}
+\caption{Advanced Object Set - Part 1}
 \label{tab:new_objects1}
 \end{table}
 
@@ -677,10 +680,10 @@ For 2023, the RoCKIn object set (see 2022 rulebook or previous ones) is replaced
 \begin{table}[h!]
 	\begin{tabular}{|c|m{2cm}|c|c|m{8cm}|}
 		\hline
-		Object & Symbolic Description & Mass & Details \\
+		ID & Object & Symbolic Description & Mass & Details \\
 		\hline
 		%%%%%%%%%%%%
-		\texttt{24} & \imageView{./images/newObjects/weraScrewdriver.jpg} & \texttt{Screwdriver } & 19g & WERA 352 \newline
+		\texttt{25} & \imageView{./images/newObjects/weraScrewdriver.jpg} & \texttt{Screwdriver } & 19g & WERA 352 \newline
 		Ball end screwdriver,hexagon socket screws\newline
 		Coating/Colour: black/green \newline
 		Size: $181\si{\milli\meter}$\newline
@@ -689,7 +692,7 @@ For 2023, the RoCKIn object set (see 2022 rulebook or previous ones) is replaced
 		\href{https://www.amazon.de/Wera-05138070001-352-Sechskant-Kugelkopf-Schraubendreher-2-5/dp/B00154ZWFI?th=1}{Amazon}  (visited Januar 2022)\\
 		\hline
 		%%%%%%%%%%%%			
-		\texttt{25} & \imageView{./images/newObjects/weraWrench.jpg} & \texttt{Wrench } & ca. 72g & WERA Jocker 6000, 8mm \newline
+		\texttt{26} & \imageView{./images/newObjects/weraWrench.jpg} & \texttt{Wrench } & ca. 72g & WERA Jocker 6000, 8mm \newline
 		Ratcheting combination wrenches\newline
 		Coating/Colour: silver/grey/pink \newline
 		Size: ca. $144\si{\milli\meter}$\newline
@@ -698,7 +701,7 @@ For 2023, the RoCKIn object set (see 2022 rulebook or previous ones) is replaced
 		\href{https://www.amazon.de/Wera-05073268001-Joker-Maul-Ringratschen-Schl%C3%BCssel/dp/B00BT0GBMG?th=1}{Amazon} (visited Januar 2022)\\
 		\hline
 		%%%%%%%%%%%%
-		\texttt{26} & \imageView{./images/newObjects/hsscoDIN338metaldrill.jpg} & \texttt{Drill } & ca. 10g & Bosch Drill HSS-Co DIN338  \newline
+		\texttt{27} & \imageView{./images/newObjects/hsscoDIN338metaldrill.jpg} & \texttt{Drill } & ca. 10g & Bosch Drill HSS-Co DIN338  \newline
 		Drill\newline
 		Coating/Colour: gold/ Cobalt alloy \newline
 		Length: ca. $151\si{\milli\meter}$\newline
@@ -707,7 +710,7 @@ For 2023, the RoCKIn object set (see 2022 rulebook or previous ones) is replaced
 		\href{https://www.amazon.com/Bosch-2609255086-Metal-Drill-HSS-Co/dp/B0071OSFQY}{Amazon} (visited Januar 2022)\\
 		\hline
 		%%%%%%%%%%%
-		\texttt{27} & \imageView{./images/newObjects/weraAllenKey.jpg} & \texttt{AllenKey } & ca. 10g & Wera Allen Key 8mm,\newline
+		\texttt{28} & \imageView{./images/newObjects/weraAllenKey.jpg} & \texttt{AllenKey } & ca. 10g & Wera Allen Key 8mm,\newline
 		3950 PKL L-key, metric, stainless\newline
 		Coating/Colour: silver \newline
 		Length: ca. $195\si{\milli\meter} \times 37\si{\milli\meter}$\newline
@@ -718,7 +721,7 @@ For 2023, the RoCKIn object set (see 2022 rulebook or previous ones) is replaced
 		%%%%%%%%%%%
 	
 \end{tabular}
-\caption{\RCAW New set of manipulation objects (tool set).}
+\caption{\RCAW Advanced Object Set - Part 2}
 \label{tab:new_objects2}
 \end{table}
 
@@ -743,6 +746,10 @@ The April Tags used in \RCAW measure $40 \si{\milli\meter} \times 40 \si{\milli\
 \end{figure}
 
 All the used April Tag ID numbers will fit to the ID numbers used by the AtWork Commander in the \href{https://github.com/robocup-at-work/atwork-commander/blob/master/atwork_commander_msgs/msg/Object.msg}{atwork\_commander\_msgs/msg/Object.msg}. 
+
+Any software package to identify such april tags is allowed. The \href{http://wiki.ros.org/apriltag_ros}{April Tag ROS package} would be a great and easy-to-use example.
+
+
 %
 %uint16 EMPTY = 0
 %
@@ -796,11 +803,11 @@ All the used April Tag ID numbers will fit to the ID numbers used by the AtWork 
 %uint16 CAVITY_END = 59 
 
 
-\subsubsection{ATTC as Manipulation Objects}
+\subsubsection{Dimensions and Details of the ATTCs}
 
-The standard ATTC measures $42\si{\milli\meter} \times 42\si{\milli\meter} \times 42 \si{\milli\meter}$ and has slightly rounded edges, similar to the shape of aluminum profile rails. On the top there is a $1\si{\milli\meter}$ deep cavatie ( $40.5\si{\milli\meter} \times 40.5\si{\milli\meter}$) to place the individual April Tag. It is manufactured by 3D printing using PLA filament of any color. The april tag is glued to the top side of the ATTC and is encoded with an ID matching one of the objects.
-The exact design and size is specified in fig. \ref{fig:cubeObject} and can be downloaded from the official league repository: \href{https://github.com/robocup-at-work/rulebook/tree/alpha_2023/images}{3D STL file of manipulation Cube.}
-The sides are marked with the ID in numeric numbers to make the cubes also identifyable by humans.
+The standard ATTC measures $42\si{\milli\meter} \times 42\si{\milli\meter} \times 42 \si{\milli\meter}$ and has slightly rounded edges, similar to the shape of aluminum profile rails. 
+A $1\si{\milli\meter}$ deep cavity measuring $40.5\si{\milli\meter} \times 40.5\si{\milli\meter}$ is embedded in the top of the cube to make centering the april tag printouts easier.
+The exact design and size is specified in fig. \ref{fig:cubeObject} and can be downloaded from the official league repository: \href{https://github.com/robocup-at-work/rulebook/tree/alpha_2023/images}{3D STL file for an ATTC}
 
 \begin{figure}[h!]
 	\centering
@@ -811,42 +818,37 @@ The sides are marked with the ID in numeric numbers to make the cubes also ident
 	\label{fig:cubeObject}
 \end{figure}
 
+The cubes are 3D printed using PLA filament. Any color is allowed since the identification of cubes is solely done using the printout tag, which is to be glued into the top cavity.
+Additionaly, printouts of a human-readable object ID and an image of the corresponding object from tables \ref{tab:manipulation_objects}, \ref{tab:new_objects1} and \ref{tab:new_objects2} must be glued to the side of the cubes to allow for easier onsite handling and identification of the cubes.
+
+\begin{figure}[h!]
+	\begin{center}
+		\subfloat{\includegraphics[width=0.32\textwidth,rotate=-0]{./images/AprilTags/AT_obj_1.jpg}} \hfill
+		\subfloat{\includegraphics[width=0.32\textwidth,rotate=-0]{./images/AprilTags/AT_obj_2.jpg}} \hfill
+		\subfloat{\includegraphics[width=0.32\textwidth,rotate=-0]{./images/AprilTags/AT_obj_3.jpg}} \hfill
+	\end{center}
+	\caption{Examples of allowed ATTCs}
+	\label{fig:real ATTCs}
+\end{figure}
+
+
+
 \subsubsection{Tagged Targets}
 
-Target objects, such as a precise placement cavity or a container, might also be marked with an April Tag.
+To allow for the more advanced tasks to be performed using the simplified april tag detection method, the target objects (precise placement cavities and containers) are also marked with a tag.
 
-For the PP cavaty tiles, one design will be used for all ATTC with any object ID. The design foresees a matching hole and two square cut-outs where tagged plates can be inserted. Additional to the April Tag also the April Tag ID will be shown on the tile.
-The ID used matches the ID used in the Atwork Commander so it should also mach with the correct ATTC.
-See the schematics shown in fig. \ref{fig:cubeObjectTile} for details. 
+Containers are marked with a tag glued to the inside bottom of the container. The tag shall be placed as centered as possible.
 
-\begin{figure}[h!]
-	\centering
-	\subfloat[ATTC cavity tile, including overall dimensions.]{\includegraphics[width=0.375\textwidth ]{./images/AprilTags/CubeTile2023_2.png}}
-	\hspace{0.05\textwidth}
-	\subfloat[Detailed dimensions of the ATTC tile April Tag cavatie.]{ \includegraphics[width=0.375\textwidth ]{./images/AprilTags/CubeTile2023_1.png} }
-	\caption{3D construction  of the ATTC Precision Placement cavaty tile.}%
-	\label{fig:cubeObjectTile}
-\end{figure}
-
-Containers get an April tag glued onto the inside of the bottom surface with centric placement as shown in fig. \ref{fig:redContainerTagged}.
+For the precise placement tests, a special PP tile is used which allows a tag to be placed with a constant offset from the hole (see fig. \ref{fig:Tagged Targets}). The used ID matches the ID of the object that must be placed into that cavity.
 
 \begin{figure}[h!]
-	\centering
-	\includegraphics[width= 0.5\textwidth ]{./images/AprilTags/container_redTAG.png}
-	\caption{Example of a red container, tagged with the April Tag ID: "31".}
-	\label{fig:redContainerTagged}
-\end{figure}
-
-
-\subsubsection{April Tags}
-April Tags can be easy generated. The usage of any ROS package to identify the April Tag is allowed. For example the \href{http://wiki.ros.org/apriltag_ros}{April Tag ROS package} can easy be adapted to be used within the competition. Example April Tags out of the April Tag Family  36h11 are shown in fig. \ref{fig:AprilTagExamples}. 
-
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width= 0.8\textwidth ]{./images/AprilTags/apriltags0to26.png}
-	\caption{Examples of April Tags with $0 \le \mathrm{April Tag ID} \le 26$.}
-	\label{fig:AprilTagExamples}
+	\begin{center}
+		\subfloat{\includegraphics[width=0.32\textwidth,rotate=-0]{./images/AprilTags/AT_Container.jpg}} \hfill
+		\subfloat{\includegraphics[width=0.32\textwidth,rotate=-0]{./images/AprilTags/CubeTile2023_2.png}} \hfill
+		\subfloat{\includegraphics[width=0.32\textwidth,rotate=-0]{./images/AprilTags/CubeTile2023_1.png}} \hfill
+	\end{center}
+	\caption{Examples of tagged targets}
+	\label{fig:Tagged Targets}
 \end{figure}
 
 
@@ -855,7 +857,7 @@ April Tags can be easy generated. The usage of any ROS package to identify the A
 \subsection{Manipulation Zone} \label{ssec:ManipulationZone}
 The manipulation zone defines the area where Objects can be placed. Thereby, the following constraints need to be satisfied:
 \begin{itemize}
-	\item The maximum depth of the manipulation zone is $20\si{\centi\meter}$.
+	\item The maximum depth of the manipulation zone from the front of the service area to the end of the manipulation zone is $20\si{\centi\meter}$.
 	\item The minimum distance between Objects to each other is $2\si{\centi\meter}$.
 	\item The minimum distance of the beginning of the manipulation zone to a Wall is $10\si{\centi\meter}$.
 	\item There as an offset of $2\si{\centi\meter}$ from the border of the Service Area to the manipulation zone.
