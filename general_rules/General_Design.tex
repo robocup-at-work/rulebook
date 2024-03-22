@@ -538,7 +538,7 @@ ID & Object & Symbolic Description & Mass & Details \\
  Size: M30 \\ [\rowpadding]
  \hline
 \end{tabular}
-\caption{\RCAW Object set.}
+\caption{\RCAW Basic Object Set}
 \label{tab:manipulation_objects}
 \end{table}
 
@@ -672,7 +672,7 @@ For 2023, the RoCKIn object set (see 2022 rulebook or previous ones) is replaced
 						\hline
 
 \end{tabular}
-\caption{Advanced Object Set}
+\caption{Advanced Object Set - Part 1}
 \label{tab:new_objects1}
 \end{table}
 
@@ -721,7 +721,7 @@ For 2023, the RoCKIn object set (see 2022 rulebook or previous ones) is replaced
 		%%%%%%%%%%%
 	
 \end{tabular}
-\caption{\RCAW New set of manipulation objects (tool set).}
+\caption{\RCAW Advanced Object Set - Part 2}
 \label{tab:new_objects2}
 \end{table}
 
@@ -746,6 +746,10 @@ The April Tags used in \RCAW measure $40 \si{\milli\meter} \times 40 \si{\milli\
 \end{figure}
 
 All the used April Tag ID numbers will fit to the ID numbers used by the AtWork Commander in the \href{https://github.com/robocup-at-work/atwork-commander/blob/master/atwork_commander_msgs/msg/Object.msg}{atwork\_commander\_msgs/msg/Object.msg}. 
+
+Any software package to identify such april tags is allowed. The \href{http://wiki.ros.org/apriltag_ros}{April Tag ROS package} would be a great and easy-to-use example.
+
+
 %
 %uint16 EMPTY = 0
 %
@@ -799,11 +803,11 @@ All the used April Tag ID numbers will fit to the ID numbers used by the AtWork 
 %uint16 CAVITY_END = 59 
 
 
-\subsubsection{ATTC as Manipulation Objects}
+\subsubsection{Dimensions and Details of the ATTCs}
 
-The standard ATTC measures $42\si{\milli\meter} \times 42\si{\milli\meter} \times 42 \si{\milli\meter}$ and has slightly rounded edges, similar to the shape of aluminum profile rails. On the top there is a $1\si{\milli\meter}$ deep cavatie ( $40.5\si{\milli\meter} \times 40.5\si{\milli\meter}$) to place the individual April Tag. It is manufactured by 3D printing using PLA filament of any color. The april tag is glued to the top side of the ATTC and is encoded with an ID matching one of the objects.
-The exact design and size is specified in fig. \ref{fig:cubeObject} and can be downloaded from the official league repository: \href{https://github.com/robocup-at-work/rulebook/tree/alpha_2023/images}{3D STL file of manipulation Cube.}
-The sides are marked with the ID in numeric numbers to make the cubes also identifyable by humans.
+The standard ATTC measures $42\si{\milli\meter} \times 42\si{\milli\meter} \times 42 \si{\milli\meter}$ and has slightly rounded edges, similar to the shape of aluminum profile rails. 
+A $1\si{\milli\meter}$ deep cavity measuring $40.5\si{\milli\meter} \times 40.5\si{\milli\meter}$ is embedded in the top of the cube to make centering the april tag printouts easier.
+The exact design and size is specified in fig. \ref{fig:cubeObject} and can be downloaded from the official league repository: \href{https://github.com/robocup-at-work/rulebook/tree/alpha_2023/images}{3D STL file for an ATTC}
 
 \begin{figure}[h!]
 	\centering
@@ -814,42 +818,37 @@ The sides are marked with the ID in numeric numbers to make the cubes also ident
 	\label{fig:cubeObject}
 \end{figure}
 
+The cubes are 3D printed using PLA filament. Any color is allowed since the identification of cubes is solely done using the printout tag, which is to be glued into the top cavity.
+Additionaly, printouts of a human-readable object ID and an image of the corresponding object from tables \ref{tab:manipulation_objects}, \ref{tab:new_objects1} and \ref{tab:new_objects2} must be glued to the side of the cubes to allow for easier onsite handling and identification of the cubes.
+
+\begin{figure}[h!]
+	\begin{center}
+		\subfloat{\includegraphics[width=0.32\textwidth,rotate=-0]{./images/AprilTags/AT_obj_1.jpg}} \hfill
+		\subfloat{\includegraphics[width=0.32\textwidth,rotate=-0]{./images/AprilTags/AT_obj_2.jpg}} \hfill
+		\subfloat{\includegraphics[width=0.32\textwidth,rotate=-0]{./images/AprilTags/AT_obj_3.jpg}} \hfill
+	\end{center}
+	\caption{Examples of allowed ATTCs}
+	\label{fig:real ATTCs}
+\end{figure}
+
+
+
 \subsubsection{Tagged Targets}
 
-Target objects, such as a precise placement cavity or a container, might also be marked with an April Tag.
+To allow for the more advanced tasks to be performed using the simplified april tag detection method, the target objects (precise placement cavities and containers) are also marked with a tag.
 
-For the PP cavity tiles, one design will be used for all ATTC with any object ID. The design foresees a matching hole and two square cut-outs where tagged plates can be inserted. Additional to the April Tag also the April Tag ID will be shown on the tile.
-The ID used matches the ID used in the Atwork Commander so it should also mach with the correct ATTC.
-See the schematics shown in fig. \ref{fig:cubeObjectTile} for details. 
+Containers are marked with a tag glued to the inside bottom of the container. The tag shall be placed as centered as possible.
 
-\begin{figure}[h!]
-	\centering
-	\subfloat[ATTC cavity tile, including overall dimensions.]{\includegraphics[width=0.375\textwidth ]{./images/AprilTags/CubeTile2023_2.png}}
-	\hspace{0.05\textwidth}
-	\subfloat[Detailed dimensions of the ATTC tile April Tag cavity.]{ \includegraphics[width=0.375\textwidth ]{./images/AprilTags/CubeTile2023_1.png} }
-	\caption{3D construction  of the ATTC Precision Placement cavity tile.}%
-	\label{fig:cubeObjectTile}
-\end{figure}
-
-Containers get an April tag glued onto the inside of the bottom surface with centric placement as shown in fig. \ref{fig:redContainerTagged}.
+For the precise placement tests, a special PP tile is used which allows a tag to be placed with a constant offset from the hole (see fig. \ref{fig:cubeObjectTile}). The used ID matches the ID of the object that must be placed into that cavity.
 
 \begin{figure}[h!]
-	\centering
-	\includegraphics[width= 0.5\textwidth ]{./images/AprilTags/container_redTAG.png}
-	\caption{Example of a red container, tagged with the April Tag ID: "31".}
-	\label{fig:redContainerTagged}
-\end{figure}
-
-
-\subsubsection{April Tags}
-April Tags can be easy generated. The usage of any ROS package to identify the April Tag is allowed. For example the \href{http://wiki.ros.org/apriltag_ros}{April Tag ROS package} can easy be adapted to be used within the competition. Example April Tags out of the April Tag Family  36h11 are shown in fig. \ref{fig:AprilTagExamples}. 
-
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width= 0.8\textwidth ]{./images/AprilTags/apriltags0to26.png}
-	\caption{Examples of April Tags with $0 \le \mathrm{April Tag ID} \le 26$.}
-	\label{fig:AprilTagExamples}
+	\begin{center}
+		\subfloat{\includegraphics[width=0.32\textwidth,rotate=-0]{./images/AprilTags/AT_Container.jpg}} \hfill
+		\subfloat{\includegraphics[width=0.32\textwidth,rotate=-0]{./images/AprilTags/CubeTile2023_2.png}} \hfill
+		\subfloat{\includegraphics[width=0.32\textwidth,rotate=-0]{./images/AprilTags/CubeTile2023_1.png}} \hfill
+	\end{center}
+	\caption{Examples of tagged targets}
+	\label{fig:Tagged Targets}
 \end{figure}
 
 
